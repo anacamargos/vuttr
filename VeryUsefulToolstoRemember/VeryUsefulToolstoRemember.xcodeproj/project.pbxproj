@@ -15,6 +15,7 @@
 		BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F993F2593F0D600E28356 /* HomeViewController.swift */; };
 		BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99452593F0FF00E28356 /* HomeContentView.swift */; };
 		BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F994B2593F13C00E28356 /* ViewCode.swift */; };
+		BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BF5F993F2593F0D600E28356 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF5F99452593F0FF00E28356 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		BF5F994B2593F13C00E28356 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5F994B2593F13C00E28356 /* ViewCode.swift */,
+				BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
+				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 			);
