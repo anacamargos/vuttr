@@ -4,8 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SourceSansPro-Regular</string>
-		<string>SourceSansPro-SemiBold</string>
+		<string>SourceSansPro-Regular.ttf</string>
+		<string>SourceSansPro-SemiBold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

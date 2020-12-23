@@ -29,7 +29,7 @@ final class HomeViewController: UIViewController {
     private func configureNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "VUTTR"
+        title = L10n.Home.vuttr.uppercased()
         navigationController?.navigationBar.configure()
         
         let search = UISearchController(searchResultsController: nil)
