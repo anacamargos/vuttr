@@ -5,3 +5,8 @@
   Created by Ana Leticia Camargos on 23/12/20.
   
 */
+
+// MARK: - Home
+
+"home.search" = "Pesquisar";
+"home.vuttr" = "vuttr";

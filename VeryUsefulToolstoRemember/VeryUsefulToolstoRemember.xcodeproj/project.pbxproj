@@ -281,6 +281,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
+				ORGANIZATIONNAME = "Ana Letícia Camargos";
 				TargetAttributes = {
 					BF5F98DF2593DFEB00E28356 = {
 						CreatedOnToolsVersion = 12.3;
