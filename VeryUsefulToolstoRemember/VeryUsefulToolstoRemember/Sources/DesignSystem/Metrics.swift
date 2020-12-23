@@ -28,6 +28,7 @@ enum Metrics {
 
 extension Metrics {
     enum FontSize {
+        case header
         case title
         case subtitle
         case body
@@ -35,6 +36,8 @@ extension Metrics {
 
         var value: CGFloat {
             switch self {
+            case .header:
+                return 30
             case .title:
                 return 24
             case .subtitle:
