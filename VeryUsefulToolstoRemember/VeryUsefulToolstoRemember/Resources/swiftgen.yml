@@ -1,0 +1,6 @@
+strings:
+  inputs:
+    - pt-BR.lproj/Localizable.strings
+  outputs:
+    templatePath: ../../swiftgen/custom-strings-template.stencil
+    output: Strings.swift

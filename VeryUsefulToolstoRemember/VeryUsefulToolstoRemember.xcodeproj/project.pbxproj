@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5F98EC2593DFF200E28356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		BF5F993B2593F07000E28356 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF145C412594059700BBAA52 /* Strings.swift */,
 				BF5F99552593F79B00E28356 /* Fonts */,
 				BF5F98EC2593DFF200E28356 /* Assets.xcassets */,
 				BF9A60162594029600BBE399 /* Localizable.strings */,
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
+				BF145C422594059700BBAA52 /* Strings.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
 				BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */,
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
