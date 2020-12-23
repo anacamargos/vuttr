@@ -11,6 +11,14 @@ protocol HomeContentViewProtocol: AnyObject {}
 
 final class HomeContentView: CodedView {
     
+    // MARK: - View Components
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        return tableView
+    }()
+    
     // MARK: - Initializers
     
     override init(
@@ -28,15 +36,23 @@ final class HomeContentView: CodedView {
     // MARK: - Override Methods
     
     override func addSubviews() {
+        addSubview(tableView)
     }
     
     override func constrainSubviews() {
+        constrainTableView()
     }
     
     // MARK: - Private Methods
     
+    private func constrainTableView() {
+        tableView.fillSuperview()
+    }
+    
     private func configureView() {
         backgroundColor = .white
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
     }
 }
 
