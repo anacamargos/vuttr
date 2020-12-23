@@ -12,6 +12,9 @@
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
 		BF5F98FB2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98FA2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift */; };
 		BF5F99062593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */; };
+		BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F993F2593F0D600E28356 /* HomeViewController.swift */; };
+		BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99452593F0FF00E28356 /* HomeContentView.swift */; };
+		BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F994B2593F13C00E28356 /* ViewCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		BF5F99012593DFF200E28356 /* VeryUsefulToolstoRememberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryUsefulToolstoRememberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeryUsefulToolstoRememberUITests.swift; sourceTree = "<group>"; };
 		BF5F99072593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5F993F2593F0D600E28356 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BF5F99452593F0FF00E28356 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		BF5F994B2593F13C00E28356 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +99,9 @@
 		BF5F98E22593DFEB00E28356 /* VeryUsefulToolstoRemember */ = {
 			isa = PBXGroup;
 			children = (
+				BF5F993C2593F09E00E28356 /* Sources */,
+				BF5F993B2593F07000E28356 /* Resources */,
 				BF5F98E32593DFEB00E28356 /* AppDelegate.swift */,
-				BF5F98EC2593DFF200E28356 /* Assets.xcassets */,
 				BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */,
 				BF5F98F12593DFF200E28356 /* Info.plist */,
 			);
@@ -117,6 +124,56 @@
 				BF5F99072593DFF200E28356 /* Info.plist */,
 			);
 			path = VeryUsefulToolstoRememberUITests;
+			sourceTree = "<group>";
+		};
+		BF5F993B2593F07000E28356 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F98EC2593DFF200E28356 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF5F993C2593F09E00E28356 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F994A2593F12800E28356 /* Extensions */,
+				BF5F993D2593F0B300E28356 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BF5F993D2593F0B300E28356 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F993E2593F0C500E28356 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF5F993E2593F0C500E28356 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F99442593F0F200E28356 /* Views */,
+				BF5F993F2593F0D600E28356 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BF5F99442593F0F200E28356 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F99452593F0FF00E28356 /* HomeContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF5F994A2593F12800E28356 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F994B2593F13C00E28356 /* ViewCode.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
+				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
+				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
