@@ -16,6 +16,8 @@
 		BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99452593F0FF00E28356 /* HomeContentView.swift */; };
 		BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F994B2593F13C00E28356 /* ViewCode.swift */; };
 		BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */; };
+		BF5F99582593F7AD00E28356 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */; };
+		BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		BF5F99452593F0FF00E28356 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		BF5F994B2593F13C00E28356 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		BF5F993B2593F07000E28356 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF5F99552593F79B00E28356 /* Fonts */,
 				BF5F98EC2593DFF200E28356 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -177,6 +182,15 @@
 				BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BF5F99552593F79B00E28356 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */,
+				BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */,
+				BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */,
 				BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */,
+				BF5F99582593F7AD00E28356 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
