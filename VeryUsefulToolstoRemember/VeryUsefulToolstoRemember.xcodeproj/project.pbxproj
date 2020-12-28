@@ -26,6 +26,7 @@
 		BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */; };
 		BFA32515259A310D007BF348 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32514259A310D007BF348 /* CustomLoadingView.swift */; };
 		BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */; };
+		BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCell.swift; sourceTree = "<group>"; };
 		BFA32514259A310D007BF348 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
 		BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingTableViewCell.swift; sourceTree = "<group>"; };
+		BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */,
 				BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */,
 				BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */,
+				BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
+				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
