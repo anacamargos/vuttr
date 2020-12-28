@@ -23,6 +23,8 @@
 		BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF62593F8B100BBE399 /* Metrics.swift */; };
 		BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */; };
 		BF9A60142594029600BBE399 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9A60162594029600BBE399 /* Localizable.strings */; };
+		BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */; };
+		BFA32515259A310D007BF348 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32514259A310D007BF348 /* CustomLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		BF9A601A2594029A00BBE399 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BF9A601B259402C500BBE399 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BF9A601C259402C500BBE399 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCell.swift; sourceTree = "<group>"; };
+		BFA32514259A310D007BF348 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		BF5F993C2593F09E00E28356 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BFA32513259A3100007BF348 /* Views */,
 				BF9A5FF52593F8A400BBE399 /* DesignSystem */,
 				BF5F994A2593F12800E28356 /* Extensions */,
 				BF5F993D2593F0B300E28356 /* Scenes */,
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5F99452593F0FF00E28356 /* HomeContentView.swift */,
+				BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +224,14 @@
 				BF9A5FF62593F8B100BBE399 /* Metrics.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		BFA32513259A3100007BF348 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFA32514259A310D007BF348 /* CustomLoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,10 +372,12 @@
 				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
 				BF145C422594059700BBAA52 /* Strings.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
+				BFA32515259A310D007BF348 /* CustomLoadingView.swift in Sources */,
 				BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */,
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
+				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 			);
