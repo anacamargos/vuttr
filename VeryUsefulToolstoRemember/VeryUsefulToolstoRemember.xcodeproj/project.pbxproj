@@ -30,6 +30,7 @@
 		BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */; };
 		BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32530259A64AA007BF348 /* UIColorExtensions.swift */; };
 		BFA32536259A6652007BF348 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32535259A6652007BF348 /* HomeModels.swift */; };
+		BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		BFA32530259A64AA007BF348 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		BFA32535259A6652007BF348 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */,
 				BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */,
 				BFA32530259A64AA007BF348 /* UIColorExtensions.swift */,
+				BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
+				BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 			);
