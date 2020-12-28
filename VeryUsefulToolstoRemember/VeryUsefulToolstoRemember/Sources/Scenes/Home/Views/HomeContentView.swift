@@ -7,9 +7,15 @@
 
 import UIKit
 
-protocol HomeContentViewProtocol: AnyObject {}
+protocol HomeContentViewProtocol: AnyObject {
+    func setupUsefulToolsState(_ viewState: Home.UsefulTools.ViewState)
+}
 
 final class HomeContentView: CodedView {
+    
+    // MARK: - Properties
+    
+    private var viewState: Home.UsefulTools.ViewState = .loading
     
     // MARK: - View Components
     
@@ -53,6 +59,9 @@ final class HomeContentView: CodedView {
         backgroundColor = .white
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(UsefulToolCell.self, forCellReuseIdentifier: UsefulToolCell.className)
         tableView.register(CustomLoadingTableViewCell.self, forCellReuseIdentifier: CustomLoadingTableViewCell.className)
     }
@@ -66,4 +75,38 @@ final class HomeContentView: CodedView {
 
 // MARK: - HomeContentViewProtocol
 
-extension HomeContentView: HomeContentViewProtocol {}
+extension HomeContentView: HomeContentViewProtocol {
+    
+    func setupUsefulToolsState(_ viewState: Home.UsefulTools.ViewState) {
+        self.viewState = viewState
+        tableView.reloadData()
+    }
+}
+
+// MARK: - UITableViewDelegate and UITableViewDataSource
+
+extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch viewState {
+        case .loading, .error:
+            return 1
+        case let .content(viewData):
+            return viewData.tools.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch viewState {
+        case let .content(viewData):
+            let cell: UsefulToolCell = tableView.reusableCell(for: UsefulToolCell.className, for: indexPath)
+            let currentTool = viewData.tools[indexPath.row]
+            cell.setupViewData(currentTool)
+            return cell
+        case .loading:
+            return getLoadingCell(for: indexPath)
+        case .error:
+            return .init()
+        }
+    }
+}
