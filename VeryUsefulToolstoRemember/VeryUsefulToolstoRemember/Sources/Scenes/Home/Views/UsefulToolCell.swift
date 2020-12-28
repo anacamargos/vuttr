@@ -12,6 +12,14 @@ final class UsefulToolCell: CodedTableViewCell {
     
     // MARK: - View Components
     
+    private let containerView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.darkestWhite.cgColor
+        return view
+    }()
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .subtitle, weight: .semibold)
@@ -42,22 +50,36 @@ final class UsefulToolCell: CodedTableViewCell {
     // MARK: - Override Methods
     
     override func addSubviews() {
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(descriptionLabel)
+        contentView.addSubview(containerView)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(descriptionLabel)
     }
     
     override func constrainSubviews() {
+        constrainContainerView()
         constrainTitleLabel()
         constrainDescriptionLabel()
     }
     
     // MARK: - Private Methods
     
-    private func constrainTitleLabel() {
-        titleLabel.anchor(
+    private func constrainContainerView() {
+        containerView.anchor(
             top: contentView.topAnchor,
             left: contentView.leftAnchor,
+            bottom: contentView.bottomAnchor,
             right: contentView.rightAnchor,
+            topConstant: Metrics.Spacing.small,
+            leftConstant: Metrics.Spacing.small,
+            rightConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constrainTitleLabel() {
+        titleLabel.anchor(
+            top: containerView.topAnchor,
+            left: containerView.leftAnchor,
+            right: containerView.rightAnchor,
             topConstant: Metrics.Spacing.small,
             leftConstant: Metrics.Spacing.small,
             rightConstant: Metrics.Spacing.small
@@ -68,7 +90,7 @@ final class UsefulToolCell: CodedTableViewCell {
         descriptionLabel.anchor(
             top: titleLabel.bottomAnchor,
             left: titleLabel.leftAnchor,
-            bottom: contentView.bottomAnchor,
+            bottom: containerView.bottomAnchor,
             right: titleLabel.rightAnchor,
             topConstant: Metrics.Spacing.tiny,
             bottomConstant: Metrics.Spacing.small
@@ -79,5 +101,12 @@ final class UsefulToolCell: CodedTableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
         contentView.isUserInteractionEnabled = true
+    }
+    
+    // MARK: - Public Methods
+    
+    func setupViewData(_ viewData: Home.UsefulTools.Tool) {
+        titleLabel.text = viewData.title
+        descriptionLabel.text = viewData.description
     }
 }

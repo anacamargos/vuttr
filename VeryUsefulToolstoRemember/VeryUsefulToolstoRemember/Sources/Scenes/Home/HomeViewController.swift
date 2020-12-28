@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeDisplayLogic: AnyObject {
+    func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState)
+}
+
 final class HomeViewController: UIViewController {
     
     // MARK: - View Components
@@ -18,6 +22,12 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
+            let tool = Home.UsefulTools.Tool(title: "Notion", description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized", tags: [])
+            let viewData = Home.UsefulTools.ViewData(tools: [tool, tool, tool])
+            self.displayUsefulToolsViewState(.content(viewData))
+        }
     }
     
     override func loadView() {
@@ -45,6 +55,15 @@ final class HomeViewController: UIViewController {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = attributes
         navigationItem.searchController = search
+    }
+}
+
+// MARK: - HomeDisplayLogic
+
+extension HomeViewController: HomeDisplayLogic {
+    
+    func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState) {
+        contentView?.setupUsefulToolsState(viewState)
     }
 }
 
