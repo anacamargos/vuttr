@@ -9,12 +9,6 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    // MARK: - Constants
-    
-    private enum Constants {
-        static let searchFieldKey: String = "searchField"
-    }
-    
     // MARK: - View Components
     
     weak var contentView: HomeContentViewProtocol?
@@ -32,16 +26,26 @@ final class HomeViewController: UIViewController {
         contentView = view as? HomeContentViewProtocol
     }
     
+    // MARK: - Private Methods
+    
     private func configureNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true
         title = L10n.Home.vuttr.uppercased()
         navigationController?.navigationBar.configure()
-        
+        configureSearchBar()
+    }
+    
+    private func configureSearchBar() {
         let search = UISearchController(searchResultsController: nil)
-        if let textfield = search.searchBar.value(forKey: Constants.searchFieldKey) as? UITextField {
-            textfield.placeholder = L10n.Home.search
-        }
+        search.delegate = self
+        let placeholderAppearance = UILabel.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        placeholderAppearance.font = .themeFont(for: .body, weight: .regular)
+        let attributes = [NSAttributedString.Key.font : UIFont.themeFont(for: .body, weight: .regular)]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = attributes
         navigationItem.searchController = search
     }
 }
+
+extension HomeViewController: UISearchControllerDelegate {}
