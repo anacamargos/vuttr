@@ -53,6 +53,14 @@ final class HomeContentView: CodedView {
         backgroundColor = .white
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
+        tableView.register(UsefulToolCell.self, forCellReuseIdentifier: UsefulToolCell.className)
+        tableView.register(CustomLoadingTableViewCell.self, forCellReuseIdentifier: CustomLoadingTableViewCell.className)
+    }
+    
+    private func getLoadingCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell: CustomLoadingTableViewCell = tableView.reusableCell(for: CustomLoadingTableViewCell.className, for: indexPath)
+        cell.startLoading()
+        return cell
     }
 }
 
