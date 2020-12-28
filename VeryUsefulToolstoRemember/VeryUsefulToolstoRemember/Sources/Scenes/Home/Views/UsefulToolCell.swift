@@ -10,13 +10,25 @@ import UIKit
 
 final class UsefulToolCell: CodedTableViewCell {
     
+    // MARK: - View Metris
+    
+    private enum ViewMetrics {
+        static let cornerRadius: CGFloat = 5
+        static let borderWidth: CGFloat = 1
+        static let shadowAlpha: Float = 0.05
+        static let shadowY: CGFloat = 5
+        static let shadowBlur: CGFloat = 7
+    }
+    
     // MARK: - View Components
     
     private let containerView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 5
-        view.layer.borderWidth = 1
+        view.layer.cornerRadius = ViewMetrics.cornerRadius
+        view.layer.borderWidth = ViewMetrics.borderWidth
         view.layer.borderColor = UIColor.darkestWhite.cgColor
+        view.backgroundColor = .white
+        view.applyShadow(color: .black, alpha: ViewMetrics.shadowAlpha, x: .zero, y: ViewMetrics.shadowY, blur: ViewMetrics.shadowBlur, spread: .zero)
         return view
     }()
     
