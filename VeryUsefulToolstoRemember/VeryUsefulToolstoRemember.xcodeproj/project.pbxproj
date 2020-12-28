@@ -28,6 +28,7 @@
 		BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */; };
 		BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */; };
 		BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */; };
+		BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32530259A64AA007BF348 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingTableViewCell.swift; sourceTree = "<group>"; };
 		BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		BFA32530259A64AA007BF348 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */,
 				BFA32526259A31A0007BF348 /* NSObjectExtensions.swift */,
 				BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */,
+				BFA32530259A64AA007BF348 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
+				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,

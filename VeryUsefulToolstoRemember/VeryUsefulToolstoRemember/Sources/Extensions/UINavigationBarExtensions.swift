@@ -13,7 +13,7 @@ extension UINavigationBar {
         smallTitleSize: Metrics.FontSize = .subtitle,
         largeTitleSize: Metrics.FontSize = .header,
         titleWeight: UIFont.SourceSansPro = .semibold,
-        titleColor: UIColor = .black
+        titleColor: UIColor = .ink
     ) {
         titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.themeFont(for: smallTitleSize, weight: titleWeight),
