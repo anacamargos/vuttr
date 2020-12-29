@@ -1,10 +1,3 @@
 language: swift
 osx_image: xcode12.0
-xcode_workspace: VeryUsefulToolstoRemember.xcworkspace 
-xcode_scheme: VeryUsefulToolstoRemember
-xcode_destination: platform=iOS Simulator,OS=11.0.1,name=iPhone 8
-podfile: VeryUsefulToolstoRemember/Podfile
-before_install:
-  - gem install cocoapods --pre
-  - cd VeryUsefulToolstoRemember; pod install --repo-update
-script: xcodebuild clean build test -workspace VeryUsefulToolstoRemember.xcworkspace -scheme "VeryUsefulToolstoRemember" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0.1'
+script: xcodebuild clean build test -project VeryUsefulToolstoRemember/VeryUsefulToolstoRemember.xcodeproj -scheme "VeryUsefulToolstoRemember" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0.1'
