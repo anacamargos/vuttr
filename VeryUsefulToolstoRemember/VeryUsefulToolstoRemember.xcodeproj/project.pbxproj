@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075429093E1C87E9F23DAB08 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */; };
+		5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */; };
+		685CD0AC4A5068AE3921BBC2 /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
@@ -51,6 +54,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24E8B14668CED8370EBB820B /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRememberTests.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests.release.xcconfig"; sourceTree = "<group>"; };
+		3BF4549CA45EF1271976A396 /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CCEC113E8720A6E94220D67 /* Pods-VeryUsefulToolstoRemember.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.debug.xcconfig"; sourceTree = "<group>"; };
+		55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRememberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B10A8E32C2198266105F8D1 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.release.xcconfig"; sourceTree = "<group>"; };
+		82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRemember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		BFA32530259A64AA007BF348 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		BFA32535259A6652007BF348 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E798083C619592B47EC221FD /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685CD0AC4A5068AE3921BBC2 /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075429093E1C87E9F23DAB08 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +120,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043D6DDD207810BE1CAC27C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CCEC113E8720A6E94220D67 /* Pods-VeryUsefulToolstoRemember.debug.xcconfig */,
+				7B10A8E32C2198266105F8D1 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */,
+				B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */,
+				E798083C619592B47EC221FD /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig */,
+				3BF4549CA45EF1271976A396 /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */,
+				24E8B14668CED8370EBB820B /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		05A3AAA5DB8493C0AE5E0AC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */,
+				662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */,
+				55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF5F98D72593DFEB00E28356 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +158,8 @@
 				BF5F98F92593DFF200E28356 /* VeryUsefulToolstoRememberTests */,
 				BF5F99042593DFF200E28356 /* VeryUsefulToolstoRememberUITests */,
 				BF5F98E12593DFEB00E28356 /* Products */,
+				043D6DDD207810BE1CAC27C0 /* Pods */,
+				05A3AAA5DB8493C0AE5E0AC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5F990A2593DFF200E28356 /* Build configuration list for PBXNativeTarget "VeryUsefulToolstoRemember" */;
 			buildPhases = (
+				54B37A3C7553AD06997E3242 /* [CP] Check Pods Manifest.lock */,
 				BF5F98DC2593DFEB00E28356 /* Sources */,
 				BF5F98DD2593DFEB00E28356 /* Frameworks */,
 				BF5F98DE2593DFEB00E28356 /* Resources */,
@@ -276,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5F990D2593DFF200E28356 /* Build configuration list for PBXNativeTarget "VeryUsefulToolstoRememberTests" */;
 			buildPhases = (
+				18D1C9816346BDB2B8FB0BBD /* [CP] Check Pods Manifest.lock */,
 				BF5F98F22593DFF200E28356 /* Sources */,
 				BF5F98F32593DFF200E28356 /* Frameworks */,
 				BF5F98F42593DFF200E28356 /* Resources */,
+				F901314D6AEB15F107A76E5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5F99102593DFF200E28356 /* Build configuration list for PBXNativeTarget "VeryUsefulToolstoRememberUITests" */;
 			buildPhases = (
+				5580EFB8B8E05FD37E1774B9 /* [CP] Check Pods Manifest.lock */,
 				BF5F98FD2593DFF200E28356 /* Sources */,
 				BF5F98FE2593DFF200E28356 /* Frameworks */,
 				BF5F98FF2593DFF200E28356 /* Resources */,
@@ -381,6 +426,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18D1C9816346BDB2B8FB0BBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeryUsefulToolstoRememberTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54B37A3C7553AD06997E3242 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeryUsefulToolstoRemember-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5580EFB8B8E05FD37E1774B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F901314D6AEB15F107A76E5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF5F98DC2593DFEB00E28356 /* Sources */ = {
@@ -582,6 +713,7 @@
 		};
 		BF5F990B2593DFF200E28356 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CCEC113E8720A6E94220D67 /* Pods-VeryUsefulToolstoRemember.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -602,6 +734,7 @@
 		};
 		BF5F990C2593DFF200E28356 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B10A8E32C2198266105F8D1 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -622,6 +755,7 @@
 		};
 		BF5F990E2593DFF200E28356 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF4549CA45EF1271976A396 /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,6 +778,7 @@
 		};
 		BF5F990F2593DFF200E28356 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E8B14668CED8370EBB820B /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -666,6 +801,7 @@
 		};
 		BF5F99112593DFF200E28356 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -686,6 +822,7 @@
 		};
 		BF5F99122593DFF200E28356 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E798083C619592B47EC221FD /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
