@@ -14,3 +14,11 @@ target 'VeryUsefulToolstoRemember' do
   end
 
 end
+
+pre_install do |installer|
+  installer.analysis_result.specifications.each do |s|
+    if s.name == 'SnapshotTesting'
+      s.swift_version = '5.0'
+    end
+  end
+end
