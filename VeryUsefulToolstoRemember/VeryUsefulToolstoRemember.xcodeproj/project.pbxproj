@@ -11,6 +11,7 @@
 		5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */; };
 		685CD0AC4A5068AE3921BBC2 /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */; };
 		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
+		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRemember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewTests.swift; sourceTree = "<group>"; };
+		BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCellTests.swift; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */,
+				BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
+				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
