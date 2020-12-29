@@ -1,3 +1,4 @@
+os: osx
+osx_image: xcode11.4
 language: swift
-osx_image: xcode12.0
 script: xcodebuild clean build test -project VeryUsefulToolstoRemember/VeryUsefulToolstoRemember.xcodeproj -scheme "VeryUsefulToolstoRemember" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0.1'
