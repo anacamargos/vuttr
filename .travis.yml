@@ -4,4 +4,3 @@ osx_image: xcode12.3
 script: xcodebuild clean build test -workspace VeryUsefulToolstoRemember/VeryUsefulToolstoRemember.xcworkspace -scheme "VeryUsefulToolstoRemember" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation),OS=14.3'
 before_install:
   - gem install cocoapods --pre
-  - pod install --repo-update
