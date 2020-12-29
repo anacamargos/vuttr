@@ -1,6 +1,6 @@
 language: swift
 osx_image: xcode12.0
-xcode_workspace: VeryUsefulToolstoRemember/VeryUsefulToolstoRemember.xcworkspace 
+xcode_workspace: VeryUsefulToolstoRemember.xcworkspace 
 xcode_scheme: VeryUsefulToolstoRemember
 xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone SE (2nd generation)
 podfile: VeryUsefulToolstoRemember/Podfile
