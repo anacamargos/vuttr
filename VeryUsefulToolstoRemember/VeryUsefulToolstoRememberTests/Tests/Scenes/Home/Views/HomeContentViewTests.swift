@@ -7,16 +7,16 @@
 //
 
 import XCTest
-import SnapshotTesting
+//import SnapshotTesting
 @testable import VeryUsefulToolstoRemember
 
 final class HomeContentViewTests: XCTestCase {
 
-    func test_homeContentView_loadingState() {
-        let view = makeView()
-        view.setupUsefulToolsState(.loading)
-        assertSnapshot(matching: view, as: .image)
-    }
+//    func test_homeContentView_loadingState() {
+//        let view = makeView()
+//        view.setupUsefulToolsState(.loading)
+//        assertSnapshot(matching: view, as: .image)
+//    }
     
     // MARK: - Test Helpers
     

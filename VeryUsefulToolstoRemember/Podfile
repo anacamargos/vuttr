@@ -10,15 +10,6 @@ target 'VeryUsefulToolstoRemember' do
   target 'VeryUsefulToolstoRememberTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SnapshotTesting'
-  end
-
-end
-
-pre_install do |installer|
-  installer.analysis_result.specifications.each do |s|
-    if s.name == 'SnapshotTesting'
-      s.swift_version = '5.0'
-    end
+    # pod 'SnapshotTesting', '~> 1.8.1'
   end
 end

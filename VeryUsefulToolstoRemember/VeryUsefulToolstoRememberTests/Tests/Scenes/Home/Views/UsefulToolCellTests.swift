@@ -7,16 +7,16 @@
 //
 
 import XCTest
-import SnapshotTesting
+//import SnapshotTesting
 @testable import VeryUsefulToolstoRemember
 
 final class UsefulToolCellTests: XCTestCase {
 
-    func test_usefulToolCell() {
-        let view = makeView()
-        view.setupViewData(.mock)
-        assertSnapshot(matching: view, as: .image)
-    }
+//    func test_usefulToolCell() {
+//        let view = makeView()
+//        view.setupViewData(.mock)
+//        assertSnapshot(matching: view, as: .image)
+//    }
     
     // MARK: - Test Helpers
     
