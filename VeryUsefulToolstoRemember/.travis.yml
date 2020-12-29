@@ -1,0 +1,12 @@
+language: swift
+osx_image: xcode12.0
+xcode_workspace: VeryUsefulToolstoRemember.xcworkspace 
+xcode_scheme: VeryUsefulToolstoRemember
+xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone SE (2nd generation)
+podfile: Podfile
+before_install:
+  - gem install cocoapods --pre
+  - pod install --repo-update
+
+# osx_image: xcode12.0
+# script: xcodebuild clean build test -workspace VeryUsefulToolstoRemember/VeryUsefulToolstoRemember.xcworkspace -scheme "VeryUsefulToolstoRemember" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation),OS=14.0'
