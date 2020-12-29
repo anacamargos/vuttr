@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		075429093E1C87E9F23DAB08 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */; };
 		5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */; };
 		685CD0AC4A5068AE3921BBC2 /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */; };
+		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
-		BF5F98FB2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98FA2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift */; };
 		BF5F99062593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */; };
 		BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F993F2593F0D600E28356 /* HomeViewController.swift */; };
 		BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99452593F0FF00E28356 /* HomeContentView.swift */; };
@@ -62,6 +62,7 @@
 		7B10A8E32C2198266105F8D1 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.release.xcconfig"; sourceTree = "<group>"; };
 		82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRemember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewTests.swift; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		BF5F98EF2593DFF200E28356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5F98F12593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5F98F62593DFF200E28356 /* VeryUsefulToolstoRememberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryUsefulToolstoRememberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF5F98FA2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeryUsefulToolstoRememberTests.swift; sourceTree = "<group>"; };
 		BF5F98FC2593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5F99012593DFF200E28356 /* VeryUsefulToolstoRememberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryUsefulToolstoRememberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeryUsefulToolstoRememberUITests.swift; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 				3BF4549CA45EF1271976A396 /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */,
 				24E8B14668CED8370EBB820B /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,6 +148,38 @@
 				55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF03B7A9259B6C5600DF170A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF03B7AA259B6C7800DF170A /* Scenes */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BF03B7AA259B6C7800DF170A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF03B7AB259B6C7F00DF170A /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF03B7AB259B6C7F00DF170A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF03B7AC259B6C8400DF170A /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BF03B7AC259B6C8400DF170A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BF5F98D72593DFEB00E28356 = {
@@ -188,7 +219,7 @@
 		BF5F98F92593DFF200E28356 /* VeryUsefulToolstoRememberTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF5F98FA2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift */,
+				BF03B7A9259B6C5600DF170A /* Tests */,
 				BF5F98FC2593DFF200E28356 /* Info.plist */,
 			);
 			path = VeryUsefulToolstoRememberTests;
@@ -542,7 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5F98FB2593DFF200E28356 /* VeryUsefulToolstoRememberTests.swift in Sources */,
+				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
