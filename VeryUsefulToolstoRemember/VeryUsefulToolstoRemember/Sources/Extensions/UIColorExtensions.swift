@@ -17,4 +17,8 @@ extension UIColor {
     @nonobjc class var darkestWhite: UIColor {
         .init(red: 235.0 / 255.0, green: 234.0 / 255.0, blue: 237.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var green: UIColor {
+        .init(red: 18.0 / 255.0, green: 219.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+    }
 }
