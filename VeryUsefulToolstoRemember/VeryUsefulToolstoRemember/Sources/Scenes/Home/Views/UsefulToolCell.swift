@@ -18,6 +18,7 @@ final class UsefulToolCell: CodedTableViewCell {
         static let shadowAlpha: Float = 0.05
         static let shadowY: CGFloat = 5
         static let shadowBlur: CGFloat = 7
+        static let iconSmallestSize: CGFloat = 12
     }
     
     // MARK: - View Components
@@ -47,6 +48,12 @@ final class UsefulToolCell: CodedTableViewCell {
         return label
     }()
     
+    private let closeIcon: UIButton = {
+        let button = UIButton()
+        button.setImage(.close, for: .normal)
+        return button
+    }()
+    
     // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -65,12 +72,14 @@ final class UsefulToolCell: CodedTableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionLabel)
+        containerView.addSubview(closeIcon)
     }
     
     override func constrainSubviews() {
         constrainContainerView()
         constrainTitleLabel()
         constrainDescriptionLabel()
+        constrainCloseIcon()
     }
     
     // MARK: - Private Methods
@@ -87,6 +96,17 @@ final class UsefulToolCell: CodedTableViewCell {
         )
     }
     
+    private func constrainCloseIcon() {
+        closeIcon.anchor(
+            top: containerView.topAnchor,
+            right: containerView.rightAnchor,
+            topConstant: Metrics.Spacing.small,
+            rightConstant: Metrics.Spacing.small,
+            widthConstant: ViewMetrics.iconSmallestSize,
+            heightConstant: ViewMetrics.iconSmallestSize
+        )
+    }
+    
     private func constrainTitleLabel() {
         titleLabel.anchor(
             top: containerView.topAnchor,
@@ -94,7 +114,7 @@ final class UsefulToolCell: CodedTableViewCell {
             right: containerView.rightAnchor,
             topConstant: Metrics.Spacing.small,
             leftConstant: Metrics.Spacing.small,
-            rightConstant: Metrics.Spacing.small
+            rightConstant: Metrics.Spacing.small + ViewMetrics.iconSmallestSize + Metrics.Spacing.tiny
         )
     }
     
@@ -103,9 +123,10 @@ final class UsefulToolCell: CodedTableViewCell {
             top: titleLabel.bottomAnchor,
             left: titleLabel.leftAnchor,
             bottom: containerView.bottomAnchor,
-            right: titleLabel.rightAnchor,
+            right: containerView.rightAnchor,
             topConstant: Metrics.Spacing.tiny,
-            bottomConstant: Metrics.Spacing.small
+            bottomConstant: Metrics.Spacing.small,
+            rightConstant: Metrics.Spacing.small
         )
     }
     
