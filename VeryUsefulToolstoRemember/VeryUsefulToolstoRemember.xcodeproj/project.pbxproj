@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,7 @@
 		BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32530259A64AA007BF348 /* UIColorExtensions.swift */; };
 		BFA32536259A6652007BF348 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32535259A6652007BF348 /* HomeModels.swift */; };
 		BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */; };
+		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		C4D200EC7614BAC4B658BD3E /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD681DD0B73507D55DEF884A /* Pods_VeryUsefulToolstoRemember.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		BFA32530259A64AA007BF348 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		BFA32535259A6652007BF348 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		C399281D9994363B194483F3 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.release.xcconfig"; sourceTree = "<group>"; };
 		ECAF33C5A296DCBBC19DE99D /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +125,6 @@
 				ECAF33C5A296DCBBC19DE99D /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */,
 				15C4DB8D4EC186AF794EB4F3 /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +262,7 @@
 				BFA3252B259A321D007BF348 /* UITableViewExtensions.swift */,
 				BFA32530259A64AA007BF348 /* UIColorExtensions.swift */,
 				BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */,
+				BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -472,6 +474,7 @@
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
+				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
