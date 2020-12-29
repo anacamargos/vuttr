@@ -13,8 +13,4 @@ target 'VeryUsefulToolstoRemember' do
     pod 'SnapshotTesting'
   end
 
-  target 'VeryUsefulToolstoRememberUITests' do
-    # Pods for testing
-  end
-
 end

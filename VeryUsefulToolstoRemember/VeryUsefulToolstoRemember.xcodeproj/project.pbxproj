@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		075429093E1C87E9F23DAB08 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B0E261A4E78769AC748804 /* Pods_VeryUsefulToolstoRememberTests.framework */; };
-		5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C080BABBF8861B5A3EC45 /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework */; };
 		685CD0AC4A5068AE3921BBC2 /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA4A01D58F9A60B38558F9 /* Pods_VeryUsefulToolstoRemember.framework */; };
 		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
 		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
@@ -16,7 +15,6 @@
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
-		BF5F99062593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */; };
 		BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F993F2593F0D600E28356 /* HomeViewController.swift */; };
 		BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99452593F0FF00E28356 /* HomeContentView.swift */; };
 		BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F994B2593F13C00E28356 /* ViewCode.swift */; };
@@ -45,13 +43,6 @@
 			remoteGlobalIDString = BF5F98DF2593DFEB00E28356;
 			remoteInfo = VeryUsefulToolstoRemember;
 		};
-		BF5F99022593DFF200E28356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF5F98D82593DFEB00E28356 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF5F98DF2593DFEB00E28356;
-			remoteInfo = VeryUsefulToolstoRemember;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -73,9 +64,6 @@
 		BF5F98F12593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5F98F62593DFF200E28356 /* VeryUsefulToolstoRememberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryUsefulToolstoRememberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98FC2593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF5F99012593DFF200E28356 /* VeryUsefulToolstoRememberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeryUsefulToolstoRememberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeryUsefulToolstoRememberUITests.swift; sourceTree = "<group>"; };
-		BF5F99072593DFF200E28356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5F993F2593F0D600E28356 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BF5F99452593F0FF00E28356 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		BF5F994B2593F13C00E28356 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
@@ -115,14 +103,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				075429093E1C87E9F23DAB08 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF5F98FE2593DFF200E28356 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CFCD801AD745BA8EB4D784A /* Pods_VeryUsefulToolstoRemember_VeryUsefulToolstoRememberUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +170,6 @@
 			children = (
 				BF5F98E22593DFEB00E28356 /* VeryUsefulToolstoRemember */,
 				BF5F98F92593DFF200E28356 /* VeryUsefulToolstoRememberTests */,
-				BF5F99042593DFF200E28356 /* VeryUsefulToolstoRememberUITests */,
 				BF5F98E12593DFEB00E28356 /* Products */,
 				043D6DDD207810BE1CAC27C0 /* Pods */,
 				05A3AAA5DB8493C0AE5E0AC5 /* Frameworks */,
@@ -202,7 +181,6 @@
 			children = (
 				BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */,
 				BF5F98F62593DFF200E28356 /* VeryUsefulToolstoRememberTests.xctest */,
-				BF5F99012593DFF200E28356 /* VeryUsefulToolstoRememberUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,15 +204,6 @@
 				BF5F98FC2593DFF200E28356 /* Info.plist */,
 			);
 			path = VeryUsefulToolstoRememberTests;
-			sourceTree = "<group>";
-		};
-		BF5F99042593DFF200E28356 /* VeryUsefulToolstoRememberUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BF5F99052593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift */,
-				BF5F99072593DFF200E28356 /* Info.plist */,
-			);
-			path = VeryUsefulToolstoRememberUITests;
 			sourceTree = "<group>";
 		};
 		BF5F993B2593F07000E28356 /* Resources */ = {
@@ -368,25 +337,6 @@
 			productReference = BF5F98F62593DFF200E28356 /* VeryUsefulToolstoRememberTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF5F99002593DFF200E28356 /* VeryUsefulToolstoRememberUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF5F99102593DFF200E28356 /* Build configuration list for PBXNativeTarget "VeryUsefulToolstoRememberUITests" */;
-			buildPhases = (
-				5580EFB8B8E05FD37E1774B9 /* [CP] Check Pods Manifest.lock */,
-				BF5F98FD2593DFF200E28356 /* Sources */,
-				BF5F98FE2593DFF200E28356 /* Frameworks */,
-				BF5F98FF2593DFF200E28356 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF5F99032593DFF200E28356 /* PBXTargetDependency */,
-			);
-			name = VeryUsefulToolstoRememberUITests;
-			productName = VeryUsefulToolstoRememberUITests;
-			productReference = BF5F99012593DFF200E28356 /* VeryUsefulToolstoRememberUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -401,10 +351,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					BF5F98F52593DFF200E28356 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = BF5F98DF2593DFEB00E28356;
-					};
-					BF5F99002593DFF200E28356 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = BF5F98DF2593DFEB00E28356;
 					};
@@ -427,7 +373,6 @@
 			targets = (
 				BF5F98DF2593DFEB00E28356 /* VeryUsefulToolstoRemember */,
 				BF5F98F52593DFF200E28356 /* VeryUsefulToolstoRememberTests */,
-				BF5F99002593DFF200E28356 /* VeryUsefulToolstoRememberUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,13 +391,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF5F98F42593DFF200E28356 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF5F98FF2593DFF200E28356 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -500,28 +438,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VeryUsefulToolstoRemember-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5580EFB8B8E05FD37E1774B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -581,14 +497,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF5F98FD2593DFF200E28356 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF5F99062593DFF200E28356 /* VeryUsefulToolstoRememberUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -596,11 +504,6 @@
 			isa = PBXTargetDependency;
 			target = BF5F98DF2593DFEB00E28356 /* VeryUsefulToolstoRemember */;
 			targetProxy = BF5F98F72593DFF200E28356 /* PBXContainerItemProxy */;
-		};
-		BF5F99032593DFF200E28356 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF5F98DF2593DFEB00E28356 /* VeryUsefulToolstoRemember */;
-			targetProxy = BF5F99022593DFF200E28356 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -834,48 +737,6 @@
 			};
 			name = Release;
 		};
-		BF5F99112593DFF200E28356 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B706BDA65F937574B66F9A1F /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
-				INFOPLIST_FILE = VeryUsefulToolstoRememberUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ana.VeryUsefulToolstoRememberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VeryUsefulToolstoRemember;
-			};
-			name = Debug;
-		};
-		BF5F99122593DFF200E28356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E798083C619592B47EC221FD /* Pods-VeryUsefulToolstoRemember-VeryUsefulToolstoRememberUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
-				INFOPLIST_FILE = VeryUsefulToolstoRememberUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ana.VeryUsefulToolstoRememberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VeryUsefulToolstoRemember;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -902,15 +763,6 @@
 			buildConfigurations = (
 				BF5F990E2593DFF200E28356 /* Debug */,
 				BF5F990F2593DFF200E28356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF5F99102593DFF200E28356 /* Build configuration list for PBXNativeTarget "VeryUsefulToolstoRememberUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF5F99112593DFF200E28356 /* Debug */,
-				BF5F99122593DFF200E28356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
