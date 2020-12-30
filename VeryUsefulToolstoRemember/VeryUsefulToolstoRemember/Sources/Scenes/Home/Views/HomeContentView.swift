@@ -13,6 +13,12 @@ protocol HomeContentViewProtocol: AnyObject {
 
 final class HomeContentView: CodedView {
     
+    // MARK: - Constants
+    
+    private enum ViewMetrics {
+        static let addViewSize: CGFloat = 56
+    }
+    
     // MARK: - Properties
     
     private var viewState: Home.UsefulTools.ViewState = .loading
@@ -22,7 +28,19 @@ final class HomeContentView: CodedView {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
+        tableView.contentInset = .init(top: .zero, left: .zero, bottom: Metrics.Spacing.medium, right: .zero)
         return tableView
+    }()
+    
+    private let addView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        return view
+    }()
+    
+    private let addImage: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
     }()
     
     // MARK: - Initializers
@@ -43,16 +61,30 @@ final class HomeContentView: CodedView {
     
     override func addSubviews() {
         addSubview(tableView)
+        addSubview(addView)
     }
     
     override func constrainSubviews() {
         constrainTableView()
+        constrainAddButton()
     }
     
     // MARK: - Private Methods
     
     private func constrainTableView() {
         tableView.fillSuperview()
+    }
+    
+    private func constrainAddButton() {
+        addView.anchor(
+            bottom: bottomAnchor,
+            right: rightAnchor,
+            bottomConstant: Metrics.Spacing.base,
+            rightConstant: Metrics.Spacing.base,
+            widthConstant: ViewMetrics.addViewSize,
+            heightConstant: ViewMetrics.addViewSize
+        )
+        addView.layer.cornerRadius = 0.5 * ViewMetrics.addViewSize
     }
     
     private func configureView() {
