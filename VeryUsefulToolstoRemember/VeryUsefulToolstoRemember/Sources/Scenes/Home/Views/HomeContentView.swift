@@ -17,6 +17,7 @@ final class HomeContentView: CodedView {
     
     private enum ViewMetrics {
         static let addViewSize: CGFloat = 56
+        static let iconSmallSize: CGFloat = 20
     }
     
     // MARK: - Properties
@@ -40,6 +41,7 @@ final class HomeContentView: CodedView {
     
     private let addImage: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = .addIcon
         return imageView
     }()
     
@@ -62,11 +64,13 @@ final class HomeContentView: CodedView {
     override func addSubviews() {
         addSubview(tableView)
         addSubview(addView)
+        addView.addSubview(addImage)
     }
     
     override func constrainSubviews() {
         constrainTableView()
         constrainAddButton()
+        constrainAddImage()
     }
     
     // MARK: - Private Methods
@@ -85,6 +89,15 @@ final class HomeContentView: CodedView {
             heightConstant: ViewMetrics.addViewSize
         )
         addView.layer.cornerRadius = 0.5 * ViewMetrics.addViewSize
+    }
+    
+    private func constrainAddImage() {
+        addImage.anchor(
+            widthConstant: ViewMetrics.iconSmallSize,
+            heightConstant: ViewMetrics.iconSmallSize
+        )
+        addImage.centerXAnchor.constraint(equalTo: addView.centerXAnchor).isActive = true
+        addImage.centerYAnchor.constraint(equalTo: addView.centerYAnchor).isActive = true
     }
     
     private func configureView() {
