@@ -18,10 +18,16 @@ final class HomeContentViewTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
     
+    func test_homeContentView_contentState() {
+        let view = makeView()
+        view.setupUsefulToolsState(.content(.init(tools: [.mock, .mock, .mock])))
+        assertSnapshot(matching: view, as: .image)
+    }
+    
     // MARK: - Test Helpers
     
     private func makeView() -> HomeContentView {
-        return .init(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 400)))
+        return .init(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 500)))
     }
 
 }
