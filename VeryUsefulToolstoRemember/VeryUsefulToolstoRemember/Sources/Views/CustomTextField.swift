@@ -96,6 +96,7 @@ final class CustomTextField: CodedView {
         label.textColor = .red
         label.isHidden = true
         label.numberOfLines = .zero
+        label.textAlignment = .right
         return label
     }()
 
@@ -150,6 +151,7 @@ final class CustomTextField: CodedView {
 
     func presentError() {
         inputContainer.layer.borderColor = UIColor.red.cgColor
+        inputContainer.backgroundColor = .mostLightestRed
         inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = false
         hapticGenerator.impactOccurred()
@@ -157,6 +159,7 @@ final class CustomTextField: CodedView {
 
     func resetView() {
         inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
+        inputContainer.backgroundColor = .darkerWhite
         inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = true
     }
