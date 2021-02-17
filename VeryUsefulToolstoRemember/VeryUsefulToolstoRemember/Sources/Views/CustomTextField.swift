@@ -119,18 +119,11 @@ final class CustomTextField: CodedView {
 
     private let hapticGenerator = UIImpactFeedbackGenerator(style: .light)
 
-    // MARK: - Properties
-
-    weak var textFieldDelegate: UITextFieldDelegate? {
-        didSet {
-            textInput.delegate = textFieldDelegate
-        }
-    }
-
     // MARK: - Initialziers
 
     init() {
         super.init(frame: .zero)
+        configureView()
     }
 
     @available(*, unavailable)
@@ -152,7 +145,6 @@ final class CustomTextField: CodedView {
     func presentError() {
         inputContainer.layer.borderColor = UIColor.red.cgColor
         inputContainer.backgroundColor = .mostLightestRed
-        inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = false
         hapticGenerator.impactOccurred()
     }
@@ -160,11 +152,14 @@ final class CustomTextField: CodedView {
     func resetView() {
         inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
         inputContainer.backgroundColor = .darkerWhite
-        inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = true
     }
     
     // MARK: - Private Methods
+    
+    private func configureView() {
+        textField.delegate = self
+    }
 
     // MARK: - CodedView
 
@@ -194,3 +189,15 @@ final class CustomTextField: CodedView {
     }
 }
 
+extension CustomTextField: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        inputContainer.layer.borderColor = UIColor.mostDarkestWhite.cgColor
+        inputContainer.backgroundColor = .darkestWhite
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
+        inputContainer.backgroundColor = .darkerWhite
+    }
+}
