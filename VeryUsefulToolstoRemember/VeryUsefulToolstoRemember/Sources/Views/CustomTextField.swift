@@ -101,7 +101,7 @@ final class CustomTextField: CodedView {
 
     private lazy var inputContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .darkerWhite
         view.layer.cornerRadius = ViewMetrics.cornerRadius
         view.clipsToBounds = true
         view.layer.borderColor = UIColor.darkestWhite.cgColor
@@ -120,7 +120,7 @@ final class CustomTextField: CodedView {
 
     // MARK: - Properties
 
-    public weak var textFieldDelegate: UITextFieldDelegate? {
+    weak var textFieldDelegate: UITextFieldDelegate? {
         didSet {
             textInput.delegate = textFieldDelegate
         }
@@ -128,7 +128,7 @@ final class CustomTextField: CodedView {
 
     // MARK: - Initialziers
 
-    public init() {
+    init() {
         super.init(frame: .zero)
     }
 
@@ -139,7 +139,7 @@ final class CustomTextField: CodedView {
 
     // MARK: - Internal methods
 
-    public func setLoading(_ isLoading: Bool) {
+    func setLoading(_ isLoading: Bool) {
         if isLoading {
             textInput.endEditing(true)
             textInput.isUserInteractionEnabled = false
@@ -148,14 +148,14 @@ final class CustomTextField: CodedView {
         }
     }
 
-    public func presentError() {
+    func presentError() {
         inputContainer.layer.borderColor = UIColor.red.cgColor
         inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = false
         hapticGenerator.impactOccurred()
     }
 
-    public func resetView() {
+    func resetView() {
         inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
         inputContainer.layer.borderWidth = ViewMetrics.borderWidth
         errorMessageLabel.isHidden = true
@@ -165,14 +165,14 @@ final class CustomTextField: CodedView {
 
     // MARK: - CodedView
 
-    override public func addSubviews() {
+    override func addSubviews() {
         addSubview(container)
         container.addArrangedSubview(inputContainer)
         container.addArrangedSubview(errorMessageLabel)
         inputContainer.addSubview(textInput)
     }
 
-    override public func constrainSubviews() {
+    override func constrainSubviews() {
         container.layout(using: [
             container.topAnchor.constraint(equalTo: topAnchor),
             container.bottomAnchor.constraint(equalTo: bottomAnchor),
