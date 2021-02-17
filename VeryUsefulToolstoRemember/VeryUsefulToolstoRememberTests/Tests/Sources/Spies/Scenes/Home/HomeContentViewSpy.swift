@@ -10,6 +10,7 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class HomeContentViewSpy: HomeContentViewProtocol {
+    
     private(set) var setupUsefulToolsStatePassedViewStates = [Home.UsefulTools.ViewState]()
     
     func setupUsefulToolsState(_ viewState: Home.UsefulTools.ViewState) {

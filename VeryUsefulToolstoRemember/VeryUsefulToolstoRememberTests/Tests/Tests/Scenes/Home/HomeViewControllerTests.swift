@@ -7,9 +7,20 @@
 //
 
 import XCTest
+import SnapshotTesting
 @testable import VeryUsefulToolstoRemember
 
 final class HomeViewControllerTests: XCTestCase {
+    
+    func test_homeViewController() {
+        let viewController = makeSUT()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        viewController.viewDidLoad()
+        viewController.loadView()
+        viewController.viewWillAppear(true)
+        viewController.displayUsefulToolsViewState(.content(.init(tools: [.mock, .mock])))
+        assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
+    }
     
     func test_displayUsefulToolsViewState_shouldCallCorrectMethodInContentView() {
         // Given
