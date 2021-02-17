@@ -24,6 +24,14 @@ final class CustomTextFieldTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
     
+    func test_customTextField_resetView() {
+        let view = makeView()
+        view.errorMessageText = "Test"
+        view.presentError()
+        view.resetView()
+        assertSnapshot(matching: view, as: .image)
+    }
+    
     // MARK: - Test Helpers
     
     private func makeView() -> CustomTextField {
