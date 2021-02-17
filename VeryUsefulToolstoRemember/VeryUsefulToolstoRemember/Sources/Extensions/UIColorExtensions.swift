@@ -59,4 +59,16 @@ extension UIColor {
     @nonobjc class var green: UIColor {
         .init(red: 18.0 / 255.0, green: 219.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
     }
+    
+    // MARK: - Red
+    
+    /// #F95E5A
+    @nonobjc class var red: UIColor {
+        .init(red: 249.0 / 255.0, green: 94.0 / 255.0, blue: 90.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #FEEFEE
+    @nonobjc class var mostLightestRed: UIColor {
+        .init(red: 254.0 / 255.0, green: 239.0 / 255.0, blue: 238.0 / 255.0, alpha: 1.0)
+    }
 }
