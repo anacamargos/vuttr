@@ -13,6 +13,8 @@
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */; };
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
+		BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */; };
+		BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
@@ -58,6 +60,8 @@
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
+		BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewSpy.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5F98EC2593DFF200E28356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,8 +139,8 @@
 		BF03B7A9259B6C5600DF170A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BF2C9BFB25DDC08500396C74 /* Views */,
-				BF03B7AA259B6C7800DF170A /* Scenes */,
+				BF2C9C0925DDCA6A00396C74 /* Sources */,
+				BF2C9C0625DDCA5300396C74 /* Tests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BF03B7AC259B6C8400DF170A /* Views */,
+				BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -172,6 +177,47 @@
 				BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF2C9C0625DDCA5300396C74 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9BFB25DDC08500396C74 /* Views */,
+				BF03B7AA259B6C7800DF170A /* Scenes */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BF2C9C0925DDCA6A00396C74 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9C0A25DDCA7300396C74 /* Spies */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BF2C9C0A25DDCA7300396C74 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9C0B25DDCA8400396C74 /* Scenes */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		BF2C9C0B25DDCA8400396C74 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9C0C25DDCA8A00396C74 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF2C9C0C25DDCA8A00396C74 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BF5F98D72593DFEB00E28356 = {
@@ -507,7 +553,9 @@
 			files = (
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
+				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
+				BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
