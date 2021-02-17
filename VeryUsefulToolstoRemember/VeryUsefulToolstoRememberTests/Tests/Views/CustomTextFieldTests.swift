@@ -32,6 +32,19 @@ final class CustomTextFieldTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
     
+    func test_customTextField_didBeginEditing() {
+        let view = makeView()
+        view.textFieldDidBeginEditing(.init())
+        assertSnapshot(matching: view, as: .image)
+    }
+    
+    func test_customTextField_didEndEditing() {
+        let view = makeView()
+        view.textFieldDidBeginEditing(.init())
+        view.textFieldDidEndEditing(.init())
+        assertSnapshot(matching: view, as: .image)
+    }
+    
     // MARK: - Test Helpers
     
     private func makeView() -> CustomTextField {
