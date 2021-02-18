@@ -77,6 +77,14 @@ final class CustomTextField: CodedView {
     }
 
     // MARK: - View components
+    
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .themeFont(for: .body, weight: .semibold)
+        label.textColor = .ink
+        label.numberOfLines = .zero
+        return label
+    }()
 
     private lazy var textInput: UITextField = {
         let input = UITextField()
@@ -121,8 +129,9 @@ final class CustomTextField: CodedView {
 
     // MARK: - Initialziers
 
-    init() {
+    init(titleText: String) {
         super.init(frame: .zero)
+        titleLabel.text = titleText
         configureView()
     }
 
@@ -165,14 +174,20 @@ final class CustomTextField: CodedView {
 
     override func addSubviews() {
         addSubview(container)
+        addSubview(titleLabel)
         container.addArrangedSubview(inputContainer)
         container.addArrangedSubview(errorMessageLabel)
         inputContainer.addSubview(textInput)
     }
 
     override func constrainSubviews() {
+        titleLabel.layout(using: [
+            titleLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
         container.layout(using: [
-            container.topAnchor.constraint(equalTo: topAnchor),
+            container.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.Spacing.xSmall),
             container.bottomAnchor.constraint(equalTo: bottomAnchor),
             container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.leadingAnchor.constraint(equalTo: leadingAnchor)

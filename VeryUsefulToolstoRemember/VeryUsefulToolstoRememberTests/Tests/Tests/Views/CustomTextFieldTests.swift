@@ -48,8 +48,8 @@ final class CustomTextFieldTests: XCTestCase {
     // MARK: - Test Helpers
     
     private func makeView() -> CustomTextField {
-        let view = CustomTextField()
-        view.frame = .init(origin: .zero, size: CGSize(width: 100, height: 70))
+        let view = CustomTextField(titleText: "Input here")
+        view.frame = .init(origin: .zero, size: CGSize(width: 100, height: 100))
         return view
     }
 
