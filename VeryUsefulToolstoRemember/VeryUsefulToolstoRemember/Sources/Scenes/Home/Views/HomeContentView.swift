@@ -18,6 +18,9 @@ final class HomeContentView: CodedView {
     private enum ViewMetrics {
         static let addViewSize: CGFloat = 56
         static let iconSmallSize: CGFloat = 20
+        static let shadowAlpha: Float = 0.05
+        static let shadowY: CGFloat = 5
+        static let shadowBlur: CGFloat = 7
     }
     
     // MARK: - Properties
@@ -33,10 +36,11 @@ final class HomeContentView: CodedView {
         return tableView
     }()
     
-    private let addView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        return view
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .teal
+        button.applyShadow(color: .black, alpha: ViewMetrics.shadowAlpha, x: .zero, y: ViewMetrics.shadowY, blur: ViewMetrics.shadowBlur, spread: .zero)
+        return button
     }()
     
     private let addImage: UIImageView = {
@@ -63,8 +67,8 @@ final class HomeContentView: CodedView {
     
     override func addSubviews() {
         addSubview(tableView)
-        addSubview(addView)
-        addView.addSubview(addImage)
+        addSubview(addButton)
+        addButton.addSubview(addImage)
     }
     
     override func constrainSubviews() {
@@ -80,7 +84,7 @@ final class HomeContentView: CodedView {
     }
     
     private func constrainAddButton() {
-        addView.anchor(
+        addButton.anchor(
             bottom: bottomAnchor,
             right: rightAnchor,
             bottomConstant: Metrics.Spacing.base,
@@ -88,7 +92,7 @@ final class HomeContentView: CodedView {
             widthConstant: ViewMetrics.addViewSize,
             heightConstant: ViewMetrics.addViewSize
         )
-        addView.layer.cornerRadius = 0.5 * ViewMetrics.addViewSize
+        addButton.layer.cornerRadius = 0.5 * ViewMetrics.addViewSize
     }
     
     private func constrainAddImage() {
@@ -96,8 +100,8 @@ final class HomeContentView: CodedView {
             widthConstant: ViewMetrics.iconSmallSize,
             heightConstant: ViewMetrics.iconSmallSize
         )
-        addImage.centerXAnchor.constraint(equalTo: addView.centerXAnchor).isActive = true
-        addImage.centerYAnchor.constraint(equalTo: addView.centerYAnchor).isActive = true
+        addImage.centerXAnchor.constraint(equalTo: addButton.centerXAnchor).isActive = true
+        addImage.centerYAnchor.constraint(equalTo: addButton.centerYAnchor).isActive = true
     }
     
     private func configureView() {
