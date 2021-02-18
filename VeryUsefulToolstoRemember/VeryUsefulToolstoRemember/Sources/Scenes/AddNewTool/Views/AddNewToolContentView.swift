@@ -14,6 +14,7 @@ final class AddNewToolContentView: CodedView {
     
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 4.0
+        static let closeButtonSize: CGFloat = 16.0
     }
     
     // MARK: - Dependencies
@@ -34,6 +35,37 @@ final class AddNewToolContentView: CodedView {
     private let closeButton: UIButton = {
         let button = UIButton()
         button.setImage(.close, for: .normal)
+        return button
+    }()
+    
+    private let toolNameTextField: CustomTextField = {
+        let textField = CustomTextField(titleText: L10n.AddNewTool.toolName)
+        return textField
+    }()
+    
+    private let toolLinkTextField: CustomTextField = {
+        let textField = CustomTextField(titleText: L10n.AddNewTool.toolLink)
+        return textField
+    }()
+    
+    private let toolDescriptionTextField: CustomTextField = {
+        let textField = CustomTextField(titleText: L10n.AddNewTool.toolDescription)
+        return textField
+    }()
+    
+    private let toolTagsTextField: CustomTextField = {
+        let textField = CustomTextField(titleText: L10n.AddNewTool.tags)
+        return textField
+    }()
+    
+    private let addToolButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(L10n.AddNewTool.addTool, for: .normal)
+        button.backgroundColor = .teal
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .themeFont(for: .body, weight: .semibold)
+        button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -66,12 +98,22 @@ final class AddNewToolContentView: CodedView {
         addSubview(container)
         container.addSubview(titleLabel)
         container.addSubview(closeButton)
+        container.addSubview(toolNameTextField)
+        container.addSubview(toolLinkTextField)
+        container.addSubview(toolDescriptionTextField)
+        container.addSubview(toolTagsTextField)
+        container.addSubview(addToolButton)
     }
     
     override func constrainSubviews() {
         constrainContainer()
         constrainTitleLabel()
         constrainCloseButton()
+        constrainToolNameTextField()
+        constrainToolLinkTextField()
+        constrainToolDescriptionTextField()
+        constraintoolTagsTextField()
+        constrainAddToolButton()
     }
     
     // MARK: - Private Methods
@@ -91,6 +133,7 @@ final class AddNewToolContentView: CodedView {
             top: container.topAnchor,
             leading: container.leadingAnchor,
             trailing: closeButton.leadingAnchor,
+            topConstant: Metrics.Spacing.small,
             leadingConstant: Metrics.Spacing.small,
             trailingConstant: Metrics.Spacing.small
         )
@@ -100,7 +143,58 @@ final class AddNewToolContentView: CodedView {
         closeButton.anchor(
             top: container.topAnchor,
             trailing: container.trailingAnchor,
+            topConstant: Metrics.Spacing.small,
+            trailingConstant: Metrics.Spacing.small,
+            widthConstant: ViewMetrics.closeButtonSize,
+            heightConstant: ViewMetrics.closeButtonSize
+        )
+    }
+    
+    private func constrainToolNameTextField() {
+        toolNameTextField.anchor(
+            top: titleLabel.bottomAnchor,
+            leading: container.leadingAnchor,
+            trailing: container.trailingAnchor,
+            topConstant: Metrics.Spacing.base,
+            leadingConstant: Metrics.Spacing.small,
             trailingConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constrainToolLinkTextField() {
+        toolLinkTextField.anchor(
+            top: toolNameTextField.bottomAnchor,
+            leading: toolNameTextField.leadingAnchor,
+            trailing: toolNameTextField.trailingAnchor,
+            topConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constrainToolDescriptionTextField() {
+        toolDescriptionTextField.anchor(
+            top: toolLinkTextField.bottomAnchor,
+            leading: toolNameTextField.leadingAnchor,
+            trailing: toolNameTextField.trailingAnchor,
+            topConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constraintoolTagsTextField() {
+        toolTagsTextField.anchor(
+            top: toolDescriptionTextField.bottomAnchor,
+            leading: toolNameTextField.leadingAnchor,
+            trailing: toolNameTextField.trailingAnchor,
+            topConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constrainAddToolButton() {
+        addToolButton.anchor(
+            top: toolTagsTextField.bottomAnchor,
+            bottom: container.bottomAnchor,
+            trailing: toolNameTextField.trailingAnchor,
+            topConstant: Metrics.Spacing.base,
+            bottomConstant: Metrics.Spacing.small
         )
     }
     

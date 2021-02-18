@@ -71,7 +71,7 @@ final class CustomTextField: CodedView {
     // MARK: - Constants
 
     private enum ViewMetrics {
-        static let inputHeight: CGFloat = 50
+        static let inputHeight: CGFloat = 40
         static let cornerRadius: CGFloat = 8
         static let borderWidth: CGFloat = 1
     }

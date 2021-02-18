@@ -10,4 +10,10 @@ import UIKit
 
 final class AddNewToolViewController: UIViewController {
     
+    // MARK: - View Controller Lifecycle
+    
+    override func loadView() {
+        super.loadView()
+        view = AddNewToolContentView(onTappedCloseButtonClosure: {})
+    }
 }
