@@ -35,6 +35,23 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: contentViewSpy.setupUsefulToolsStatePassedViewStates), String(describing: [expectedViewState]))
     }
+    
+    func test_onTappedAddButtonClosure_shouldCallCorrectMethodInInteractor() {
+        // Given
+        let routerSpy = HomeRouterSpy()
+        let sut = makeSUT(router: routerSpy)
+        guard let contentView = sut.view as? HomeContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedAddButtonClosure = Mirror(reflecting: contentView).firstChild(of: (() -> Void).self, in: "onTappedAddButtonClosure")
+        
+        // When
+        onTappedAddButtonClosure?()
+        
+        // Then
+        XCTAssertTrue(routerSpy.routeToAddNewToolSceneCalled)
+    }
 
     // MARK: - Private Methods
     

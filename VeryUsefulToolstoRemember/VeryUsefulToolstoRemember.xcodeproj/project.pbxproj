@@ -43,6 +43,7 @@
 		BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE1425DF1366006ED5CA /* HomeRouterDummy.swift */; };
 		BFE8AE1B25DF143C006ED5CA /* HomeConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE1A25DF143C006ED5CA /* HomeConfiguratorTests.swift */; };
 		BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */; };
+		BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		C4D200EC7614BAC4B658BD3E /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD681DD0B73507D55DEF884A /* Pods_VeryUsefulToolstoRemember.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		BFE8AE1425DF1366006ED5CA /* HomeRouterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterDummy.swift; sourceTree = "<group>"; };
 		BFE8AE1A25DF143C006ED5CA /* HomeConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfiguratorTests.swift; sourceTree = "<group>"; };
 		BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorExtensions.swift; sourceTree = "<group>"; };
+		BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		C399281D9994363B194483F3 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.release.xcconfig"; sourceTree = "<group>"; };
 		ECAF33C5A296DCBBC19DE99D /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */,
+				BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
+				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
 				BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */,
 				BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */,
 				BFE8AE1B25DF143C006ED5CA /* HomeConfiguratorTests.swift in Sources */,
