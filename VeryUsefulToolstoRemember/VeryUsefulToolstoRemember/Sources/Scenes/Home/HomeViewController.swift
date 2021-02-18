@@ -13,9 +13,27 @@ protocol HomeDisplayLogic: AnyObject {
 
 final class HomeViewController: UIViewController {
     
+    // MARK: - Dependencies
+    
+    private let router: HomeRoutingLogic
+    
     // MARK: - View Components
     
     weak var contentView: HomeContentViewProtocol?
+    
+    // MARK: - Initializers
+    
+    init(
+        router: HomeRoutingLogic
+    ) {
+        self.router = router
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - View Controller Lifecycle
     
@@ -32,7 +50,7 @@ final class HomeViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view = HomeContentView()
+        view = HomeContentView(onTappedAddButtonClosure: { [weak self] in self?.router.routeToAddNewToolScene() })
         contentView = view as? HomeContentViewProtocol
     }
     

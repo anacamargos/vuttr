@@ -23,6 +23,10 @@ final class HomeContentView: CodedView {
         static let shadowBlur: CGFloat = 7
     }
     
+    // MARK: - Dependencies
+    
+    private let onTappedAddButtonClosure: () -> Void
+    
     // MARK: - Properties
     
     private var viewState: Home.UsefulTools.ViewState = .loading
@@ -51,9 +55,11 @@ final class HomeContentView: CodedView {
     
     // MARK: - Initializers
     
-    override init(
-        frame: CGRect = .zero
+    init(
+        frame: CGRect = .zero,
+        onTappedAddButtonClosure: @escaping () -> Void
     ) {
+        self.onTappedAddButtonClosure = onTappedAddButtonClosure
         super.init(frame: frame)
         configureView()
     }
@@ -106,6 +112,7 @@ final class HomeContentView: CodedView {
     
     private func configureView() {
         backgroundColor = .white
+        addButton.addTarget(self, action: #selector(onTappedAddButton), for: .touchUpInside)
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
@@ -119,6 +126,10 @@ final class HomeContentView: CodedView {
         let cell: CustomLoadingTableViewCell = tableView.reusableCell(for: CustomLoadingTableViewCell.className, for: indexPath)
         cell.startLoading()
         return cell
+    }
+    
+    @objc private func onTappedAddButton() {
+        onTappedAddButtonClosure()
     }
 }
 
