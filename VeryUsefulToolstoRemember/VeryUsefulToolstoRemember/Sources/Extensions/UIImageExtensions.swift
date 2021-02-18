@@ -12,12 +12,10 @@ extension UIImage {
     
     enum Resource: String {
         case close
-        case plusCircle = "plus-circle"
         case add
     }
     
     class var close: UIImage { UIImage(.close)! }
-    class var plusCircle: UIImage { UIImage(.plusCircle)! }
     class var addIcon: UIImage { UIImage(.add)! }
     
     convenience init?(_ resource: Resource) {
