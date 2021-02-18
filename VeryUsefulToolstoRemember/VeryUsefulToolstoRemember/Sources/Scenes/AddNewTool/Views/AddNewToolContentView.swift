@@ -71,6 +71,7 @@ final class AddNewToolContentView: CodedView {
     override func constrainSubviews() {
         constrainContainer()
         constrainTitleLabel()
+        constrainCloseButton()
     }
     
     // MARK: - Private Methods
@@ -86,7 +87,21 @@ final class AddNewToolContentView: CodedView {
     }
     
     private func constrainTitleLabel() {
-        
+        titleLabel.anchor(
+            top: container.topAnchor,
+            leading: container.leadingAnchor,
+            trailing: closeButton.leadingAnchor,
+            leadingConstant: Metrics.Spacing.small,
+            trailingConstant: Metrics.Spacing.small
+        )
+    }
+    
+    private func constrainCloseButton() {
+        closeButton.anchor(
+            top: container.topAnchor,
+            trailing: container.trailingAnchor,
+            trailingConstant: Metrics.Spacing.small
+        )
     }
     
     private func configureView() {
