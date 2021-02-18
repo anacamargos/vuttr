@@ -85,4 +85,10 @@ extension UIColor {
     @nonobjc class var purple: UIColor {
         .init(red: 101.0 / 255.0, green: 84.0 / 255.0, blue: 192.0 / 255.0, alpha: 1.0)
     }
+    
+    // MARK: - Other
+    
+    @nonobjc class var secundary80: UIColor {
+        .init(red: 53.0 / 255.0, green: 58.0 / 255.0, blue: 64.0 / 255.0, alpha: 0.8)
+    }
 }
