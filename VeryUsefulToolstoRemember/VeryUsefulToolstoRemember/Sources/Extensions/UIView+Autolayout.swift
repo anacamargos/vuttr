@@ -83,7 +83,7 @@ extension UIView {
     ///   - heightConstant: current view's height
     /// - Returns: array of newly added constraints (if applicable).
     @discardableResult
-    public func anchor(
+    func anchor(
         top: NSLayoutYAxisAnchor? = nil,
         leading: NSLayoutXAxisAnchor? = nil,
         bottom: NSLayoutYAxisAnchor? = nil,
@@ -159,13 +159,13 @@ extension UIView {
     
     /// Returns the `safeAreaLayoutGuide.trailingAnchor`, if available,
     /// otherwhise, returns `trailingAnchor`
-    public var safeTrailingAnchor: NSLayoutXAxisAnchor {
+    var safeTrailingAnchor: NSLayoutXAxisAnchor {
         safeAreaLayoutGuide.trailingAnchor
     }
     
     /// Returns the `safeAreaLayoutGuide.leadingAnchor`, if available,
     /// otherwhise, returns `leadingAnchor`
-    public var safeLeadingAnchor: NSLayoutXAxisAnchor {
+    var safeLeadingAnchor: NSLayoutXAxisAnchor {
         safeAreaLayoutGuide.leadingAnchor
     }
     
