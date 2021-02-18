@@ -10,3 +10,12 @@
 
 "home.search" = "Buscar";
 "home.vuttr" = "vuttr";
+
+// MARK: - Add New Tool
+
+"add_new_tool.add_new_tool_title" = "Agregar nueva herramienta";
+"add_new_tool.tool_name" = "Nombre de la herramienta";
+"add_new_tool.tool_link" = "Enlace de herramienta";
+"add_new_tool.tool_description" = "Descripción de la herramienta";
+"add_new_tool.tags" = "Etiquetas";
+"add_new_tool.add_tool" = "Agregar herramienta";

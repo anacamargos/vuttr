@@ -13,6 +13,33 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum AddNewTool {
+    /// Adicionar nova ferramenta
+    internal static var addNewToolTitle: String {
+      L10n.tr("Localizable", "add_new_tool.add_new_tool_title")
+    }
+    /// Adicionar ferramenta
+    internal static var addTool: String {
+      L10n.tr("Localizable", "add_new_tool.add_tool")
+    }
+    /// Tags
+    internal static var tags: String {
+      L10n.tr("Localizable", "add_new_tool.tags")
+    }
+    /// Descrição da ferramenta
+    internal static var toolDescription: String {
+      L10n.tr("Localizable", "add_new_tool.tool_description")
+    }
+    /// Link da ferramenta
+    internal static var toolLink: String {
+      L10n.tr("Localizable", "add_new_tool.tool_link")
+    }
+    /// Nome da ferramenta
+    internal static var toolName: String {
+      L10n.tr("Localizable", "add_new_tool.tool_name")
+    }
+  }
+
   internal enum Home {
     /// Pesquisar
     internal static var search: String {
