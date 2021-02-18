@@ -86,9 +86,9 @@ final class HomeContentView: CodedView {
     private func constrainAddButton() {
         addButton.anchor(
             bottom: bottomAnchor,
-            right: rightAnchor,
+            trailing: trailingAnchor,
             bottomConstant: Metrics.Spacing.base,
-            rightConstant: Metrics.Spacing.base,
+            trailingConstant: Metrics.Spacing.base,
             widthConstant: ViewMetrics.addViewSize,
             heightConstant: ViewMetrics.addViewSize
         )

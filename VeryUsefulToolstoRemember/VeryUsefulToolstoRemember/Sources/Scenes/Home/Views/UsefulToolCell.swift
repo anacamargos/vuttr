@@ -87,21 +87,21 @@ final class UsefulToolCell: CodedTableViewCell {
     private func constrainContainerView() {
         containerView.anchor(
             top: contentView.topAnchor,
-            left: contentView.leftAnchor,
+            leading: contentView.leadingAnchor,
             bottom: contentView.bottomAnchor,
-            right: contentView.rightAnchor,
+            trailing: contentView.trailingAnchor,
             topConstant: Metrics.Spacing.small,
-            leftConstant: Metrics.Spacing.small,
-            rightConstant: Metrics.Spacing.small
+            leadingConstant: Metrics.Spacing.small,
+            trailingConstant: Metrics.Spacing.small
         )
     }
     
     private func constrainCloseIcon() {
         closeIcon.anchor(
             top: containerView.topAnchor,
-            right: containerView.rightAnchor,
+            trailing: containerView.trailingAnchor,
             topConstant: Metrics.Spacing.small,
-            rightConstant: Metrics.Spacing.small,
+            trailingConstant: Metrics.Spacing.small,
             widthConstant: ViewMetrics.iconSmallestSize,
             heightConstant: ViewMetrics.iconSmallestSize
         )
@@ -110,23 +110,23 @@ final class UsefulToolCell: CodedTableViewCell {
     private func constrainTitleLabel() {
         titleLabel.anchor(
             top: containerView.topAnchor,
-            left: containerView.leftAnchor,
-            right: containerView.rightAnchor,
+            leading: containerView.leadingAnchor,
+            trailing: containerView.trailingAnchor,
             topConstant: Metrics.Spacing.small,
-            leftConstant: Metrics.Spacing.small,
-            rightConstant: Metrics.Spacing.small + ViewMetrics.iconSmallestSize + Metrics.Spacing.tiny
+            leadingConstant: Metrics.Spacing.small,
+            trailingConstant: Metrics.Spacing.small + ViewMetrics.iconSmallestSize + Metrics.Spacing.tiny
         )
     }
     
     private func constrainDescriptionLabel() {
         descriptionLabel.anchor(
             top: titleLabel.bottomAnchor,
-            left: titleLabel.leftAnchor,
+            leading: titleLabel.leadingAnchor,
             bottom: containerView.bottomAnchor,
-            right: containerView.rightAnchor,
+            trailing: containerView.trailingAnchor,
             topConstant: Metrics.Spacing.tiny,
             bottomConstant: Metrics.Spacing.small,
-            rightConstant: Metrics.Spacing.small
+            trailingConstant: Metrics.Spacing.small
         )
     }
     
