@@ -58,14 +58,10 @@ final class AddNewToolContentView: CodedView {
         return textField
     }()
     
-    private let addToolButton: UIButton = {
-        let button = UIButton()
+    private let addToolButton: LayoutableButton = {
+        let button = LayoutableButton(layout: .primary)
         button.setTitle(L10n.AddNewTool.addTool, for: .normal)
-        button.backgroundColor = .teal
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .themeFont(for: .body, weight: .semibold)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
-        button.layer.cornerRadius = 5
         return button
     }()
     

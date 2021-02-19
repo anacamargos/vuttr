@@ -10,17 +10,19 @@ import UIKit
 
 /// Defines a button that has a default layout and enable/disable logic
 class LayoutableButton: UIButton {
-    
-    // MARK: - Dependencies
-    
-    private let onTappedButtonClosure: (() -> Void)?
-    
+        
     // MARK: - Properties
 
     var layout: ButtonLayout
 
     override var isEnabled: Bool {
         didSet { isEnabled ? applyLayoutProperties(layout.enabled) : applyLayoutProperties(layout.disabled) }
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            changeBackgroudColor(isHighlighted)
+        }
     }
     
     // MARK: - View components
@@ -30,12 +32,10 @@ class LayoutableButton: UIButton {
     // MARK: - Initialization
 
     init(
-        frame: CGRect,
-        layout: ButtonLayout = .primary,
-        onTappedButtonClosure: (() -> Void)? = nil
+        frame: CGRect = .zero,
+        layout: ButtonLayout = .primary
     ) {
         self.layout = layout
-        self.onTappedButtonClosure = onTappedButtonClosure
         super.init(frame: frame)
         applyLayout(layout)
         configureView()
@@ -52,7 +52,6 @@ class LayoutableButton: UIButton {
         addSubviews()
         constrainSubviews()
         loading.isHidden = true
-        addTarget(self, action: #selector(onTappedButton), for: .touchUpInside)
     }
     
     private func addSubviews() {
@@ -66,13 +65,11 @@ class LayoutableButton: UIButton {
         ])
     }
     
-    @objc private func onTappedButton(_ sender: UIButton) {
-        onTappedButtonClosure?()
-        sender.isSelected = !sender.isSelected
-        if isEnabled && sender.isSelected {
-            sender.backgroundColor = layout.enabled.selectedBackgroundColor
+    private func changeBackgroudColor(_ isHighlighted: Bool) {
+        if isEnabled && isHighlighted {
+            backgroundColor = layout.enabled.selectedBackgroundColor
         } else if isEnabled {
-            sender.backgroundColor = layout.enabled.backgroundColor
+            backgroundColor = layout.enabled.backgroundColor
         }
     }
     
