@@ -42,7 +42,7 @@ final class HomeContentView: CodedView {
     
     private let addButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .teal
+        button.backgroundColor = .blue
         button.applyShadow(color: .black, alpha: ViewMetrics.shadowAlpha, x: .zero, y: ViewMetrics.shadowY, blur: ViewMetrics.shadowBlur, spread: .zero)
         return button
     }()
