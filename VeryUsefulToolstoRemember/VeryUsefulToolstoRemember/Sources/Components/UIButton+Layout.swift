@@ -9,11 +9,11 @@
 import UIKit
 
 /// Defines the button layout configuration
-public struct ButtonLayout: Equatable {
+struct ButtonLayout: Equatable {
     let enabled: Properties
     let disabled: Properties
 
-    public init(
+    init(
         enabled: Properties,
         disabled: Properties
     ) {
@@ -21,7 +21,7 @@ public struct ButtonLayout: Equatable {
         self.disabled = disabled
     }
 
-    public struct Properties: Equatable {
+    struct Properties: Equatable {
         let titleFont: UIFont
         let titleColor: UIColor
         let borderColor: UIColor?
@@ -29,7 +29,7 @@ public struct ButtonLayout: Equatable {
         let backgroundColor: UIColor
         let cornerRadius: CGFloat
 
-        public init(
+        init(
             titleFont: UIFont,
             titleColor: UIColor,
             borderColor: UIColor? = nil,
@@ -51,7 +51,7 @@ extension UIButton {
     /// Applies a the layout  to a UIButton
     /// - Parameter layout: a layout definition with properties to decorate a button
     @discardableResult
-    public func applyLayout(_ layout: ButtonLayout) -> Self {
+    func applyLayout(_ layout: ButtonLayout) -> Self {
         let propertiesToApply = isEnabled ? layout.enabled : layout.disabled
         applyLayoutProperties(propertiesToApply)
         return self
@@ -60,7 +60,7 @@ extension UIButton {
     /// Applies a the layout properties to a UIButton
     /// - Parameter layout: a layout definition with properties to decorate a button
     @discardableResult
-    public func applyLayoutProperties(_ properties: ButtonLayout.Properties) -> Self {
+    func applyLayoutProperties(_ properties: ButtonLayout.Properties) -> Self {
         titleLabel?.font = properties.titleFont
         setTitleColor(properties.titleColor, for: .normal)
         layer.borderColor = properties.borderColor?.cgColor

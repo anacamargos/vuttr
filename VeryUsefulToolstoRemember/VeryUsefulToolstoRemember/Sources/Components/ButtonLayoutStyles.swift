@@ -10,7 +10,7 @@ import UIKit
 
 extension ButtonLayout {
     
-    public static let primary: ButtonLayout = .init(
+    static let primary: ButtonLayout = .init(
         enabled: PrimaryNeutral.enabled,
         disabled: PrimaryNeutral.disabled
     )
