@@ -86,6 +86,33 @@ extension UIColor {
         .init(red: 101.0 / 255.0, green: 84.0 / 255.0, blue: 192.0 / 255.0, alpha: 1.0)
     }
     
+    // MARK: - Blue
+    
+    /// #365DF0
+    @nonobjc class var blue: UIColor {
+        .init(red: 54.0 / 255.0, green: 93.0 / 255.0, blue: 240.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #9AAEF7
+    @nonobjc class var lightBlue: UIColor {
+        .init(red: 154.0 / 255.0, green: 174.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #B9C6FA
+    @nonobjc class var lighterBlue: UIColor {
+        .init(red: 185.0 / 255.0, green: 198.0 / 255.0, blue: 250.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #CAD6FC
+    @nonobjc class var lightestBlue: UIColor {
+        .init(red: 202.0 / 255.0, green: 214.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #E1E7FD
+    @nonobjc class var mostLightestBlue: UIColor {
+        .init(red: 225.0 / 255.0, green: 231.0 / 255.0, blue: 253.0 / 255.0, alpha: 1.0)
+    }
+    
     // MARK: - Other
     
     @nonobjc class var secundary80: UIColor {
