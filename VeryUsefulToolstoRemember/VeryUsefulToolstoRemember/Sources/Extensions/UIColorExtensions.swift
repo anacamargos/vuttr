@@ -88,6 +88,16 @@ extension UIColor {
     
     // MARK: - Blue
     
+    /// #244AA8
+    @nonobjc class var darkerBlue: UIColor {
+        .init(red: 36.0 / 255.0, green: 74.0 / 255.0, blue: 168.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #2F55CC
+    @nonobjc class var darkBlue: UIColor {
+        .init(red: 47.0 / 255.0, green: 85.0 / 255.0, blue: 204.0 / 255.0, alpha: 1.0)
+    }
+    
     /// #365DF0
     @nonobjc class var blue: UIColor {
         .init(red: 54.0 / 255.0, green: 93.0 / 255.0, blue: 240.0 / 255.0, alpha: 1.0)
