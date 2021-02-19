@@ -24,6 +24,8 @@
 		BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */; };
 		BF5F99582593F7AD00E28356 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */; };
 		BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */; };
+		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
+		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
 		BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */; };
 		BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF62593F8B100BBE399 /* Metrics.swift */; };
 		BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */; };
@@ -83,6 +85,8 @@
 		BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
+		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
 		BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		BF9A5FF62593F8B100BBE399 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtensions.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 		BF5F993C2593F09E00E28356 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BF8D067125E05B4B0045EAFE /* Components */,
 				BFA32513259A3100007BF348 /* Views */,
 				BF9A5FF52593F8A400BBE399 /* DesignSystem */,
 				BF5F994A2593F12800E28356 /* Extensions */,
@@ -358,6 +363,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BF8D067125E05B4B0045EAFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */,
+				BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */,
+				BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		BF9A5FF52593F8A400BBE399 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +386,6 @@
 			children = (
 				BFA32514259A310D007BF348 /* CustomLoadingView.swift */,
 				BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */,
-				BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -616,6 +630,8 @@
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
+				BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */,
+				BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */,
 				BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
