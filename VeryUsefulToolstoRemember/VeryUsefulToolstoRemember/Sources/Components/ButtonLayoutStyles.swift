@@ -24,7 +24,8 @@ extension ButtonLayout {
         static let enabled: ButtonLayout.Properties = .init(
             titleFont: .themeFont(for: .body, weight: .semibold),
             titleColor: .white,
-            backgroundColor: .blue
+            backgroundColor: .blue,
+            selectedBackgroundColor: .darkerBlue
         )
         static let disabled: ButtonLayout.Properties = .init(
             titleFont: .themeFont(for: .body, weight: .semibold),

@@ -26,6 +26,7 @@
 		BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
 		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
+		BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */; };
 		BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */; };
 		BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF62593F8B100BBE399 /* Metrics.swift */; };
 		BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */; };
@@ -87,6 +88,7 @@
 		BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
 		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
+		BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
 		BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		BF9A5FF62593F8B100BBE399 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		BF9A5FFE2593FC5700BBE399 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtensions.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */,
 				BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */,
 				BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */,
+				BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */,
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
 				BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */,
+				BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */,
 				BFE8AE0E25DF11DF006ED5CA /* HomeConfigurator.swift in Sources */,
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,

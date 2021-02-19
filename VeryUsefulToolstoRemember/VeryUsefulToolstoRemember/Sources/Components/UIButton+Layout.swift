@@ -27,6 +27,7 @@ struct ButtonLayout: Equatable {
         let borderColor: UIColor?
         let borderWidth: CGFloat?
         let backgroundColor: UIColor
+        let selectedBackgroundColor: UIColor?
         let cornerRadius: CGFloat
 
         init(
@@ -35,6 +36,7 @@ struct ButtonLayout: Equatable {
             borderColor: UIColor? = nil,
             borderWidth: CGFloat? = nil,
             backgroundColor: UIColor,
+            selectedBackgroundColor: UIColor? = nil,
             cornerRadius: CGFloat = 4
         ) {
             self.titleFont = titleFont
@@ -42,6 +44,7 @@ struct ButtonLayout: Equatable {
             self.borderColor = borderColor
             self.borderWidth = borderWidth
             self.backgroundColor = backgroundColor
+            self.selectedBackgroundColor = selectedBackgroundColor
             self.cornerRadius = cornerRadius
         }
     }
