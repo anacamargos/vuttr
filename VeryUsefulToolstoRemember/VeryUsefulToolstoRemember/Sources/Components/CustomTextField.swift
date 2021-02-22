@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CustomTextField: CodedView {
+final class CustomTextField: UIView {
     
     // MARK: - Public Properties
 
@@ -60,13 +60,10 @@ final class CustomTextField: CodedView {
             textInput.text = newValue
         }
     }
-
-    var inputContainerHeight: CGFloat {
-        get { inputContainer.frame.height }
-        set {
-            inputContainer.heightAnchor.constraint(equalTo: heightAnchor, constant: newValue).isActive = true
-        }
-    }
+    
+    // MARK: - Private Properties
+    
+    private var inputContainerHeight: CGFloat?
     
     // MARK: - Constants
 
@@ -129,7 +126,11 @@ final class CustomTextField: CodedView {
 
     // MARK: - Initialziers
 
-    init(titleText: String) {
+    init(
+        titleText: String,
+        inputContainerHeight: CGFloat? = nil
+    ) {
+        self.inputContainerHeight = inputContainerHeight
         super.init(frame: .zero)
         titleLabel.text = titleText
         configureView()
@@ -167,12 +168,14 @@ final class CustomTextField: CodedView {
     // MARK: - Private Methods
     
     private func configureView() {
+        addSubviews()
+        constrainSubviews()
         textField.delegate = self
     }
 
     // MARK: - CodedView
 
-    override func addSubviews() {
+    private func addSubviews() {
         addSubview(container)
         addSubview(titleLabel)
         container.addArrangedSubview(inputContainer)
@@ -180,7 +183,7 @@ final class CustomTextField: CodedView {
         inputContainer.addSubview(textInput)
     }
 
-    override func constrainSubviews() {
+    private func constrainSubviews() {
         titleLabel.layout(using: [
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -192,9 +195,15 @@ final class CustomTextField: CodedView {
             container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
-        inputContainer.layout(using: [
-            inputContainer.heightAnchor.constraint(equalToConstant: ViewMetrics.inputHeight)
-        ])
+        if let inputContainerHeight = inputContainerHeight {
+            inputContainer.layout(using: [
+                inputContainer.heightAnchor.constraint(equalToConstant: inputContainerHeight)
+            ])
+        } else {
+            inputContainer.layout(using: [
+                inputContainer.heightAnchor.constraint(equalToConstant: ViewMetrics.inputHeight)
+            ])
+        }
         textInput.layout(using: [
             textInput.leadingAnchor.constraint(equalTo: inputContainer.leadingAnchor, constant: Metrics.Spacing.small),
             textInput.topAnchor.constraint(equalTo: inputContainer.topAnchor),

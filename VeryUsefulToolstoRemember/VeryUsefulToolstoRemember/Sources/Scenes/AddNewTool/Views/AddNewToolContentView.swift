@@ -15,6 +15,7 @@ final class AddNewToolContentView: CodedView {
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 4.0
         static let closeButtonSize: CGFloat = 16.0
+        static let descriptionTextFieldHeight: CGFloat = 100
     }
     
     // MARK: - Dependencies
@@ -40,21 +41,25 @@ final class AddNewToolContentView: CodedView {
     
     private let toolNameTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.toolName)
+        textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
     
     private let toolLinkTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.toolLink)
+        textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
     
     private let toolDescriptionTextField: CustomTextField = {
-        let textField = CustomTextField(titleText: L10n.AddNewTool.toolDescription)
+        let textField = CustomTextField(titleText: L10n.AddNewTool.toolDescription, inputContainerHeight: ViewMetrics.descriptionTextFieldHeight)
+        textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
     
     private let toolTagsTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.tags)
+        textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
     
