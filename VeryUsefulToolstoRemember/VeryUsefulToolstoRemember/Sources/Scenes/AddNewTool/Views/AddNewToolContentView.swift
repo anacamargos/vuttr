@@ -21,6 +21,7 @@ final class AddNewToolContentView: CodedView {
     // MARK: - Dependencies
     
     private let onTappedCloseButtonClosure: () -> Void
+    private let onTappedAddToolButtonClosure: (AddNewTool.Request) -> Void
     
     // MARK: - View Components
     
@@ -81,9 +82,11 @@ final class AddNewToolContentView: CodedView {
     
     init(
         frame: CGRect = .zero,
-        onTappedCloseButtonClosure: @escaping () -> Void
+        onTappedCloseButtonClosure: @escaping () -> Void,
+        onTappedAddToolButtonClosure: @escaping (AddNewTool.Request) -> Void
     ) {
         self.onTappedCloseButtonClosure = onTappedCloseButtonClosure
+        self.onTappedAddToolButtonClosure = onTappedAddToolButtonClosure
         super.init(frame: frame)
         configureView()
     }
@@ -202,9 +205,52 @@ final class AddNewToolContentView: CodedView {
     private func configureView() {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
+        addToolButton.addTarget(self, action: #selector(onTappedAddToolButton), for: .touchUpInside)
+    }
+    
+    private func validateTextField(_ textField: CustomTextField) -> Bool {
+        if textField.text == nil {
+            textField.presentError()
+            return false
+        } else if let text = textField.text, text.isEmpty {
+            textField.presentError()
+            return false
+        } else {
+            textField.resetView()
+            return true
+        }
+    }
+    
+    private func getToolTags(_ text: String) -> [String] {
+        text.components(separatedBy: " ")
     }
     
     @objc private func onTappedCloseButton() {
         onTappedCloseButtonClosure()
+    }
+    
+    @objc private func onTappedAddToolButton() {
+        if validateTextField(toolNameTextField)
+            && validateTextField(toolLinkTextField)
+            && validateTextField(toolDescriptionTextField)
+            && validateTextField(toolTagsTextField) {
+            let tool = AddNewTool.Request(
+                toolName: toolNameTextField.text ?? "",
+                toolLink: toolLinkTextField.text ?? "",
+                toolDescription: toolDescriptionTextField.text ?? "",
+                toolTags: getToolTags(toolTagsTextField.text ?? "")
+            )
+            onTappedAddToolButtonClosure(tool)
+        }
+    }
+}
+
+enum AddNewTool {
+    
+    struct Request {
+        let toolName: String
+        let toolLink: String
+        let toolDescription: String
+        let toolTags: [String]
     }
 }

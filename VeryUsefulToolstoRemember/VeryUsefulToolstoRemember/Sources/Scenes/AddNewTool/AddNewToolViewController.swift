@@ -14,6 +14,6 @@ final class AddNewToolViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view = AddNewToolContentView(onTappedCloseButtonClosure: {})
+        view = AddNewToolContentView(onTappedCloseButtonClosure: {}, onTappedAddToolButtonClosure: { _ in })
     }
 }
