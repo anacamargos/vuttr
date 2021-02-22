@@ -19,3 +19,4 @@
 "add_new_tool.tool_description" = "Descripción de la herramienta";
 "add_new_tool.tags" = "Etiquetas";
 "add_new_tool.add_tool" = "Agregar herramienta";
+"add_new_tool.required_field" = "Campo obligatorio";

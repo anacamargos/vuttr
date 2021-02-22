@@ -22,6 +22,10 @@ internal enum L10n {
     internal static var addTool: String {
       L10n.tr("Localizable", "add_new_tool.add_tool")
     }
+    /// Campo obrigatório
+    internal static var requiredField: String {
+      L10n.tr("Localizable", "add_new_tool.required_field")
+    }
     /// Tags
     internal static var tags: String {
       L10n.tr("Localizable", "add_new_tool.tags")

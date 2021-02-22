@@ -19,3 +19,4 @@
 "add_new_tool.tool_description" = "Tool description";
 "add_new_tool.tags" = "Tags";
 "add_new_tool.add_tool" = "Add tool";
+"add_new_tool.required_field" = "Required field";
