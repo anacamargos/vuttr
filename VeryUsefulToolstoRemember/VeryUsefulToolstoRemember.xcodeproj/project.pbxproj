@@ -41,6 +41,7 @@
 		BFA32536259A6652007BF348 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA32535259A6652007BF348 /* HomeModels.swift */; };
 		BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */; };
 		BFAA914825E5AF3B00C9936D /* AddNewToolContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA914725E5AF3B00C9936D /* AddNewToolContentViewTests.swift */; };
+		BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA914F25E5B37400C9936D /* CustomTextViewTests.swift */; };
 		BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */; };
 		BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */; };
 		BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */; };
@@ -109,6 +110,7 @@
 		BFA32535259A6652007BF348 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		BFAA914725E5AF3B00C9936D /* AddNewToolContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentViewTests.swift; sourceTree = "<group>"; };
+		BFAA914F25E5B37400C9936D /* CustomTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextViewTests.swift; sourceTree = "<group>"; };
 		BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewController.swift; sourceTree = "<group>"; };
 		BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentView.swift; sourceTree = "<group>"; };
 		BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */,
+				BFAA914F25E5B37400C9936D /* CustomTextViewTests.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 			files = (
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
+				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
