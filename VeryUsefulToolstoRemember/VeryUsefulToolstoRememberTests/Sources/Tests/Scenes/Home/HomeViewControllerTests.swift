@@ -17,7 +17,6 @@ final class HomeViewControllerTests: XCTestCase {
         let navigationController = UINavigationController(rootViewController: viewController)
         viewController.viewDidLoad()
         viewController.loadView()
-        viewController.viewWillAppear(true)
         viewController.displayUsefulToolsViewState(.content(.init(tools: [.mock, .mock])))
         assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
     }
