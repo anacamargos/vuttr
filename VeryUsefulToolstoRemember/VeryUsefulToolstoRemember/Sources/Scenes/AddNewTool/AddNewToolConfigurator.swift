@@ -14,6 +14,8 @@ final class AddNewToolConfigurator {
         let router = AddNewToolRouter()
         let viewController = AddNewToolViewController(router: router)
         router.viewController = viewController
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
         return viewController
     }
 }
