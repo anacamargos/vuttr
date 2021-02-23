@@ -14,6 +14,7 @@ final class HomeConfiguratorTests: XCTestCase {
     func test_configurator_shouldReturnCorrectlyConfiguredInstance() {
         // Given
         let sut = HomeConfigurator()
+        
         // When
         let viewController = sut.resolveViewController()
         
