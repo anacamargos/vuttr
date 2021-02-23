@@ -52,8 +52,8 @@ final class AddNewToolContentView: CodedView {
         return textField
     }()
     
-    private let toolDescriptionTextField: CustomTextField = {
-        let textField = CustomTextField(titleText: L10n.AddNewTool.toolDescription, inputContainerHeight: ViewMetrics.descriptionTextFieldHeight)
+    private let toolDescriptionTextField: CustomTextView = {
+        let textField = CustomTextView(titleText: L10n.AddNewTool.toolDescription, inputContainerHeight: ViewMetrics.descriptionTextFieldHeight)
         textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
@@ -221,6 +221,19 @@ final class AddNewToolContentView: CodedView {
         }
     }
     
+    private func validateTextView(_ textView: CustomTextView) -> Bool {
+        if textView.text == nil {
+            textView.presentError()
+            return false
+        } else if let text = textView.text, text.isEmpty {
+            textView.presentError()
+            return false
+        } else {
+            textView.resetView()
+            return true
+        }
+    }
+    
     private func getToolTags(_ text: String) -> [String] {
         text.components(separatedBy: " ")
     }
@@ -230,10 +243,14 @@ final class AddNewToolContentView: CodedView {
     }
     
     @objc private func onTappedAddToolButton() {
-        if validateTextField(toolNameTextField)
-            && validateTextField(toolLinkTextField)
-            && validateTextField(toolDescriptionTextField)
-            && validateTextField(toolTagsTextField) {
+        let isToolNameTextFieldValidated = validateTextField(toolNameTextField)
+        let isToolLinkTextFieldValidated = validateTextField(toolLinkTextField)
+        let isToolDescriptionTextFieldValidated = validateTextView(toolDescriptionTextField)
+        let istoolTagsTextFieldValidated = validateTextField(toolTagsTextField)
+        if isToolNameTextFieldValidated
+            && isToolLinkTextFieldValidated
+            && isToolDescriptionTextFieldValidated
+            && istoolTagsTextFieldValidated {
             let tool = AddNewTool.Request(
                 toolName: toolNameTextField.text ?? "",
                 toolLink: toolLinkTextField.text ?? "",
