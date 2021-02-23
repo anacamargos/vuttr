@@ -31,7 +31,7 @@ final class HomeRouterTests: XCTestCase {
         XCTAssertTrue(viewControllerSpy.presentCalled)
         XCTAssertTrue(passedViewController is AddNewToolViewController)
         XCTAssertTrue(passedAnimatedFlag)
-        XCTAssertNil(viewControllerSpy.dismissCompletionPassed)
+        XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
     
     // MARK: - Test Helpers
