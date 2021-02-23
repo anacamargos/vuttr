@@ -35,7 +35,7 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertEqual(String(describing: contentViewSpy.setupUsefulToolsStatePassedViewStates), String(describing: [expectedViewState]))
     }
     
-    func test_onTappedAddButtonClosure_shouldCallCorrectMethodInInteractor() {
+    func test_onTappedAddButtonClosure_shouldCallCorrectMethodInRouter() {
         // Given
         let routerSpy = HomeRouterSpy()
         let sut = makeSUT(router: routerSpy)

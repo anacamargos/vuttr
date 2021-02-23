@@ -20,6 +20,23 @@ final class AddNewToolViewControllerTests: XCTestCase {
         assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
     }
     
+    func test_onTappedCloseButtonAction_shouldCallCorrectMethodInRouter() {
+        // Given
+        let routerSpy = AddNewToolRouterSpy()
+        let sut = makeSUT(router: routerSpy)
+        guard let contentView = sut.view as? AddNewToolContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedCloseButtonClosure = Mirror(reflecting: contentView).firstChild(of: (() -> Void).self, in: "onTappedCloseButtonClosure")
+        
+        // When
+        onTappedCloseButtonClosure?()
+        
+        // Then
+        XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
+    }
+    
     // MARK: - Private Methods
     
     private func makeSUT(router: AddNewToolRoutingLogic = AddNewToolRouterDummy()) -> AddNewToolViewController {
@@ -27,4 +44,13 @@ final class AddNewToolViewControllerTests: XCTestCase {
         return sut
     }
 
+}
+
+final class AddNewToolRouterSpy: AddNewToolRoutingLogic {
+    
+    private(set) var routeToPreviousSceneCalled = false
+    
+    func routeToPreviousScene() {
+        routeToPreviousSceneCalled = true
+    }
 }
