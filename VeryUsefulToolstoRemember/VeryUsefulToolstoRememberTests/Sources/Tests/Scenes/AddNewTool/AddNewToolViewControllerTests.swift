@@ -45,12 +45,3 @@ final class AddNewToolViewControllerTests: XCTestCase {
     }
 
 }
-
-final class AddNewToolRouterSpy: AddNewToolRoutingLogic {
-    
-    private(set) var routeToPreviousSceneCalled = false
-    
-    func routeToPreviousScene() {
-        routeToPreviousSceneCalled = true
-    }
-}
