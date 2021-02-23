@@ -15,6 +15,7 @@
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
 		BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */; };
 		BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */; };
+		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
@@ -73,6 +74,7 @@
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
 		BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewSpy.swift; sourceTree = "<group>"; };
+		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5F98EC2593DFF200E28356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */,
 				BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */,
 				BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */,
+				BF489FCE25E5A93600F901B8 /* CustomTextView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */,
 				BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */,
 				BFE8AE0E25DF11DF006ED5CA /* HomeConfigurator.swift in Sources */,
+				BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */,
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
