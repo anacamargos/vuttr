@@ -13,7 +13,8 @@ final class HomeConfigurator {
     // MARK: - Public Methods
     
     func resolveViewController() -> UIViewController {
-        let router = HomeRouter()
+        let addNewToolConfigurator = AddNewToolConfigurator()
+        let router = HomeRouter(addNewToolConfigurator: addNewToolConfigurator)
         let viewController = HomeViewController(router: router)
         router.viewController = viewController
         return viewController

@@ -17,13 +17,18 @@ final class HomeRouter: HomeRoutingLogic{
     // MARK: - Dependencies
     
     weak var viewController: UIViewController?
+    private let addNewToolConfigurator: AddNewToolConfigurator
+    
+    // MARK: - Initializer
+    
+    init(addNewToolConfigurator: AddNewToolConfigurator) {
+        self.addNewToolConfigurator = addNewToolConfigurator
+    }
     
     // MARK: - Public Methods
     
     func routeToAddNewToolScene() {
-        let destinationViewController = AddNewToolViewController()
-        destinationViewController.modalPresentationStyle = .overFullScreen
-        destinationViewController.modalTransitionStyle = .crossDissolve
+        let destinationViewController = addNewToolConfigurator.resolveViewController()
         viewController?.present(destinationViewController, animated: true)
     }
 }
