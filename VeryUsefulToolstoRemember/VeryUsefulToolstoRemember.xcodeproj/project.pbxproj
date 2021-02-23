@@ -252,8 +252,8 @@
 		BF2C9C0B25DDCA8400396C74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA917D25E5BE6000C9936D /* AddNewTool */,
 				BF2C9C0C25DDCA8A00396C74 /* Home */,
-				BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -439,6 +439,14 @@
 			isa = PBXGroup;
 			children = (
 				BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */,
+			);
+			path = AddNewTool;
+			sourceTree = "<group>";
+		};
+		BFAA917D25E5BE6000C9936D /* AddNewTool */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */,
 			);
 			path = AddNewTool;
 			sourceTree = "<group>";
