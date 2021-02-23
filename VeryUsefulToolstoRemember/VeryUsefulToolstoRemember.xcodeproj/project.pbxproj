@@ -160,15 +160,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BF03B7A9259B6C5600DF170A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BF2C9C0925DDCA6A00396C74 /* Sources */,
-				BF2C9C0625DDCA5300396C74 /* Tests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		BF03B7AA259B6C7800DF170A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +201,8 @@
 				BF2C9BFB25DDC08500396C74 /* Views */,
 				BF03B7AA259B6C7800DF170A /* Scenes */,
 			);
-			path = Tests;
+			name = Tests;
+			path = Sources/Tests;
 			sourceTree = "<group>";
 		};
 		BF2C9C0925DDCA6A00396C74 /* Sources */ = {
@@ -283,7 +275,8 @@
 		BF5F98F92593DFF200E28356 /* VeryUsefulToolstoRememberTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF03B7A9259B6C5600DF170A /* Tests */,
+				BF2C9C0625DDCA5300396C74 /* Tests */,
+				BF2C9C0925DDCA6A00396C74 /* Sources */,
 				BF5F98FC2593DFF200E28356 /* Info.plist */,
 			);
 			path = VeryUsefulToolstoRememberTests;
