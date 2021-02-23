@@ -118,7 +118,7 @@ final class CustomTextField: UIView {
     private lazy var container: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = Metrics.Spacing.xSmall
+        stackView.spacing = Metrics.Spacing.tiny
         return stackView
     }()
 
@@ -190,7 +190,7 @@ final class CustomTextField: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
         container.layout(using: [
-            container.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.Spacing.xSmall),
+            container.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.Spacing.tiny),
             container.bottomAnchor.constraint(equalTo: bottomAnchor),
             container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.leadingAnchor.constraint(equalTo: leadingAnchor)

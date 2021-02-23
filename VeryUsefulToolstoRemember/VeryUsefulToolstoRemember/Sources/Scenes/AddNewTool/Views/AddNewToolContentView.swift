@@ -15,7 +15,7 @@ final class AddNewToolContentView: CodedView {
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 4.0
         static let closeButtonSize: CGFloat = 16.0
-        static let descriptionTextFieldHeight: CGFloat = 100
+        static let descriptionTextFieldHeight: CGFloat = 70
     }
     
     // MARK: - Dependencies
@@ -159,7 +159,7 @@ final class AddNewToolContentView: CodedView {
             top: titleLabel.bottomAnchor,
             leading: container.leadingAnchor,
             trailing: container.trailingAnchor,
-            topConstant: Metrics.Spacing.base,
+            topConstant: Metrics.Spacing.small,
             leadingConstant: Metrics.Spacing.small,
             trailingConstant: Metrics.Spacing.small
         )
@@ -170,7 +170,7 @@ final class AddNewToolContentView: CodedView {
             top: toolNameTextField.bottomAnchor,
             leading: toolNameTextField.leadingAnchor,
             trailing: toolNameTextField.trailingAnchor,
-            topConstant: Metrics.Spacing.small
+            topConstant: Metrics.Spacing.xSmall
         )
     }
     
@@ -179,7 +179,7 @@ final class AddNewToolContentView: CodedView {
             top: toolLinkTextField.bottomAnchor,
             leading: toolNameTextField.leadingAnchor,
             trailing: toolNameTextField.trailingAnchor,
-            topConstant: Metrics.Spacing.small
+            topConstant: Metrics.Spacing.xSmall
         )
     }
     
@@ -188,7 +188,7 @@ final class AddNewToolContentView: CodedView {
             top: toolDescriptionTextField.bottomAnchor,
             leading: toolNameTextField.leadingAnchor,
             trailing: toolNameTextField.trailingAnchor,
-            topConstant: Metrics.Spacing.small
+            topConstant: Metrics.Spacing.xSmall
         )
     }
     
@@ -197,7 +197,7 @@ final class AddNewToolContentView: CodedView {
             top: toolTagsTextField.bottomAnchor,
             bottom: container.bottomAnchor,
             trailing: toolNameTextField.trailingAnchor,
-            topConstant: Metrics.Spacing.base,
+            topConstant: Metrics.Spacing.small,
             bottomConstant: Metrics.Spacing.small
         )
     }
