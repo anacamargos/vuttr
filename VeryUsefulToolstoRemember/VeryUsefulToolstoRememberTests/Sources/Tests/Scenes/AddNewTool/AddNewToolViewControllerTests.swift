@@ -28,7 +28,3 @@ final class AddNewToolViewControllerTests: XCTestCase {
     }
 
 }
-
-final class AddNewToolRouterDummy: AddNewToolRoutingLogic {
-    func routeToPreviousScene() {}
-}

@@ -49,6 +49,7 @@
 		BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA916325E5BB1300C9936D /* AddNewToolConfiguratorTests.swift */; };
 		BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA916725E5BB6E00C9936D /* AddNewToolRouterTests.swift */; };
 		BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA916B25E5BC2800C9936D /* AddNewToolViewControllerTests.swift */; };
+		BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */; };
 		BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */; };
 		BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */; };
 		BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */; };
@@ -125,6 +126,7 @@
 		BFAA916325E5BB1300C9936D /* AddNewToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolConfiguratorTests.swift; sourceTree = "<group>"; };
 		BFAA916725E5BB6E00C9936D /* AddNewToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolRouterTests.swift; sourceTree = "<group>"; };
 		BFAA916B25E5BC2800C9936D /* AddNewToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewControllerTests.swift; sourceTree = "<group>"; };
+		BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolRouterDummy.swift; sourceTree = "<group>"; };
 		BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewController.swift; sourceTree = "<group>"; };
 		BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentView.swift; sourceTree = "<group>"; };
 		BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -430,6 +432,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFAA916F25E5BD0500C9936D /* AddNewTool */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */,
+			);
+			path = AddNewTool;
+			sourceTree = "<group>";
+		};
 		BFE8ADFD25DF048F006ED5CA /* AddNewTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +470,7 @@
 		BFE8AE1225DF1359006ED5CA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA916F25E5BD0500C9936D /* AddNewTool */,
 				BFE8AE1325DF135D006ED5CA /* Home */,
 			);
 			path = Scenes;
@@ -690,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAA916025E5B83100C9936D /* UIViewControllerSpy.swift in Sources */,
+				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
