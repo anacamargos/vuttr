@@ -190,18 +190,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BF2C9BFB25DDC08500396C74 /* Views */ = {
+		BF2C9BFB25DDC08500396C74 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */,
 			);
-			path = Views;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BF2C9C0625DDCA5300396C74 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BF2C9BFB25DDC08500396C74 /* Views */,
+				BF2C9BFB25DDC08500396C74 /* Components */,
 				BF03B7AA259B6C7800DF170A /* Scenes */,
 			);
 			name = Tests;
