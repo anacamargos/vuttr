@@ -8,6 +8,8 @@
 
 import UIKit
 
+protocol AddNewToolContentViewProtocol: AnyObject {}
+
 final class AddNewToolContentView: CodedView {
     
     // MARK: - Constants
@@ -261,6 +263,10 @@ final class AddNewToolContentView: CodedView {
         }
     }
 }
+
+// MARK: - AddNewToolContentViewProtocol
+
+extension AddNewToolContentView: AddNewToolContentViewProtocol {}
 
 enum AddNewTool {
     
