@@ -32,7 +32,18 @@ extension Home.UsefulTools.Tool {
         .init(
             title: "Notion",
             description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
-            tags: ["organization", "planning", "collaboration", "writing"]
+            tags: [
+                .init(text: "#organization", estimatedWidth: getEstimatedWidthByWord("#organization")),
+                .init(text: "#planning", estimatedWidth: getEstimatedWidthByWord("#planning")),
+                .init(text: "#collaboration", estimatedWidth: getEstimatedWidthByWord("#collaboration")),
+                .init(text: "#writing", estimatedWidth: getEstimatedWidthByWord("#writing"))
+            ]
         )
+    }
+    
+    private static func getEstimatedWidthByWord(_ word: String) -> CGFloat {
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: Metrics.FontSize.body.value)]
+        let estimatedWidth = NSString(string: word).boundingRect(with: .zero, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return estimatedWidth.width
     }
 }
