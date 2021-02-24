@@ -23,7 +23,7 @@ final class UsefulToolCell: CodedTableViewCell {
         static let shadowY: CGFloat = 5
         static let shadowBlur: CGFloat = 7
         static let iconSmallestSize: CGFloat = 12
-        static let collectionViewRowHeight: CGFloat = 17
+        static let collectionViewRowHeight: CGFloat = 26
         static let collectionViewEstimatedWidth: CGFloat = 10
     }
     
@@ -174,7 +174,7 @@ final class UsefulToolCell: CodedTableViewCell {
         var rowCounts: Int = 1
         let collectionViewWidth = UIScreen.main.bounds.width - Metrics.Spacing.xLarge
         tags.forEach {
-            let dynamicCellWidth = $0.estimatedWidth
+            let dynamicCellWidth = $0.estimatedWidth + Metrics.Spacing.small
             totalWidthPerRow += dynamicCellWidth + Metrics.Spacing.xSmall
 
             if totalWidthPerRow > collectionViewWidth {
@@ -190,7 +190,7 @@ final class UsefulToolCell: CodedTableViewCell {
     func setupViewData(_ viewData: Home.UsefulTools.Tool) {
         tags = viewData.tags
         let numberOfRows = CGFloat(countNumberOfRows())
-        let lineSpacing = Metrics.Spacing.xSmall * (numberOfRows - 1)
+        let lineSpacing = Metrics.Spacing.tiny * (numberOfRows - 1)
         let collectionViewHeight = ViewMetrics.collectionViewRowHeight * numberOfRows
         collectionView.heightAnchor.constraint(equalToConstant: lineSpacing + collectionViewHeight).isActive = true
         titleLabel.text = viewData.title

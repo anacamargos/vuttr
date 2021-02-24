@@ -10,6 +10,12 @@ import UIKit
 
 final class TagCell: CodedCollectionViewCell {
     
+    // MARK: - Constants
+    
+    private enum ViewMetrics {
+        static let cornerRadius: CGFloat = 12
+    }
+    
     // MARK: - View Components
     
     private let titleLabel: UILabel = {
@@ -18,6 +24,18 @@ final class TagCell: CodedCollectionViewCell {
         label.font = .themeFont(for: .body, weight: .regular)
         return label
     }()
+    
+    // MARK: - Initializers
+    
+    override init(frame: CGRect = .zero) {
+        super.init(frame: frame)
+        configureView()
+    }
+    
+    @available(*, unavailable)
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Override Methods
     
@@ -31,8 +49,22 @@ final class TagCell: CodedCollectionViewCell {
     
     // MARK: - Private Methods
     
+    private func configureView() {
+        backgroundColor = .darkestWhite
+        layer.cornerRadius = ViewMetrics.cornerRadius
+    }
+    
     private func constrainTitleLabel() {
-        titleLabel.fillSuperview()
+        titleLabel.anchor(
+            top: topAnchor,
+            leading: leadingAnchor,
+            bottom: bottomAnchor,
+            trailing: trailingAnchor,
+            topConstant: Metrics.Spacing.tiny,
+            leadingConstant: Metrics.Spacing.xSmall,
+            bottomConstant: Metrics.Spacing.tiny,
+            trailingConstant: Metrics.Spacing.xSmall
+        )
     }
     
     // MARK: - Public Methods
