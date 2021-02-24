@@ -52,6 +52,7 @@
 		BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */; };
 		BFAA917825E5BE3D00C9936D /* AddNewToolRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */; };
 		BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */; };
+		BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918C25E6CDA300C9936D /* TagCell.swift */; };
 		BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */; };
 		BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */; };
 		BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */; };
@@ -131,6 +132,7 @@
 		BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolRouterDummy.swift; sourceTree = "<group>"; };
 		BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolRouterSpy.swift; sourceTree = "<group>"; };
 		BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		BFAA918C25E6CDA300C9936D /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewController.swift; sourceTree = "<group>"; };
 		BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentView.swift; sourceTree = "<group>"; };
 		BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				BF5F99452593F0FF00E28356 /* HomeContentView.swift */,
 				BFA3250E259A30CE007BF348 /* UsefulToolCell.swift */,
+				BFAA918C25E6CDA300C9936D /* TagCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */,
 				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
 				BF145C422594059700BBAA52 /* Strings.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
