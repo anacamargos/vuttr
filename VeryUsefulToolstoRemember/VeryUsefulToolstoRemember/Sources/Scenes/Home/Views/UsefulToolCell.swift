@@ -10,6 +10,10 @@ import UIKit
 
 final class UsefulToolCell: CodedTableViewCell {
     
+    // MARK: - Properties
+    
+    private var tags: [Home.UsefulTools.Tag] = []
+    
     // MARK: - View Metris
     
     private enum ViewMetrics {
@@ -19,6 +23,8 @@ final class UsefulToolCell: CodedTableViewCell {
         static let shadowY: CGFloat = 5
         static let shadowBlur: CGFloat = 7
         static let iconSmallestSize: CGFloat = 12
+        static let collectionViewRowHeight: CGFloat = 15
+        static let collectionViewEstimatedWidth: CGFloat = 10
     }
     
     // MARK: - View Components
@@ -54,6 +60,18 @@ final class UsefulToolCell: CodedTableViewCell {
         return button
     }()
     
+    private let collectionView: UICollectionView = {
+        let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .leading, verticalAlignment: .center)
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = Metrics.Spacing.tiny
+        layout.minimumInteritemSpacing = Metrics.Spacing.xSmall
+        layout.estimatedItemSize = .init(width: ViewMetrics.collectionViewEstimatedWidth, height: ViewMetrics.collectionViewRowHeight)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        return collectionView
+    }()
+    
     // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -73,6 +91,7 @@ final class UsefulToolCell: CodedTableViewCell {
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionLabel)
         containerView.addSubview(closeIcon)
+        containerView.addSubview(collectionView)
     }
     
     override func constrainSubviews() {
@@ -80,6 +99,7 @@ final class UsefulToolCell: CodedTableViewCell {
         constrainTitleLabel()
         constrainDescriptionLabel()
         constrainCloseIcon()
+        constrainCollectionView()
     }
     
     // MARK: - Private Methods
@@ -122,7 +142,6 @@ final class UsefulToolCell: CodedTableViewCell {
         descriptionLabel.anchor(
             top: titleLabel.bottomAnchor,
             leading: titleLabel.leadingAnchor,
-            bottom: containerView.bottomAnchor,
             trailing: containerView.trailingAnchor,
             topConstant: Metrics.Spacing.tiny,
             bottomConstant: Metrics.Spacing.small,
@@ -130,16 +149,66 @@ final class UsefulToolCell: CodedTableViewCell {
         )
     }
     
+    private func constrainCollectionView() {
+        collectionView.anchor(
+            top: descriptionLabel.bottomAnchor,
+            leading: descriptionLabel.leadingAnchor,
+            bottom: containerView.bottomAnchor,
+            trailing: descriptionLabel.trailingAnchor,
+            topConstant: Metrics.Spacing.xSmall,
+            bottomConstant: Metrics.Spacing.small
+        )
+    }
+    
     private func configureView() {
         backgroundColor = .clear
         selectionStyle = .none
         contentView.isUserInteractionEnabled = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(TagCell.self, forCellWithReuseIdentifier: TagCell.className)
+    }
+    
+    private func countNumberOfRows() -> Int {
+        var totalWidthPerRow: CGFloat = .zero
+        var rowCounts: Int = 1
+        let collectionViewWidth = UIScreen.main.bounds.width - Metrics.Spacing.xLarge
+        tags.forEach {
+            let dynamicCellWidth = $0.estimatedWidth
+            totalWidthPerRow += dynamicCellWidth + Metrics.Spacing.xSmall
+
+            if totalWidthPerRow > collectionViewWidth {
+               rowCounts += 1
+               totalWidthPerRow = dynamicCellWidth + Metrics.Spacing.xSmall
+            }
+        }
+        return rowCounts
     }
     
     // MARK: - Public Methods
     
     func setupViewData(_ viewData: Home.UsefulTools.Tool) {
+        tags = viewData.tags
+        let numberOfRows = CGFloat(countNumberOfRows())
+        let lineSpacing = Metrics.Spacing.xSmall * (numberOfRows - 1)
+        let collectionViewHeight = ViewMetrics.collectionViewRowHeight * numberOfRows
+        collectionView.heightAnchor.constraint(equalToConstant: lineSpacing + collectionViewHeight).isActive = true
         titleLabel.text = viewData.title
         descriptionLabel.text = viewData.description
+        collectionView.reloadData()
+    }
+}
+
+extension UsefulToolCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        tags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.reusableCell(for: TagCell.self, indexPath: indexPath)
+        let currentTag = tags[indexPath.row]
+        cell.setupTag(currentTag.text)
+        return cell
     }
 }
