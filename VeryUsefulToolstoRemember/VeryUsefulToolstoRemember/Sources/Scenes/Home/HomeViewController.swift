@@ -41,8 +41,19 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationBar()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4)) {
-            let tool = Home.UsefulTools.Tool(title: "Notion", description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized", tags: [])
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            let tool = Home.UsefulTools.Tool(
+                title: "Notion",
+                description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized",
+                tags: [
+                    .init(text: "#test", estimatedWidth: self.getEstimatedWidthByWord("#test")),
+                    .init(text: "#test", estimatedWidth: self.getEstimatedWidthByWord("#test")),
+                    .init(text: "#testawdqwd", estimatedWidth: self.getEstimatedWidthByWord("#testawdqwd")),
+                    .init(text: "#test", estimatedWidth: self.getEstimatedWidthByWord("#test")),
+                    .init(text: "#test", estimatedWidth: self.getEstimatedWidthByWord("#test")),
+                    .init(text: "#testawdqwd", estimatedWidth: self.getEstimatedWidthByWord("#testawdqwd")),
+                ]
+            )
             let viewData = Home.UsefulTools.ViewData(tools: [tool, tool, tool])
             self.displayUsefulToolsViewState(.content(viewData))
         }
@@ -52,6 +63,12 @@ final class HomeViewController: UIViewController {
         super.loadView()
         view = HomeContentView(onTappedAddButtonClosure: { [weak self] in self?.router.routeToAddNewToolScene() })
         contentView = view as? HomeContentViewProtocol
+    }
+    
+    private func getEstimatedWidthByWord(_ word: String) -> CGFloat {
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: Metrics.FontSize.body.value)]
+        let estimatedWidth = NSString(string: word).boundingRect(with: .zero, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return estimatedWidth.width
     }
     
     // MARK: - Private Methods

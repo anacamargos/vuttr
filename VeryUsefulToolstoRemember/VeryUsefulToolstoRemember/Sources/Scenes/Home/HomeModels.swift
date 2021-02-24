@@ -6,7 +6,7 @@
 //  Copyright © 2020 Ana Letícia Camargos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum Home {
     
@@ -25,7 +25,12 @@ enum Home {
         struct Tool {
             let title: String
             let description: String
-            let tags: [String]
+            let tags: [Tag]
+        }
+        
+        struct Tag {
+            let text: String
+            let estimatedWidth: CGFloat
         }
     }
 }
