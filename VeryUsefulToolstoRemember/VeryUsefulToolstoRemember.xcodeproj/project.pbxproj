@@ -323,9 +323,7 @@
 		BF5F993C2593F09E00E28356 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BF8D067125E05B4B0045EAFE /* Components */,
-				BFA32513259A3100007BF348 /* Views */,
-				BF9A5FF52593F8A400BBE399 /* DesignSystem */,
+				BFAA918025E6C9B000C9936D /* UI */,
 				BF5F994A2593F12800E28356 /* Extensions */,
 				BF5F993D2593F0B300E28356 /* Scenes */,
 			);
@@ -449,6 +447,16 @@
 				BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */,
 			);
 			path = AddNewTool;
+			sourceTree = "<group>";
+		};
+		BFAA918025E6C9B000C9936D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BF8D067125E05B4B0045EAFE /* Components */,
+				BFA32513259A3100007BF348 /* Views */,
+				BF9A5FF52593F8A400BBE399 /* DesignSystem */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		BFE8ADFD25DF048F006ED5CA /* AddNewTool */ = {
