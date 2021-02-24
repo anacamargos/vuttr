@@ -23,7 +23,7 @@ final class UsefulToolCell: CodedTableViewCell {
         static let shadowY: CGFloat = 5
         static let shadowBlur: CGFloat = 7
         static let iconSmallestSize: CGFloat = 12
-        static let collectionViewRowHeight: CGFloat = 15
+        static let collectionViewRowHeight: CGFloat = 17
         static let collectionViewEstimatedWidth: CGFloat = 10
     }
     
