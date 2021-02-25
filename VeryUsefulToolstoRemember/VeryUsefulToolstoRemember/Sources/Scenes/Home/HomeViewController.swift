@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Dependencies
     
+    private let interactor: HomeBusinessLogic
     private let router: HomeRoutingLogic
     
     // MARK: - View Components
@@ -24,8 +25,10 @@ final class HomeViewController: UIViewController {
     // MARK: - Initializers
     
     init(
+        interactor: HomeBusinessLogic,
         router: HomeRoutingLogic
     ) {
+        self.interactor = interactor
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }
@@ -40,6 +43,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
+        interactor.onViewDidLoad()
     }
     
     override func loadView() {
