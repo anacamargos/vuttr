@@ -54,8 +54,11 @@ final class HomeViewControllerTests: XCTestCase {
 
     // MARK: - Private Methods
     
-    private func makeSUT(router: HomeRoutingLogic = HomeRouterDummy()) -> HomeViewController {
-        let sut = HomeViewController(router: router)
+    private func makeSUT(
+        interactor: HomeBusinessLogic = HomeInteractorDummy(),
+        router: HomeRoutingLogic = HomeRouterDummy()
+    ) -> HomeViewController {
+        let sut = HomeViewController(interactor: interactor, router: router)
         return sut
     }
 }
