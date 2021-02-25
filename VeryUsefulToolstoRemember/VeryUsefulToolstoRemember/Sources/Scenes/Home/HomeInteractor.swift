@@ -9,15 +9,27 @@
 import Foundation
 
 protocol HomeBusinessLogic {
-    
+    func onViewDidLoad()
 }
 
 final class HomeInteractor {
     
+    // MARK: - Dependencies
+    
+    private let presenter: HomePresentationLogic
+    
+    // MARK: - Initializer
+    
+    init(presenter: HomePresentationLogic) {
+        self.presenter = presenter
+    }
 }
 
 // MARK: - HomeBusinessLogic
 
 extension HomeInteractor: HomeBusinessLogic {
     
+    func onViewDidLoad() {
+        presenter.presentToolsViewState()
+    }
 }
