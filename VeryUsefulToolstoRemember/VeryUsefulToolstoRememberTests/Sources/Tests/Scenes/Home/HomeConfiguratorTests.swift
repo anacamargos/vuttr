@@ -23,9 +23,19 @@ final class HomeConfiguratorTests: XCTestCase {
             XCTFail("Could not find HomeRouter.")
             return
         }
+        guard let interactor = Mirror(reflecting: viewController).firstChild(of: HomeInteractor.self) else {
+            XCTFail("Could not find HomeInteractor.")
+            return
+        }
+        guard let presenter = Mirror(reflecting: interactor).firstChild(of: HomePresenter.self) else {
+            XCTFail("Could not find HomePresenter.")
+            return
+        }
         
         XCTAssertNotNil(router.viewController)
         XCTAssertTrue(router.viewController is HomeViewController)
+        XCTAssertNotNil(presenter.viewController)
+        XCTAssertTrue(presenter.viewController is HomeViewController)
     }
     
 }
