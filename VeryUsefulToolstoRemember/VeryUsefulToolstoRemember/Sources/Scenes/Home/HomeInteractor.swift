@@ -17,11 +17,16 @@ final class HomeInteractor {
     // MARK: - Dependencies
     
     private let presenter: HomePresentationLogic
+    private let getToolsUseCase: GetUsefulToolsUseCaseProvider
     
     // MARK: - Initializer
     
-    init(presenter: HomePresentationLogic) {
+    init(
+        presenter: HomePresentationLogic,
+        getToolsUseCase: GetUsefulToolsUseCaseProvider
+    ) {
         self.presenter = presenter
+        self.getToolsUseCase = getToolsUseCase
     }
 }
 
@@ -30,6 +35,14 @@ final class HomeInteractor {
 extension HomeInteractor: HomeBusinessLogic {
     
     func onViewDidLoad() {
-        presenter.presentToolsViewState()
+        presenter.presentToolsResponse(.loading)
+        getToolsUseCase.execute { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.presenter.presentToolsResponse(.content(data))
+            case .failure:
+                self?.presenter.presentToolsResponse(.error)
+            }
+        }
     }
 }

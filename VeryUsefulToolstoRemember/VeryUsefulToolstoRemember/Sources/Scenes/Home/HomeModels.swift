@@ -12,6 +12,12 @@ enum Home {
     
     enum UsefulTools {
         
+        enum Response {
+            case content([GetUsefulToolsUseCaseModels.Tool])
+            case loading
+            case error
+        }
+        
         enum ViewState {
             case content(ViewData)
             case loading
