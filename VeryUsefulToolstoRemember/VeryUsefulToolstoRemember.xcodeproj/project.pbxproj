@@ -31,6 +31,7 @@
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
+		BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
 		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
 		BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */; };
@@ -114,6 +115,7 @@
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicDummy.swift; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
 		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
 		BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 			children = (
 				BFE8AE1425DF1366006ED5CA /* HomeRouterDummy.swift */,
 				BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */,
+				BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -802,6 +805,7 @@
 				BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */,
 				BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */,
 				BFAA917825E5BE3D00C9936D /* AddNewToolRouterSpy.swift in Sources */,
+				BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */,
 				BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */,
 				BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */,
 				BFE8AE1B25DF143C006ED5CA /* HomeConfiguratorTests.swift in Sources */,
