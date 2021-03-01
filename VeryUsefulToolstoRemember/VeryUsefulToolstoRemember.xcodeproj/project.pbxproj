@@ -20,6 +20,8 @@
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
+		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
+		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
@@ -101,6 +103,8 @@
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
+		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5F98EC2593DFF200E28356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,6 +291,23 @@
 				BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */,
 				BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */,
 				BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BF53CB8725ED92600014E967 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF53CB8825ED92630014E967 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF53CB8825ED92630014E967 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */,
+				BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -571,6 +592,7 @@
 		BFE8AE1E25DF14DE006ED5CA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BF53CB8725ED92600014E967 /* Scenes */,
 				BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */,
 			);
 			path = Extensions;
@@ -793,11 +815,13 @@
 			files = (
 				BFAA916025E5B83100C9936D /* UIViewControllerSpy.swift in Sources */,
 				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
+				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,
 				BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */,
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
 				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
+				BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */,
 				BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
