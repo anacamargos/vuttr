@@ -12,20 +12,6 @@ protocol GetUsefulToolsUseCaseProvider {
     func execute(then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void)
 }
 
-enum GetUsefulToolsUseCaseError: Error {
-    case genericError
-}
-
-enum GetUsefulToolsUseCaseModels {
-    struct Tool {
-        let id: UInt
-        let title: String
-        let link: String
-        let description: String
-        let tags: [String]
-    }
-}
-
 final class GetUsefulToolsUseCase: GetUsefulToolsUseCaseProvider {
     
     // MARK: - GetUsefulToolsUseCaseProvider
