@@ -22,6 +22,7 @@
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
 		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
+		BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */; };
 		BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F98E32593DFEB00E28356 /* AppDelegate.swift */; };
 		BF5F98ED2593DFF200E28356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EC2593DFF200E28356 /* Assets.xcassets */; };
 		BF5F98F02593DFF200E28356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5F98EE2593DFF200E28356 /* LaunchScreen.storyboard */; };
@@ -105,6 +106,7 @@
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
+		BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		BF5F98E02593DFEB00E28356 /* VeryUsefulToolstoRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryUsefulToolstoRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F98E32593DFEB00E28356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5F98EC2593DFF200E28356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				BFE8AE1A25DF143C006ED5CA /* HomeConfiguratorTests.swift */,
 				BFAA915B25E5B74F00C9936D /* HomeRouterTests.swift */,
 				BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */,
+				BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAA916025E5B83100C9936D /* UIViewControllerSpy.swift in Sources */,
+				BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */,
 				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
 				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,

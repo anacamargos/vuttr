@@ -28,13 +28,10 @@ final class HomeInteractor {
         self.presenter = presenter
         self.getToolsUseCase = getToolsUseCase
     }
-}
-
-// MARK: - HomeBusinessLogic
-
-extension HomeInteractor: HomeBusinessLogic {
     
-    func onViewDidLoad() {
+    // MARK: - Private Methods
+    
+    private func loadTools() {
         presenter.presentToolsResponse(.loading)
         getToolsUseCase.execute { [weak self] result in
             switch result {
@@ -44,5 +41,14 @@ extension HomeInteractor: HomeBusinessLogic {
                 self?.presenter.presentToolsResponse(.error)
             }
         }
+    }
+}
+
+// MARK: - HomeBusinessLogic
+
+extension HomeInteractor: HomeBusinessLogic {
+    
+    func onViewDidLoad() {
+        loadTools()
     }
 }
