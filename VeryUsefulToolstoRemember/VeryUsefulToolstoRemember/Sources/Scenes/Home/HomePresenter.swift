@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomePresentationLogic {
-    func presentToolsViewState()
+    func presentToolsResponse(_ response: Home.UsefulTools.Response)
 }
 
 final class HomePresenter {
@@ -25,26 +25,36 @@ final class HomePresenter {
         let estimatedWidth = NSString(string: word).boundingRect(with: .zero, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         return estimatedWidth.width
     }
+    
+    private func mapToolTags(_ tags: [String]) -> [Home.UsefulTools.Tag] {
+        tags.map {
+            Home.UsefulTools.Tag(text: $0, estimatedWidth: getEstimatedWidthByWord($0))
+        }
+    }
+    
+    private func mapDomainDataToViewData(_ domainData: [GetUsefulToolsUseCaseModels.Tool]) -> Home.UsefulTools.ViewData {
+        let tools = domainData.map {
+            Home.UsefulTools.Tool(title: $0.title, description: $0.description, tags: mapToolTags($0.tags))
+        }
+        return .init(tools: tools)
+    }
 }
 
 // MARK: - HomePresentationLogic
 
 extension HomePresenter: HomePresentationLogic {
     
-    func presentToolsViewState() {
-        let tool = Home.UsefulTools.Tool(
-            title: "Notion",
-            description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized",
-            tags: [
-                .init(text: "#test", estimatedWidth: getEstimatedWidthByWord("#test")),
-                .init(text: "#test", estimatedWidth: getEstimatedWidthByWord("#test")),
-                .init(text: "#testawdqwd", estimatedWidth: getEstimatedWidthByWord("#testawdqwd")),
-                .init(text: "#test", estimatedWidth: getEstimatedWidthByWord("#test")),
-                .init(text: "#test", estimatedWidth: getEstimatedWidthByWord("#test")),
-                .init(text: "#testawdqwd", estimatedWidth: getEstimatedWidthByWord("#testawdqwd")),
-            ]
-        )
-        let viewData = Home.UsefulTools.ViewData(tools: [tool, tool, tool])
-        viewController?.displayUsefulToolsViewState(.content(viewData))
+    func presentToolsResponse(_ response: Home.UsefulTools.Response) {
+        let viewState: Home.UsefulTools.ViewState
+        switch response {
+        case let .content(domainData):
+            let viewData = mapDomainDataToViewData(domainData)
+            viewState = .content(viewData)
+        case .loading:
+            viewState = .loading
+        case .error:
+            viewState = .error
+        }
+        viewController?.displayUsefulToolsViewState(viewState)
     }
 }
