@@ -60,15 +60,6 @@ final class HomePresenterTests: XCTestCase {
 
 }
 
-final class HomeDisplayLogicSpy: HomeDisplayLogic {
-    
-    private(set) var displayUsefulToolsViewStatePassedViewStates = [Home.UsefulTools.ViewState]()
-    
-    func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState) {
-        displayUsefulToolsViewStatePassedViewStates.append(viewState)
-    }
-}
-
 extension GetUsefulToolsUseCaseModels.Tool {
     static var mock: GetUsefulToolsUseCaseModels.Tool {
         .init(
