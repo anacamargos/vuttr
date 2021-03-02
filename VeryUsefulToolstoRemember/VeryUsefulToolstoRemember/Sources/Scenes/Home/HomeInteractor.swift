@@ -10,9 +10,14 @@ import Foundation
 
 protocol HomeBusinessLogic {
     func onViewDidLoad()
+    func handleToolSelection(at row: Int)
 }
 
 final class HomeInteractor {
+    
+    // MARK: - Properties
+    
+    private var usefulTools: [GetUsefulToolsUseCaseModels.Tool] = []
     
     // MARK: - Dependencies
     
@@ -36,6 +41,7 @@ final class HomeInteractor {
         getToolsUseCase.execute { [weak self] result in
             switch result {
             case let .success(data):
+                self?.usefulTools = data
                 self?.presenter.presentToolsResponse(.content(data))
             case .failure:
                 self?.presenter.presentToolsResponse(.error)
@@ -50,5 +56,12 @@ extension HomeInteractor: HomeBusinessLogic {
     
     func onViewDidLoad() {
         loadTools()
+    }
+    
+    func handleToolSelection(at row: Int) {
+        guard usefulTools.indices.contains(row) else { return }
+        let selectedTool = usefulTools[row]
+        guard let url = URL(string: selectedTool.link) else { return }
+        presenter.presentURL(url)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomePresentationLogic {
     func presentToolsResponse(_ response: Home.UsefulTools.Response)
+    func presentURL(_ url: URL)
 }
 
 final class HomePresenter {
@@ -56,5 +57,9 @@ extension HomePresenter: HomePresentationLogic {
             viewState = .error
         }
         viewController?.displayUsefulToolsViewState(viewState)
+    }
+    
+    func presentURL(_ url: URL) {
+        viewController?.displayURL(url)
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
     func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState)
+    func displayURL(_ url: URL)
 }
 
 final class HomeViewController: UIViewController {
@@ -83,6 +84,10 @@ extension HomeViewController: HomeDisplayLogic {
     
     func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState) {
         contentView?.setupUsefulToolsState(viewState)
+    }
+    
+    func displayURL(_ url: URL) {
+        router.routeToURL(url)
     }
 }
 
