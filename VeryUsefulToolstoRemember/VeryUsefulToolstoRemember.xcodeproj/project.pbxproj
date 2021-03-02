@@ -32,6 +32,10 @@
 		BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */; };
 		BF5F99582593F7AD00E28356 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */; };
 		BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */; };
+		BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */; };
+		BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */; };
+		BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */; };
+		BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */; };
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
@@ -120,6 +124,10 @@
 		BF5F99502593F5D400E28356 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		BF5F99562593F7AD00E28356 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterDummy.swift; sourceTree = "<group>"; };
+		BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseDummy.swift; sourceTree = "<group>"; };
+		BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
+		BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseStub.swift; sourceTree = "<group>"; };
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
@@ -263,6 +271,7 @@
 		BF2C9C0925DDCA6A00396C74 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BF69836425EECFD300603AF0 /* Stubs */,
 				BFE8AE1E25DF14DE006ED5CA /* Extensions */,
 				BFE8AE1125DF1353006ED5CA /* Dummies */,
 				BF2C9C0A25DDCA7300396C74 /* Spies */,
@@ -294,6 +303,7 @@
 				BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */,
 				BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */,
 				BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */,
+				BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -436,6 +446,30 @@
 				BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BF69836425EECFD300603AF0 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				BF69836525EECFD700603AF0 /* Scenes */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		BF69836525EECFD700603AF0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF69836625EECFDE00603AF0 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF69836625EECFDE00603AF0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BF7EB24425ED85CE004EA9AD /* Domain */ = {
@@ -588,6 +622,8 @@
 				BFE8AE1425DF1366006ED5CA /* HomeRouterDummy.swift */,
 				BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */,
 				BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */,
+				BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */,
+				BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -818,6 +854,7 @@
 			files = (
 				BFAA916025E5B83100C9936D /* UIViewControllerSpy.swift in Sources */,
 				BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */,
+				BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */,
 				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
 				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,
@@ -830,12 +867,15 @@
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
+				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
+				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
 				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
 				BFAA914825E5AF3B00C9936D /* AddNewToolContentViewTests.swift in Sources */,
 				BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */,
 				BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */,
+				BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */,
 				BFAA917825E5BE3D00C9936D /* AddNewToolRouterSpy.swift in Sources */,
 				BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */,
 				BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */,

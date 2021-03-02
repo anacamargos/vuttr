@@ -39,7 +39,6 @@ final class HomeInteractorTests: XCTestCase {
         
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
-
     }
 
     // MARK: - Test Helpers
@@ -54,30 +53,4 @@ final class HomeInteractorTests: XCTestCase {
         )
     }
 
-}
-
-final class HomePresenterDummy: HomePresentationLogic {
-    func presentToolsResponse(_ response: Home.UsefulTools.Response) {}
-}
-
-final class GetUsefulToolsUseCaseDummy: GetUsefulToolsUseCaseProvider {
-    func execute(then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void) {}
-}
-
-final class HomePresenterSpy: HomePresentationLogic {
-    
-    private(set) var presentToolsResponsePassedResponses = [Home.UsefulTools.Response]()
-    
-    func presentToolsResponse(_ response: Home.UsefulTools.Response) {
-        presentToolsResponsePassedResponses.append(response)
-    }
-}
-
-final class GetUsefulToolsUseCaseStub: GetUsefulToolsUseCaseProvider {
-    
-    var executeResultToBeReturned: Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError> = .success([.mock])
-    
-    func execute(then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void) {
-        handle(executeResultToBeReturned)
-    }
 }
