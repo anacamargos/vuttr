@@ -26,6 +26,7 @@ final class HomeContentView: CodedView {
     // MARK: - Dependencies
     
     private let onTappedAddButtonClosure: () -> Void
+    private let onTappedToolCellClosure: (Int) -> Void
     
     // MARK: - Properties
     
@@ -57,9 +58,11 @@ final class HomeContentView: CodedView {
     
     init(
         frame: CGRect = .zero,
-        onTappedAddButtonClosure: @escaping () -> Void
+        onTappedAddButtonClosure: @escaping () -> Void,
+        onTappedToolCellClosure: @escaping (Int) -> Void
     ) {
         self.onTappedAddButtonClosure = onTappedAddButtonClosure
+        self.onTappedToolCellClosure = onTappedToolCellClosure
         super.init(frame: frame)
         configureView()
     }
@@ -167,6 +170,12 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
             return getLoadingCell(for: indexPath)
         case .error:
             return .init()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if case .content = viewState {
+            onTappedToolCellClosure(indexPath.row)
         }
     }
 }
