@@ -64,6 +64,23 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertEqual(routerSpy.routeToURLPassedURLs, [anyURL])
     }
+    
+    func test_onTappedToolCellClosure_shouldCallCorrectMethodInInteractor() {
+        // Given
+        let interactorSpy = HomeInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy)
+        guard let contentView = sut.view as? HomeContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedToolCellClosure = Mirror(reflecting: contentView).firstChild(of: ((Int) -> Void).self, in: "onTappedToolCellClosure")
+        
+        // When
+        onTappedToolCellClosure?(.zero)
+        
+        // Then
+        XCTAssertTrue(interactorSpy.handleToolSelectionCalled)
+    }
 
     // MARK: - Private Methods
     
@@ -73,5 +90,20 @@ final class HomeViewControllerTests: XCTestCase {
     ) -> HomeViewController {
         let sut = HomeViewController(interactor: interactor, router: router)
         return sut
+    }
+}
+
+final class HomeInteractorSpy: HomeBusinessLogic {
+    
+    private(set) var onViewDidLoadCalled = false
+    
+    func onViewDidLoad() {
+        onViewDidLoadCalled = true
+    }
+    
+    private(set) var handleToolSelectionCalled = false
+    
+    func handleToolSelection(at row: Int) {
+        handleToolSelectionCalled = true
     }
 }
