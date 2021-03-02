@@ -11,4 +11,5 @@ import Foundation
 
 final class HomeDisplayLogicDummy: HomeDisplayLogic {
     func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState) {}
+    func displayURL(_ url: URL) {}
 }

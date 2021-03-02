@@ -16,4 +16,10 @@ final class HomeRouterSpy: HomeRoutingLogic {
     func routeToAddNewToolScene() {
         routeToAddNewToolSceneCalled = true
     }
+    
+    private(set) var routeToURLPassedURLs = [URL]()
+    
+    func routeToURL(_ url: URL) {
+        routeToURLPassedURLs.append(url)
+    }
 }

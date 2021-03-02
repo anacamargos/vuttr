@@ -16,4 +16,10 @@ final class HomePresenterSpy: HomePresentationLogic {
     func presentToolsResponse(_ response: Home.UsefulTools.Response) {
         presentToolsResponsePassedResponses.append(response)
     }
+    
+    private(set) var presentURLPassedURLs = [URL]()
+    
+    func presentURL(_ url: URL) {
+        presentURLPassedURLs.append(url)
+    }
 }

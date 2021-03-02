@@ -11,4 +11,5 @@ import Foundation
 
 final class HomePresenterDummy: HomePresentationLogic {
     func presentToolsResponse(_ response: Home.UsefulTools.Response) {}
+    func presentURL(_ url: URL) {}
 }

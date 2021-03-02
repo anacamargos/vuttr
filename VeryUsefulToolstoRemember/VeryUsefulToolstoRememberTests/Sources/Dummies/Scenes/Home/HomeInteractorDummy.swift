@@ -11,4 +11,5 @@ import Foundation
 
 final class HomeInteractorDummy: HomeBusinessLogic {
     func onViewDidLoad() {}
+    func handleToolSelection(at row: Int) {}
 }
