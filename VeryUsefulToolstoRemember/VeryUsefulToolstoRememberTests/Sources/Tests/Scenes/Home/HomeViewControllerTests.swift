@@ -81,6 +81,18 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertTrue(interactorSpy.handleToolSelectionCalled)
     }
+    
+    func test_viewDidLoad_shouldCallCorrectMethodInInteractor() {
+        // Given
+        let interactorSpy = HomeInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy)
+        
+        // When
+        sut.viewDidLoad()
+        
+        // Then
+        XCTAssertTrue(interactorSpy.onViewDidLoadCalled)
+    }
 
     // MARK: - Private Methods
     
