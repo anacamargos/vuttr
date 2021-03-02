@@ -92,18 +92,3 @@ final class HomeViewControllerTests: XCTestCase {
         return sut
     }
 }
-
-final class HomeInteractorSpy: HomeBusinessLogic {
-    
-    private(set) var onViewDidLoadCalled = false
-    
-    func onViewDidLoad() {
-        onViewDidLoadCalled = true
-    }
-    
-    private(set) var handleToolSelectionCalled = false
-    
-    func handleToolSelection(at row: Int) {
-        handleToolSelectionCalled = true
-    }
-}
