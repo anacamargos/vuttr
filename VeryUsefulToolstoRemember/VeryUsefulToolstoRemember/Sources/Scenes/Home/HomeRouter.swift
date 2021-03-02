@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol HomeRoutingLogic{
     func routeToAddNewToolScene()
+    func routeToURL(_ url: URL)
 }
 
 final class HomeRouter: HomeRoutingLogic{
@@ -29,6 +31,11 @@ final class HomeRouter: HomeRoutingLogic{
     
     func routeToAddNewToolScene() {
         let destinationViewController = addNewToolConfigurator.resolveViewController()
+        viewController?.present(destinationViewController, animated: true)
+    }
+    
+    func routeToURL(_ url: URL) {
+        let destinationViewController = SFSafariViewController(url: url)
         viewController?.present(destinationViewController, animated: true)
     }
 }
