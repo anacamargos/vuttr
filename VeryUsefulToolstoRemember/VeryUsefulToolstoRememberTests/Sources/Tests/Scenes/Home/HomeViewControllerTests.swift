@@ -51,6 +51,19 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertTrue(routerSpy.routeToAddNewToolSceneCalled)
     }
+    
+    func test_displayURL_shouldCallCorrectMethodInRouter() {
+        // Given
+        let routerSpy = HomeRouterSpy()
+        let sut = makeSUT(router: routerSpy)
+        let anyURL = URL(string: "https://any-url.com")!
+        
+        // When
+        sut.displayURL(anyURL)
+        
+        // Then
+        XCTAssertEqual(routerSpy.routeToURLPassedURLs, [anyURL])
+    }
 
     // MARK: - Private Methods
     

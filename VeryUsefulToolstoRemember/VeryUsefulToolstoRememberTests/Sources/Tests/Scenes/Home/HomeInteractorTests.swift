@@ -40,6 +40,49 @@ final class HomeInteractorTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
     }
+    
+    func test_handleToolSelection_whenSelectedToolIsValid_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedURL = URL(string: "https://notion.so")!
+        
+        // When
+        sut.onViewDidLoad()
+        sut.handleToolSelection(at: .zero)
+        
+        // Then
+        XCTAssertEqual(presenterSpy.presentURLPassedURLs, [expectedURL])
+    }
+    
+    func test_handleToolSelection_whenSelectedToolIsNotValid_shouldCallNotCallMethodInPresenter() {
+        // Given
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy)
+        
+        // When
+        sut.handleToolSelection(at: .zero)
+        
+        // Then
+        XCTAssertEqual(presenterSpy.presentURLPassedURLs, [])
+    }
+    
+    func test_handleToolSelection_whenSelectedToolIsValidButURLIsNotValid_shouldCallNotCallMethodInPresenter() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mockWithInvalidLink])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+
+        // When
+        sut.onViewDidLoad()
+        sut.handleToolSelection(at: .zero)
+        
+        // Then
+        XCTAssertEqual(presenterSpy.presentURLPassedURLs, [])
+    }
 
     // MARK: - Test Helpers
     

@@ -14,6 +14,16 @@ extension GetUsefulToolsUseCaseModels.Tool {
         .init(
             id: 1,
             title: "Notion",
+            link: "https://notion.so",
+            description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
+            tags: ["#organization", "#planning", "#collaboration", "#writing"]
+        )
+    }
+    
+    static var mockWithInvalidLink: GetUsefulToolsUseCaseModels.Tool {
+        .init(
+            id: 1,
+            title: "Notion",
             link: "",
             description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
             tags: ["#organization", "#planning", "#collaboration", "#writing"]

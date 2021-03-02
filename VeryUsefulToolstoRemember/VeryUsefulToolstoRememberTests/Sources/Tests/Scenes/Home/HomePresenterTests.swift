@@ -49,6 +49,19 @@ final class HomePresenterTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: viewControllerSpy.displayUsefulToolsViewStatePassedViewStates), String(describing: [expectedViewState]))
     }
+    
+    func test_presentURL_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = HomeDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+        let anyURL = URL(string: "https://any-url.com")!
+        
+        // When
+        sut.presentURL(anyURL)
+        
+        // Then
+        XCTAssertEqual(viewControllerSpy.displayURLPassedURLs, [anyURL])
+    }
 
     // MARK: - Test Helpers
     
