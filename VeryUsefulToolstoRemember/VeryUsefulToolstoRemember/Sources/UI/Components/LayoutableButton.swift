@@ -16,7 +16,7 @@ class LayoutableButton: UIButton {
     var layout: ButtonLayout
 
     override var isEnabled: Bool {
-        didSet { isEnabled ? applyLayoutProperties(layout.enabled) : applyLayoutProperties(layout.disabled) }
+        didSet { updateButtonLayout() }
     }
     
     override var isHighlighted: Bool {
@@ -61,7 +61,7 @@ class LayoutableButton: UIButton {
     private func constrainSubviews() {
         loading.layout(using: [
             loading.centerYAnchor.constraint(equalTo: centerYAnchor),
-            loading.rightAnchor.constraint(equalTo: rightAnchor, constant: -Metrics.Spacing.small)
+            loading.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
@@ -73,14 +73,20 @@ class LayoutableButton: UIButton {
         }
     }
     
+    private func updateButtonLayout() {
+        isEnabled ? applyLayoutProperties(layout.enabled) : applyLayoutProperties(layout.disabled)
+    }
+    
     // MARK: - Public methods
     
     func setLoading(_ isLoading: Bool) {
         if isLoading {
+            setTitleColor(.clear, for: .normal)
             isUserInteractionEnabled = false
             loading.isHidden = false
             loading.startAnimating()
         } else {
+            updateButtonLayout()
             isUserInteractionEnabled = true
             loading.isHidden = true
             loading.stopAnimating()
