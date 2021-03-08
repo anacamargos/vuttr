@@ -45,7 +45,7 @@ final class RemoveToolContentView: CodedView {
     }()
     
     private let cancelButton: LayoutableButton = {
-        let button = LayoutableButton(layout: .primary)
+        let button = LayoutableButton(layout: .secundary)
         button.setTitle(L10n.AddNewTool.removeToolCancel, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
@@ -135,7 +135,7 @@ final class RemoveToolContentView: CodedView {
     
     private func constrainDescriptionLabel() {
         descriptionLabel.anchor(
-            top: titleLabel.topAnchor,
+            top: titleLabel.bottomAnchor,
             leading: titleLabel.leadingAnchor,
             trailing: container.trailingAnchor,
             topConstant: Metrics.Spacing.small,
@@ -148,7 +148,7 @@ final class RemoveToolContentView: CodedView {
             top: descriptionLabel.bottomAnchor,
             bottom: container.bottomAnchor,
             trailing: container.trailingAnchor,
-            topConstant: Metrics.Spacing.small,
+            topConstant: Metrics.Spacing.base,
             bottomConstant: Metrics.Spacing.small,
             trailingConstant: Metrics.Spacing.small
         )

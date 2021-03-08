@@ -14,6 +14,11 @@ extension ButtonLayout {
         enabled: PrimaryNeutral.enabled,
         disabled: PrimaryNeutral.disabled
     )
+    
+    static let secundary: ButtonLayout = .init(
+        enabled: SecondaryNeutral.enabled,
+        disabled: SecondaryNeutral.disabled
+    )
 }
 
 extension ButtonLayout {
@@ -31,6 +36,20 @@ extension ButtonLayout {
             titleFont: .themeFont(for: .body, weight: .semibold),
             titleColor: .mostLightestBlue,
             backgroundColor: .lighterBlue
+        )
+    }
+    
+    enum SecondaryNeutral {
+        static let enabled: ButtonLayout.Properties = .init(
+            titleFont: .themeFont(for: .body, weight: .semibold),
+            titleColor: .blue,
+            backgroundColor: .mostLightestBlue,
+            selectedBackgroundColor: .lighterBlue
+        )
+        static let disabled: ButtonLayout.Properties = .init(
+            titleFont: .themeFont(for: .body, weight: .semibold),
+            titleColor: .lighterBlue,
+            backgroundColor: .mostLightestBlue
         )
     }
 }
