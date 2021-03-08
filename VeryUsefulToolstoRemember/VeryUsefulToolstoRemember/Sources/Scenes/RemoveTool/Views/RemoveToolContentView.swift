@@ -166,6 +166,12 @@ final class RemoveToolContentView: CodedView {
     private func configureView() {
         backgroundColor = .secundary80
     }
+    
+    // MARK: - Public Methods
+    
+    func setupViewData(_ toolName: String) {
+        descriptionLabel.text = L10n.AddNewTool.removeToolDescription(toolName)
+    }
 }
 
 // MARK: - RemoveToolContentViewProtocol
