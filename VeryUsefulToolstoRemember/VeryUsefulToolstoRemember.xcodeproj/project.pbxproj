@@ -70,6 +70,8 @@
 		BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */; };
 		BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918C25E6CDA300C9936D /* TagCell.swift */; };
 		BFAA919125E6CF7B00C9936D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */; };
+		BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */; };
+		BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */; };
 		BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */; };
 		BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */; };
 		BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */; };
@@ -167,6 +169,8 @@
 		BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BFAA918C25E6CDA300C9936D /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewController.swift; sourceTree = "<group>"; };
+		BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentView.swift; sourceTree = "<group>"; };
 		BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewController.swift; sourceTree = "<group>"; };
 		BFE8AE0525DF04D2006ED5CA /* AddNewToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentView.swift; sourceTree = "<group>"; };
 		BFE8AE0925DF10A0006ED5CA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -394,6 +398,7 @@
 		BF5F993D2593F0B300E28356 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFD277B725F6BCEF004016C8 /* RemoveTool */,
 				BFE8ADFD25DF048F006ED5CA /* AddNewTool */,
 				BF5F993E2593F0C500E28356 /* Home */,
 			);
@@ -581,6 +586,23 @@
 				BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */,
 			);
 			path = FlowLayouts;
+			sourceTree = "<group>";
+		};
+		BFD277B725F6BCEF004016C8 /* RemoveTool */ = {
+			isa = PBXGroup;
+			children = (
+				BFD277BC25F6BD36004016C8 /* Views */,
+				BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */,
+			);
+			path = RemoveTool;
+			sourceTree = "<group>";
+		};
+		BFD277BC25F6BD36004016C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BFE8ADFD25DF048F006ED5CA /* AddNewTool */ = {
@@ -846,7 +868,9 @@
 				BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */,
 				BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
+				BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
+				BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */,
 				BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
