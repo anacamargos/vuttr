@@ -62,9 +62,34 @@ extension UIColor {
     
     // MARK: - Red
     
+    /// #A53F3F
+    @nonobjc class var darkerRed: UIColor {
+        .init(red: 165.0 / 255.0, green: 63.0 / 255.0, blue: 63.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #CC4C4C
+    @nonobjc class var darkRed: UIColor {
+        .init(red: 204.0 / 255.0, green: 76.0 / 255.0, blue: 76.0 / 255.0, alpha: 1.0)
+    }
+    
     /// #F95E5A
     @nonobjc class var red: UIColor {
         .init(red: 249.0 / 255.0, green: 94.0 / 255.0, blue: 90.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #FCAEAC
+    @nonobjc class var lightRed: UIColor {
+        .init(red: 252.0 / 255.0, green: 174.0 / 255.0, blue: 172.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #FCC6C5
+    @nonobjc class var lighterRed: UIColor {
+        .init(red: 252.0 / 255.0, green: 198.0 / 255.0, blue: 197.0 / 255.0, alpha: 1.0)
+    }
+    
+    /// #FCD7D6
+    @nonobjc class var lightestRed: UIColor {
+        .init(red: 252.0 / 255.0, green: 215.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.0)
     }
     
     /// #FEEFEE
