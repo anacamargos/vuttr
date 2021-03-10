@@ -34,10 +34,6 @@ final class RemoveToolPresenterTests: XCTestCase {
 
 }
 
-final class RemoveToolDisplayLogicDummy: RemoveToolDisplayLogic {
-    func displayToolName(_ toolName: String) {}
-}
-
 final class RemoveToolDisplayLogicSpy: RemoveToolDisplayLogic {
     
     private(set) var displayToolNamePassedToolNames = [String]()
