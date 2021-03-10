@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RemoveToolDisplayLogic: AnyObject {
+    func displayToolName(_ toolName: String)
+}
+
 final class RemoveToolViewController: UIViewController {
     
     // MARK: - View Components
@@ -39,4 +43,13 @@ final class RemoveToolViewController: UIViewController {
         
     }
     
+}
+
+// MARK: - RemoveToolDisplayLogic
+
+extension RemoveToolViewController: RemoveToolDisplayLogic {
+    
+    func displayToolName(_ toolName: String) {
+        contentView?.setupViewData(toolName)
+    }
 }

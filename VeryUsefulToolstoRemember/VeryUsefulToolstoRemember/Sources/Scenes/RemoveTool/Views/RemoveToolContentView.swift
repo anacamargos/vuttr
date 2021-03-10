@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol RemoveToolContentViewProtocol: AnyObject {}
+protocol RemoveToolContentViewProtocol: AnyObject {
+    func setupViewData(_ toolName: String)
+}
 
 final class RemoveToolContentView: CodedView {
     
@@ -177,14 +179,13 @@ final class RemoveToolContentView: CodedView {
     @objc private func onTappedCloseButton() {
         onTappedCloseButtonClosure()
     }
-    
-    // MARK: - Public Methods
+}
+
+// MARK: - RemoveToolContentViewProtocol
+
+extension RemoveToolContentView: RemoveToolContentViewProtocol {
     
     func setupViewData(_ toolName: String) {
         descriptionLabel.text = L10n.AddNewTool.removeToolDescription(toolName)
     }
 }
-
-// MARK: - RemoveToolContentViewProtocol
-
-extension RemoveToolContentView: RemoveToolContentViewProtocol {}
