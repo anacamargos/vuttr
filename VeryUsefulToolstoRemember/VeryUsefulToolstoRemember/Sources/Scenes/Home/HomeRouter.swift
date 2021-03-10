@@ -14,7 +14,7 @@ protocol HomeRoutingLogic{
     func routeToURL(_ url: URL)
 }
 
-final class HomeRouter: HomeRoutingLogic{
+final class HomeRouter: HomeRoutingLogic {
     
     // MARK: - Dependencies
     

@@ -37,6 +37,7 @@
 		BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */; };
 		BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */; };
 		BF69836E25EEDA9700603AF0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */; };
+		BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A1825F84A820096C623 /* RemoveToolRouter.swift */; };
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
@@ -133,6 +134,7 @@
 		BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
 		BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseStub.swift; sourceTree = "<group>"; };
 		BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
+		BF764A1825F84A820096C623 /* RemoveToolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouter.swift; sourceTree = "<group>"; };
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
@@ -596,6 +598,7 @@
 			children = (
 				BFD277BC25F6BD36004016C8 /* Views */,
 				BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */,
+				BF764A1825F84A820096C623 /* RemoveToolRouter.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
+				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
