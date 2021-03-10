@@ -14,13 +14,23 @@ protocol RemoveToolDisplayLogic: AnyObject {
 
 final class RemoveToolViewController: UIViewController {
     
+    // MARK: - Dependencies
+    
+    private let interactor: RemoveToolBusinessLogic
+    private let router: RemoveToolRoutingLogic
+    
     // MARK: - View Components
     
     weak var contentView: RemoveToolContentViewProtocol?
     
     // MARK: - Initializers
     
-    init() {
+    init(
+        interactor: RemoveToolBusinessLogic,
+        router: RemoveToolRoutingLogic
+    ) {
+        self.interactor = interactor
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -40,7 +50,7 @@ final class RemoveToolViewController: UIViewController {
     // MARK: - Private Methods
     
     private func onTappedCloseButtonAction() {
-        
+        router.routeToPreviousScene()
     }
     
 }
