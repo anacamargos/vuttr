@@ -41,6 +41,11 @@ final class RemoveToolViewController: UIViewController {
     
     // MARK: - View Controller Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        interactor.onViewDidLoad()
+    }
+    
     override func loadView() {
         super.loadView()
         view = RemoveToolContentView(onTappedCloseButtonClosure: { [weak self] in self?.onTappedCloseButtonAction()})
