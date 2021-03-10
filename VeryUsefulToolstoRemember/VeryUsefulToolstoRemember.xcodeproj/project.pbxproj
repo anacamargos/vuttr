@@ -40,6 +40,7 @@
 		BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A1825F84A820096C623 /* RemoveToolRouter.swift */; };
 		BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */; };
 		BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */; };
+		BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */; };
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
@@ -139,6 +140,7 @@
 		BF764A1825F84A820096C623 /* RemoveToolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouter.swift; sourceTree = "<group>"; };
 		BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenter.swift; sourceTree = "<group>"; };
 		BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractor.swift; sourceTree = "<group>"; };
+		BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfigurator.swift; sourceTree = "<group>"; };
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				BF764A1825F84A820096C623 /* RemoveToolRouter.swift */,
 				BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */,
 				BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */,
+				BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
+				BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */,
 				BFAA915425E5B45300C9936D /* AddNewToolRouter.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
