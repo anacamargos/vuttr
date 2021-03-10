@@ -17,13 +17,16 @@ final class RemoveToolInteractor {
     // MARK: - Dependencies
     
     private let presenter: RemoveToolPresentationLogic
+    private let parameters: RemoveToolSceneParameters
     
     // MARK: - Initializer
     
     init(
-        presenter: RemoveToolPresentationLogic
+        presenter: RemoveToolPresentationLogic,
+        parameters: RemoveToolSceneParameters
     ) {
         self.presenter = presenter
+        self.parameters = parameters
     }
 }
 
@@ -32,6 +35,6 @@ final class RemoveToolInteractor {
 extension RemoveToolInteractor: RemoveToolBusinessLogic {
     
     func onViewDidLoad() {
-        
+        presenter.presentToolName(parameters.toolName)
     }
 }

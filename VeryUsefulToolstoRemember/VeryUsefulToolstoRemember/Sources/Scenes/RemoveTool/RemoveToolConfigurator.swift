@@ -8,13 +8,18 @@
 
 import UIKit
 
+struct RemoveToolSceneParameters {
+    let toolName: String
+    let toolId: Int
+}
+
 final class RemoveToolConfigurator {
     
     // MARK: - Public Methods
     
-    func resolveViewController() -> UIViewController {
+    func resolveViewController(using parameters: RemoveToolSceneParameters) -> UIViewController {
         let presenter = RemoveToolPresenter()
-        let interactor = RemoveToolInteractor(presenter: presenter)
+        let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters)
         let router = RemoveToolRouter()
         let viewController = RemoveToolViewController(interactor: interactor, router: router)
         router.viewController = viewController
