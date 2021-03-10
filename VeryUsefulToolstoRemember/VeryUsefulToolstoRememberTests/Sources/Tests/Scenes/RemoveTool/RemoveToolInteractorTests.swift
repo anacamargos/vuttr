@@ -36,10 +36,3 @@ final class RemoveToolInteractorTests: XCTestCase {
         )
     }
 }
-
-extension RemoveToolSceneParameters {
-    
-    static var mock: RemoveToolSceneParameters {
-        .init(toolName: "Notio", toolId: .zero)
-    }
-}
