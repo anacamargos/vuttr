@@ -45,14 +45,14 @@ final class RemoveToolContentView: CodedView {
     }()
     
     private let cancelButton: LayoutableButton = {
-        let button = LayoutableButton(layout: .secundary)
+        let button = LayoutableButton(layout: .secundaryDanger)
         button.setTitle(L10n.AddNewTool.removeToolCancel, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
     
     private let removeToolButton: LayoutableButton = {
-        let button = LayoutableButton(layout: .primary)
+        let button = LayoutableButton(layout: .primaryDanger)
         button.setTitle(L10n.AddNewTool.removeToolConfirmation, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
