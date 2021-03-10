@@ -29,8 +29,14 @@ final class RemoveToolViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view = RemoveToolContentView()
+        view = RemoveToolContentView(onTappedCloseButtonClosure: { [weak self] in self?.onTappedCloseButtonAction()})
         contentView = view as? RemoveToolContentViewProtocol
+    }
+    
+    // MARK: - Private Methods
+    
+    private func onTappedCloseButtonAction() {
+        
     }
     
 }

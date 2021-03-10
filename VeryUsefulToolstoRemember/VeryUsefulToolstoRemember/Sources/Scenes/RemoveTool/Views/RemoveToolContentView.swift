@@ -19,6 +19,10 @@ final class RemoveToolContentView: CodedView {
         static let closeButtonSize: CGFloat = 16.0
     }
     
+    // MARK: - Dependencies
+    
+    private let onTappedCloseButtonClosure: () -> Void
+    
     // MARK: - View Components
     
     private let titleLabel: UILabel = {
@@ -67,9 +71,11 @@ final class RemoveToolContentView: CodedView {
     
     // MARK: - Initializers
     
-    override init(
-        frame: CGRect = .zero
+    init(
+        frame: CGRect = .zero,
+        onTappedCloseButtonClosure: @escaping () -> Void
     ) {
+        self.onTappedCloseButtonClosure = onTappedCloseButtonClosure
         super.init(frame: frame)
         configureView()
     }
@@ -165,6 +171,11 @@ final class RemoveToolContentView: CodedView {
     
     private func configureView() {
         backgroundColor = .secundary80
+        closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
+    }
+    
+    @objc private func onTappedCloseButton() {
+        onTappedCloseButtonClosure()
     }
     
     // MARK: - Public Methods
