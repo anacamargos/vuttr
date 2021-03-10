@@ -88,6 +88,9 @@
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
+		BFFFA87D25F972A9000BC298 /* RemoveToolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */; };
+		BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA88125F97685000BC298 /* RemoveToolPresenterDummy.swift */; };
+		BFFFA88925F976BC000BC298 /* RemoveToolPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA88825F976BC000BC298 /* RemoveToolPresenterSpy.swift */; };
 		C4D200EC7614BAC4B658BD3E /* Pods_VeryUsefulToolstoRemember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD681DD0B73507D55DEF884A /* Pods_VeryUsefulToolstoRemember.framework */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +197,9 @@
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
+		BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractorTests.swift; sourceTree = "<group>"; };
+		BFFFA88125F97685000BC298 /* RemoveToolPresenterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenterDummy.swift; sourceTree = "<group>"; };
+		BFFFA88825F976BC000BC298 /* RemoveToolPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenterSpy.swift; sourceTree = "<group>"; };
 		C399281D9994363B194483F3 /* Pods-VeryUsefulToolstoRemember.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.release.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.release.xcconfig"; sourceTree = "<group>"; };
 		ECAF33C5A296DCBBC19DE99D /* Pods-VeryUsefulToolstoRememberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRememberTests/Pods-VeryUsefulToolstoRememberTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,6 +318,7 @@
 		BF2C9C0B25DDCA8400396C74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFFFA88725F976A4000BC298 /* RemoveTool */,
 				BFAA917D25E5BE6000C9936D /* AddNewTool */,
 				BF2C9C0C25DDCA8A00396C74 /* Home */,
 			);
@@ -630,6 +637,7 @@
 				BFD277C425F6C6FD004016C8 /* Views */,
 				BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */,
 				BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */,
+				BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -672,6 +680,7 @@
 		BFE8AE1225DF1359006ED5CA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFFFA88025F97675000BC298 /* RemoveTool */,
 				BFAA916F25E5BD0500C9936D /* AddNewTool */,
 				BFE8AE1325DF135D006ED5CA /* Home */,
 			);
@@ -697,6 +706,22 @@
 				BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFFFA88025F97675000BC298 /* RemoveTool */ = {
+			isa = PBXGroup;
+			children = (
+				BFFFA88125F97685000BC298 /* RemoveToolPresenterDummy.swift */,
+			);
+			path = RemoveTool;
+			sourceTree = "<group>";
+		};
+		BFFFA88725F976A4000BC298 /* RemoveTool */ = {
+			isa = PBXGroup;
+			children = (
+				BFFFA88825F976BC000BC298 /* RemoveToolPresenterSpy.swift */,
+			);
+			path = RemoveTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -936,8 +961,10 @@
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
+				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
+				BFFFA88925F976BC000BC298 /* RemoveToolPresenterSpy.swift in Sources */,
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
 				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
 				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
@@ -948,6 +975,7 @@
 				BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */,
 				BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */,
 				BFAA917825E5BE3D00C9936D /* AddNewToolRouterSpy.swift in Sources */,
+				BFFFA87D25F972A9000BC298 /* RemoveToolInteractorTests.swift in Sources */,
 				BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */,
 				BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */,
 				BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */,
