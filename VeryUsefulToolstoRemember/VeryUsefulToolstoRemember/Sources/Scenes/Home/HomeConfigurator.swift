@@ -14,11 +14,12 @@ final class HomeConfigurator {
     
     func resolveViewController() -> UIViewController {
         let addNewToolConfigurator = AddNewToolConfigurator()
+        let removeToolConfigurator = RemoveToolConfigurator()
         let getToolsUseCase = GetUsefulToolsUseCase()
         
         let presenter = HomePresenter()
         let interactor = HomeInteractor(presenter: presenter, getToolsUseCase: getToolsUseCase)
-        let router = HomeRouter(addNewToolConfigurator: addNewToolConfigurator)
+        let router = HomeRouter(addNewToolConfigurator: addNewToolConfigurator, removeToolConfigurator: removeToolConfigurator, dataStore: interactor)
         let viewController = HomeViewController(interactor: interactor, router: router)
         router.viewController = viewController
         presenter.viewController = viewController

@@ -35,7 +35,7 @@ final class HomePresenter {
     
     private func mapDomainDataToViewData(_ domainData: [GetUsefulToolsUseCaseModels.Tool]) -> Home.UsefulTools.ViewData {
         let tools = domainData.map {
-            Home.UsefulTools.Tool(title: $0.title, description: $0.description, tags: mapToolTags($0.tags))
+            Home.UsefulTools.Tool(id: $0.id, title: $0.title, description: $0.description, tags: mapToolTags($0.tags))
         }
         return .init(tools: tools)
     }

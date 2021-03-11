@@ -10,7 +10,7 @@ import UIKit
 
 struct RemoveToolSceneParameters {
     let toolName: String
-    let toolId: Int
+    let toolId: UInt
 }
 
 final class RemoveToolConfigurator {
@@ -24,6 +24,8 @@ final class RemoveToolConfigurator {
         let viewController = RemoveToolViewController(interactor: interactor, router: router)
         router.viewController = viewController
         presenter.viewController = viewController
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
         return viewController
     }
 }

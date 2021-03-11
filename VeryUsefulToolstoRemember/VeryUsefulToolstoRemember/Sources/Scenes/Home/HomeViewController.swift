@@ -79,7 +79,8 @@ final class HomeViewController: UIViewController {
     }
     
     private func onTappedRemoveToolAction(_ toolId: UInt) {
-        debugPrint(toolId)
+        interactor.handleRemoveToolSelection(toolId)
+        router.routeToRemoveToolScene()
     }
 }
 

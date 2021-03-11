@@ -11,13 +11,19 @@ import Foundation
 protocol HomeBusinessLogic {
     func onViewDidLoad()
     func handleToolSelection(at row: Int)
+    func handleRemoveToolSelection(_ toolId: UInt)
 }
 
-final class HomeInteractor {
+protocol HomeDataStore {
+    var selectedTool: GetUsefulToolsUseCaseModels.Tool? { get set }
+}
+
+final class HomeInteractor: HomeDataStore {
     
     // MARK: - Properties
     
     private var usefulTools: [GetUsefulToolsUseCaseModels.Tool] = []
+    var selectedTool: GetUsefulToolsUseCaseModels.Tool?
     
     // MARK: - Dependencies
     
@@ -63,5 +69,10 @@ extension HomeInteractor: HomeBusinessLogic {
         let selectedTool = usefulTools[row]
         guard let url = URL(string: selectedTool.link) else { return }
         presenter.presentURL(url)
+    }
+    
+    func handleRemoveToolSelection(_ toolId: UInt) {
+        guard let selectedTool = usefulTools.first(where: { $0.id == toolId }) else { return }
+        self.selectedTool = selectedTool
     }
 }

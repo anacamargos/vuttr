@@ -29,6 +29,7 @@ enum Home {
         }
         
         struct Tool {
+            let id: UInt
             let title: String
             let description: String
             let tags: [Tag]
