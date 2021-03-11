@@ -27,6 +27,7 @@ final class HomeContentView: CodedView {
     
     private let onTappedAddButtonClosure: () -> Void
     private let onTappedToolCellClosure: (Int) -> Void
+    private let onTappedRemoveToolClosure: (UInt) -> Void
     
     // MARK: - Properties
     
@@ -59,10 +60,12 @@ final class HomeContentView: CodedView {
     init(
         frame: CGRect = .zero,
         onTappedAddButtonClosure: @escaping () -> Void,
-        onTappedToolCellClosure: @escaping (Int) -> Void
+        onTappedToolCellClosure: @escaping (Int) -> Void,
+        onTappedRemoveToolClosure: @escaping (UInt) -> Void
     ) {
         self.onTappedAddButtonClosure = onTappedAddButtonClosure
         self.onTappedToolCellClosure = onTappedToolCellClosure
+        self.onTappedRemoveToolClosure = onTappedRemoveToolClosure
         super.init(frame: frame)
         configureView()
     }
@@ -165,6 +168,7 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
             let cell: UsefulToolCell = tableView.reusableCell(for: UsefulToolCell.className, for: indexPath)
             let currentTool = viewData.tools[indexPath.row]
             cell.setupViewData(currentTool)
+            cell.onTappedRemoveToolButtonClosure = onTappedRemoveToolClosure
             return cell
         case .loading:
             return getLoadingCell(for: indexPath)

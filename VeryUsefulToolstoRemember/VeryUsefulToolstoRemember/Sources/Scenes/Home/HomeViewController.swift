@@ -51,7 +51,8 @@ final class HomeViewController: UIViewController {
         super.loadView()
         view = HomeContentView(
             onTappedAddButtonClosure: { [weak self] in self?.router.routeToAddNewToolScene() },
-            onTappedToolCellClosure: { [weak self] selectedRow in self?.interactor.handleToolSelection(at: selectedRow)}
+            onTappedToolCellClosure: { [weak self] selectedRow in self?.interactor.handleToolSelection(at: selectedRow)},
+            onTappedRemoveToolClosure: { [weak self] toolId in self?.onTappedRemoveToolAction(toolId)}
         )
         contentView = view as? HomeContentViewProtocol
     }
@@ -75,6 +76,10 @@ final class HomeViewController: UIViewController {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = attributes
         navigationItem.searchController = search
+    }
+    
+    private func onTappedRemoveToolAction(_ toolId: UInt) {
+        debugPrint(toolId)
     }
 }
 

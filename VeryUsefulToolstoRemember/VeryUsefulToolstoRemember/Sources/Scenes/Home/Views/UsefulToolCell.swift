@@ -10,9 +10,14 @@ import UIKit
 
 final class UsefulToolCell: CodedTableViewCell {
     
+    // MARK: - Dependencies
+    
+    var onTappedRemoveToolButtonClosure: ((UInt) -> Void)?
+    
     // MARK: - Properties
     
     private var tags: [Home.UsefulTools.Tag] = []
+    private var toolId: UInt?
     
     // MARK: - View Metris
     
@@ -54,7 +59,7 @@ final class UsefulToolCell: CodedTableViewCell {
         return label
     }()
     
-    private let closeIcon: UIButton = {
+    private let removeToolButton: UIButton = {
         let button = UIButton()
         button.setImage(.close, for: .normal)
         return button
@@ -90,7 +95,7 @@ final class UsefulToolCell: CodedTableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(titleLabel)
         containerView.addSubview(descriptionLabel)
-        containerView.addSubview(closeIcon)
+        containerView.addSubview(removeToolButton)
         containerView.addSubview(collectionView)
     }
     
@@ -98,7 +103,7 @@ final class UsefulToolCell: CodedTableViewCell {
         constrainContainerView()
         constrainTitleLabel()
         constrainDescriptionLabel()
-        constrainCloseIcon()
+        constrainRemoveToolButton()
         constrainCollectionView()
     }
     
@@ -116,8 +121,8 @@ final class UsefulToolCell: CodedTableViewCell {
         )
     }
     
-    private func constrainCloseIcon() {
-        closeIcon.anchor(
+    private func constrainRemoveToolButton() {
+        removeToolButton.anchor(
             top: containerView.topAnchor,
             trailing: containerView.trailingAnchor,
             topConstant: Metrics.Spacing.small,
@@ -167,6 +172,12 @@ final class UsefulToolCell: CodedTableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(TagCell.self, forCellWithReuseIdentifier: TagCell.className)
+        removeToolButton.addTarget(self, action: #selector(onTappedRemoveToolButton), for: .touchUpInside)
+    }
+    
+    @objc private func onTappedRemoveToolButton() {
+        guard let id = toolId else { return }
+        onTappedRemoveToolButtonClosure?(id)
     }
     
     private func countNumberOfRows() -> Int {
@@ -188,6 +199,7 @@ final class UsefulToolCell: CodedTableViewCell {
     // MARK: - Public Methods
     
     func setupViewData(_ viewData: Home.UsefulTools.Tool) {
+        self.toolId = viewData.id
         tags = viewData.tags
         let numberOfRows = CGFloat(countNumberOfRows())
         let lineSpacing = Metrics.Spacing.tiny * (numberOfRows - 1)
