@@ -59,6 +59,46 @@ final class HomeRouterTests: XCTestCase {
         XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
     
+    func test_routeToRemoveToolScene_whenSelectedToolIsNotNil_shouldPresentCorrectViewController() {
+        // Given
+        let sut = makeSUT()
+        let viewControllerSpy = makeViewController(sut)
+        
+        // When
+        sut.routeToRemoveToolScene()
+        
+        // Then
+        guard let passedViewController = viewControllerSpy.viewControllerToPresentPassed else {
+            XCTFail("Could not find viewControllerToPresentPassed")
+            return
+        }
+        guard let passedAnimatedFlag = viewControllerSpy.presentAnimatedFlagPassed else {
+            XCTFail("Could not find presentAnimatedFlagPassed")
+            return
+        }
+        XCTAssertTrue(viewControllerSpy.presentCalled)
+        XCTAssertTrue(passedViewController is RemoveToolViewController)
+        XCTAssertTrue(passedAnimatedFlag)
+        XCTAssertNil(viewControllerSpy.presentCompletionPassed)
+    }
+    
+    func test_routeToRemoveToolScene_whenSelectedToolIsNil_shouldNotPresentCorrectViewController() {
+        // Given
+        var dataStore = HomeDataStoreDummy()
+        dataStore.selectedTool = nil
+        let sut = makeSUT(dataStore: dataStore)
+        let viewControllerSpy = makeViewController(sut)
+        
+        // When
+        sut.routeToRemoveToolScene()
+        
+        // Then
+        XCTAssertFalse(viewControllerSpy.presentCalled)
+        XCTAssertNil(viewControllerSpy.viewControllerToPresentPassed)
+        XCTAssertNil(viewControllerSpy.presentAnimatedFlagPassed)
+        XCTAssertNil(viewControllerSpy.presentCompletionPassed)
+    }
+    
     // MARK: - Test Helpers
     
     private func makeSUT(
