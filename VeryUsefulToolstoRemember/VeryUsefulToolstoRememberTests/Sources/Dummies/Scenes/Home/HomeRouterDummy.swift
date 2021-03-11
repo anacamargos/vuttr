@@ -12,4 +12,5 @@ import Foundation
 final class HomeRouterDummy: HomeRoutingLogic {
     func routeToAddNewToolScene() {}
     func routeToURL(_ url: URL) {}
+    func routeToRemoveToolScene() {}
 }

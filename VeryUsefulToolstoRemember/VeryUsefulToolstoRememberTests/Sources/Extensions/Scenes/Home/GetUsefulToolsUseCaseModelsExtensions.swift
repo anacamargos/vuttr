@@ -12,7 +12,7 @@ import Foundation
 extension GetUsefulToolsUseCaseModels.Tool {
     static var mock: GetUsefulToolsUseCaseModels.Tool {
         .init(
-            id: 1,
+            id: .zero,
             title: "Notion",
             link: "https://notion.so",
             description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
@@ -22,7 +22,7 @@ extension GetUsefulToolsUseCaseModels.Tool {
     
     static var mockWithInvalidLink: GetUsefulToolsUseCaseModels.Tool {
         .init(
-            id: 1,
+            id: .zero,
             title: "Notion",
             link: "",
             description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",

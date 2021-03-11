@@ -22,4 +22,10 @@ final class HomeRouterSpy: HomeRoutingLogic {
     func routeToURL(_ url: URL) {
         routeToURLPassedURLs.append(url)
     }
+    
+    private(set) var routeToRemoveToolSceneCalled = false
+    
+    func routeToRemoveToolScene() {
+        routeToRemoveToolSceneCalled = true
+    }
 }

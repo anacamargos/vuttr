@@ -22,4 +22,10 @@ final class HomeInteractorSpy: HomeBusinessLogic {
     func handleToolSelection(at row: Int) {
         handleToolSelectionCalled = true
     }
+    
+    private(set) var handleRemoveToolSelectionCalled = false
+    
+    func handleRemoveToolSelection(_ toolId: UInt) {
+        handleRemoveToolSelectionCalled = true
+    }
 }

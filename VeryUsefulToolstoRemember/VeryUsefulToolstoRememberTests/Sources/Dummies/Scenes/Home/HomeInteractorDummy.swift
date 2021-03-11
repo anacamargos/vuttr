@@ -12,4 +12,5 @@ import Foundation
 final class HomeInteractorDummy: HomeBusinessLogic {
     func onViewDidLoad() {}
     func handleToolSelection(at row: Int) {}
+    func handleRemoveToolSelection(_ toolId: UInt) {}
 }

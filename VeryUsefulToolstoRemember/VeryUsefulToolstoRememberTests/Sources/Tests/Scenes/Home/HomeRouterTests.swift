@@ -61,8 +61,14 @@ final class HomeRouterTests: XCTestCase {
     
     // MARK: - Test Helpers
     
-    private func makeSUT() -> HomeRouter {
-        .init(addNewToolConfigurator: .init())
+    private func makeSUT(
+        dataStore: HomeDataStore = HomeDataStoreDummy()
+    ) -> HomeRouter {
+        .init(
+            addNewToolConfigurator: .init(),
+            removeToolConfigurator: .init(),
+            dataStore: dataStore
+        )
     }
     
     private func makeViewController(_ sut: HomeRouter) -> UIViewControllerSpy {
@@ -71,4 +77,8 @@ final class HomeRouterTests: XCTestCase {
         return viewController
     }
 
+}
+
+struct HomeDataStoreDummy: HomeDataStore {
+    var selectedTool: GetUsefulToolsUseCaseModels.Tool? = .mock
 }

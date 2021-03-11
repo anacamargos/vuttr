@@ -12,6 +12,7 @@ import UIKit
 extension Home.UsefulTools.Tool {
     static var mock: Home.UsefulTools.Tool {
         .init(
+            id: .zero,
             title: "Notion",
             description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
             tags: [
