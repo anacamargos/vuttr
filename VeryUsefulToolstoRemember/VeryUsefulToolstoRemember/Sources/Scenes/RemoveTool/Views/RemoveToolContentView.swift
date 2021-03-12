@@ -174,6 +174,7 @@ final class RemoveToolContentView: CodedView {
     private func configureView() {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
     }
     
     @objc private func onTappedCloseButton() {
