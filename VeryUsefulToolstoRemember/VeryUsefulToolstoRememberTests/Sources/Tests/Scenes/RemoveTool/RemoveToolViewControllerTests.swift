@@ -32,6 +32,38 @@ final class RemoveToolViewControllerTests: XCTestCase {
         // Then
         XCTAssertTrue(interactorSpy.onViewDidLoadCalled)
     }
+    
+    func test_displayToolName_shouldCallCorrectMethodInContentView() {
+        // Given
+        let contentViewSpy = RemoveToolContentViewSpy()
+        let sut = makeSUT()
+        sut.contentView = contentViewSpy
+        let toolName = "Notion"
+        
+        // When
+        sut.displayToolName(toolName)
+        
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupViewDataPassedToolNames), String(describing: [toolName]))
+    }
+    
+    func test_onTappedAddButtonClosure_shouldCallCorrectMethodInRouter() {
+        // Given
+        let routerSpy = RemoveToolRouterSpy()
+        let sut = makeSUT(router: routerSpy)
+        guard let contentView = sut.view as? RemoveToolContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedCloseButtonClosure = Mirror(reflecting: contentView).firstChild(of: (() -> Void).self, in: "onTappedCloseButtonClosure")
+        
+        // When
+        onTappedCloseButtonClosure?()
+        
+        // Then
+        XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
+    }
+    
     // MARK: - Private Methods
     
     private func makeSUT(
@@ -57,5 +89,23 @@ final class RemoveToolInteractorSpy: RemoveToolBusinessLogic {
     
     func onViewDidLoad() {
         onViewDidLoadCalled = true
+    }
+}
+
+final class RemoveToolContentViewSpy: RemoveToolContentViewProtocol {
+    
+    private(set) var setupViewDataPassedToolNames = [String]()
+    
+    func setupViewData(_ toolName: String) {
+        setupViewDataPassedToolNames.append(toolName)
+    }
+}
+
+final class RemoveToolRouterSpy: RemoveToolRoutingLogic {
+    
+    private(set) var routeToPreviousSceneCalled = false
+    
+    func routeToPreviousScene() {
+        routeToPreviousSceneCalled = true
     }
 }
