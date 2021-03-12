@@ -83,6 +83,39 @@ final class HomeInteractorTests: XCTestCase {
         // Then
         XCTAssertEqual(presenterSpy.presentURLPassedURLs, [])
     }
+    
+    func test_handleRemoveToolSelection_shouldSelectCorrectTool() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let sut = makeSUT(getToolsUseCase: useCaseStub)
+        let expectedSelectedTool = GetUsefulToolsUseCaseModels.Tool.mock
+        
+        // When
+        sut.onViewDidLoad()
+        sut.handleRemoveToolSelection(.zero)
+        
+        // Then
+        guard let selectedTool = sut.selectedTool else {
+            XCTFail("Could not find selectedTool")
+            return
+        }
+        XCTAssertEqual(String(describing: selectedTool), String(describing: expectedSelectedTool))
+    }
+    
+    func test_handleRemoveToolSelection_whenSelectedToolIsNotFound_selectedToolShouldBeNil() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let sut = makeSUT(getToolsUseCase: useCaseStub)
+        
+        // When
+        sut.onViewDidLoad()
+        sut.handleRemoveToolSelection(1)
+        
+        // Then
+        XCTAssertNil(sut.selectedTool)
+    }
 
     // MARK: - Test Helpers
     
