@@ -93,6 +93,24 @@ final class HomeViewControllerTests: XCTestCase {
         // Then
         XCTAssertTrue(interactorSpy.onViewDidLoadCalled)
     }
+    
+    func test_onTappedRemoveToolAction_shouldCallCorrectMethodInRouterAndInteractor() {
+        // Given
+        let routerSpy = HomeRouterSpy()
+        let interactorSpy = HomeInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy, router: routerSpy)
+        guard let contentView = sut.view as? HomeContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedRemoveToolClosure = Mirror(reflecting: contentView).firstChild(of: ((UInt) -> Void).self, in: "onTappedRemoveToolClosure")
+        
+        // When
+        onTappedRemoveToolClosure?(.zero)
+        
+        // Then
+        XCTAssertTrue(routerSpy.routeToRemoveToolSceneCalled)
+    }
 
     // MARK: - Private Methods
     
