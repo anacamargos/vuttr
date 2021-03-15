@@ -15,6 +15,7 @@
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
 		BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */; };
 		BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */; };
+		BF2F50FC2600291C0078AD62 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F50FB2600291C0078AD62 /* EmptyView.swift */; };
 		BF3140EB25E85EE500D5F766 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EA25E85EE500D5F766 /* HomeInteractor.swift */; };
 		BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EE25E85F5100D5F766 /* HomePresenter.swift */; };
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
@@ -121,6 +122,7 @@
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
 		BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewSpy.swift; sourceTree = "<group>"; };
+		BF2F50FB2600291C0078AD62 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		BF3140EA25E85EE500D5F766 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BF3140EE25E85F5100D5F766 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
@@ -563,6 +565,7 @@
 			children = (
 				BFA32514259A310D007BF348 /* CustomLoadingView.swift */,
 				BFA32519259A3138007BF348 /* CustomLoadingTableViewCell.swift */,
+				BF2F50FB2600291C0078AD62 /* EmptyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 				BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */,
 				BFAA915825E5B5D500C9936D /* AddNewToolConfigurator.swift in Sources */,
 				BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */,
+				BF2F50FC2600291C0078AD62 /* EmptyView.swift in Sources */,
 				BF3140EB25E85EE500D5F766 /* HomeInteractor.swift in Sources */,
 				BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */,
 				BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */,
