@@ -61,6 +61,10 @@ internal enum L10n {
   }
 
   internal enum Home {
+    /// Você não adicionou nenhuma ferramenta... ainda!
+    internal static var noRegisteredTools: String {
+      L10n.tr("Localizable", "home.no_registered_tools")
+    }
     /// Pesquisar
     internal static var search: String {
       L10n.tr("Localizable", "home.search")

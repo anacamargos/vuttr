@@ -10,6 +10,7 @@
 
 "home.search" = "Search";
 "home.vuttr" = "vuttr";
+"home.no_registered_tools" = "You haven't added any tools ... yet!";
 
 // MARK: - Add New Tool
 
