@@ -17,6 +17,7 @@ final class EmptyView: CodedView {
         label.font = .themeFont(for: .body, weight: .semibold)
         label.textColor = .ink
         label.numberOfLines = .zero
+        label.textAlignment = .center
         label.text = L10n.Home.noRegisteredTools
         return label
     }()
