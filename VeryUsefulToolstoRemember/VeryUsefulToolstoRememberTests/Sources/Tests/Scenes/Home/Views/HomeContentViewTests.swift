@@ -24,6 +24,12 @@ final class HomeContentViewTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
     
+    func test_homeContentView_emptyState() {
+        let view = makeView()
+        view.setupUsefulToolsState(.empty)
+        assertSnapshot(matching: view, as: .image)
+    }
+    
     // MARK: - Test Helpers
     
     private func makeView() -> HomeContentView {
