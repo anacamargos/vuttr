@@ -162,7 +162,7 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch viewState {
-        case .loading, .error:
+        case .loading, .error, .empty:
             return 1
         case let .content(viewData):
             return viewData.tools.count
@@ -179,6 +179,8 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .loading:
             return getLoadingCell(for: indexPath)
+        case .empty:
+            return getEmptyCell(for: indexPath)
         case .error:
             return .init()
         }

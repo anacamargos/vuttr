@@ -15,12 +15,14 @@ enum Home {
         enum Response {
             case content([GetUsefulToolsUseCaseModels.Tool])
             case loading
+            case empty
             case error
         }
         
         enum ViewState {
             case content(ViewData)
             case loading
+            case empty
             case error
         }
         

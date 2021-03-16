@@ -48,7 +48,11 @@ final class HomeInteractor: HomeDataStore {
             switch result {
             case let .success(data):
                 self?.usefulTools = data
-                self?.presenter.presentToolsResponse(.content(data))
+                if data.isEmpty {
+                    self?.presenter.presentToolsResponse(.empty)
+                } else {
+                    self?.presenter.presentToolsResponse(.content(data))
+                }
             case .failure:
                 self?.presenter.presentToolsResponse(.error)
             }

@@ -53,6 +53,8 @@ extension HomePresenter: HomePresentationLogic {
             viewState = .content(viewData)
         case .loading:
             viewState = .loading
+        case .empty:
+            viewState = .empty
         case .error:
             viewState = .error
         }
