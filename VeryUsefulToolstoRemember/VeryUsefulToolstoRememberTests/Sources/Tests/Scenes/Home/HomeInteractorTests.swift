@@ -26,6 +26,21 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
     }
     
+    func test_onViewDidLoad_whenUseCaseSucceedsWithNoTools_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.empty
+        
+        // When
+        sut.onViewDidLoad()
+        
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+    }
+    
     func test_onViewDidLoad_whenUseCaseFails_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
         // Given
         let useCaseStub = GetUsefulToolsUseCaseStub()
