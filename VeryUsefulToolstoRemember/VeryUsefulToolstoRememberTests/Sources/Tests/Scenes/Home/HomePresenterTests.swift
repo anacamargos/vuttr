@@ -50,6 +50,19 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertEqual(String(describing: viewControllerSpy.displayUsefulToolsViewStatePassedViewStates), String(describing: [expectedViewState]))
     }
     
+    func test_presentToolsResponse_whenResponseIsEmpty_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = HomeDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+        let expectedViewState = Home.UsefulTools.ViewState.empty
+        
+        // When
+        sut.presentToolsResponse(.empty)
+        
+        // Then
+        XCTAssertEqual(String(describing: viewControllerSpy.displayUsefulToolsViewStatePassedViewStates), String(describing: [expectedViewState]))
+    }
+    
     func test_presentURL_shouldCallCorrectMethodInViewController() {
         // Given
         let viewControllerSpy = HomeDisplayLogicSpy()
