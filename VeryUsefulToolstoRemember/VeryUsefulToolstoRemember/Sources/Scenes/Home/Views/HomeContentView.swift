@@ -126,11 +126,18 @@ final class HomeContentView: CodedView {
         tableView.separatorStyle = .none
         tableView.register(UsefulToolCell.self, forCellReuseIdentifier: UsefulToolCell.className)
         tableView.register(CustomLoadingTableViewCell.self, forCellReuseIdentifier: CustomLoadingTableViewCell.className)
+        tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: EmptyTableViewCell.className)
     }
     
     private func getLoadingCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomLoadingTableViewCell = tableView.reusableCell(for: CustomLoadingTableViewCell.className, for: indexPath)
         cell.startLoading()
+        return cell
+    }
+    
+    private func getEmptyCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell: EmptyTableViewCell = tableView.reusableCell(for: EmptyTableViewCell.className, for: indexPath)
+        cell.setupLabelText(L10n.Home.noRegisteredTools)
         return cell
     }
     
