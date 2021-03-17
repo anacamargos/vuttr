@@ -11,6 +11,7 @@
 "home.search" = "Pesquisar";
 "home.vuttr" = "vuttr";
 "home.no_registered_tools" = "Você não adicionou nenhuma ferramenta... ainda!";
+"home.error_message" = "Não foi possível carregar\nTente novamente";
 
 // MARK: - Add New Tool
 
