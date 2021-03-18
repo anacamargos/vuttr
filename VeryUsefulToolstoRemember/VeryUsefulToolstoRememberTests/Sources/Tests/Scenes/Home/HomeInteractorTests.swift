@@ -131,6 +131,21 @@ final class HomeInteractorTests: XCTestCase {
         // Then
         XCTAssertNil(sut.selectedTool)
     }
+    
+    func test_reloadTools_whenUseCaseSucceeds_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.content([.mock])
+        
+        // When
+        sut.reloadTools()
+        
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+    }
 
     // MARK: - Test Helpers
     
