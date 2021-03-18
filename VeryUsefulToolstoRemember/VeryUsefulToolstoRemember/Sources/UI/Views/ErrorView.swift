@@ -13,7 +13,7 @@ final class ErrorView: CodedView {
     // MARK: - View Metrics
     
     private enum ViewMetrics {
-        static let errorImageViewSize: CGFloat = 35
+        static let errorImageViewSize: CGFloat = 50
     }
     
     // MARK: - View Components
@@ -31,6 +31,7 @@ final class ErrorView: CodedView {
     private let reloadButton: UIButton = {
         let button = UIButton()
         button.setImage(.reloadArrow, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
     
@@ -49,24 +50,25 @@ final class ErrorView: CodedView {
     // MARK: - Private Methods
     
     private func constrainErrorLabel() {
-        errorLabel.anchor(
+        reloadButton.anchor(
             top: topAnchor,
-            leading: leadingAnchor,
-            trailing: trailingAnchor,
             topConstant: Metrics.Spacing.xLarge,
-            leadingConstant: Metrics.Spacing.small,
-            trailingConstant: Metrics.Spacing.small
+            widthConstant: ViewMetrics.errorImageViewSize,
+            heightConstant: ViewMetrics.errorImageViewSize
         )
+        reloadButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     
     private func constrainReloadButton() {
-        reloadButton.anchor(
-            top: errorLabel.bottomAnchor,
+        errorLabel.anchor(
+            top: reloadButton.bottomAnchor,
+            leading: leadingAnchor,
             bottom: bottomAnchor,
+            trailing: trailingAnchor,
             topConstant: Metrics.Spacing.small,
+            leadingConstant: Metrics.Spacing.small,
             bottomConstant: Metrics.Spacing.xLarge,
-            widthConstant: ViewMetrics.errorImageViewSize,
-            heightConstant: ViewMetrics.errorImageViewSize
+            trailingConstant: Metrics.Spacing.small
         )
     }
 }
