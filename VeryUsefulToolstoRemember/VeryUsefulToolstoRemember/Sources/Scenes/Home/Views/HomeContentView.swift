@@ -127,6 +127,7 @@ final class HomeContentView: CodedView {
         tableView.register(UsefulToolCell.self, forCellReuseIdentifier: UsefulToolCell.className)
         tableView.register(CustomLoadingTableViewCell.self, forCellReuseIdentifier: CustomLoadingTableViewCell.className)
         tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: EmptyTableViewCell.className)
+        tableView.register(ErrorTableViewCell.self, forCellReuseIdentifier: ErrorTableViewCell.className)
     }
     
     private func getLoadingCell(for indexPath: IndexPath) -> UITableViewCell {
@@ -138,6 +139,11 @@ final class HomeContentView: CodedView {
     private func getEmptyCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell: EmptyTableViewCell = tableView.reusableCell(for: EmptyTableViewCell.className, for: indexPath)
         cell.setupLabelText(L10n.Home.noRegisteredTools)
+        return cell
+    }
+    
+    private func getErrorCell(for indexPath: IndexPath) -> UITableViewCell {
+        let cell: ErrorTableViewCell = tableView.reusableCell(for: ErrorTableViewCell.className, for: indexPath)
         return cell
     }
     
@@ -182,7 +188,7 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
         case .empty:
             return getEmptyCell(for: indexPath)
         case .error:
-            return .init()
+            return getErrorCell(for: indexPath)
         }
     }
     
