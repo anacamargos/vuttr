@@ -110,6 +110,25 @@ final class HomeViewControllerTests: XCTestCase {
         
         // Then
         XCTAssertTrue(routerSpy.routeToRemoveToolSceneCalled)
+        XCTAssertTrue(interactorSpy.handleRemoveToolSelectionCalled)
+    }
+    
+    func test_onTappedErrorReloadButtonClosure_shouldCallCorrectMethodInRouterAndInteractor() {
+        // Given
+        let interactorSpy = HomeInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy)
+        
+        guard let contentView = sut.view as? HomeContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedErrorReloadButtonClosure = Mirror(reflecting: contentView).firstChild(of: (() -> Void).self, in: "onTappedErrorReloadButtonClosure")
+        
+        // When
+        onTappedErrorReloadButtonClosure?()
+        
+        // Then
+        XCTAssertTrue(interactorSpy.reloadToolsCalled)
     }
 
     // MARK: - Private Methods
