@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeBusinessLogic {
     func onViewDidLoad()
+    func reloadTools()
     func handleToolSelection(at row: Int)
     func handleRemoveToolSelection(_ toolId: UInt)
 }
@@ -65,6 +66,10 @@ final class HomeInteractor: HomeDataStore {
 extension HomeInteractor: HomeBusinessLogic {
     
     func onViewDidLoad() {
+        loadTools()
+    }
+    
+    func reloadTools() {
         loadTools()
     }
     

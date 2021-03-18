@@ -51,8 +51,9 @@ final class HomeViewController: UIViewController {
         super.loadView()
         view = HomeContentView(
             onTappedAddButtonClosure: { [weak self] in self?.router.routeToAddNewToolScene() },
-            onTappedToolCellClosure: { [weak self] selectedRow in self?.interactor.handleToolSelection(at: selectedRow)},
-            onTappedRemoveToolClosure: { [weak self] toolId in self?.onTappedRemoveToolAction(toolId)}
+            onTappedToolCellClosure: { [weak self] selectedRow in self?.interactor.handleToolSelection(at: selectedRow) },
+            onTappedRemoveToolClosure: { [weak self] toolId in self?.onTappedRemoveToolAction(toolId) },
+            onTappedErrorReloadButtonClosure: { [weak self] in self?.interactor.reloadTools() }
         )
         contentView = view as? HomeContentViewProtocol
     }

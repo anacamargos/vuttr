@@ -28,6 +28,7 @@ final class HomeContentView: CodedView {
     private let onTappedAddButtonClosure: () -> Void
     private let onTappedToolCellClosure: (Int) -> Void
     private let onTappedRemoveToolClosure: (UInt) -> Void
+    private let onTappedErrorReloadButtonClosure: () -> Void
     
     // MARK: - Properties
     
@@ -61,11 +62,13 @@ final class HomeContentView: CodedView {
         frame: CGRect = .zero,
         onTappedAddButtonClosure: @escaping () -> Void,
         onTappedToolCellClosure: @escaping (Int) -> Void,
-        onTappedRemoveToolClosure: @escaping (UInt) -> Void
+        onTappedRemoveToolClosure: @escaping (UInt) -> Void,
+        onTappedErrorReloadButtonClosure: @escaping () -> Void
     ) {
         self.onTappedAddButtonClosure = onTappedAddButtonClosure
         self.onTappedToolCellClosure = onTappedToolCellClosure
         self.onTappedRemoveToolClosure = onTappedRemoveToolClosure
+        self.onTappedErrorReloadButtonClosure = onTappedErrorReloadButtonClosure
         super.init(frame: frame)
         configureView()
     }
@@ -195,6 +198,8 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if case .content = viewState {
             onTappedToolCellClosure(indexPath.row)
+        } else if case .error = viewState {
+            onTappedErrorReloadButtonClosure()
         }
     }
 }
