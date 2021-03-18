@@ -39,7 +39,7 @@ final class HomeContentViewTests: XCTestCase {
     // MARK: - Test Helpers
     
     private func makeView() -> HomeContentView {
-        return .init(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 500)), onTappedAddButtonClosure: {}, onTappedToolCellClosure: { _ in }, onTappedRemoveToolClosure: { _ in })
+        return .init(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 500)), onTappedAddButtonClosure: {}, onTappedToolCellClosure: { _ in }, onTappedRemoveToolClosure: { _ in }, onTappedErrorReloadButtonClosure: {})
     }
 
 }

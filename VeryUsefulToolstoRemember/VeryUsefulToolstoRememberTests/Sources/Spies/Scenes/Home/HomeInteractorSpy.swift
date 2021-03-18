@@ -17,6 +17,12 @@ final class HomeInteractorSpy: HomeBusinessLogic {
         onViewDidLoadCalled = true
     }
     
+    private(set) var reloadToolsCalled = false
+    
+    func reloadTools() {
+        reloadToolsCalled = true
+    }
+    
     private(set) var handleToolSelectionCalled = false
     
     func handleToolSelection(at row: Int) {
