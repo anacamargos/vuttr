@@ -62,7 +62,9 @@ final class ErrorView: CodedView {
     private func constrainReloadButton() {
         reloadButton.anchor(
             top: errorLabel.bottomAnchor,
+            bottom: bottomAnchor,
             topConstant: Metrics.Spacing.small,
+            bottomConstant: Metrics.Spacing.xLarge,
             widthConstant: ViewMetrics.errorImageViewSize,
             heightConstant: ViewMetrics.errorImageViewSize
         )
