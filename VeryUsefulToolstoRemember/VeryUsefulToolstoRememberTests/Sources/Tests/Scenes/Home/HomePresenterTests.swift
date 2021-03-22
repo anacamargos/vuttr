@@ -78,9 +78,15 @@ final class HomePresenterTests: XCTestCase {
 
     // MARK: - Test Helpers
     
-    private func makeSUT(viewController: HomeDisplayLogic = HomeDisplayLogicDummy()) -> HomePresenter {
+    private func makeSUT(
+        viewController: HomeDisplayLogic = HomeDisplayLogicDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> HomePresenter {
         let sut = HomePresenter()
         sut.viewController = viewController
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(viewController, file: file, line: line)
         return sut
     }
 

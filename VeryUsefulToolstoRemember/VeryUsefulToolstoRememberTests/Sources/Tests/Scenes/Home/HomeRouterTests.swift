@@ -102,13 +102,17 @@ final class HomeRouterTests: XCTestCase {
     // MARK: - Test Helpers
     
     private func makeSUT(
-        dataStore: HomeDataStore = HomeDataStoreDummy()
+        dataStore: HomeDataStore = HomeDataStoreDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> HomeRouter {
-        .init(
+        let sut = HomeRouter(
             addNewToolConfigurator: .init(),
             removeToolConfigurator: .init(),
             dataStore: dataStore
         )
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
     
     private func makeViewController(_ sut: HomeRouter) -> UIViewControllerSpy {
