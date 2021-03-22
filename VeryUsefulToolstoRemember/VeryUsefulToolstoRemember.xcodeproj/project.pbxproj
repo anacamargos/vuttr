@@ -44,6 +44,7 @@
 		BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */; };
 		BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */; };
 		BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */; };
+		BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */; };
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
@@ -158,6 +159,7 @@
 		BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenter.swift; sourceTree = "<group>"; };
 		BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractor.swift; sourceTree = "<group>"; };
 		BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfigurator.swift; sourceTree = "<group>"; };
+		BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 			children = (
 				BF53CB8725ED92600014E967 /* Scenes */,
 				BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */,
+				BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1001,6 +1004,7 @@
 				BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
+				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
 				BFFFA89625F978E5000BC298 /* RemoveToolPresenterTests.swift in Sources */,
