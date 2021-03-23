@@ -14,6 +14,7 @@ final class RemoveToolConfiguratorTests: XCTestCase {
     func test_configurator_shouldReturnCorrectlyConfiguredInstance() {
         // Given
         let sut = RemoveToolConfigurator()
+        trackForMemoryLeaks(sut)
         
         // When
         let viewController = sut.resolveViewController(using: .init(toolName: "", toolId: .zero))

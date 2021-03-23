@@ -31,13 +31,23 @@ final class AddNewToolRouterTests: XCTestCase {
 
     // MARK: - Test Helpers
     
-    private func makeSUT() -> AddNewToolRouter {
-        .init()
+    private func makeSUT(
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> AddNewToolRouter {
+        let sut = AddNewToolRouter()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
     
-    private func makeViewController(_ sut: AddNewToolRouter) -> UIViewControllerSpy {
+    private func makeViewController(
+        _ sut: AddNewToolRouter,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> UIViewControllerSpy {
         let viewController = UIViewControllerSpy()
         sut.viewController = viewController
+        trackForMemoryLeaks(viewController, file: file, line: line)
         return viewController
     }
 

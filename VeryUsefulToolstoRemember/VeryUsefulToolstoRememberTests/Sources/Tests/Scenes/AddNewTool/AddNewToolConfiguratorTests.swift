@@ -14,6 +14,7 @@ final class AddNewToolConfiguratorTests: XCTestCase {
     func test_configurator_shouldReturnCorrectlyConfiguredInstance() {
         // Given
         let sut = AddNewToolConfigurator()
+        trackForMemoryLeaks(sut)
         
         // When
         let viewController = sut.resolveViewController()
