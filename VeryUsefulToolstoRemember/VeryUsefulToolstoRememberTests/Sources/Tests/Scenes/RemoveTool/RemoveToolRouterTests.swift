@@ -31,13 +31,23 @@ final class RemoveToolRouterTests: XCTestCase {
 
     // MARK: - Test Helpers
     
-    private func makeSUT() -> RemoveToolRouter {
-        .init()
+    private func makeSUT(
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> RemoveToolRouter {
+        let sut = RemoveToolRouter()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
     
-    private func makeViewController(_ sut: RemoveToolRouter) -> UIViewControllerSpy {
+    private func makeViewController(
+        _ sut: RemoveToolRouter,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> UIViewControllerSpy {
         let viewController = UIViewControllerSpy()
         sut.viewController = viewController
+        trackForMemoryLeaks(viewController, file: file, line: line)
         return viewController
     }
 

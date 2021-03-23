@@ -28,11 +28,15 @@ final class RemoveToolInteractorTests: XCTestCase {
     
     private func makeSUT(
         presenter: RemoveToolPresentationLogic = RemoveToolPresenterDummy(),
-        parameters: RemoveToolSceneParameters = .mock
+        parameters: RemoveToolSceneParameters = .mock,
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> RemoveToolInteractor {
-        .init(
+        let sut = RemoveToolInteractor(
             presenter: presenter,
             parameters: parameters
         )
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
 }

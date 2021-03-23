@@ -26,9 +26,15 @@ final class RemoveToolPresenterTests: XCTestCase {
 
     // MARK: - Test Helpers
     
-    private func makeSUT(viewController: RemoveToolDisplayLogic = RemoveToolDisplayLogicDummy()) -> RemoveToolPresenter {
+    private func makeSUT(
+        viewController: RemoveToolDisplayLogic = RemoveToolDisplayLogicDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> RemoveToolPresenter {
         let sut = RemoveToolPresenter()
         sut.viewController = viewController
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(viewController, file: file, line: line)
         return sut
     }
 
