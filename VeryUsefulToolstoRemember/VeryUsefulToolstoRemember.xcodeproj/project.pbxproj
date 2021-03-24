@@ -91,6 +91,7 @@
 		BFE8AE1B25DF143C006ED5CA /* HomeConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE1A25DF143C006ED5CA /* HomeConfiguratorTests.swift */; };
 		BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */; };
 		BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */; };
+		BFEAF157260BE8D800B29F04 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF156260BE8D800B29F04 /* Status.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
@@ -210,6 +211,7 @@
 		BFE8AE1A25DF143C006ED5CA /* HomeConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfiguratorTests.swift; sourceTree = "<group>"; };
 		BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorExtensions.swift; sourceTree = "<group>"; };
 		BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
+		BFEAF156260BE8D800B29F04 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 		BF5F993C2593F09E00E28356 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BFEAF154260BE8A900B29F04 /* Network */,
 				BFAA918025E6C9B000C9936D /* UI */,
 				BF5F994A2593F12800E28356 /* Extensions */,
 				BF5F993D2593F0B300E28356 /* Scenes */,
@@ -736,6 +739,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		BFEAF154260BE8A900B29F04 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFEAF155260BE8B300B29F04 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BFEAF155260BE8B300B29F04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFEAF156260BE8D800B29F04 /* Status.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BFFFA88025F97675000BC298 /* RemoveTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +982,7 @@
 				BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
+				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,
 				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
