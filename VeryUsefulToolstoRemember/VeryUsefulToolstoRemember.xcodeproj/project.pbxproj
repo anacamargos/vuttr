@@ -93,6 +93,7 @@
 		BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */; };
 		BFEAF157260BE8D800B29F04 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF156260BE8D800B29F04 /* Status.swift */; };
 		BFEAF15D260BE97C00B29F04 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */; };
+		BFEAF162260BEA9D00B29F04 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF161260BEA9D00B29F04 /* NetworkError.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
@@ -214,6 +215,7 @@
 		BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
 		BFEAF156260BE8D800B29F04 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		BFEAF161260BEA9D00B29F04 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 			children = (
 				BFEAF156260BE8D800B29F04 /* Status.swift */,
 				BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */,
+				BFEAF161260BEA9D00B29F04 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -978,6 +981,7 @@
 				BFE8AE0625DF04D2006ED5CA /* AddNewToolContentView.swift in Sources */,
 				BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */,
 				BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */,
+				BFEAF162260BEA9D00B29F04 /* NetworkError.swift in Sources */,
 				BF93DEC62601515A00BBA060 /* EmptyTableViewCell.swift in Sources */,
 				BFE8AE0E25DF11DF006ED5CA /* HomeConfigurator.swift in Sources */,
 				BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */,
