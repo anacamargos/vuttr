@@ -94,6 +94,8 @@
 		BFEAF157260BE8D800B29F04 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF156260BE8D800B29F04 /* Status.swift */; };
 		BFEAF15D260BE97C00B29F04 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */; };
 		BFEAF162260BEA9D00B29F04 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF161260BEA9D00B29F04 /* NetworkError.swift */; };
+		BFEAF167260BEBC700B29F04 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */; };
+		BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
@@ -216,6 +218,8 @@
 		BFEAF156260BE8D800B29F04 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		BFEAF161260BEA9D00B29F04 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -746,6 +750,7 @@
 		BFEAF154260BE8A900B29F04 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BFEAF165260BEB8700B29F04 /* Dispatcher */,
 				BFEAF155260BE8B300B29F04 /* Models */,
 			);
 			path = Network;
@@ -757,8 +762,17 @@
 				BFEAF156260BE8D800B29F04 /* Status.swift */,
 				BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */,
 				BFEAF161260BEA9D00B29F04 /* NetworkError.swift */,
+				BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BFEAF165260BEB8700B29F04 /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */,
+			);
+			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 		BFFFA88025F97675000BC298 /* RemoveTool */ = {
@@ -975,6 +989,7 @@
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
 				BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */,
 				BFAA915825E5B5D500C9936D /* AddNewToolConfigurator.swift in Sources */,
+				BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */,
 				BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */,
 				BF2F50FC2600291C0078AD62 /* EmptyView.swift in Sources */,
 				BF3140EB25E85EE500D5F766 /* HomeInteractor.swift in Sources */,
@@ -1002,6 +1017,7 @@
 				BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */,
 				BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */,
 				BFEAF15D260BE97C00B29F04 /* NetworkResponse.swift in Sources */,
+				BFEAF167260BEBC700B29F04 /* NetworkDispatcher.swift in Sources */,
 				BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
 				BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */,
