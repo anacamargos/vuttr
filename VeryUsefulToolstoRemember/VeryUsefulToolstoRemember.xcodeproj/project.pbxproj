@@ -11,6 +11,8 @@
 		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
 		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
+		BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317E9260D351300315A5F /* URLSessionProvider.swift */; };
+		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
 		BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B97EF2602AA6300C7821B /* ErrorView.swift */; };
 		BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */; };
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
@@ -127,6 +129,8 @@
 		BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewTests.swift; sourceTree = "<group>"; };
 		BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCellTests.swift; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BF2317E9260D351300315A5F /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
 		BF2B97EF2602AA6300C7821B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
@@ -304,6 +308,14 @@
 				BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF2317E8260D34EE00315A5F /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				BF2317E9260D351300315A5F /* URLSessionProvider.swift */,
+			);
+			path = URLSession;
 			sourceTree = "<group>";
 		};
 		BF2C9BFB25DDC08500396C74 /* Components */ = {
@@ -750,6 +762,7 @@
 		BFEAF154260BE8A900B29F04 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BF2317E8260D34EE00315A5F /* URLSession */,
 				BFEAF165260BEB8700B29F04 /* Dispatcher */,
 				BFEAF155260BE8B300B29F04 /* Models */,
 			);
@@ -771,6 +784,7 @@
 			isa = PBXGroup;
 			children = (
 				BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */,
+				BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */,
 			);
 			path = Dispatcher;
 			sourceTree = "<group>";
@@ -987,6 +1001,7 @@
 				BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */,
 				BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */,
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
+				BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */,
 				BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */,
 				BFAA915825E5B5D500C9936D /* AddNewToolConfigurator.swift in Sources */,
 				BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */,
@@ -1004,6 +1019,7 @@
 				BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
+				BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */,
 				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,
 				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
