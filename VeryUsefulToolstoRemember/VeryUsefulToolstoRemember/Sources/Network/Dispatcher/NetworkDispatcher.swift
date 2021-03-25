@@ -16,7 +16,6 @@ protocol NetworkDispatcher {
     ///   - then: the request result closure
     func dispatch(
         _ request: NetworkRequest,
-        onQueue queue: DispatchQueue,
         then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void
     )
 
@@ -28,26 +27,6 @@ protocol NetworkDispatcher {
     func requestCodable<T: Codable>(
         ofType type: T.Type,
         for request: NetworkRequest,
-        onQueue queue: DispatchQueue,
         then handle: @escaping (Result<T?, NetworkError>) -> Void
     )
-}
-
-extension NetworkDispatcher {
-    func dispatch(
-        _ request: NetworkRequest,
-        onQueue queue: DispatchQueue = .main,
-        then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void
-    ) {
-        dispatch(request, onQueue: queue, then: handle)
-    }
-
-    func requestCodable<T: Codable>(
-        ofType type: T.Type,
-        for request: NetworkRequest,
-        onQueue queue: DispatchQueue = .main,
-        then handle: @escaping (Result<T?, NetworkError>) -> Void
-    ) {
-        requestCodable(ofType: type, for: request, onQueue: queue, then: handle)
-    }
 }
