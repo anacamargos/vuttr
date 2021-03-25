@@ -13,6 +13,7 @@
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317E9260D351300315A5F /* URLSessionProvider.swift */; };
 		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
+		BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */; };
 		BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B97EF2602AA6300C7821B /* ErrorView.swift */; };
 		BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */; };
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
@@ -131,6 +132,7 @@
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF2317E9260D351300315A5F /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
+		BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		BF2B97EF2602AA6300C7821B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				BF2317E9260D351300315A5F /* URLSessionProvider.swift */,
+				BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -1022,6 +1025,7 @@
 				BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */,
 				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,
 				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
+				BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
