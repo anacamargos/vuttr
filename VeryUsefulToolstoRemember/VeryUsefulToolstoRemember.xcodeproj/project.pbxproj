@@ -82,6 +82,7 @@
 		BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */; };
 		BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918C25E6CDA300C9936D /* TagCell.swift */; };
 		BFAA919125E6CF7B00C9936D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */; };
+		BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */; };
 		BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */; };
 		BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */; };
 		BFD277C625F6C73D004016C8 /* RemoveToolContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */; };
@@ -209,6 +210,7 @@
 		BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BFAA918C25E6CDA300C9936D /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewController.swift; sourceTree = "<group>"; };
 		BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentView.swift; sourceTree = "<group>"; };
 		BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentViewTests.swift; sourceTree = "<group>"; };
@@ -661,6 +663,14 @@
 			path = FlowLayouts;
 			sourceTree = "<group>";
 		};
+		BFB1048D26126C6100AA4307 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		BFD277B725F6BCEF004016C8 /* RemoveTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +775,7 @@
 		BFEAF154260BE8A900B29F04 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BFB1048D26126C6100AA4307 /* Decoder */,
 				BF2317E8260D34EE00315A5F /* URLSession */,
 				BFEAF165260BEB8700B29F04 /* Dispatcher */,
 				BFEAF155260BE8B300B29F04 /* Models */,
@@ -1001,6 +1012,7 @@
 				BFA32515259A310D007BF348 /* CustomLoadingView.swift in Sources */,
 				BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */,
 				BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */,
+				BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */,
 				BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */,
 				BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */,
 				BF5F99512593F5D400E28356 /* UIView+Autolayout.swift in Sources */,
