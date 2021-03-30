@@ -716,6 +716,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFDB6E1E2613CD8000AA0759 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		BFE8ADFD25DF048F006ED5CA /* AddNewTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,10 +797,10 @@
 		BFEAF155260BE8B300B29F04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFDB6E1E2613CD8000AA0759 /* Request */,
 				BFEAF156260BE8D800B29F04 /* Status.swift */,
 				BFEAF15C260BE97C00B29F04 /* NetworkResponse.swift */,
 				BFEAF161260BEA9D00B29F04 /* NetworkError.swift */,
-				BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
