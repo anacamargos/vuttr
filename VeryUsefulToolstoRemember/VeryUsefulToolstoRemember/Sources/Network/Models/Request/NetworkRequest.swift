@@ -8,13 +8,13 @@
 
 import Foundation
 
-
 /// Defines the Request protocol, which can be implemented as a class, struct or enum.
 protocol NetworkRequest {
+    
     // MARK: - Properties
 
     /// The API's base url.
-//    var baseURL: BaseURL { get }
+    var baseURL: BaseURL { get }
 
     /// Defines the endpoint we want to hit.
     var path: String? { get }
@@ -37,15 +37,15 @@ protocol NetworkRequest {
 
 extension NetworkRequest {
     /// queryParameters default value
-//    public var urlParameters: URLParameters? { nil }
+//    var urlParameters: URLParameters? { nil }
 
     /// httpBody default value
-//    public var httpBody: HTTPBody? { nil }
+//    var httpBody: HTTPBody? { nil }
 
     /// headers default value
-    public var headers: [String: String] { [:] }
+    var headers: [String: String] { [:] }
 
     /// request default timeout
-    public var timeout: Double? { nil }
+    var timeout: Double? { nil }
 }
 
