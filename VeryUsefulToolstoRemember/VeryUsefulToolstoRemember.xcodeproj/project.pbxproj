@@ -56,6 +56,7 @@
 		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
 		BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */; };
 		BF92A2B8261542510026DD33 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92A2B7261542510026DD33 /* BaseURL.swift */; };
+		BF92A2BC2615430D0026DD33 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92A2BB2615430D0026DD33 /* URLProvider.swift */; };
 		BF93DEC62601515A00BBA060 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93DEC52601515A00BBA060 /* EmptyTableViewCell.swift */; };
 		BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */; };
 		BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A5FF62593F8B100BBE399 /* Metrics.swift */; };
@@ -183,6 +184,7 @@
 		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
 		BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
 		BF92A2B7261542510026DD33 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		BF92A2BB2615430D0026DD33 /* URLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
 		BF93DEC52601515A00BBA060 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		BF9A5FF02593F84000BBE399 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		BF9A5FF62593F8B100BBE399 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
@@ -726,6 +728,7 @@
 				BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */,
 				BFDB6E1F2613CDDB00AA0759 /* HTTPMethod.swift */,
 				BF92A2B7261542510026DD33 /* BaseURL.swift */,
+				BF92A2BB2615430D0026DD33 /* URLProvider.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 				BFEAF167260BEBC700B29F04 /* NetworkDispatcher.swift in Sources */,
 				BFA3253B259A6B12007BF348 /* UIViewExtensions.swift in Sources */,
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
+				BF92A2BC2615430D0026DD33 /* URLProvider.swift in Sources */,
 				BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 				BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */,
