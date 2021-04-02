@@ -43,6 +43,7 @@
 		BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */; };
 		BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */; };
 		BF69836E25EEDA9700603AF0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */; };
+		BF6A74BB2617B4B800155DF5 /* URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A74BA2617B4B800155DF5 /* URLParameters.swift */; };
 		BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A1825F84A820096C623 /* RemoveToolRouter.swift */; };
 		BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */; };
 		BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */; };
@@ -171,6 +172,7 @@
 		BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
 		BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseStub.swift; sourceTree = "<group>"; };
 		BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
+		BF6A74BA2617B4B800155DF5 /* URLParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameters.swift; sourceTree = "<group>"; };
 		BF764A1825F84A820096C623 /* RemoveToolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouter.swift; sourceTree = "<group>"; };
 		BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenter.swift; sourceTree = "<group>"; };
 		BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractor.swift; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 				BFDB6E1F2613CDDB00AA0759 /* HTTPMethod.swift */,
 				BF92A2B7261542510026DD33 /* BaseURL.swift */,
 				BF92A2BB2615430D0026DD33 /* URLProvider.swift */,
+				BF6A74BA2617B4B800155DF5 /* URLParameters.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1058,6 +1061,7 @@
 				BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */,
 				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,
 				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
+				BF6A74BB2617B4B800155DF5 /* URLParameters.swift in Sources */,
 				BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BFDB6E202613CDDB00AA0759 /* HTTPMethod.swift in Sources */,

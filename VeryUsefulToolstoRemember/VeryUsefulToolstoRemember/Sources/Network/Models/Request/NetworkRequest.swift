@@ -20,7 +20,7 @@ protocol NetworkRequest {
     var path: String? { get }
 
     /// Parameters we want to pass with the request that needds to be appendend to the URL.
-//    var urlParameters: URLParameters? { get }
+    var urlParameters: URLParameters? { get }
 
     /// Relative to the method we want to call, which was defined with an enum above.
     var method: HTTPMethod { get }
