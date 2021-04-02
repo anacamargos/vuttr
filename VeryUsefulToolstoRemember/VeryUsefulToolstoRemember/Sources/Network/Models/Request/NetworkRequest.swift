@@ -26,7 +26,7 @@ protocol NetworkRequest {
     var method: HTTPMethod { get }
 
     /// Parameters we want to pass with the request that can be used for the body or the URL.
-//    var httpBody: HTTPBody? { get }
+    var httpBody: HTTPBody? { get }
 
     /// Defines the list of headers we want to pass along with each request.
     var headers: [String: String] { get }
@@ -37,10 +37,10 @@ protocol NetworkRequest {
 
 extension NetworkRequest {
     /// queryParameters default value
-//    var urlParameters: URLParameters? { nil }
+    var urlParameters: URLParameters? { nil }
 
     /// httpBody default value
-//    var httpBody: HTTPBody? { nil }
+    var httpBody: HTTPBody? { nil }
 
     /// headers default value
     var headers: [String: String] { [:] }

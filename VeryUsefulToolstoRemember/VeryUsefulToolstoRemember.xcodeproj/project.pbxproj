@@ -44,6 +44,7 @@
 		BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */; };
 		BF69836E25EEDA9700603AF0 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */; };
 		BF6A74BB2617B4B800155DF5 /* URLParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A74BA2617B4B800155DF5 /* URLParameters.swift */; };
+		BF6A74BF2617B5E300155DF5 /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A74BE2617B5E300155DF5 /* HTTPBody.swift */; };
 		BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A1825F84A820096C623 /* RemoveToolRouter.swift */; };
 		BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */; };
 		BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */; };
@@ -173,6 +174,7 @@
 		BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseStub.swift; sourceTree = "<group>"; };
 		BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
 		BF6A74BA2617B4B800155DF5 /* URLParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameters.swift; sourceTree = "<group>"; };
+		BF6A74BE2617B5E300155DF5 /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
 		BF764A1825F84A820096C623 /* RemoveToolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouter.swift; sourceTree = "<group>"; };
 		BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenter.swift; sourceTree = "<group>"; };
 		BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractor.swift; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 				BF92A2B7261542510026DD33 /* BaseURL.swift */,
 				BF92A2BB2615430D0026DD33 /* URLProvider.swift */,
 				BF6A74BA2617B4B800155DF5 /* URLParameters.swift */,
+				BF6A74BE2617B5E300155DF5 /* HTTPBody.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 				BFEAF162260BEA9D00B29F04 /* NetworkError.swift in Sources */,
 				BF93DEC62601515A00BBA060 /* EmptyTableViewCell.swift in Sources */,
 				BFE8AE0E25DF11DF006ED5CA /* HomeConfigurator.swift in Sources */,
+				BF6A74BF2617B5E300155DF5 /* HTTPBody.swift in Sources */,
 				BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */,
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */,
