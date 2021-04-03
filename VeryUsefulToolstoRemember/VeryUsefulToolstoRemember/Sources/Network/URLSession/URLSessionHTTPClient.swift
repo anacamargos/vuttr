@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HTTPClient {
-    func get(from url: URL, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void)
+    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void)
 }
 
 final class URLSessionHTTPClient: HTTPClient {
@@ -40,8 +40,9 @@ final class URLSessionHTTPClient: HTTPClient {
     
     // MARK: - HTTPClient
     
-    func get(from url: URL, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
-        session.dataTask(with: url) { [weak self] data, response, error in
+    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
+        let urlRequest = URLRequest(url: URL(string: "")!, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 0)
+        session.dataTask(with: urlRequest) { [weak self] data, response, error in
             if let error = error {
                 self?.handleFailure(with: error, then: handle)
             } else if let data = data, let response = response as? HTTPURLResponse {

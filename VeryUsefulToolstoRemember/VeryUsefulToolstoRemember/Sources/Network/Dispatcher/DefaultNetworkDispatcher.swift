@@ -28,8 +28,7 @@ final class DefaultNetworkDispatcher: NetworkDispatcher {
     // MARK: - NetworkDispatcher
     
     func dispatch(_ request: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
-        let url = URL(string: "google.com")!
-        httpClient.get(from: url) { result in
+        httpClient.get(from: request) { result in
             handle(result)
         }
     }
