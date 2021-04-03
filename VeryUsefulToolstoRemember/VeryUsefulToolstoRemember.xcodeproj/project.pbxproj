@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25B3A45914C23254B2A9B604 /* Pods_VeryUsefulToolstoRememberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6734CA42C6B473DDCE342EC5 /* Pods_VeryUsefulToolstoRememberTests.framework */; };
+		BF007E5726192E3B0042F852 /* NetworkRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */; };
 		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
 		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
@@ -134,6 +135,7 @@
 		6734CA42C6B473DDCE342EC5 /* Pods_VeryUsefulToolstoRememberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRememberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7A3B9CE9E37CFBA77BE35D /* Pods-VeryUsefulToolstoRemember.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryUsefulToolstoRemember.debug.xcconfig"; path = "Target Support Files/Pods-VeryUsefulToolstoRemember/Pods-VeryUsefulToolstoRemember.debug.xcconfig"; sourceTree = "<group>"; };
 		BD681DD0B73507D55DEF884A /* Pods_VeryUsefulToolstoRemember.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryUsefulToolstoRemember.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestBuilder.swift; sourceTree = "<group>"; };
 		BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewTests.swift; sourceTree = "<group>"; };
 		BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCellTests.swift; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -292,6 +294,14 @@
 				15C4DB8D4EC186AF794EB4F3 /* Pods-VeryUsefulToolstoRememberTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF007E5526192E2B0042F852 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		BF03B7AA259B6C7800DF170A /* Scenes */ = {
@@ -801,6 +811,7 @@
 		BFEAF154260BE8A900B29F04 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BF007E5526192E2B0042F852 /* Builders */,
 				BFB1048D26126C6100AA4307 /* Decoder */,
 				BF2317E8260D34EE00315A5F /* URLSession */,
 				BFEAF165260BEB8700B29F04 /* Dispatcher */,
@@ -1037,6 +1048,7 @@
 				BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				BFA32515259A310D007BF348 /* CustomLoadingView.swift in Sources */,
 				BF9A5FF12593F84000BBE399 /* UIFontExtensions.swift in Sources */,
+				BF007E5726192E3B0042F852 /* NetworkRequestBuilder.swift in Sources */,
 				BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */,
 				BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */,
 				BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */,
