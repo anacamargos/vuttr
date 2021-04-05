@@ -17,11 +17,19 @@ final class URLSessionHTTPClient: HTTPClient {
     // MARK: - Dependencies
     
     private let session: URLSessionProvider
+    private let networkRequestBuilder: NetworkRequestBuilder.Type
+    private let configuration: NetworkConfiguration
     
     // MARK: - Initializer
     
-    init(session: URLSessionProvider) {
+    init(
+        session: URLSessionProvider,
+        networkRequestBuilder: NetworkRequestBuilder.Type = DefaultRequestBuilder.self,
+        configuration: NetworkConfiguration
+    ) {
         self.session = session
+        self.networkRequestBuilder = networkRequestBuilder
+        self.configuration = configuration
     }
     
     // MARK: - Private Methods
@@ -40,16 +48,27 @@ final class URLSessionHTTPClient: HTTPClient {
     
     // MARK: - HTTPClient
     
-    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
-        let urlRequest = URLRequest(url: URL(string: "")!, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 0)
-        session.dataTask(with: urlRequest) { [weak self] data, response, error in
-            if let error = error {
-                self?.handleFailure(with: error, then: handle)
-            } else if let data = data, let response = response as? HTTPURLResponse {
-                self?.handleSuccess(with: data, response: response, then: handle)
-            } else {
-                handle(.failure(.init(.internal(.invalidHTTPResponse))))
-            }
-        }.resume()
+    func get(
+        from networkRequest: NetworkRequest,
+        then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void
+    ) {
+        do {
+            let urlRequest = try networkRequestBuilder.init(
+                request: networkRequest,
+                networkConfiguration: configuration
+            ).build()
+            session.dataTask(with: urlRequest) { [weak self] data, response, error in
+                if let error = error {
+                    self?.handleFailure(with: error, then: handle)
+                } else if let data = data, let response = response as? HTTPURLResponse {
+                    self?.handleSuccess(with: data, response: response, then: handle)
+                } else {
+                    handle(.failure(.init(.internal(.invalidHTTPResponse))))
+                }
+            }.resume()
+        } catch {
+            let internalError = error as? RequestError.Internal ?? .unexpected
+            handle(.failure(.init(.internal(internalError))))
+        }
     }
 }

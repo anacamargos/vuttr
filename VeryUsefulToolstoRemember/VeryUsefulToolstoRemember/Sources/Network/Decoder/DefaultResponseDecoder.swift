@@ -22,7 +22,11 @@ final class DefaultResponseDecoder: NetworkResponseDecoder {
     
     // MARK: - Decoding Logic
     
-    func decodeDataRequestResult<T>(_ result: Result<NetworkResponse, NetworkError>, ofType: T.Type, then handle: @escaping (Result<T?, NetworkError>) -> Void) where T : Decodable, T : Encodable {
+    func decodeDataRequestResult<T>(
+        _ result: Result<NetworkResponse, NetworkError>,
+        ofType: T.Type,
+        then handle: @escaping (Result<T?, NetworkError>) -> Void
+    ) where T : Decodable, T : Encodable {
         switch result {
         case let .success(networkResponse):
             decodeSuccessResponseData(networkResponse.data, then: handle)
