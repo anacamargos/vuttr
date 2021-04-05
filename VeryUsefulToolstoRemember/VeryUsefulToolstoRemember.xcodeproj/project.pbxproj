@@ -55,6 +55,7 @@
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
 		BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */; };
+		BF8778FC261B5880001E22A9 /* DefaultRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
 		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
 		BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */; };
@@ -186,6 +187,7 @@
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicDummy.swift; sourceTree = "<group>"; };
+		BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilder.swift; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
 		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
 		BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */,
+				BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				BFA3251A259A3138007BF348 /* CustomLoadingTableViewCell.swift in Sources */,
 				BF92A2BC2615430D0026DD33 /* URLProvider.swift in Sources */,
 				BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */,
+				BF8778FC261B5880001E22A9 /* DefaultRequestBuilder.swift in Sources */,
 				BF5F994C2593F13C00E28356 /* ViewCode.swift in Sources */,
 				BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */,
 				BFE8AE0A25DF10A0006ED5CA /* HomeRouter.swift in Sources */,
