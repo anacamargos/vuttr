@@ -15,8 +15,10 @@ protocol NetworkRequestBuilder {
     /// Intitializes a builder
     /// - Parameters:
     ///   - request: the NetworkRequest to init the builder
+    ///   - networkConfiguration: configuration parameters
     init(
-        request: NetworkRequest
+        request: NetworkRequest,
+        networkConfiguration: NetworkConfiguration
     )
 
     /// Builds an URLRequest as previously defined.
