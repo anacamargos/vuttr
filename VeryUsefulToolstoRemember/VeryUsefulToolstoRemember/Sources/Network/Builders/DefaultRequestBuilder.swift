@@ -51,6 +51,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         }
         setupRequestHeaders(for: &urlRequest)
         setupHTTPBody(for: &urlRequest)
+        setupURLParameters(for: &urlRequest)
         return urlRequest
     }
     
@@ -107,5 +108,25 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
     ) {
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         request.httpBody = jsonData
+    }
+    
+    private func setupURLParameters(for request: inout URLRequest) {
+        if let urlParameters = urlParameters {
+            configureURLParameters(urlParameters, for: &request)
+        }
+    }
+    
+    private func configureURLParameters(_ parameters: URLParameters, for request: inout URLRequest) {
+        switch parameters {
+        case let .raw(parameters):
+            setupRawURLParameteres(parameters, for: &request)
+        }
+    }
+    
+    private func setupRawURLParameteres(_ parameters: [String: String], for request: inout URLRequest) {
+        if let url = request.url, var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+            urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+            request.url = urlComponents.url
+        }
     }
 }

@@ -12,6 +12,4 @@ import Foundation
 enum URLParameters {
     /// - raw: means that the data can be added as is.
     case raw([String: String])
-    /// - enconded: means that the provided data, need to be enconded before set as a QueryParameter.
-    case encoded([String: Any])
 }
