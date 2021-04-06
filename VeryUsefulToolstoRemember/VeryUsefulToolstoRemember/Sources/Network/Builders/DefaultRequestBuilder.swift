@@ -49,6 +49,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         if let timeout = timeout {
             urlRequest.timeoutInterval = timeout
         }
+        setupRequestHeaders(for: &urlRequest)
         return urlRequest
     }
     
@@ -69,5 +70,13 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
             throw RequestError.Internal.invalidBaseURL
         }
         return url
+    }
+    
+    private func setupRequestHeaders(
+        for request: inout URLRequest
+    ) {
+        headers.forEach { header in
+            request.addValue(header.value, forHTTPHeaderField: header.key)
+        }
     }
 }
