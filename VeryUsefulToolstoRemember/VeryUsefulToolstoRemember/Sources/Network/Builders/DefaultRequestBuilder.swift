@@ -50,6 +50,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
             urlRequest.timeoutInterval = timeout
         }
         setupRequestHeaders(for: &urlRequest)
+        setupHTTPBody(for: &urlRequest)
         return urlRequest
     }
     
@@ -78,5 +79,33 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         headers.forEach { header in
             request.addValue(header.value, forHTTPHeaderField: header.key)
         }
+    }
+    
+    private func setupHTTPBody(for request: inout URLRequest) {
+        if let httpBody = httpBody {
+            configureHTTPBody(httpBody, for: &request)
+        }
+    }
+    
+    private func configureHTTPBody(
+        _ httpBody: HTTPBody,
+        for request: inout URLRequest
+    ) {
+        switch httpBody {
+        case let .data(data):
+            request.httpBody = data
+        case let .dictionary(dictionary):
+            configureHTTPBodyWithJSON(dictionary, for: &request)
+        case let .json(json):
+            configureHTTPBodyWithJSON(json, for: &request)
+        }
+    }
+    
+    private func configureHTTPBodyWithJSON(
+        _ json: Any,
+        for request: inout URLRequest
+    ) {
+        let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+        request.httpBody = jsonData
     }
 }

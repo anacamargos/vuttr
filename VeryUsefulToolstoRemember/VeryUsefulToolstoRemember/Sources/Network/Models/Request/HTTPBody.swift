@@ -13,5 +13,4 @@ enum HTTPBody {
     case data(Data)
     case dictionary([String: Any])
     case json(Any)
-    case formUrlEncoded([String: Any])
 }
