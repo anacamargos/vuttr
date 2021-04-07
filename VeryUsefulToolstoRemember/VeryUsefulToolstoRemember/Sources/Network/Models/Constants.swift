@@ -11,12 +11,7 @@ import Foundation
 enum Header {
     
     enum Key {
-        static let authorization = "Authorization"
         static let contentType = "Content-Type"
-    }
-
-    enum Value {
-        static let autorizationType = "Bearer %@"
     }
 
     enum ContentType {
