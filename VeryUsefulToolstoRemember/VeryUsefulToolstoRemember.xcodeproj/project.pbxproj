@@ -41,6 +41,8 @@
 		BF5F99592593F7AD00E28356 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */; };
 		BF6784EF261E580700738F99 /* DefaultRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6784EE261E580700738F99 /* DefaultRequestBuilderTests.swift */; };
 		BF6784F5261E5E5600738F99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6784F4261E5E5600738F99 /* Constants.swift */; };
+		BF6784F9261E607D00738F99 /* URLProviderDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6784F8261E607D00738F99 /* URLProviderDummy.swift */; };
+		BF6784FD261E609C00738F99 /* URLProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6784FC261E609C00738F99 /* URLProviderSpy.swift */; };
 		BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */; };
 		BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */; };
 		BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */; };
@@ -176,6 +178,8 @@
 		BF5F99572593F7AD00E28356 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		BF6784EE261E580700738F99 /* DefaultRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilderTests.swift; sourceTree = "<group>"; };
 		BF6784F4261E5E5600738F99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF6784F8261E607D00738F99 /* URLProviderDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProviderDummy.swift; sourceTree = "<group>"; };
+		BF6784FC261E609C00738F99 /* URLProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProviderSpy.swift; sourceTree = "<group>"; };
 		BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterDummy.swift; sourceTree = "<group>"; };
 		BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseDummy.swift; sourceTree = "<group>"; };
 		BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			children = (
 				BF2C9C0B25DDCA8400396C74 /* Scenes */,
 				BFAA915F25E5B83100C9936D /* UIViewControllerSpy.swift */,
+				BF6784FC261E609C00738F99 /* URLProviderSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE8AE1225DF1359006ED5CA /* Scenes */,
+				BF6784F8261E607D00738F99 /* URLProviderDummy.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -1153,6 +1159,7 @@
 				BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */,
+				BF6784F9261E607D00738F99 /* URLProviderDummy.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
@@ -1165,6 +1172,7 @@
 				BFFFA89A25F97A54000BC298 /* RemoveToolDisplayLogicDummy.swift in Sources */,
 				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
 				BF6784EF261E580700738F99 /* DefaultRequestBuilderTests.swift in Sources */,
+				BF6784FD261E609C00738F99 /* URLProviderSpy.swift in Sources */,
 				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
 				BFAA914825E5AF3B00C9936D /* AddNewToolContentViewTests.swift in Sources */,
 				BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */,

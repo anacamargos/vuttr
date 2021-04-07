@@ -249,20 +249,6 @@ final class DefaultRequestBuilderTests: XCTestCase {
     }
 }
 
-final class URLProviderDummy: URLProvider {
-    func getBaseURL(forServiceGroup group: ServiceGroup) -> String { return "" }
-}
-
-final class URLProviderSpy: URLProvider {
-    
-    private(set) var getBaseURLPassedServiceGroups = [ServiceGroup]()
-    
-    func getBaseURL(forServiceGroup group: ServiceGroup) -> String {
-        getBaseURLPassedServiceGroups.append(group)
-        return "www.test.com"
-    }
-}
-
 struct HTTPRequest: NetworkRequest {
     var baseURL: BaseURL
     var path: String?
