@@ -92,6 +92,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         _ httpBody: HTTPBody,
         for request: inout URLRequest
     ) {
+        let contentType = Header.ContentType.applicationJSONCharsetUTF8
         switch httpBody {
         case let .data(data):
             request.httpBody = data
@@ -100,6 +101,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         case let .json(json):
             configureHTTPBodyWithJSON(json, for: &request)
         }
+        request.setValue(contentType, forHTTPHeaderField: Header.Key.contentType)
     }
     
     private func configureHTTPBodyWithJSON(
