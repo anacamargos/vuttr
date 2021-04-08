@@ -25,6 +25,7 @@
 		BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EE25E85F5100D5F766 /* HomePresenter.swift */; };
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
 		BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */; };
+		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
@@ -159,6 +160,7 @@
 		BF3140EE25E85F5100D5F766 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
 		BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewControllerTests.swift; sourceTree = "<group>"; };
+		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
@@ -423,6 +425,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BF4829D5261F7F390096FB78 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		BF53CB8725ED92600014E967 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +579,7 @@
 		BF6784EC261E57EE00738F99 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BF4829D5261F7F390096FB78 /* Decoder */,
 				BF6784ED261E57F400738F99 /* Builders */,
 			);
 			path = Network;
@@ -1155,6 +1166,7 @@
 				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
 				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,
+				BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */,
 				BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */,
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
