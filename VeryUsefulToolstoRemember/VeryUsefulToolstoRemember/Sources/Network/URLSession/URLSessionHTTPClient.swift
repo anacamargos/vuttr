@@ -41,7 +41,7 @@ final class URLSessionHTTPClient: HTTPClient {
         handle(.failure(networkError))
     }
     
-    private func handleSuccess(with data: Data, response: HTTPURLResponse, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
+    private func handleSuccess(with data: Data?, response: HTTPURLResponse, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
         let networkResponse = NetworkResponse(status: .http(response.statusCode), data: data)
         handle(.success(networkResponse))
     }
@@ -60,7 +60,7 @@ final class URLSessionHTTPClient: HTTPClient {
             session.dataTask(with: urlRequest) { [weak self] data, response, error in
                 if let error = error {
                     self?.handleFailure(with: error, then: handle)
-                } else if let data = data, let response = response as? HTTPURLResponse {
+                } else if let response = response as? HTTPURLResponse {
                     self?.handleSuccess(with: data, response: response, then: handle)
                 } else {
                     handle(.failure(.init(.internal(.invalidHTTPResponse))))
