@@ -25,6 +25,7 @@
 		BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EE25E85F5100D5F766 /* HomePresenter.swift */; };
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
 		BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */; };
+		BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
@@ -160,6 +161,7 @@
 		BF3140EE25E85F5100D5F766 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
 		BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewControllerTests.swift; sourceTree = "<group>"; };
+		BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
@@ -425,6 +427,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BF3E63C42620A3A6008DC5D2 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
 		BF4829D5261F7F390096FB78 /* Decoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +589,7 @@
 		BF6784EC261E57EE00738F99 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BF3E63C42620A3A6008DC5D2 /* URLSession */,
 				BF4829D5261F7F390096FB78 /* Decoder */,
 				BF6784ED261E57F400738F99 /* Builders */,
 			);
@@ -1190,6 +1201,7 @@
 				BF6784EF261E580700738F99 /* DefaultRequestBuilderTests.swift in Sources */,
 				BF6784FD261E609C00738F99 /* URLProviderSpy.swift in Sources */,
 				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
+				BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */,
 				BFAA914825E5AF3B00C9936D /* AddNewToolContentViewTests.swift in Sources */,
 				BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */,
 				BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */,
