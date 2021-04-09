@@ -26,6 +26,43 @@ final class URLSessionHTTPClientTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
     }
+    
+    func test_get_whenHTTPResponseIsInvalid_shouldReturnInvalidHTTPResponse() {
+        // Given
+        let urlSessionMock = URLSessionMock()
+        urlSessionMock.dataTaskResultToBeReturned = (nil, nil, nil)
+        let sut = makeSUT(session: urlSessionMock)
+        let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
+        let expectedError = NetworkError(.internal(.invalidHTTPResponse))
+        
+        // When
+        guard let receivedError = resultErrorFor(networkRequest: httpRequest, sut: sut) else {
+            XCTFail("Could not find receivedError")
+            return
+        }
+        
+        // Then
+        XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
+    }
+    
+    func test_get_whenRequestFails_shouldReturnReceivedError() {
+        // Given
+        let urlSessionMock = URLSessionMock()
+        let nsError = NSError(domain: "", code: 400)
+        urlSessionMock.dataTaskResultToBeReturned = (nil, nil, nsError)
+        let sut = makeSUT(session: urlSessionMock)
+        let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
+        let expectedError = NetworkError(requestError: .http(400), rawError: nsError)
+        
+        // When
+        guard let receivedError = resultErrorFor(networkRequest: httpRequest, sut: sut) else {
+            XCTFail("Could not find receivedError")
+            return
+        }
+        
+        // Then
+        XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
+    }
 
     // MARK: - Test Helpers
     
@@ -77,5 +114,17 @@ final class URLSessionHTTPClientTests: XCTestCase {
 final class URLSessionDummy: URLSessionProvider {
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return .init()
+    }
+}
+
+final class URLSessionMock: URLSessionProvider {
+    
+    var dataTaskResultToBeReturned: (data: Data?, response: URLResponse?, error: Error?) = (nil, nil, nil)
+    private(set) var dataTaskPassedRequests = [URLRequest]()
+    
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        dataTaskPassedRequests.append(request)
+        completionHandler(dataTaskResultToBeReturned.data, dataTaskResultToBeReturned.response, dataTaskResultToBeReturned.error)
+        return URLSession.shared.dataTask(with: request)
     }
 }
