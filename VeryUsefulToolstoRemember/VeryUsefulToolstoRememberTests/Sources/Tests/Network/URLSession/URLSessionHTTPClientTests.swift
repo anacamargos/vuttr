@@ -63,6 +63,26 @@ final class URLSessionHTTPClientTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
     }
+    
+    func test_get_whenRequestSucceeds_shouldReturnReceivedResponseAndData() {
+        // Given
+        let urlSessionMock = URLSessionMock()
+        let anyURL = URL(string: "http:a-url.com")!
+        let response = HTTPURLResponse(url: anyURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+        urlSessionMock.dataTaskResultToBeReturned = (nil, response, nil)
+        let sut = makeSUT(session: urlSessionMock)
+        let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
+        let expectedResponse = NetworkResponse(status: .http(200), data: nil)
+        
+        // When
+        guard let receivedResponse = resultSuccessFor(networkRequest: httpRequest, sut: sut) else {
+            XCTFail("Could not find receivedError")
+            return
+        }
+        
+        // Then
+        XCTAssertEqual(String(describing: receivedResponse), String(describing: expectedResponse))
+    }
 
     // MARK: - Test Helpers
     
@@ -106,6 +126,22 @@ final class URLSessionHTTPClientTests: XCTestCase {
             return error
         default:
             XCTFail("Expected failure, got \(result) instead", file: file, line: line)
+            return nil
+        }
+    }
+    
+    private func resultSuccessFor(
+        networkRequest: NetworkRequest,
+        sut: URLSessionHTTPClient,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> NetworkResponse? {
+        let result = resultFor(request: networkRequest, sut: sut)
+        switch result {
+        case let .success(response):
+            return response
+        default:
+            XCTFail("Expected success, got \(result) instead", file: file, line: line)
             return nil
         }
     }
