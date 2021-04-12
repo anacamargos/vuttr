@@ -42,6 +42,37 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         XCTAssertEqual(String(describing: httpClientMock.getPassedRequests), String(describing: [htppRequest]))
     }
     
+    func test_dispatch_whenRequestFails_shouldReturnCorrectNetworkError() {
+        // Given
+        let expectedNetworkError = NetworkError(.http(400))
+        let httpClientMock = HTTPClientMock()
+        httpClientMock.getResultToBeReturned = .failure(expectedNetworkError)
+        let sut = makeSUT(httpClient: httpClientMock)
+        let htppRequest = HTTPRequest(baseURL: .string("www.a-url.com"), method: .get)
+        
+        // When
+        let dispatchExpectation = expectation(description: "dispatch expectation")
+        var receivedNetworkError: NetworkError?
+        sut.dispatch(htppRequest) { result in
+            switch result {
+            case .success:
+                XCTFail("Expected failure, but got \(result) instead")
+            case let .failure(error):
+                receivedNetworkError = error
+            }
+            dispatchExpectation.fulfill()
+        }
+        wait(for: [dispatchExpectation], timeout: 1.0)
+        
+        // Then
+        guard let receivedError = receivedNetworkError else {
+            XCTFail("Could not find NetworkResponse")
+            return
+        }
+        XCTAssertEqual(String(describing: expectedNetworkError), String(describing: receivedError))
+        XCTAssertEqual(String(describing: httpClientMock.getPassedRequests), String(describing: [htppRequest]))
+    }
+    
     // MARK: - Test Helpers
 
     private func makeSUT(
