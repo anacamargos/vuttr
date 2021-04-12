@@ -147,12 +147,6 @@ final class URLSessionHTTPClientTests: XCTestCase {
     }
 }
 
-final class URLSessionDummy: URLSessionProvider {
-    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return .init()
-    }
-}
-
 final class URLSessionMock: URLSessionProvider {
     
     var dataTaskResultToBeReturned: (data: Data?, response: URLResponse?, error: Error?) = (nil, nil, nil)

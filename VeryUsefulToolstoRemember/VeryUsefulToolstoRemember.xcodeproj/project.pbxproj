@@ -27,6 +27,7 @@
 		BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */; };
 		BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */; };
 		BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */; };
+		BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169472624827A00989DA1 /* URLSessionDummy.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
@@ -164,6 +165,7 @@
 		BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewControllerTests.swift; sourceTree = "<group>"; };
 		BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcherTests.swift; sourceTree = "<group>"; };
+		BF4169472624827A00989DA1 /* URLSessionDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDummy.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
@@ -841,6 +843,7 @@
 			children = (
 				BFE8AE1225DF1359006ED5CA /* Scenes */,
 				BF6784F8261E607D00738F99 /* URLProviderDummy.swift */,
+				BF4169472624827A00989DA1 /* URLSessionDummy.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -1194,6 +1197,7 @@
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
 				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
 				BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */,
+				BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */,
 				BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */,
