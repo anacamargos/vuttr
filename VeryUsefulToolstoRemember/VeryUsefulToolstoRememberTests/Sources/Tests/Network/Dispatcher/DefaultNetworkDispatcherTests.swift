@@ -10,6 +10,17 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class DefaultNetworkDispatcherTests: XCTestCase {
+    
+    // MARK: - Test Helpers
 
+    private func makeSUT(
+        httpClient: HTTPClient = HTTPClientDummy()
+    ) -> DefaultNetworkDispatcher {
+        let sut = DefaultNetworkDispatcher(httpClient: httpClient, responseDecoder: DefaultResponseDecoder())
+        return sut
+    }
+}
 
+final class HTTPClientDummy: HTTPClient {
+    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {}
 }
