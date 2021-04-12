@@ -30,6 +30,7 @@
 		BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169472624827A00989DA1 /* URLSessionDummy.swift */; };
 		BF41694D262482AF00989DA1 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694C262482AF00989DA1 /* URLSessionMock.swift */; };
 		BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169522624866D00989DA1 /* HTTPClientDummy.swift */; };
+		BF416957262486A700989DA1 /* HTTPClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF416956262486A700989DA1 /* HTTPClientMock.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
@@ -170,6 +171,7 @@
 		BF4169472624827A00989DA1 /* URLSessionDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDummy.swift; sourceTree = "<group>"; };
 		BF41694C262482AF00989DA1 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		BF4169522624866D00989DA1 /* HTTPClientDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientDummy.swift; sourceTree = "<group>"; };
+		BF416956262486A700989DA1 /* HTTPClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientMock.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				BF41694C262482AF00989DA1 /* URLSessionMock.swift */,
+				BF416956262486A700989DA1 /* HTTPClientMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1198,6 +1201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF416957262486A700989DA1 /* HTTPClientMock.swift in Sources */,
 				BFD277C625F6C73D004016C8 /* RemoveToolContentViewTests.swift in Sources */,
 				BFAA916025E5B83100C9936D /* UIViewControllerSpy.swift in Sources */,
 				BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */,

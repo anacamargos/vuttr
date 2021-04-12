@@ -82,14 +82,3 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         return sut
     }
 }
-
-final class HTTPClientMock: HTTPClient {
-    
-    var getResultToBeReturned: Result<NetworkResponse, NetworkError> = .success(.init(status: .http(200), data: nil))
-    private(set) var getPassedRequests = [NetworkRequest]()
-    
-    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
-        getPassedRequests.append(networkRequest)
-        handle(getResultToBeReturned)
-    }
-}
