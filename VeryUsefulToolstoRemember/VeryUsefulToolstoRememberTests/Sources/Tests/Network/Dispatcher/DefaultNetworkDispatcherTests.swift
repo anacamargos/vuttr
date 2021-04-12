@@ -83,10 +83,6 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
     }
 }
 
-final class HTTPClientDummy: HTTPClient { //
-    func get(from networkRequest: NetworkRequest, then handle: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {}
-}
-
 final class HTTPClientMock: HTTPClient {
     
     var getResultToBeReturned: Result<NetworkResponse, NetworkError> = .success(.init(status: .http(200), data: nil))

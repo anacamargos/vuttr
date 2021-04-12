@@ -29,6 +29,7 @@
 		BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */; };
 		BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169472624827A00989DA1 /* URLSessionDummy.swift */; };
 		BF41694D262482AF00989DA1 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694C262482AF00989DA1 /* URLSessionMock.swift */; };
+		BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169522624866D00989DA1 /* HTTPClientDummy.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
@@ -168,6 +169,7 @@
 		BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcherTests.swift; sourceTree = "<group>"; };
 		BF4169472624827A00989DA1 /* URLSessionDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDummy.swift; sourceTree = "<group>"; };
 		BF41694C262482AF00989DA1 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		BF4169522624866D00989DA1 /* HTTPClientDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientDummy.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
@@ -855,6 +857,7 @@
 				BFE8AE1225DF1359006ED5CA /* Scenes */,
 				BF6784F8261E607D00738F99 /* URLProviderDummy.swift */,
 				BF4169472624827A00989DA1 /* URLSessionDummy.swift */,
+				BF4169522624866D00989DA1 /* HTTPClientDummy.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -1222,6 +1225,7 @@
 				BFFFA89625F978E5000BC298 /* RemoveToolPresenterTests.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
 				BFFFA88925F976BC000BC298 /* RemoveToolPresenterSpy.swift in Sources */,
+				BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */,
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
 				BFFFA89A25F97A54000BC298 /* RemoveToolDisplayLogicDummy.swift in Sources */,
 				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
