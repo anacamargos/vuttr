@@ -73,6 +73,42 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         XCTAssertEqual(String(describing: httpClientMock.getPassedRequests), String(describing: [htppRequest]))
     }
     
+    func test_whenRequestCodableIsCalled_itShouldReturnResponseDecoderResult() {
+        // Given
+        let httpClientMock = HTTPClientMock()
+        let sut = makeSUT(httpClient: httpClientMock)
+        guard let codableMockData = """
+        {
+           "key": "value"
+        }
+        """.data(using: .utf8) else {
+           XCTFail("Could not create codableMockData.")
+            return
+        }
+        let expectedCodableObject = CodableMock(key: "value")
+        let stubbedNetworkResponse = NetworkResponse(status: .http(200), data: codableMockData)
+        httpClientMock.getResultToBeReturned = .success(stubbedNetworkResponse)
+        let requestMock = HTTPRequest(baseURL: .string("www.test.com"), method: .get)
+        
+        // When
+        let codableDataExpectation = expectation(description: "codableDataExpectation")
+        var requestObjectReturned: CodableMock?
+        sut.requestCodable(ofType: CodableMock.self, for: requestMock) { result in
+            switch result {
+            case let .success(requestObject):
+                requestObjectReturned = requestObject
+            case .failure:
+                XCTFail("Expected .success, but got \(String(describing: result)).")
+                return
+            }
+            codableDataExpectation.fulfill()
+        }
+        wait(for: [codableDataExpectation], timeout: 1.0)
+        
+        // Then
+        XCTAssertEqual(requestObjectReturned, expectedCodableObject)
+    }
+    
     // MARK: - Test Helpers
 
     private func makeSUT(
