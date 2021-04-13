@@ -8,20 +8,11 @@
 
 import Foundation
 
-enum Status: RawRepresentable {
+enum Status {
     typealias RawValue = Int
     
     case http(Int)
     case internalError(InternalError)
-    
-    init?(rawValue: Int) {
-        if 0 ... 599 ~= rawValue {
-            self = .http(rawValue)
-        } else if 1000 ... 2000 ~= rawValue, let internalErrorCode = InternalError(rawValue: rawValue) {
-            self = .internalError(internalErrorCode)
-        }
-        return nil
-    }
     
     var rawValue: Status.RawValue {
         switch self {
@@ -34,7 +25,7 @@ enum Status: RawRepresentable {
 }
 
 extension Status {
-    enum InternalError: RawRepresentable {
+    enum InternalError {
         typealias RawValue = Int
         
         case unexpected
@@ -48,31 +39,6 @@ extension Status {
         case invalidBaseURL
         case invalidHTTPBody
         case unexpectedHTTPError(HTTPURLResponse, Error?, Data?)
-        
-        init?(rawValue: Self.RawValue) {
-            switch rawValue {
-            case 1001:
-                self = .unexpected
-            case 1002:
-                self = .couldNotConnectToNetwork
-            case 1003:
-                self = .noInternetConnection
-            case 1004:
-                self = .apiErrorParsing
-            case 1005:
-                self = .jsonParsing
-            case 1006:
-                self = .invalidHTTPResponse
-            case 1007:
-                self = .objectDecoding
-            case 1008:
-                self = .invalidBaseURL
-            case 1009:
-                self = .invalidHTTPBody
-            default:
-                return nil
-            }
-        }
         
         var rawValue: Int {
             switch self {
