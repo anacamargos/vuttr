@@ -25,6 +25,7 @@
 		BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EE25E85F5100D5F766 /* HomePresenter.swift */; };
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
 		BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */; };
+		BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E0CD12625D7E8003A31CF /* DefaultURLProviderTests.swift */; };
 		BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */; };
 		BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */; };
 		BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169472624827A00989DA1 /* URLSessionDummy.swift */; };
@@ -166,6 +167,7 @@
 		BF3140EE25E85F5100D5F766 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
 		BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewControllerTests.swift; sourceTree = "<group>"; };
+		BF3E0CD12625D7E8003A31CF /* DefaultURLProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLProviderTests.swift; sourceTree = "<group>"; };
 		BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcherTests.swift; sourceTree = "<group>"; };
 		BF4169472624827A00989DA1 /* URLSessionDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDummy.swift; sourceTree = "<group>"; };
@@ -438,6 +440,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BF3E0CD02625D7D4003A31CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF3E0CD12625D7E8003A31CF /* DefaultURLProviderTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BF3E63C42620A3A6008DC5D2 /* URLSession */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +627,7 @@
 		BF6784EC261E57EE00738F99 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BF3E0CD02625D7D4003A31CF /* Models */,
 				BF41694026247E5F00989DA1 /* Dispatcher */,
 				BF3E63C42620A3A6008DC5D2 /* URLSession */,
 				BF4829D5261F7F390096FB78 /* Decoder */,
@@ -1223,6 +1234,7 @@
 				BF6784F9261E607D00738F99 /* URLProviderDummy.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
+				BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
