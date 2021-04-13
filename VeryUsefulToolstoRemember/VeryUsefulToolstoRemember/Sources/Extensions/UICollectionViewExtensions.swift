@@ -15,11 +15,4 @@ extension UICollectionView {
         }
         return T()
     }
-
-    func reusableSupplementaryCell<T: UICollectionReusableView>(for type: T.Type, kind: String, indexPath: IndexPath) -> T {
-        if let cell = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.className, for: indexPath) as? T {
-            return cell
-        }
-        return T()
-    }
 }
