@@ -10,12 +10,12 @@ import Foundation
 
 /// Defines a service group to provide URLs
 /// A ServiceGroup is a sum of endpoints that exist on the applications context.
-public enum ServiceGroup {
+enum ServiceGroup {
     case vuttr
 }
 
 /// Defines a  provider of URLs
-public protocol URLProvider {
+protocol URLProvider {
     /// Returns a baseURL string acording to the  ServiceGroup
     /// - Parameters:
     ///   - group: a service group that defines the URL
@@ -24,7 +24,7 @@ public protocol URLProvider {
     ) -> String
 }
 
-public final class DefaultURLProvider: URLProvider {
+final class DefaultURLProvider: URLProvider {
     
     // MARK: - Constants
     
@@ -32,11 +32,11 @@ public final class DefaultURLProvider: URLProvider {
     
     // MARK: - Initialization
     
-    public init() {}
+    init() {}
 
     // MARK: - Public Functions
     
-    public func getBaseURL(
+    func getBaseURL(
         forServiceGroup group: ServiceGroup
     ) -> String {
         var url: String
