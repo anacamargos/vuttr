@@ -55,11 +55,3 @@ final class ToolsServices: ToolsServicesProvider {
         }
     }
 }
-
-struct ToolResponseEntity: Codable {
-    let id: UInt
-    let title: String
-    let link: String
-    let description: String
-    let tags: [String]
-}
