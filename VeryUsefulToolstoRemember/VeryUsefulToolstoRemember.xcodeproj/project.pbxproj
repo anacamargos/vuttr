@@ -127,6 +127,8 @@
 		BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
 		BFFDFDE02628DD270039B4EB /* ToolsServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */; };
+		BFFDFDE62628E2570039B4EB /* NetworkDispatcherDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDE52628E2570039B4EB /* NetworkDispatcherDummy.swift */; };
+		BFFDFDEA2628E2820039B4EB /* NetworkDispatcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
 		BFFFA87D25F972A9000BC298 /* RemoveToolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */; };
@@ -281,6 +283,8 @@
 		BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesTests.swift; sourceTree = "<group>"; };
+		BFFDFDE52628E2570039B4EB /* NetworkDispatcherDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcherDummy.swift; sourceTree = "<group>"; };
+		BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcherMock.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
 		BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractorTests.swift; sourceTree = "<group>"; };
@@ -496,6 +500,7 @@
 			children = (
 				BF41694C262482AF00989DA1 /* URLSessionMock.swift */,
 				BF416956262486A700989DA1 /* HTTPClientMock.swift */,
+				BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				BF6784F8261E607D00738F99 /* URLProviderDummy.swift */,
 				BF4169472624827A00989DA1 /* URLSessionDummy.swift */,
 				BF4169522624866D00989DA1 /* HTTPClientDummy.swift */,
+				BFFDFDE52628E2570039B4EB /* NetworkDispatcherDummy.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -1284,11 +1290,13 @@
 				BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */,
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
 				BFFFA89A25F97A54000BC298 /* RemoveToolDisplayLogicDummy.swift in Sources */,
+				BFFDFDEA2628E2820039B4EB /* NetworkDispatcherMock.swift in Sources */,
 				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
 				BF41694D262482AF00989DA1 /* URLSessionMock.swift in Sources */,
 				BF6784EF261E580700738F99 /* DefaultRequestBuilderTests.swift in Sources */,
 				BF6784FD261E609C00738F99 /* URLProviderSpy.swift in Sources */,
 				BFE8AE2625DF1620006ED5CA /* HomeRouterSpy.swift in Sources */,
+				BFFDFDE62628E2570039B4EB /* NetworkDispatcherDummy.swift in Sources */,
 				BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */,
 				BFAA914825E5AF3B00C9936D /* AddNewToolContentViewTests.swift in Sources */,
 				BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */,
