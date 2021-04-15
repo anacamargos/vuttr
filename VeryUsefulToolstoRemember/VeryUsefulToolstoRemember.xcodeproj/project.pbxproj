@@ -126,6 +126,7 @@
 		BFEAF167260BEBC700B29F04 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */; };
 		BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
+		BFFDFDE02628DD270039B4EB /* ToolsServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */; };
 		BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */; };
 		BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */; };
 		BFFFA87D25F972A9000BC298 /* RemoveToolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */; };
@@ -279,6 +280,7 @@
 		BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesTests.swift; sourceTree = "<group>"; };
 		BFFFA87425F96CAE000BC298 /* RemoveToolRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouterTests.swift; sourceTree = "<group>"; };
 		BFFFA87825F96DB4000BC298 /* RemoveToolConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfiguratorTests.swift; sourceTree = "<group>"; };
 		BFFFA87C25F972A9000BC298 /* RemoveToolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractorTests.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		BF2C9C0625DDCA5300396C74 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BFFDFDDE2628DD160039B4EB /* Services */,
 				BF6784EC261E57EE00738F99 /* Network */,
 				BF2C9BFB25DDC08500396C74 /* Components */,
 				BF03B7AA259B6C7800DF170A /* Scenes */,
@@ -966,6 +969,14 @@
 			path = Dispatcher;
 			sourceTree = "<group>";
 		};
+		BFFDFDDE2628DD160039B4EB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BFFFA88025F97675000BC298 /* RemoveTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1259,6 +1270,7 @@
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */,
 				BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */,
+				BFFDFDE02628DD270039B4EB /* ToolsServicesTests.swift in Sources */,
 				BF6784F9261E607D00738F99 /* URLProviderDummy.swift in Sources */,
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
