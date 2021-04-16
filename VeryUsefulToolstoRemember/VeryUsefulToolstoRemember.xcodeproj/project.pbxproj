@@ -28,6 +28,7 @@
 		BF3140EF25E85F5100D5F766 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140EE25E85F5100D5F766 /* HomePresenter.swift */; };
 		BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */; };
 		BF31606B25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */; };
+		BF35608A262A2197009362A8 /* ToolResponseEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF356089262A2197009362A8 /* ToolResponseEntityExtensions.swift */; };
 		BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E0CD12625D7E8003A31CF /* DefaultURLProviderTests.swift */; };
 		BF3E63C62620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */; };
 		BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */; };
@@ -176,6 +177,7 @@
 		BF3140EE25E85F5100D5F766 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BF3140F825E8624800D5F766 /* HomeInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorDummy.swift; sourceTree = "<group>"; };
 		BF31606A25FBD7D200FF1804 /* RemoveToolViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewControllerTests.swift; sourceTree = "<group>"; };
+		BF356089262A2197009362A8 /* ToolResponseEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolResponseEntityExtensions.swift; sourceTree = "<group>"; };
 		BF3E0CD12625D7E8003A31CF /* DefaultURLProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultURLProviderTests.swift; sourceTree = "<group>"; };
 		BF3E63C52620A3B8008DC5D2 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		BF41694126247E8100989DA1 /* DefaultNetworkDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcherTests.swift; sourceTree = "<group>"; };
@@ -938,6 +940,7 @@
 				BF53CB8725ED92600014E967 /* Scenes */,
 				BFE8AE1F25DF14EA006ED5CA /* MirrorExtensions.swift */,
 				BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */,
+				BF356089262A2197009362A8 /* ToolResponseEntityExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1287,6 +1290,7 @@
 				BFFFA89625F978E5000BC298 /* RemoveToolPresenterTests.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
 				BFFFA88925F976BC000BC298 /* RemoveToolPresenterSpy.swift in Sources */,
+				BF35608A262A2197009362A8 /* ToolResponseEntityExtensions.swift in Sources */,
 				BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */,
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
 				BFFFA89A25F97A54000BC298 /* RemoveToolDisplayLogicDummy.swift in Sources */,
