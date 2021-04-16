@@ -25,6 +25,34 @@ final class ToolsServicesTests: XCTestCase {
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
     }
+    
+    func test_getAllTools_whenRequestSucceeds_butResponseIsInvalid_shouldReturnCorrectError() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        dispatcherMock.requestCodableResultToBeReturned = .success(nil)
+        let expectedError = ToolsServiceError.responseParse
+        
+        // When
+        expect(sut, toCompleteWith: .failure(expectedError))
+        
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
+    }
+    
+    func test_getAllTools_whenRequestSucceedsWirhValidResponse_shouldReturnCorrectData() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        dispatcherMock.requestCodableResultToBeReturned = .success([.mock])
+        let expectedResponse = [ToolResponseEntity.mock]
+        
+        // When
+        expect(sut, toCompleteWith: .success(expectedResponse))
+        
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
+    }
 
     // MARK: - Test Helpers
     
@@ -55,4 +83,10 @@ final class ToolsServicesTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
+}
+
+extension ToolResponseEntity {
+    static var mock: ToolResponseEntity {
+        .init(id: 0, title: "Notion", link: "https://notion.so", description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.", tags: ["organization", "planning", "collaboration", "writing", "calendar"])
+    }
 }
