@@ -9,24 +9,24 @@
 import UIKit
 
 final class CustomLoadingView: CodedView {
-    
+
     // MARK: - View Components
-    
+
     private let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .gray)
         return view
     }()
-    
+
     deinit {
         activityIndicator.stopAnimating()
     }
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(activityIndicator)
     }
-    
+
     override func constrainSubviews() {
         activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         activityIndicator.anchor(
@@ -36,9 +36,9 @@ final class CustomLoadingView: CodedView {
             bottomConstant: Metrics.Spacing.xSmall
         )
     }
-    
+
     // MARK: - Public Methods
-    
+
     func startLoading() {
         activityIndicator.startAnimating()
     }

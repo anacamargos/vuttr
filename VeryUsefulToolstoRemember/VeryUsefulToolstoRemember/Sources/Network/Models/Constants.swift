@@ -9,7 +9,7 @@
 import Foundation
 
 enum Header {
-    
+
     enum Key {
         static let contentType = "Content-Type"
     }

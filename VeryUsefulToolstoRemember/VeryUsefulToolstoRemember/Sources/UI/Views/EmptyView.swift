@@ -9,9 +9,9 @@
 import UIKit
 
 final class EmptyView: CodedView {
-    
+
     // MARK: - View Components
-    
+
     private let emptyLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .body, weight: .semibold)
@@ -21,13 +21,13 @@ final class EmptyView: CodedView {
         label.text = L10n.Home.noRegisteredTools
         return label
     }()
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(emptyLabel)
     }
-    
+
     override func constrainSubviews() {
         emptyLabel.anchor(
             top: topAnchor,
@@ -40,9 +40,9 @@ final class EmptyView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     // MARK: - Public Methods
-    
+
     func setupLabelText(_ text: String) {
         emptyLabel.text = text
     }

@@ -11,14 +11,14 @@ import SnapshotTesting
 @testable import VeryUsefulToolstoRemember
 
 final class AddNewToolContentViewTests: XCTestCase {
-    
+
     func test_addNewToolContentView() {
         let view = makeView()
         assertSnapshot(matching: view, as: .image)
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeView() -> AddNewToolContentView {
         return .init(
             frame: .init(origin: .zero, size: CGSize(width: 350, height: 600)),

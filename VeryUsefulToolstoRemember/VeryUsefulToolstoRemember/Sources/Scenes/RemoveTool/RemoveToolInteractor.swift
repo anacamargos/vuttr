@@ -13,14 +13,14 @@ protocol RemoveToolBusinessLogic {
 }
 
 final class RemoveToolInteractor {
-    
+
     // MARK: - Dependencies
-    
+
     private let presenter: RemoveToolPresentationLogic
     private let parameters: RemoveToolSceneParameters
-    
+
     // MARK: - Initializer
-    
+
     init(
         presenter: RemoveToolPresentationLogic,
         parameters: RemoveToolSceneParameters
@@ -33,7 +33,7 @@ final class RemoveToolInteractor {
 // MARK: - RemoveToolBusinessLogic
 
 extension RemoveToolInteractor: RemoveToolBusinessLogic {
-    
+
     func onViewDidLoad() {
         presenter.presentToolName(parameters.toolName)
     }

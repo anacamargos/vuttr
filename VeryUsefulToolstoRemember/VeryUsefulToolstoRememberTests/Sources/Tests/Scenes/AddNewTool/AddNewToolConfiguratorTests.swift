@@ -15,16 +15,16 @@ final class AddNewToolConfiguratorTests: XCTestCase {
         // Given
         let sut = AddNewToolConfigurator()
         trackForMemoryLeaks(sut)
-        
+
         // When
         let viewController = sut.resolveViewController()
-        
+
         // Then
         guard let router = Mirror(reflecting: viewController).firstChild(of: AddNewToolRouter.self) else {
             XCTFail("Could not find HomeRouter.")
             return
         }
-        
+
         XCTAssertNotNil(router.viewController)
         XCTAssertTrue(router.viewController is AddNewToolViewController)
     }

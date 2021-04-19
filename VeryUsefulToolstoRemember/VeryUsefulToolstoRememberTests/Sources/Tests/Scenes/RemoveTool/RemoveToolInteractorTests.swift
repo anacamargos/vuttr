@@ -10,7 +10,7 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class RemoveToolInteractorTests: XCTestCase {
-    
+
     func test_onViewDidLoad_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
         // Given
         let presenterSpy = RemoveToolPresenterSpy()
@@ -25,7 +25,7 @@ final class RemoveToolInteractorTests: XCTestCase {
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeSUT(
         presenter: RemoveToolPresentationLogic = RemoveToolPresenterDummy(),
         parameters: RemoveToolSceneParameters = .mock,

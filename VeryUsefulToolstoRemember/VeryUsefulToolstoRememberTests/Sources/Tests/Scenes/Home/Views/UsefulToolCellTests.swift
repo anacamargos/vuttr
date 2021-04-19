@@ -17,9 +17,9 @@ final class UsefulToolCellTests: XCTestCase {
         view.setupViewData(.mock)
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     // MARK: - Test Helpers
-    
+
     private func makeView() -> UsefulToolCell {
         let view = UsefulToolCell()
         view.frame = .init(origin: .zero, size: CGSize(width: 300, height: 150))

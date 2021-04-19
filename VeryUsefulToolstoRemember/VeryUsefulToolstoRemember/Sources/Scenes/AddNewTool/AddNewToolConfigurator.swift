@@ -9,7 +9,7 @@
 import UIKit
 
 final class AddNewToolConfigurator {
-    
+
     func resolveViewController() -> UIViewController {
         let router = AddNewToolRouter()
         let viewController = AddNewToolViewController(router: router)

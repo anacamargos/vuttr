@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NetworkRequestBuilder {
-    
+
     // MARK: - Initialization
 
     /// Intitializes a builder

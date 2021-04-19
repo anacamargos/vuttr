@@ -19,7 +19,7 @@ extension GetUsefulToolsUseCaseModels.Tool {
             tags: ["#organization", "#planning", "#collaboration", "#writing"]
         )
     }
-    
+
     static var mockWithInvalidLink: GetUsefulToolsUseCaseModels.Tool {
         .init(
             id: .zero,

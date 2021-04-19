@@ -9,15 +9,15 @@
 import UIKit
 
 final class ErrorView: CodedView {
-    
+
     // MARK: - View Metrics
-    
+
     private enum ViewMetrics {
         static let errorImageViewSize: CGFloat = 50
     }
-    
+
     // MARK: - View Components
-    
+
     private let errorLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .body, weight: .semibold)
@@ -27,28 +27,28 @@ final class ErrorView: CodedView {
         label.text = L10n.Home.errorMessage
         return label
     }()
-    
+
     private let reloadButton: UIButton = {
         let button = UIButton()
         button.setImage(.reloadArrow, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(errorLabel)
         addSubview(reloadButton)
     }
-    
+
     override func constrainSubviews() {
         constrainErrorLabel()
         constrainReloadButton()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func constrainErrorLabel() {
         reloadButton.anchor(
             top: topAnchor,
@@ -58,7 +58,7 @@ final class ErrorView: CodedView {
         )
         reloadButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
-    
+
     private func constrainReloadButton() {
         errorLabel.anchor(
             top: reloadButton.bottomAnchor,

@@ -10,7 +10,7 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 extension RemoveToolSceneParameters {
-    
+
     static var mock: RemoveToolSceneParameters {
         .init(toolName: "Notion", toolId: .zero)
     }

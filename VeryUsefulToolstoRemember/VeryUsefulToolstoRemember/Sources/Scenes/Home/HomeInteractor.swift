@@ -20,19 +20,19 @@ protocol HomeDataStore {
 }
 
 final class HomeInteractor: HomeDataStore {
-    
+
     // MARK: - Properties
-    
+
     private var usefulTools: [GetUsefulToolsUseCaseModels.Tool] = []
     var selectedTool: GetUsefulToolsUseCaseModels.Tool?
-    
+
     // MARK: - Dependencies
-    
+
     private let presenter: HomePresentationLogic
     private let getToolsUseCase: GetUsefulToolsUseCaseProvider
-    
+
     // MARK: - Initializer
-    
+
     init(
         presenter: HomePresentationLogic,
         getToolsUseCase: GetUsefulToolsUseCaseProvider
@@ -40,9 +40,9 @@ final class HomeInteractor: HomeDataStore {
         self.presenter = presenter
         self.getToolsUseCase = getToolsUseCase
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func loadTools() {
         presenter.presentToolsResponse(.loading)
         getToolsUseCase.execute { [weak self] result in
@@ -64,22 +64,22 @@ final class HomeInteractor: HomeDataStore {
 // MARK: - HomeBusinessLogic
 
 extension HomeInteractor: HomeBusinessLogic {
-    
+
     func onViewDidLoad() {
         loadTools()
     }
-    
+
     func reloadTools() {
         loadTools()
     }
-    
+
     func handleToolSelection(at row: Int) {
         guard usefulTools.indices.contains(row) else { return }
         let selectedTool = usefulTools[row]
         guard let url = URL(string: selectedTool.link) else { return }
         presenter.presentURL(url)
     }
-    
+
     func handleRemoveToolSelection(_ toolId: UInt) {
         guard let selectedTool = usefulTools.first(where: { $0.id == toolId }) else { return }
         self.selectedTool = selectedTool

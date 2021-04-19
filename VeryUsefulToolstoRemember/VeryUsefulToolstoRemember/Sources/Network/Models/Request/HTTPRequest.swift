@@ -16,7 +16,7 @@ struct HTTPRequest: NetworkRequest {
     var httpBody: HTTPBody?
     var headers: [String: String]
     var timeout: Double?
-    
+
     init(
         baseURL: BaseURL,
         path: String? = nil,

@@ -16,14 +16,14 @@ final class CustomTextFieldTests: XCTestCase {
         let view = makeView()
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     func test_customTextField_errorState() {
         let view = makeView()
         view.errorMessageText = "Test"
         view.presentError()
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     func test_customTextField_resetView() {
         let view = makeView()
         view.errorMessageText = "Test"
@@ -31,22 +31,22 @@ final class CustomTextFieldTests: XCTestCase {
         view.resetView()
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     func test_customTextField_didBeginEditing() {
         let view = makeView()
         view.textFieldDidBeginEditing(.init())
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     func test_customTextField_didEndEditing() {
         let view = makeView()
         view.textFieldDidBeginEditing(.init())
         view.textFieldDidEndEditing(.init())
         assertSnapshot(matching: view, as: .image)
     }
-    
+
     // MARK: - Test Helpers
-    
+
     private func makeView() -> CustomTextField {
         let view = CustomTextField(titleText: "Input here")
         view.frame = .init(origin: .zero, size: CGSize(width: 100, height: 100))

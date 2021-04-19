@@ -9,22 +9,22 @@
 import UIKit
 
 extension ButtonLayout {
-    
+
     static let primary: ButtonLayout = .init(
         enabled: PrimaryNeutral.enabled,
         disabled: PrimaryNeutral.disabled
     )
-    
+
     static let secundary: ButtonLayout = .init(
         enabled: SecondaryNeutral.enabled,
         disabled: SecondaryNeutral.disabled
     )
-    
+
     static let primaryDanger: ButtonLayout = .init(
         enabled: PrimaryDanger.enabled,
         disabled: PrimaryDanger.disabled
     )
-    
+
     static let secundaryDanger: ButtonLayout = .init(
         enabled: SecondaryDanger.enabled,
         disabled: SecondaryDanger.disabled
@@ -32,7 +32,7 @@ extension ButtonLayout {
 }
 
 extension ButtonLayout {
-    
+
     // MARK: - Primary Style
 
     enum PrimaryNeutral {
@@ -48,7 +48,7 @@ extension ButtonLayout {
             backgroundColor: .lighterBlue
         )
     }
-    
+
     enum SecondaryNeutral {
         static let enabled: ButtonLayout.Properties = .init(
             titleFont: .themeFont(for: .body, weight: .semibold),
@@ -62,7 +62,7 @@ extension ButtonLayout {
             backgroundColor: .mostLightestBlue
         )
     }
-    
+
     enum PrimaryDanger {
         static let enabled: ButtonLayout.Properties = .init(
             titleFont: .themeFont(for: .body, weight: .semibold),
@@ -76,7 +76,7 @@ extension ButtonLayout {
             backgroundColor: .lightRed
         )
     }
-    
+
     enum SecondaryDanger {
         static let enabled: ButtonLayout.Properties = .init(
             titleFont: .themeFont(for: .body, weight: .semibold),
@@ -91,4 +91,3 @@ extension ButtonLayout {
         )
     }
 }
-

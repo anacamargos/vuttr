@@ -13,13 +13,13 @@ protocol RemoveToolRoutingLogic {
 }
 
 final class RemoveToolRouter: RemoveToolRoutingLogic {
-    
+
     // MARK: - Dependencies
-    
+
     weak var viewController: UIViewController?
-    
+
     // MARK: - Public Methods
-    
+
     func routeToPreviousScene() {
         viewController?.dismiss(animated: true)
     }

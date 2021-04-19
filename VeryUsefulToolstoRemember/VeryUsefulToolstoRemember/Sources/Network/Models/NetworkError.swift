@@ -11,12 +11,12 @@ import Foundation
 struct NetworkError: Error {
     let requestError: RequestError
     let rawError: NSError?
-    
+
     init(_ requestError: RequestError) {
         self.requestError = requestError
         rawError = nil
     }
-    
+
     init(requestError: RequestError, rawError: Error?) {
         self.requestError = requestError
         self.rawError = rawError as NSError?
@@ -45,7 +45,7 @@ extension RequestError: CustomNSError {
             return code
         }
     }
-    
+
     var errorUserInfo: [String: Any] {
         switch self {
         case let .internal(internalError):

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    
+
     func applyShadow(
         color: UIColor = .black,
         alpha: Float = 0.2,

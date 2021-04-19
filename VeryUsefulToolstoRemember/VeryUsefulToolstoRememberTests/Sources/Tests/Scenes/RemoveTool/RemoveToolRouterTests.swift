@@ -15,10 +15,10 @@ final class RemoveToolRouterTests: XCTestCase {
         // Given
         let sut = makeSUT()
         let viewControllerSpy = makeViewController(sut)
-        
+
         // When
         sut.routeToPreviousScene()
-        
+
         // Then
         guard let passedAnimatedFlag = viewControllerSpy.dismissAnimatedFlagPassed else {
             XCTFail("Could not find dismissAnimatedFlagPassed")
@@ -30,7 +30,7 @@ final class RemoveToolRouterTests: XCTestCase {
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeSUT(
         file: StaticString = #file,
         line: UInt = #line
@@ -39,7 +39,7 @@ final class RemoveToolRouterTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
+
     private func makeViewController(
         _ sut: RemoveToolRouter,
         file: StaticString = #file,

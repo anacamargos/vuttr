@@ -9,24 +9,24 @@
 import Foundation
 
 final class DefaultResponseDecoder: NetworkResponseDecoder {
-    
+
     // MARK: - Dependencies
-    
+
     private let jsonDecoder: JSONDecoder
-    
+
     // MARK: - Initializer
-    
+
     init(jsonDecoder: JSONDecoder = .init()) {
         self.jsonDecoder = jsonDecoder
     }
-    
+
     // MARK: - Decoding Logic
-    
+
     func decodeDataRequestResult<T>(
         _ result: Result<NetworkResponse, NetworkError>,
         ofType: T.Type,
         then handle: @escaping (Result<T?, NetworkError>) -> Void
-    ) where T : Decodable, T : Encodable {
+    ) where T: Decodable, T: Encodable {
         switch result {
         case let .success(networkResponse):
             decodeSuccessResponseData(networkResponse.data, then: handle)
@@ -34,13 +34,13 @@ final class DefaultResponseDecoder: NetworkResponseDecoder {
             handle(.failure(networkError))
         }
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func decodeSuccessResponseData<T: Codable>(
         _ data: Data?,
         then handle: @escaping (Result<T?, NetworkError>) -> Void
-    ){
+    ) {
         guard let data = data, !data.isEmpty else {
             handle(.success(nil))
             return

@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIFont {
-    
+
     /// Static function that creates a Source Sans Pro font
     ///
     /// - Parameters:
@@ -45,14 +45,14 @@ extension UIFont {
     /// - regular: Regular weight
     /// - semibold: SemiBold Font
     enum SourceSansPro {
-        
+
         // MARK: - Types
-        
+
         case regular
         case semibold
-        
+
         // MARK: - Internal Properties
-        
+
         fileprivate var fontName: String {
             switch self {
             case .regular:
@@ -61,7 +61,7 @@ extension UIFont {
                 return "SourceSansPro-SemiBold"
             }
         }
-        
+
         fileprivate var asUIFontWeight: UIFont.Weight {
             switch self {
             case .regular:
@@ -72,4 +72,3 @@ extension UIFont {
         }
     }
 }
-

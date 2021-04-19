@@ -10,10 +10,10 @@ import Foundation
 
 enum Status {
     typealias RawValue = Int
-    
+
     case http(Int)
     case internalError(InternalError)
-    
+
     var rawValue: Status.RawValue {
         switch self {
         case let .http(code):
@@ -27,7 +27,7 @@ enum Status {
 extension Status {
     enum InternalError {
         typealias RawValue = Int
-        
+
         case unexpected
         case couldNotConnectToNetwork
         case noInternetConnection
@@ -39,7 +39,7 @@ extension Status {
         case invalidBaseURL
         case invalidHTTPBody
         case unexpectedHTTPError(HTTPURLResponse, Error?, Data?)
-        
+
         var rawValue: Int {
             switch self {
             case .httpServiceUnavailable:

@@ -10,7 +10,7 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class DefaultNetworkDispatcherTests: XCTestCase {
-    
+
     func test_dispatch_whenRequestSucceeds_itShouldReturnSuccessWithData() {
         // Given
         let expectedResponse = NetworkResponse(status: .http(200), data: nil)
@@ -18,7 +18,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         httpClientMock.getResultToBeReturned = .success(expectedResponse)
         let sut = makeSUT(httpClient: httpClientMock)
         let htppRequest = HTTPRequest(baseURL: .string("www.a-url.com"), method: .get)
-        
+
         // When
         let dispatchExpectation = expectation(description: "dispatch expectation")
         var receivedNetworkResponse: NetworkResponse?
@@ -32,7 +32,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
             dispatchExpectation.fulfill()
         }
         wait(for: [dispatchExpectation], timeout: 1.0)
-        
+
         // Then
         guard let receivedResponse = receivedNetworkResponse else {
             XCTFail("Could not find NetworkResponse")
@@ -41,7 +41,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         XCTAssertEqual(String(describing: expectedResponse), String(describing: receivedResponse))
         XCTAssertEqual(String(describing: httpClientMock.getPassedRequests), String(describing: [htppRequest]))
     }
-    
+
     func test_dispatch_whenRequestFails_shouldReturnCorrectNetworkError() {
         // Given
         let expectedNetworkError = NetworkError(.http(400))
@@ -49,7 +49,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         httpClientMock.getResultToBeReturned = .failure(expectedNetworkError)
         let sut = makeSUT(httpClient: httpClientMock)
         let htppRequest = HTTPRequest(baseURL: .string("www.a-url.com"), method: .get)
-        
+
         // When
         let dispatchExpectation = expectation(description: "dispatch expectation")
         var receivedNetworkError: NetworkError?
@@ -63,7 +63,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
             dispatchExpectation.fulfill()
         }
         wait(for: [dispatchExpectation], timeout: 1.0)
-        
+
         // Then
         guard let receivedError = receivedNetworkError else {
             XCTFail("Could not find NetworkResponse")
@@ -72,7 +72,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         XCTAssertEqual(String(describing: expectedNetworkError), String(describing: receivedError))
         XCTAssertEqual(String(describing: httpClientMock.getPassedRequests), String(describing: [htppRequest]))
     }
-    
+
     func test_whenRequestCodableIsCalled_itShouldReturnResponseDecoderResult() {
         // Given
         let httpClientMock = HTTPClientMock()
@@ -89,7 +89,7 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         let stubbedNetworkResponse = NetworkResponse(status: .http(200), data: codableMockData)
         httpClientMock.getResultToBeReturned = .success(stubbedNetworkResponse)
         let requestMock = HTTPRequest(baseURL: .string("www.test.com"), method: .get)
-        
+
         // When
         let codableDataExpectation = expectation(description: "codableDataExpectation")
         var requestObjectReturned: CodableMock?
@@ -104,11 +104,11 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
             codableDataExpectation.fulfill()
         }
         wait(for: [codableDataExpectation], timeout: 1.0)
-        
+
         // Then
         XCTAssertEqual(requestObjectReturned, expectedCodableObject)
     }
-    
+
     // MARK: - Test Helpers
 
     private func makeSUT(

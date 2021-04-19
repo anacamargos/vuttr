@@ -13,16 +13,16 @@ protocol RemoveToolPresentationLogic {
 }
 
 final class RemoveToolPresenter {
-    
+
     // MARK: - Dependencies
-    
+
     weak var viewController: RemoveToolDisplayLogic?
 }
 
 // MARK: - RemoveToolPresentationLogic
 
 extension RemoveToolPresenter: RemoveToolPresentationLogic {
-    
+
     func presentToolName(_ toolName: String) {
         viewController?.displayToolName(toolName)
     }

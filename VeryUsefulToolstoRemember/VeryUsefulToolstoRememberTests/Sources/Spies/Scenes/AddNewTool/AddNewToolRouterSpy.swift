@@ -10,9 +10,9 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class AddNewToolRouterSpy: AddNewToolRoutingLogic {
-    
+
     private(set) var routeToPreviousSceneCalled = false
-    
+
     func routeToPreviousScene() {
         routeToPreviousSceneCalled = true
     }

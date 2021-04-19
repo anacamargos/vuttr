@@ -23,7 +23,7 @@ extension Home.UsefulTools.Tool {
             ]
         )
     }
-    
+
     private static func getEstimatedWidthByWord(_ word: String) -> CGFloat {
         let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: Metrics.FontSize.body.value)]
         let estimatedWidth = NSString(string: word).boundingRect(with: .zero, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)

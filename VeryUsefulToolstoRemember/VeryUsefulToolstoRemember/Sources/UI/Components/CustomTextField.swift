@@ -9,7 +9,7 @@
 import UIKit
 
 final class CustomTextField: UIView {
-    
+
     // MARK: - Public Properties
 
     var textField: UITextField {
@@ -60,11 +60,11 @@ final class CustomTextField: UIView {
             textInput.text = newValue
         }
     }
-    
+
     // MARK: - Private Properties
-    
+
     private var inputContainerHeight: CGFloat?
-    
+
     // MARK: - Constants
 
     private enum ViewMetrics {
@@ -74,7 +74,7 @@ final class CustomTextField: UIView {
     }
 
     // MARK: - View components
-    
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .body, weight: .semibold)
@@ -164,9 +164,9 @@ final class CustomTextField: UIView {
         inputContainer.backgroundColor = .darkerWhite
         errorMessageLabel.isHidden = true
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func configureView() {
         addSubviews()
         constrainSubviews()
@@ -214,12 +214,12 @@ final class CustomTextField: UIView {
 }
 
 extension CustomTextField: UITextFieldDelegate {
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         inputContainer.layer.borderColor = UIColor.mostDarkestWhite.cgColor
         inputContainer.backgroundColor = .darkestWhite
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
         inputContainer.backgroundColor = .darkerWhite

@@ -10,10 +10,10 @@ import Foundation
 
 /// Constrains the response and the status code.
 struct NetworkResponse {
-    
+
     let status: Status
     let data: Data?
-    
+
     init(
         status: Status,
         data: Data?

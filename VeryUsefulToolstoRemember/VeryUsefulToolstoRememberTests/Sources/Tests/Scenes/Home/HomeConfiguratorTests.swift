@@ -10,15 +10,15 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class HomeConfiguratorTests: XCTestCase {
-    
+
     func test_configurator_shouldReturnCorrectlyConfiguredInstance() {
         // Given
         let sut = HomeConfigurator()
         trackForMemoryLeaks(sut)
-        
+
         // When
         let viewController = sut.resolveViewController()
-        
+
         // Then
         guard let router = Mirror(reflecting: viewController).firstChild(of: HomeRouter.self) else {
             XCTFail("Could not find HomeRouter.")
@@ -32,11 +32,11 @@ final class HomeConfiguratorTests: XCTestCase {
             XCTFail("Could not find HomePresenter.")
             return
         }
-        
+
         XCTAssertNotNil(router.viewController)
         XCTAssertTrue(router.viewController is HomeViewController)
         XCTAssertNotNil(presenter.viewController)
         XCTAssertTrue(presenter.viewController is HomeViewController)
     }
-    
+
 }

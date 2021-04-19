@@ -9,34 +9,34 @@
 import UIKit
 
 enum Home {
-    
+
     enum UsefulTools {
-        
+
         enum Response {
             case content([GetUsefulToolsUseCaseModels.Tool])
             case loading
             case empty
             case error
         }
-        
+
         enum ViewState {
             case content(ViewData)
             case loading
             case empty
             case error
         }
-        
+
         struct ViewData {
             let tools: [Tool]
         }
-        
+
         struct Tool {
             let id: UInt
             let title: String
             let description: String
             let tags: [Tag]
         }
-        
+
         struct Tag {
             let text: String
             let estimatedWidth: CGFloat

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NetworkDispatcher {
-    
+
     /// Dispatches a request and returns the value as data
     /// - Parameters:
     ///   - request: a request object

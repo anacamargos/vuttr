@@ -12,9 +12,9 @@ protocol HomeContentViewProtocol: AnyObject {
 }
 
 final class HomeContentView: CodedView {
-    
+
     // MARK: - Constants
-    
+
     private enum ViewMetrics {
         static let addViewSize: CGFloat = 56
         static let iconSmallSize: CGFloat = 20
@@ -22,42 +22,42 @@ final class HomeContentView: CodedView {
         static let shadowY: CGFloat = 5
         static let shadowBlur: CGFloat = 7
     }
-    
+
     // MARK: - Dependencies
-    
+
     private let onTappedAddButtonClosure: () -> Void
     private let onTappedToolCellClosure: (Int) -> Void
     private let onTappedRemoveToolClosure: (UInt) -> Void
     private let onTappedErrorReloadButtonClosure: () -> Void
-    
+
     // MARK: - Properties
-    
+
     private var viewState: Home.UsefulTools.ViewState = .loading
-    
+
     // MARK: - View Components
-    
+
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
         tableView.contentInset = .init(top: .zero, left: .zero, bottom: Metrics.Spacing.medium, right: .zero)
         return tableView
     }()
-    
+
     private let addButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
         button.applyShadow(color: .black, alpha: ViewMetrics.shadowAlpha, x: .zero, y: ViewMetrics.shadowY, blur: ViewMetrics.shadowBlur, spread: .zero)
         return button
     }()
-    
+
     private let addImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .addIcon
         return imageView
     }()
-    
+
     // MARK: - Initializers
-    
+
     init(
         frame: CGRect = .zero,
         onTappedAddButtonClosure: @escaping () -> Void,
@@ -72,32 +72,32 @@ final class HomeContentView: CodedView {
         super.init(frame: frame)
         configureView()
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(tableView)
         addSubview(addButton)
         addButton.addSubview(addImage)
     }
-    
+
     override func constrainSubviews() {
         constrainTableView()
         constrainAddButton()
         constrainAddImage()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func constrainTableView() {
         tableView.fillSuperview()
     }
-    
+
     private func constrainAddButton() {
         addButton.anchor(
             bottom: bottomAnchor,
@@ -109,7 +109,7 @@ final class HomeContentView: CodedView {
         )
         addButton.layer.cornerRadius = 0.5 * ViewMetrics.addViewSize
     }
-    
+
     private func constrainAddImage() {
         addImage.anchor(
             widthConstant: ViewMetrics.iconSmallSize,
@@ -118,7 +118,7 @@ final class HomeContentView: CodedView {
         addImage.centerXAnchor.constraint(equalTo: addButton.centerXAnchor).isActive = true
         addImage.centerYAnchor.constraint(equalTo: addButton.centerYAnchor).isActive = true
     }
-    
+
     private func configureView() {
         backgroundColor = .white
         addButton.addTarget(self, action: #selector(onTappedAddButton), for: .touchUpInside)
@@ -132,24 +132,24 @@ final class HomeContentView: CodedView {
         tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: EmptyTableViewCell.className)
         tableView.register(ErrorTableViewCell.self, forCellReuseIdentifier: ErrorTableViewCell.className)
     }
-    
+
     private func getLoadingCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomLoadingTableViewCell = tableView.reusableCell(for: CustomLoadingTableViewCell.className, for: indexPath)
         cell.startLoading()
         return cell
     }
-    
+
     private func getEmptyCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell: EmptyTableViewCell = tableView.reusableCell(for: EmptyTableViewCell.className, for: indexPath)
         cell.setupLabelText(L10n.Home.noRegisteredTools)
         return cell
     }
-    
+
     private func getErrorCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell: ErrorTableViewCell = tableView.reusableCell(for: ErrorTableViewCell.className, for: indexPath)
         return cell
     }
-    
+
     @objc private func onTappedAddButton() {
         onTappedAddButtonClosure()
     }
@@ -158,7 +158,7 @@ final class HomeContentView: CodedView {
 // MARK: - HomeContentViewProtocol
 
 extension HomeContentView: HomeContentViewProtocol {
-    
+
     func setupUsefulToolsState(_ viewState: Home.UsefulTools.ViewState) {
         self.viewState = viewState
         DispatchQueue.main.async {
@@ -170,7 +170,7 @@ extension HomeContentView: HomeContentViewProtocol {
 // MARK: - UITableViewDelegate and UITableViewDataSource
 
 extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch viewState {
         case .loading, .error, .empty:
@@ -179,7 +179,7 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
             return viewData.tools.count
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewState {
         case let .content(viewData):
@@ -196,7 +196,7 @@ extension HomeContentView: UITableViewDelegate, UITableViewDataSource {
             return getErrorCell(for: indexPath)
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if case .content = viewState {
             onTappedToolCellClosure(indexPath.row)

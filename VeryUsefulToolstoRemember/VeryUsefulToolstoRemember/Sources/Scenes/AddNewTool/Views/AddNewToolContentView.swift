@@ -11,22 +11,22 @@ import UIKit
 protocol AddNewToolContentViewProtocol: AnyObject {}
 
 final class AddNewToolContentView: CodedView {
-    
+
     // MARK: - Constants
-    
+
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 4.0
         static let closeButtonSize: CGFloat = 16.0
         static let descriptionTextFieldHeight: CGFloat = 70
     }
-    
+
     // MARK: - Dependencies
-    
+
     private let onTappedCloseButtonClosure: () -> Void
     private let onTappedAddToolButtonClosure: (AddNewTool.Request) -> Void
-    
+
     // MARK: - View Components
-    
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .ink
@@ -35,53 +35,53 @@ final class AddNewToolContentView: CodedView {
         label.numberOfLines = .zero
         return label
     }()
-    
+
     private let closeButton: UIButton = {
         let button = UIButton()
         button.setImage(.close, for: .normal)
         return button
     }()
-    
+
     private let toolNameTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.toolName)
         textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
-    
+
     private let toolLinkTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.toolLink)
         textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
-    
+
     private let toolDescriptionTextField: CustomTextView = {
         let textField = CustomTextView(titleText: L10n.AddNewTool.toolDescription, inputContainerHeight: ViewMetrics.descriptionTextFieldHeight)
         textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
-    
+
     private let toolTagsTextField: CustomTextField = {
         let textField = CustomTextField(titleText: L10n.AddNewTool.tags)
         textField.errorMessageText = L10n.AddNewTool.requiredField
         return textField
     }()
-    
+
     private let addToolButton: LayoutableButton = {
         let button = LayoutableButton(layout: .primary)
         button.setTitle(L10n.AddNewTool.addTool, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
-    
+
     private let container: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = ViewMetrics.cornerRadius
         return view
     }()
-    
+
     // MARK: - Initializers
-    
+
     init(
         frame: CGRect = .zero,
         onTappedCloseButtonClosure: @escaping () -> Void,
@@ -92,14 +92,14 @@ final class AddNewToolContentView: CodedView {
         super.init(frame: frame)
         configureView()
     }
-    
+
     @available(*, unavailable)
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(container)
         container.addSubview(titleLabel)
@@ -110,7 +110,7 @@ final class AddNewToolContentView: CodedView {
         container.addSubview(toolTagsTextField)
         container.addSubview(addToolButton)
     }
-    
+
     override func constrainSubviews() {
         constrainContainer()
         constrainTitleLabel()
@@ -121,9 +121,9 @@ final class AddNewToolContentView: CodedView {
         constraintoolTagsTextField()
         constrainAddToolButton()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func constrainContainer() {
         container.anchor(
             leading: leadingAnchor,
@@ -133,7 +133,7 @@ final class AddNewToolContentView: CodedView {
         )
         container.anchorCenterYToSuperview()
     }
-    
+
     private func constrainTitleLabel() {
         titleLabel.anchor(
             top: container.topAnchor,
@@ -144,7 +144,7 @@ final class AddNewToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainCloseButton() {
         closeButton.anchor(
             top: container.topAnchor,
@@ -155,7 +155,7 @@ final class AddNewToolContentView: CodedView {
             heightConstant: ViewMetrics.closeButtonSize
         )
     }
-    
+
     private func constrainToolNameTextField() {
         toolNameTextField.anchor(
             top: titleLabel.bottomAnchor,
@@ -166,7 +166,7 @@ final class AddNewToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainToolLinkTextField() {
         toolLinkTextField.anchor(
             top: toolNameTextField.bottomAnchor,
@@ -175,7 +175,7 @@ final class AddNewToolContentView: CodedView {
             topConstant: Metrics.Spacing.xSmall
         )
     }
-    
+
     private func constrainToolDescriptionTextField() {
         toolDescriptionTextField.anchor(
             top: toolLinkTextField.bottomAnchor,
@@ -184,7 +184,7 @@ final class AddNewToolContentView: CodedView {
             topConstant: Metrics.Spacing.xSmall
         )
     }
-    
+
     private func constraintoolTagsTextField() {
         toolTagsTextField.anchor(
             top: toolDescriptionTextField.bottomAnchor,
@@ -193,7 +193,7 @@ final class AddNewToolContentView: CodedView {
             topConstant: Metrics.Spacing.xSmall
         )
     }
-    
+
     private func constrainAddToolButton() {
         addToolButton.anchor(
             top: toolTagsTextField.bottomAnchor,
@@ -203,13 +203,13 @@ final class AddNewToolContentView: CodedView {
             bottomConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func configureView() {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
         addToolButton.addTarget(self, action: #selector(onTappedAddToolButton), for: .touchUpInside)
     }
-    
+
     private func validateTextField(_ textField: CustomTextField) -> Bool {
         if textField.text == nil {
             textField.presentError()
@@ -222,7 +222,7 @@ final class AddNewToolContentView: CodedView {
             return true
         }
     }
-    
+
     private func validateTextView(_ textView: CustomTextView) -> Bool {
         if textView.text == nil {
             textView.presentError()
@@ -235,15 +235,15 @@ final class AddNewToolContentView: CodedView {
             return true
         }
     }
-    
+
     private func getToolTags(_ text: String) -> [String] {
         text.components(separatedBy: " ")
     }
-    
+
     @objc private func onTappedCloseButton() {
         onTappedCloseButtonClosure()
     }
-    
+
     @objc private func onTappedAddToolButton() {
         let isToolNameTextFieldValidated = validateTextField(toolNameTextField)
         let isToolLinkTextFieldValidated = validateTextField(toolLinkTextField)
@@ -269,7 +269,7 @@ final class AddNewToolContentView: CodedView {
 extension AddNewToolContentView: AddNewToolContentViewProtocol {}
 
 enum AddNewTool {
-    
+
     struct Request {
         let toolName: String
         let toolLink: String

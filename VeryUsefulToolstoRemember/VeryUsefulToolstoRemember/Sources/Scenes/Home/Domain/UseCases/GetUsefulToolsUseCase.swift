@@ -13,19 +13,19 @@ protocol GetUsefulToolsUseCaseProvider {
 }
 
 final class GetUsefulToolsUseCase: GetUsefulToolsUseCaseProvider {
-    
+
     // MARK: - Dependencies
-    
+
     private let service: ToolsServicesProvider
-    
+
     // MARK: - Initializer
-    
+
     init(service: ToolsServicesProvider) {
         self.service = service
     }
-    
+
     // MARK: - GetUsefulToolsUseCaseProvider
-    
+
     func execute(then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void) {
         service.getAllTools { [weak self] result in
             switch result {
@@ -36,9 +36,9 @@ final class GetUsefulToolsUseCase: GetUsefulToolsUseCaseProvider {
             }
         }
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func handleSuccess(
         input: [ToolResponseEntity],
         then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void

@@ -9,18 +9,18 @@
 import UIKit
 
 final class UsefulToolCell: CodedTableViewCell {
-    
+
     // MARK: - Dependencies
-    
+
     var onTappedRemoveToolButtonClosure: ((UInt) -> Void)?
-    
+
     // MARK: - Properties
-    
+
     private var tags: [Home.UsefulTools.Tag] = []
     private var toolId: UInt?
-    
+
     // MARK: - View Metris
-    
+
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 5
         static let borderWidth: CGFloat = 1
@@ -31,9 +31,9 @@ final class UsefulToolCell: CodedTableViewCell {
         static let collectionViewRowHeight: CGFloat = 26
         static let collectionViewEstimatedWidth: CGFloat = 10
     }
-    
+
     // MARK: - View Components
-    
+
     private let containerView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = ViewMetrics.cornerRadius
@@ -43,14 +43,14 @@ final class UsefulToolCell: CodedTableViewCell {
         view.applyShadow(color: .black, alpha: ViewMetrics.shadowAlpha, x: .zero, y: ViewMetrics.shadowY, blur: ViewMetrics.shadowBlur, spread: .zero)
         return view
     }()
-    
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .subtitle, weight: .semibold)
         label.textColor = .ink
         return label
     }()
-    
+
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .themeFont(for: .body, weight: .regular)
@@ -58,13 +58,13 @@ final class UsefulToolCell: CodedTableViewCell {
         label.numberOfLines = .zero
         return label
     }()
-    
+
     private let removeToolButton: UIButton = {
         let button = UIButton()
         button.setImage(.close, for: .normal)
         return button
     }()
-    
+
     private let collectionView: UICollectionView = {
         let layout = AlignedCollectionViewFlowLayout(horizontalAlignment: .leading, verticalAlignment: .center)
         layout.scrollDirection = .vertical
@@ -76,21 +76,21 @@ final class UsefulToolCell: CodedTableViewCell {
         collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
-    
+
     // MARK: - Initializers
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureView()
     }
-    
+
     @available(*, unavailable)
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         contentView.addSubview(containerView)
         containerView.addSubview(titleLabel)
@@ -98,7 +98,7 @@ final class UsefulToolCell: CodedTableViewCell {
         containerView.addSubview(removeToolButton)
         containerView.addSubview(collectionView)
     }
-    
+
     override func constrainSubviews() {
         constrainContainerView()
         constrainTitleLabel()
@@ -106,9 +106,9 @@ final class UsefulToolCell: CodedTableViewCell {
         constrainRemoveToolButton()
         constrainCollectionView()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func constrainContainerView() {
         containerView.anchor(
             top: contentView.topAnchor,
@@ -120,7 +120,7 @@ final class UsefulToolCell: CodedTableViewCell {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainRemoveToolButton() {
         removeToolButton.anchor(
             top: containerView.topAnchor,
@@ -131,7 +131,7 @@ final class UsefulToolCell: CodedTableViewCell {
             heightConstant: ViewMetrics.iconSmallestSize
         )
     }
-    
+
     private func constrainTitleLabel() {
         titleLabel.anchor(
             top: containerView.topAnchor,
@@ -142,7 +142,7 @@ final class UsefulToolCell: CodedTableViewCell {
             trailingConstant: Metrics.Spacing.small + ViewMetrics.iconSmallestSize + Metrics.Spacing.tiny
         )
     }
-    
+
     private func constrainDescriptionLabel() {
         descriptionLabel.anchor(
             top: titleLabel.bottomAnchor,
@@ -153,7 +153,7 @@ final class UsefulToolCell: CodedTableViewCell {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainCollectionView() {
         collectionView.anchor(
             top: descriptionLabel.bottomAnchor,
@@ -164,7 +164,7 @@ final class UsefulToolCell: CodedTableViewCell {
             bottomConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func configureView() {
         backgroundColor = .clear
         selectionStyle = .none
@@ -174,12 +174,12 @@ final class UsefulToolCell: CodedTableViewCell {
         collectionView.register(TagCell.self, forCellWithReuseIdentifier: TagCell.className)
         removeToolButton.addTarget(self, action: #selector(onTappedRemoveToolButton), for: .touchUpInside)
     }
-    
+
     @objc private func onTappedRemoveToolButton() {
         guard let id = toolId else { return }
         onTappedRemoveToolButtonClosure?(id)
     }
-    
+
     private func countNumberOfRows() -> Int {
         var totalWidthPerRow: CGFloat = .zero
         var rowCounts: Int = 1
@@ -195,9 +195,9 @@ final class UsefulToolCell: CodedTableViewCell {
         }
         return rowCounts
     }
-    
+
     // MARK: - Public Methods
-    
+
     func setupViewData(_ viewData: Home.UsefulTools.Tool) {
         self.toolId = viewData.id
         tags = viewData.tags
@@ -212,11 +212,11 @@ final class UsefulToolCell: CodedTableViewCell {
 }
 
 extension UsefulToolCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         tags.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.reusableCell(for: TagCell.self, indexPath: indexPath)
         let currentTag = tags[indexPath.row]

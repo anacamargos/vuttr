@@ -10,7 +10,7 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class ToolsServicesTests: XCTestCase {
-    
+
     func test_getAllTools_whenRequestFails_shouldReturnCorrectError() {
         // Given
         let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
@@ -18,49 +18,49 @@ final class ToolsServicesTests: XCTestCase {
         let errorMock = NetworkError(.internal(.noInternetConnection))
         dispatcherMock.requestCodableResultToBeReturned = .failure(errorMock)
         let expectedError = ToolsServiceError.genericError
-        
+
         // When
         expect(sut, toCompleteWith: .failure(expectedError))
-        
+
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
     }
-    
+
     func test_getAllTools_whenRequestSucceeds_butResponseIsInvalid_shouldReturnCorrectError() {
         // Given
         let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
         let sut = makeSUT(networkDispatcher: dispatcherMock)
         dispatcherMock.requestCodableResultToBeReturned = .success(nil)
         let expectedError = ToolsServiceError.responseParse
-        
+
         // When
         expect(sut, toCompleteWith: .failure(expectedError))
-        
+
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
     }
-    
+
     func test_getAllTools_whenRequestSucceedsWirhValidResponse_shouldReturnCorrectData() {
         // Given
         let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
         let sut = makeSUT(networkDispatcher: dispatcherMock)
         dispatcherMock.requestCodableResultToBeReturned = .success([.mock])
         let expectedResponse = [ToolResponseEntity.mock]
-        
+
         // When
         expect(sut, toCompleteWith: .success(expectedResponse))
-        
+
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeSUT(networkDispatcher: NetworkDispatcher) -> ToolsServices {
         let sut = ToolsServices(networkDispatcher: networkDispatcher)
         return sut
     }
-    
+
     private func expect(
         _ sut: ToolsServices,
         toCompleteWith expectedResult: Result<[ToolResponseEntity], ToolsServiceError>,
@@ -79,8 +79,8 @@ final class ToolsServicesTests: XCTestCase {
             }
             exp.fulfill()
         }
-        
+
         wait(for: [exp], timeout: 1.0)
     }
-    
+
 }

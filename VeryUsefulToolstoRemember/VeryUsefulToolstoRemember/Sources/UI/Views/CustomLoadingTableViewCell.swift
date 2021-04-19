@@ -9,25 +9,25 @@
 import UIKit
 
 final class CustomLoadingTableViewCell: CodedTableViewCell {
-    
+
     // MARK: - View Components
-    
+
     private let loadingView: CustomLoadingView = CustomLoadingView()
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(loadingView)
     }
-    
+
     override func constrainSubviews() {
         backgroundColor = .clear
         selectionStyle = .none
         loadingView.fillSuperview()
     }
-    
+
     // MARK: - Public Methods
-    
+
     func startLoading() {
         loadingView.startLoading()
     }

@@ -10,27 +10,27 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class HomeInteractorSpy: HomeBusinessLogic {
-    
+
     private(set) var onViewDidLoadCalled = false
-    
+
     func onViewDidLoad() {
         onViewDidLoadCalled = true
     }
-    
+
     private(set) var reloadToolsCalled = false
-    
+
     func reloadTools() {
         reloadToolsCalled = true
     }
-    
+
     private(set) var handleToolSelectionCalled = false
-    
+
     func handleToolSelection(at row: Int) {
         handleToolSelectionCalled = true
     }
-    
+
     private(set) var handleRemoveToolSelectionCalled = false
-    
+
     func handleRemoveToolSelection(_ toolId: UInt) {
         handleRemoveToolSelectionCalled = true
     }

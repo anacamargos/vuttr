@@ -21,7 +21,7 @@ extension UINavigationBar {
         ]
         largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont.themeFont(for: largeTitleSize, weight: titleWeight),
-            NSAttributedString.Key.foregroundColor: titleColor,
+            NSAttributedString.Key.foregroundColor: titleColor
         ]
         backgroundColor = customBackgroundColor
         barTintColor = customBackgroundColor

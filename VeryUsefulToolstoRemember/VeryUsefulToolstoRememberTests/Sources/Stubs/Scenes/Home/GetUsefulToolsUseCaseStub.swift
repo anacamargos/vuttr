@@ -10,9 +10,9 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class GetUsefulToolsUseCaseStub: GetUsefulToolsUseCaseProvider {
-    
+
     var executeResultToBeReturned: Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError> = .success([.mock])
-    
+
     func execute(then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], GetUsefulToolsUseCaseError>) -> Void) {
         handle(executeResultToBeReturned)
     }

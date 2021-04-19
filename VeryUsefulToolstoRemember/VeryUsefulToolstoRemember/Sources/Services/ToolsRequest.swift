@@ -9,13 +9,13 @@
 import Foundation
 
 enum ToolsRequest: NetworkRequest {
-    
+
     case getTools
     case createNewTool
     case deleteTool(id: UInt)
-    
+
     var baseURL: BaseURL { .serviceGroup(.vuttr) }
-    
+
     var path: String? {
         switch self {
         case .getTools, .createNewTool:
@@ -24,7 +24,7 @@ enum ToolsRequest: NetworkRequest {
             return "/tools/\(id)"
         }
     }
-    
+
     var method: HTTPMethod {
         switch self {
         case .getTools:

@@ -9,9 +9,9 @@
 import Foundation
 
 final class DefaultRequestBuilder: NetworkRequestBuilder {
-    
+
     // MARK: - Properties
-    
+
     private let networkConfiguration: NetworkConfiguration
     private var baseURL: BaseURL
     private var path: String?
@@ -20,9 +20,9 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
     private var httpBody: HTTPBody?
     private var headers: [String: String]
     private var timeout: Double?
-    
+
     // MARK: - Initializer
-    
+
     init(
         request: NetworkRequest,
         networkConfiguration: NetworkConfiguration
@@ -36,9 +36,9 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         timeout = request.timeout
         self.networkConfiguration = networkConfiguration
     }
-    
+
     // MARK: - NetworkRequestBuilder
-    
+
     func build() throws -> URLRequest {
         var url = try getURL(baseURL: baseURL)
         if let path = path {
@@ -54,9 +54,9 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         setupURLParameters(for: &urlRequest)
         return urlRequest
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func getURL(
         baseURL: BaseURL
     ) throws -> URL {
@@ -73,7 +73,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         }
         return url
     }
-    
+
     private func setupRequestHeaders(
         for request: inout URLRequest
     ) {
@@ -81,13 +81,13 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
             request.addValue(header.value, forHTTPHeaderField: header.key)
         }
     }
-    
+
     private func setupHTTPBody(for request: inout URLRequest) {
         if let httpBody = httpBody {
             configureHTTPBody(httpBody, for: &request)
         }
     }
-    
+
     private func configureHTTPBody(
         _ httpBody: HTTPBody,
         for request: inout URLRequest
@@ -103,7 +103,7 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         }
         request.setValue(contentType, forHTTPHeaderField: Header.Key.contentType)
     }
-    
+
     private func configureHTTPBodyWithJSON(
         _ json: Any,
         for request: inout URLRequest
@@ -111,20 +111,20 @@ final class DefaultRequestBuilder: NetworkRequestBuilder {
         let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         request.httpBody = jsonData
     }
-    
+
     private func setupURLParameters(for request: inout URLRequest) {
         if let urlParameters = urlParameters {
             configureURLParameters(urlParameters, for: &request)
         }
     }
-    
+
     private func configureURLParameters(_ parameters: URLParameters, for request: inout URLRequest) {
         switch parameters {
         case let .raw(parameters):
             setupRawURLParameteres(parameters, for: &request)
         }
     }
-    
+
     private func setupRawURLParameteres(_ parameters: [String: String], for request: inout URLRequest) {
         if let url = request.url, var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) {
             urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }

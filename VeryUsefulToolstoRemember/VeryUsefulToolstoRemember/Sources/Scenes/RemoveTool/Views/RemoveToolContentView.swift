@@ -13,20 +13,20 @@ protocol RemoveToolContentViewProtocol: AnyObject {
 }
 
 final class RemoveToolContentView: CodedView {
-    
+
     // MARK: - Constants
-    
+
     private enum ViewMetrics {
         static let cornerRadius: CGFloat = 4.0
         static let closeButtonSize: CGFloat = 16.0
     }
-    
+
     // MARK: - Dependencies
-    
+
     private let onTappedCloseButtonClosure: () -> Void
-    
+
     // MARK: - View Components
-    
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .ink
@@ -35,13 +35,13 @@ final class RemoveToolContentView: CodedView {
         label.numberOfLines = .zero
         return label
     }()
-    
+
     private let closeButton: UIButton = {
         let button = UIButton()
         button.setImage(.close, for: .normal)
         return button
     }()
-    
+
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .ink
@@ -49,30 +49,30 @@ final class RemoveToolContentView: CodedView {
         label.numberOfLines = .zero
         return label
     }()
-    
+
     private let cancelButton: LayoutableButton = {
         let button = LayoutableButton(layout: .secundaryDanger)
         button.setTitle(L10n.AddNewTool.removeToolCancel, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
-    
+
     private let removeToolButton: LayoutableButton = {
         let button = LayoutableButton(layout: .primaryDanger)
         button.setTitle(L10n.AddNewTool.removeToolConfirmation, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
-    
+
     private let container: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = ViewMetrics.cornerRadius
         return view
     }()
-    
+
     // MARK: - Initializers
-    
+
     init(
         frame: CGRect = .zero,
         onTappedCloseButtonClosure: @escaping () -> Void
@@ -81,14 +81,14 @@ final class RemoveToolContentView: CodedView {
         super.init(frame: frame)
         configureView()
     }
-    
+
     @available(*, unavailable)
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Override Methods
-    
+
     override func addSubviews() {
         addSubview(container)
         container.addSubview(titleLabel)
@@ -97,7 +97,7 @@ final class RemoveToolContentView: CodedView {
         container.addSubview(cancelButton)
         container.addSubview(removeToolButton)
     }
-    
+
     override func constrainSubviews() {
         constrainContainer()
         constrainTitleLabel()
@@ -106,9 +106,9 @@ final class RemoveToolContentView: CodedView {
         constrainCancelButton()
         constrainRemoveToolButton()
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func constrainContainer() {
         container.anchor(
             leading: leadingAnchor,
@@ -118,7 +118,7 @@ final class RemoveToolContentView: CodedView {
         )
         container.anchorCenterYToSuperview()
     }
-    
+
     private func constrainTitleLabel() {
         titleLabel.anchor(
             top: container.topAnchor,
@@ -129,7 +129,7 @@ final class RemoveToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainCloseButton() {
         closeButton.anchor(
             top: container.topAnchor,
@@ -140,7 +140,7 @@ final class RemoveToolContentView: CodedView {
             heightConstant: ViewMetrics.closeButtonSize
         )
     }
-    
+
     private func constrainDescriptionLabel() {
         descriptionLabel.anchor(
             top: titleLabel.bottomAnchor,
@@ -150,7 +150,7 @@ final class RemoveToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainRemoveToolButton() {
         removeToolButton.anchor(
             top: descriptionLabel.bottomAnchor,
@@ -161,7 +161,7 @@ final class RemoveToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.small
         )
     }
-    
+
     private func constrainCancelButton() {
         cancelButton.anchor(
             top: removeToolButton.topAnchor,
@@ -170,13 +170,13 @@ final class RemoveToolContentView: CodedView {
             trailingConstant: Metrics.Spacing.xSmall
         )
     }
-    
+
     private func configureView() {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
     }
-    
+
     @objc private func onTappedCloseButton() {
         onTappedCloseButtonClosure()
     }
@@ -185,7 +185,7 @@ final class RemoveToolContentView: CodedView {
 // MARK: - RemoveToolContentViewProtocol
 
 extension RemoveToolContentView: RemoveToolContentViewProtocol {
-    
+
     func setupViewData(_ toolName: String) {
         descriptionLabel.text = L10n.AddNewTool.removeToolDescription(toolName)
     }

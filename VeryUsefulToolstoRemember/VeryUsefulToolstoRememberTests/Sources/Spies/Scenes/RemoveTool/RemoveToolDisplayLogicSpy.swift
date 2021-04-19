@@ -10,9 +10,9 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class RemoveToolDisplayLogicSpy: RemoveToolDisplayLogic {
-    
+
     private(set) var displayToolNamePassedToolNames = [String]()
-    
+
     func displayToolName(_ toolName: String) {
         displayToolNamePassedToolNames.append(toolName)
     }

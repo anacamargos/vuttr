@@ -16,10 +16,10 @@ final class HomeRouterTests: XCTestCase {
         // Given
         let sut = makeSUT()
         let viewControllerSpy = makeViewController(sut)
-        
+
         // When
         sut.routeToAddNewToolScene()
-        
+
         // Then
         guard let passedViewController = viewControllerSpy.viewControllerToPresentPassed else {
             XCTFail("Could not find viewControllerToPresentPassed")
@@ -34,16 +34,16 @@ final class HomeRouterTests: XCTestCase {
         XCTAssertTrue(passedAnimatedFlag)
         XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
-    
+
     func test_routeToURL_shouldPresentCorrectViewController() {
         // Given
         let sut = makeSUT()
         let viewControllerSpy = makeViewController(sut)
         let anyURL = URL(string: "https://any-url.com")!
-        
+
         // When
         sut.routeToURL(anyURL)
-        
+
         // Then
         guard let passedViewController = viewControllerSpy.viewControllerToPresentPassed else {
             XCTFail("Could not find viewControllerToPresentPassed")
@@ -58,15 +58,15 @@ final class HomeRouterTests: XCTestCase {
         XCTAssertTrue(passedAnimatedFlag)
         XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
-    
+
     func test_routeToRemoveToolScene_whenSelectedToolIsNotNil_shouldPresentCorrectViewController() {
         // Given
         let sut = makeSUT()
         let viewControllerSpy = makeViewController(sut)
-        
+
         // When
         sut.routeToRemoveToolScene()
-        
+
         // Then
         guard let passedViewController = viewControllerSpy.viewControllerToPresentPassed else {
             XCTFail("Could not find viewControllerToPresentPassed")
@@ -81,26 +81,26 @@ final class HomeRouterTests: XCTestCase {
         XCTAssertTrue(passedAnimatedFlag)
         XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
-    
+
     func test_routeToRemoveToolScene_whenSelectedToolIsNil_shouldNotPresentCorrectViewController() {
         // Given
         var dataStore = HomeDataStoreDummy()
         dataStore.selectedTool = nil
         let sut = makeSUT(dataStore: dataStore)
         let viewControllerSpy = makeViewController(sut)
-        
+
         // When
         sut.routeToRemoveToolScene()
-        
+
         // Then
         XCTAssertFalse(viewControllerSpy.presentCalled)
         XCTAssertNil(viewControllerSpy.viewControllerToPresentPassed)
         XCTAssertNil(viewControllerSpy.presentAnimatedFlagPassed)
         XCTAssertNil(viewControllerSpy.presentCompletionPassed)
     }
-    
+
     // MARK: - Test Helpers
-    
+
     private func makeSUT(
         dataStore: HomeDataStore = HomeDataStoreDummy(),
         file: StaticString = #file,
@@ -114,7 +114,7 @@ final class HomeRouterTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
+
     private func makeViewController(_ sut: HomeRouter) -> UIViewControllerSpy {
         let viewController = UIViewControllerSpy()
         sut.viewController = viewController

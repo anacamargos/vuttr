@@ -25,17 +25,17 @@ protocol URLProvider {
 }
 
 final class DefaultURLProvider: URLProvider {
-    
+
     // MARK: - Constants
-    
+
     private let https = "https://"
-    
+
     // MARK: - Initialization
-    
+
     init() {}
 
     // MARK: - Public Functions
-    
+
     func getBaseURL(
         forServiceGroup group: ServiceGroup
     ) -> String {
@@ -47,9 +47,9 @@ final class DefaultURLProvider: URLProvider {
         }
         return https + url
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func getVuttrURL() -> String {
         return "api.test.com.br"
     }

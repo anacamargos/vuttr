@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-protocol HomeRoutingLogic{
+protocol HomeRoutingLogic {
     func routeToRemoveToolScene()
     func routeToAddNewToolScene()
     func routeToURL(_ url: URL)
@@ -20,16 +20,16 @@ protocol HomeDataPassing {
 }
 
 final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
-    
+
     // MARK: - Dependencies
-    
+
     weak var viewController: UIViewController?
     private let addNewToolConfigurator: AddNewToolConfigurator
     private let removeToolConfigurator: RemoveToolConfigurator
     var dataStore: HomeDataStore?
-    
+
     // MARK: - Initializer
-    
+
     init(
         addNewToolConfigurator: AddNewToolConfigurator,
         removeToolConfigurator: RemoveToolConfigurator,
@@ -39,19 +39,19 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
         self.removeToolConfigurator = removeToolConfigurator
         self.dataStore = dataStore
     }
-    
+
     // MARK: - Public Methods
-    
+
     func routeToAddNewToolScene() {
         let destinationViewController = addNewToolConfigurator.resolveViewController()
         viewController?.present(destinationViewController, animated: true)
     }
-    
+
     func routeToURL(_ url: URL) {
         let destinationViewController = SFSafariViewController(url: url)
         viewController?.present(destinationViewController, animated: true)
     }
-    
+
     func routeToRemoveToolScene() {
         guard let selectedTool = dataStore?.selectedTool else { return }
         let parameters = RemoveToolSceneParameters(toolName: selectedTool.title, toolId: selectedTool.id)

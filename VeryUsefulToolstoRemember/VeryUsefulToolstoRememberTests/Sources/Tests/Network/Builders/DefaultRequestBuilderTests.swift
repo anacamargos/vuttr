@@ -10,13 +10,13 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class DefaultRequestBuilderTests: XCTestCase {
-    
+
     // MARK: - Properties
-    
+
     private lazy var networkConfiguration: NetworkConfiguration = {
         .init(urlProvider: URLProviderDummy())
     }()
-    
+
     // MARK: - Tests
 
     func test_whenBaseURL_isInvalid_invalidBaseURLError_shouldBeThrown() {
@@ -39,7 +39,7 @@ final class DefaultRequestBuilderTests: XCTestCase {
         XCTAssertNotNil(errorThrown)
         XCTAssertEqual(errorThrown?.rawValue, RequestError.Internal.invalidBaseURL.rawValue)
     }
-    
+
     func test_whenBaseURL_isFromServiceGroup_urlProviderShouldBeCalled() {
         // Given
         let urlProviderSpy = URLProviderSpy()
@@ -60,7 +60,7 @@ final class DefaultRequestBuilderTests: XCTestCase {
         XCTAssertNotNil(urlRequest)
         XCTAssertEqual(String(describing: urlProviderSpy.getBaseURLPassedServiceGroups), String(describing: [serviceGroup]))
     }
-    
+
     func test_requestWithNoHeadersOrParameters_shouldBeBuiltSuccessfuly() {
         // Given
         let request = HTTPRequest(
@@ -87,7 +87,7 @@ final class DefaultRequestBuilderTests: XCTestCase {
         XCTAssertEqual(urlRequest.httpMethod, request.method.name)
         XCTAssertEqual(urlRequest.timeoutInterval, request.timeout)
     }
-    
+
     func test_request_shouldSetupCustomAndDefaultHeadersCorrectly() {
         // Given
         let request = HTTPRequest(
@@ -109,7 +109,7 @@ final class DefaultRequestBuilderTests: XCTestCase {
         // Then
         XCTAssertEqual(urlRequest.allHTTPHeaderFields?["NewHeader"], "NewHeader")
     }
-    
+
     func test_whenHTTPBodyIsData_requestShouldContainCorrectHTTPBody_andJSONCharsetUTF8Header() {
         // Given
         let httpBodyData = Data()
@@ -134,13 +134,13 @@ final class DefaultRequestBuilderTests: XCTestCase {
         XCTAssertEqual(urlRequest.httpBody, httpBodyData)
         XCTAssertEqual(urlRequest.allHTTPHeaderFields?[Header.Key.contentType], Header.ContentType.applicationJSONCharsetUTF8)
     }
-    
+
     func test_whenHTTPBodyIsDictionary_builderShouldSetupBodyParametersCorrectly() {
         // Given
         let request = HTTPRequest(
             baseURL: .string("www.test.com"),
             method: .get,
-            httpBody: .dictionary(["value":  "data", "otherValue": "other"])
+            httpBody: .dictionary(["value": "data", "otherValue": "other"])
         )
         let sut = DefaultRequestBuilder(
             request: request,
@@ -172,13 +172,13 @@ final class DefaultRequestBuilderTests: XCTestCase {
         let jsonCharsetHeader = urlRequest.allHTTPHeaderFields?[Header.Key.contentType]
         XCTAssertEqual(jsonCharsetHeader, Header.ContentType.applicationJSONCharsetUTF8)
     }
-    
+
     func test_whenHTTPBodyIsJSON_builderShouldSetupBodyParametersWithEncoding() {
         // Given
         let request = HTTPRequest(
             baseURL: .string("www.test.com"),
             method: .get,
-            httpBody: .json(["value":  "data", "otherValue": "other"])
+            httpBody: .json(["value": "data", "otherValue": "other"])
         )
         let sut = DefaultRequestBuilder(
             request: request,
@@ -210,10 +210,10 @@ final class DefaultRequestBuilderTests: XCTestCase {
         let jsonCharsetHeader = urlRequest.allHTTPHeaderFields?[Header.Key.contentType]
         XCTAssertEqual(jsonCharsetHeader, Header.ContentType.applicationJSONCharsetUTF8)
     }
-    
+
     func test_whenURLParametersIsRaw_builderShouldSetupURLParametersCorrectly() {
         // Given'
-        let urlParameters = ["value":  "data", "otherValue": "other"]
+        let urlParameters = ["value": "data", "otherValue": "other"]
         let request = HTTPRequest(
             baseURL: .string("www.test.com"),
             method: .get,

@@ -14,9 +14,9 @@ struct RemoveToolSceneParameters {
 }
 
 final class RemoveToolConfigurator {
-    
+
     // MARK: - Public Methods
-    
+
     func resolveViewController(using parameters: RemoveToolSceneParameters) -> UIViewController {
         let presenter = RemoveToolPresenter()
         let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters)

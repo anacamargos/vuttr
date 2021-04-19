@@ -36,38 +36,38 @@ extension UIView {
         heightConstant: CGFloat = 0
     ) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        
+
         var anchors = [NSLayoutConstraint]()
-        
+
         if let top = top {
             anchors.append(topAnchor.constraint(equalTo: top, constant: topConstant))
         }
-        
+
         if let left = left {
             anchors.append(leftAnchor.constraint(equalTo: left, constant: leftConstant))
         }
-        
+
         if let bottom = bottom {
             anchors.append(bottomAnchor.constraint(equalTo: bottom, constant: -bottomConstant))
         }
-        
+
         if let right = right {
             anchors.append(rightAnchor.constraint(equalTo: right, constant: -rightConstant))
         }
-        
+
         if widthConstant > 0 {
             anchors.append(widthAnchor.constraint(equalToConstant: widthConstant))
         }
-        
+
         if heightConstant > 0 {
             anchors.append(heightAnchor.constraint(equalToConstant: heightConstant))
         }
-        
+
         anchors.forEach({ $0.isActive = true })
-        
+
         return anchors
     }
-    
+
     /// Add anchors from any side of the current view into the specified anchors and returns the newly added constraints.
     ///
     /// - Parameters:
@@ -96,7 +96,7 @@ extension UIView {
         heightConstant: CGFloat = 0
     ) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
-        
+
         var anchors = anchor(
             top: top,
             left: nil,
@@ -119,8 +119,7 @@ extension UIView {
         }
         return anchors
     }
-    
-    
+
     /// makes the view to fill the entire superview.
     func fillSuperview() {
         anchor(
@@ -130,7 +129,7 @@ extension UIView {
             trailing: superview?.trailingAnchor
         )
     }
-    
+
     /// Anchor center X into current view's superview with a constant margin value.
     ///
     /// - Parameter constant: constant of the anchor constraint (default is 0).
@@ -140,7 +139,7 @@ extension UIView {
             centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
         }
     }
-    
+
     /// Anchor center Y into current view's superview with a constant margin value.
     ///
     /// - Parameter withConstant: constant of the anchor constraint (default is 0).
@@ -150,37 +149,37 @@ extension UIView {
             centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
         }
     }
-    
+
     /// Anchor center X and Y into current view's superview
     func anchorCenterSuperview() {
         anchorCenterXToSuperview()
         anchorCenterYToSuperview()
     }
-    
+
     /// Returns the `safeAreaLayoutGuide.trailingAnchor`, if available,
     /// otherwhise, returns `trailingAnchor`
     var safeTrailingAnchor: NSLayoutXAxisAnchor {
         safeAreaLayoutGuide.trailingAnchor
     }
-    
+
     /// Returns the `safeAreaLayoutGuide.leadingAnchor`, if available,
     /// otherwhise, returns `leadingAnchor`
     var safeLeadingAnchor: NSLayoutXAxisAnchor {
         safeAreaLayoutGuide.leadingAnchor
     }
-    
+
     /// Returns the `safeAreaLayoutGuide.bottomAnchor`, if available,
     /// otherwhise, returns `bottomAnchor`
     var safeBottomAnchor: NSLayoutYAxisAnchor {
         return safeAreaLayoutGuide.bottomAnchor
     }
-    
+
     /// Returns the `safeAreaLayoutGuide.topAnchor`, if available,
     /// otherwhise, returns `topAnchor`
     var safeTopAnchor: NSLayoutYAxisAnchor {
         return safeAreaLayoutGuide.topAnchor
     }
-    
+
     /// Simplifies layouting with a constraint array
     /// - Parameter constraints: the constraints to apply to the view
     func layout(using constraints: [NSLayoutConstraint]) {

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NetworkResponseDecoder {
-    
+
     func decodeDataRequestResult<T: Codable>(
         _ result: Result<NetworkResponse, NetworkError>,
         ofType: T.Type,

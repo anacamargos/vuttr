@@ -18,26 +18,26 @@ protocol ToolsServicesProvider {
 }
 
 final class ToolsServices: ToolsServicesProvider {
-    
+
     // MARK: - Dependencies
-    
+
     private let networkDispatcher: NetworkDispatcher
-    
+
     // MARK: - Initializers
-    
+
     init(networkDispatcher: NetworkDispatcher) {
         self.networkDispatcher = networkDispatcher
     }
-    
+
     // MARK: - ToolsServicesProvider
-    
+
     func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {
         let request = ToolsRequest.getTools
         execute(request: request, then: handle)
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func execute<T: Codable>(
         request: ToolsRequest,
         then handle: @escaping (Result<T, ToolsServiceError>) -> Void

@@ -10,23 +10,23 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class URLSessionHTTPClientTests: XCTestCase {
-    
+
     func test_get_whenRequestIsInvalid_shouldReturnInvalidBaseURLError() {
         // Given
         let sut = makeSUT()
         let httpRequest = HTTPRequest(baseURL: .string(""), method: .get)
         let expectedError = NetworkError(.internal(.invalidBaseURL))
-        
+
         // When
         guard let receivedError = resultErrorFor(networkRequest: httpRequest, sut: sut) else {
             XCTFail("Could not find receivedError")
             return
         }
-        
+
         // Then
         XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
     }
-    
+
     func test_get_whenHTTPResponseIsInvalid_shouldReturnInvalidHTTPResponse() {
         // Given
         let urlSessionMock = URLSessionMock()
@@ -34,17 +34,17 @@ final class URLSessionHTTPClientTests: XCTestCase {
         let sut = makeSUT(session: urlSessionMock)
         let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
         let expectedError = NetworkError(.internal(.invalidHTTPResponse))
-        
+
         // When
         guard let receivedError = resultErrorFor(networkRequest: httpRequest, sut: sut) else {
             XCTFail("Could not find receivedError")
             return
         }
-        
+
         // Then
         XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
     }
-    
+
     func test_get_whenRequestFails_shouldReturnReceivedError() {
         // Given
         let urlSessionMock = URLSessionMock()
@@ -53,17 +53,17 @@ final class URLSessionHTTPClientTests: XCTestCase {
         let sut = makeSUT(session: urlSessionMock)
         let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
         let expectedError = NetworkError(requestError: .http(400), rawError: nsError)
-        
+
         // When
         guard let receivedError = resultErrorFor(networkRequest: httpRequest, sut: sut) else {
             XCTFail("Could not find receivedError")
             return
         }
-        
+
         // Then
         XCTAssertEqual(String(describing: receivedError), String(describing: expectedError))
     }
-    
+
     func test_get_whenRequestSucceeds_shouldReturnReceivedResponseAndData() {
         // Given
         let urlSessionMock = URLSessionMock()
@@ -73,19 +73,19 @@ final class URLSessionHTTPClientTests: XCTestCase {
         let sut = makeSUT(session: urlSessionMock)
         let httpRequest = HTTPRequest(baseURL: .string("http://a-url.com"), method: .get)
         let expectedResponse = NetworkResponse(status: .http(200), data: nil)
-        
+
         // When
         guard let receivedResponse = resultSuccessFor(networkRequest: httpRequest, sut: sut) else {
             XCTFail("Could not find receivedError")
             return
         }
-        
+
         // Then
         XCTAssertEqual(String(describing: receivedResponse), String(describing: expectedResponse))
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeSUT(
         session: URLSessionProvider = URLSessionDummy(),
         configuration: NetworkConfiguration = NetworkConfiguration(urlProvider: URLProviderDummy()),
@@ -96,14 +96,14 @@ final class URLSessionHTTPClientTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
+
     private func resultFor(
         request: NetworkRequest,
         sut: URLSessionHTTPClient,
         file: StaticString = #file,
         line: UInt = #line
     ) -> Result<NetworkResponse, NetworkError> {
-         
+
         var receivedResult: Result<NetworkResponse, NetworkError>!
         let exp = expectation(description: "Wait for completion")
         sut.get(from: request) { result in
@@ -113,7 +113,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
         return receivedResult
     }
-    
+
     private func resultErrorFor(
         networkRequest: NetworkRequest,
         sut: URLSessionHTTPClient,
@@ -129,7 +129,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
             return nil
         }
     }
-    
+
     private func resultSuccessFor(
         networkRequest: NetworkRequest,
         sut: URLSessionHTTPClient,

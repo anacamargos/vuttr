@@ -10,7 +10,7 @@ import Foundation
 
 /// Defines the Request protocol, which can be implemented as a class, struct or enum.
 protocol NetworkRequest {
-    
+
     // MARK: - Properties
 
     /// The API's base url.
@@ -48,4 +48,3 @@ extension NetworkRequest {
     /// request default timeout
     var timeout: Double? { nil }
 }
-

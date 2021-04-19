@@ -15,10 +15,10 @@ final class RemoveToolConfiguratorTests: XCTestCase {
         // Given
         let sut = RemoveToolConfigurator()
         trackForMemoryLeaks(sut)
-        
+
         // When
         let viewController = sut.resolveViewController(using: .init(toolName: "", toolId: .zero))
-        
+
         // Then
         guard let router = Mirror(reflecting: viewController).firstChild(of: RemoveToolRouter.self) else {
             XCTFail("Could not find RemoveToolRouter.")
@@ -32,7 +32,7 @@ final class RemoveToolConfiguratorTests: XCTestCase {
             XCTFail("Could not find RemoveToolPresenter.")
             return
         }
-        
+
         XCTAssertNotNil(router.viewController)
         XCTAssertTrue(router.viewController is RemoveToolViewController)
         XCTAssertNotNil(presenter.viewController)

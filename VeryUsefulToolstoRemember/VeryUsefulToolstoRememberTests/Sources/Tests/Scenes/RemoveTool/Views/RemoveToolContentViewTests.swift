@@ -11,7 +11,7 @@ import SnapshotTesting
 @testable import VeryUsefulToolstoRemember
 
 final class RemoveToolContentViewTests: XCTestCase {
-    
+
     func test_removeToolContentView() {
         let view = makeView()
         view.setupViewData("Notion")
@@ -19,7 +19,7 @@ final class RemoveToolContentViewTests: XCTestCase {
     }
 
     // MARK: - Test Helpers
-    
+
     private func makeView() -> RemoveToolContentView {
         return .init(
             frame: .init(origin: .zero, size: CGSize(width: 350, height: 600)), onTappedCloseButtonClosure: {}

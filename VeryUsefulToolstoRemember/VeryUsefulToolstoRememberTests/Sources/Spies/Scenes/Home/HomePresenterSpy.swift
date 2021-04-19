@@ -10,15 +10,15 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class HomePresenterSpy: HomePresentationLogic {
-    
+
     private(set) var presentToolsResponsePassedResponses = [Home.UsefulTools.Response]()
-    
+
     func presentToolsResponse(_ response: Home.UsefulTools.Response) {
         presentToolsResponsePassedResponses.append(response)
     }
-    
+
     private(set) var presentURLPassedURLs = [URL]()
-    
+
     func presentURL(_ url: URL) {
         presentURLPassedURLs.append(url)
     }

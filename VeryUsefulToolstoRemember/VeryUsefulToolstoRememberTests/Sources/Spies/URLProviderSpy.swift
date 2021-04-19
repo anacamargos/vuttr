@@ -10,9 +10,9 @@ import Foundation
 @testable import VeryUsefulToolstoRemember
 
 final class URLProviderSpy: URLProvider {
-    
+
     private(set) var getBaseURLPassedServiceGroups = [ServiceGroup]()
-    
+
     func getBaseURL(forServiceGroup group: ServiceGroup) -> String {
         getBaseURLPassedServiceGroups.append(group)
         return "www.test.com"
