@@ -1,0 +1,13 @@
+disabled_rules:
+- line_length
+- identifier_name
+- file_length
+
+excluded:
+  - Pods
+
+nesting:
+  type_level:
+    warning: 5
+  statement_level:
+    warning: 5
