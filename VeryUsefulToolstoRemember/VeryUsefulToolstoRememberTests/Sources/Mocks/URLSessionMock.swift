@@ -11,6 +11,7 @@ import Foundation
 
 final class URLSessionMock: URLSessionProvider {
 
+    // swiftlint:disable:next large_tuple
     var dataTaskResultToBeReturned: (data: Data?, response: URLResponse?, error: Error?) = (nil, nil, nil)
     private(set) var dataTaskPassedRequests = [URLRequest]()
 
