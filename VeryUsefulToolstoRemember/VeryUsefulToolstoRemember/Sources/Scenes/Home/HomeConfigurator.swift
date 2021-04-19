@@ -13,9 +13,16 @@ final class HomeConfigurator {
     // MARK: - Public Methods
     
     func resolveViewController() -> UIViewController {
+        let urlProvider = DefaultURLProvider()
+        let networkConfiguration = NetworkConfiguration(urlProvider: urlProvider)
+        let responseDecoder = DefaultResponseDecoder()
+        let httpClient = URLSessionHTTPClient(session: URLSession.shared, configuration: networkConfiguration)
+        let networkDispatcher = DefaultNetworkDispatcher(httpClient: httpClient, responseDecoder: responseDecoder)
+        let service = ToolsServices(networkDispatcher: networkDispatcher)
+        
         let addNewToolConfigurator = AddNewToolConfigurator()
         let removeToolConfigurator = RemoveToolConfigurator()
-        let getToolsUseCase = GetUsefulToolsUseCase()
+        let getToolsUseCase = GetUsefulToolsUseCase(service: service)
         
         let presenter = HomePresenter()
         let interactor = HomeInteractor(presenter: presenter, getToolsUseCase: getToolsUseCase)
