@@ -161,7 +161,9 @@ extension HomeContentView: HomeContentViewProtocol {
     
     func setupUsefulToolsState(_ viewState: Home.UsefulTools.ViewState) {
         self.viewState = viewState
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
