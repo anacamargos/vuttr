@@ -67,6 +67,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     func test_get_whenRequestSucceeds_shouldReturnReceivedResponseAndData() {
         // Given
         let urlSessionMock = URLSessionMock()
+        // swiftlint:disable:next force_unwrapping
         let anyURL = URL(string: "http:a-url.com")!
         let response = HTTPURLResponse(url: anyURL, statusCode: 200, httpVersion: nil, headerFields: nil)
         urlSessionMock.dataTaskResultToBeReturned = (nil, response, nil)
@@ -103,7 +104,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) -> Result<NetworkResponse, NetworkError> {
-
+        // swiftlint:disable:next implicitly_unwrapped_optional
         var receivedResult: Result<NetworkResponse, NetworkError>!
         let exp = expectation(description: "Wait for completion")
         sut.get(from: request) { result in

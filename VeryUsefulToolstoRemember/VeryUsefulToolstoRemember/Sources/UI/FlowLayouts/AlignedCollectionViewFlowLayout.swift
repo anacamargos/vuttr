@@ -6,6 +6,7 @@
 /* FONT: https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout/blob/master/AlignedCollectionViewFlowLayout/Classes/AlignedCollectionViewFlowLayout.swift
  */
 // swiftlint:disable force_unwrapping
+// swiftlint:disable trailing_closure
 
 import UIKit
 

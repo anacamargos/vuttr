@@ -62,9 +62,7 @@ extension UIView {
         if heightConstant > 0 {
             anchors.append(heightAnchor.constraint(equalToConstant: heightConstant))
         }
-
-        anchors.forEach({ $0.isActive = true })
-
+        anchors.forEach { $0.isActive = true }
         return anchors
     }
 

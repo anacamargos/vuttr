@@ -67,6 +67,7 @@ final class HomePresenterTests: XCTestCase {
         // Given
         let viewControllerSpy = HomeDisplayLogicSpy()
         let sut = makeSUT(viewController: viewControllerSpy)
+        // swiftlint:disable:next force_unwrapping
         let anyURL = URL(string: "https://any-url.com")!
 
         // When

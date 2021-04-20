@@ -39,6 +39,7 @@ final class HomeRouterTests: XCTestCase {
         // Given
         let sut = makeSUT()
         let viewControllerSpy = makeViewController(sut)
+        // swiftlint:disable:next force_unwrapping
         let anyURL = URL(string: "https://any-url.com")!
 
         // When

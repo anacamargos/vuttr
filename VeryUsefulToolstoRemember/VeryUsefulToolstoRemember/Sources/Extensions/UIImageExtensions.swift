@@ -5,6 +5,7 @@
 //  Created by Ana Leticia Camargos on 29/12/20.
 //  Copyright © 2020 Ana Letícia Camargos. All rights reserved.
 //
+// swiftlint:disable force_unwrapping
 
 import UIKit
 

@@ -62,6 +62,7 @@ final class HomeInteractorTests: XCTestCase {
         useCaseStub.executeResultToBeReturned = .success([.mock])
         let presenterSpy = HomePresenterSpy()
         let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        // swiftlint:disable:next force_unwrapping
         let expectedURL = URL(string: "https://notion.so")!
 
         // When
