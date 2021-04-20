@@ -48,7 +48,6 @@ final class HomeViewController: UIViewController {
     }
 
     override func loadView() {
-        super.loadView()
         view = HomeContentView(
             onTappedAddButtonClosure: { [weak self] in self?.router.routeToAddNewToolScene() },
             onTappedToolCellClosure: { [weak self] selectedRow in self?.interactor.handleToolSelection(at: selectedRow) },

@@ -35,7 +35,6 @@ final class AddNewToolViewController: UIViewController {
     // MARK: - View Controller Lifecycle
 
     override func loadView() {
-        super.loadView()
         view = AddNewToolContentView(
             onTappedCloseButtonClosure: { [weak self] in self?.onTappedCloseButtonAction() },
             onTappedAddToolButtonClosure: { [weak self] tool in self?.onTappedAddToolButtonAction(tool) }

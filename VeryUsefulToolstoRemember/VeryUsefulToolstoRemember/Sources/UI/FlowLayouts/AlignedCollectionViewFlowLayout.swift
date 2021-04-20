@@ -5,6 +5,7 @@
 //  Copyright © 2017 Mischa Hildebrand.
 /* FONT: https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout/blob/master/AlignedCollectionViewFlowLayout/Classes/AlignedCollectionViewFlowLayout.swift
  */
+// swiftlint:disable force_unwrapping
 
 import UIKit
 
