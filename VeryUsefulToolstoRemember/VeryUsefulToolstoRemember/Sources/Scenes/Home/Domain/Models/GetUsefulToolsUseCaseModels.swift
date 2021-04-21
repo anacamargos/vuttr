@@ -16,7 +16,7 @@ enum GetUsefulToolsUseCaseModels {
     struct Tool {
         let id: UInt
         let title: String
-        let link: String
+        let link: String?
         let description: String
         let tags: [String]
     }

@@ -76,7 +76,10 @@ extension HomeInteractor: HomeBusinessLogic {
     func handleToolSelection(at row: Int) {
         guard usefulTools.indices.contains(row) else { return }
         let selectedTool = usefulTools[row]
-        guard let url = URL(string: selectedTool.link) else { return }
+        guard
+            let toolLink = selectedTool.link,
+            let url = URL(string: toolLink)
+        else { return }
         presenter.presentURL(url)
     }
 
