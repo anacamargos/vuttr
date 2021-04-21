@@ -29,6 +29,7 @@ final class DefaultURLProvider: URLProvider {
     // MARK: - Constants
 
     private let https = "https://"
+    private let http = "http://"
 
     // MARK: - Initialization
 
@@ -45,12 +46,12 @@ final class DefaultURLProvider: URLProvider {
         case .vuttr:
             url = getVuttrURL()
         }
-        return https + url
+        return http + url
     }
 
     // MARK: - Private Methods
 
     private func getVuttrURL() -> String {
-        return "api.test.com.br"
+        return "localhost:3000"
     }
 }
