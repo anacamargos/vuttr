@@ -14,7 +14,7 @@ final class DefaultURLProviderTests: XCTestCase {
     func test_getBaseURL_shouldReturnCorrectURL() {
         // Given
         let sut = makeSUT()
-        let expectedURL = "https://api.test.com.br"
+        let expectedURL = "http://localhost:3000"
 
         // When
         let receivedURL = sut.getBaseURL(forServiceGroup: .vuttr)
