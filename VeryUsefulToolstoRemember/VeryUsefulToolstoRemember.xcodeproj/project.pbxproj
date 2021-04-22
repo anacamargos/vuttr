@@ -19,6 +19,7 @@
 		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
 		BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */; };
 		BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B97EF2602AA6300C7821B /* ErrorView.swift */; };
+		BF2C334526324056000DB066 /* NoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C334426324056000DB066 /* NoEntity.swift */; };
 		BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */; };
 		BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */; };
 		BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */; };
@@ -168,6 +169,7 @@
 		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
 		BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		BF2B97EF2602AA6300C7821B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BF2C334426324056000DB066 /* NoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntity.swift; sourceTree = "<group>"; };
 		BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF2C9BFC25DDC09500396C74 /* CustomTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTests.swift; sourceTree = "<group>"; };
 		BF2C9C0225DDC8D300396C74 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */,
+				BF2C334426324056000DB066 /* NoEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1255,6 +1258,7 @@
 				BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */,
 				BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */,
 				BFAA915425E5B45300C9936D /* AddNewToolRouter.swift in Sources */,
+				BF2C334526324056000DB066 /* NoEntity.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */,

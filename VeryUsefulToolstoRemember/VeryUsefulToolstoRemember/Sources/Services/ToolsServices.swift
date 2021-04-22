@@ -68,5 +68,3 @@ final class ToolsServices: ToolsServicesProvider {
         }
     }
 }
-
-struct NoEntity: Codable {}
