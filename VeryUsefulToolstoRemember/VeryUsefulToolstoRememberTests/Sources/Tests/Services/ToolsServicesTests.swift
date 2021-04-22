@@ -20,7 +20,7 @@ final class ToolsServicesTests: XCTestCase {
         let expectedError = ToolsServiceError.genericError
 
         // When
-        expect(sut, toCompleteWith: .failure(expectedError))
+        getAllToolsExpect(sut, toCompleteWith: .failure(expectedError))
 
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
@@ -34,13 +34,13 @@ final class ToolsServicesTests: XCTestCase {
         let expectedError = ToolsServiceError.responseParse
 
         // When
-        expect(sut, toCompleteWith: .failure(expectedError))
+        getAllToolsExpect(sut, toCompleteWith: .failure(expectedError))
 
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
     }
 
-    func test_getAllTools_whenRequestSucceedsWirhValidResponse_shouldReturnCorrectData() {
+    func test_getAllTools_whenRequestSucceedsWithValidResponse_shouldReturnCorrectData() {
         // Given
         let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
         let sut = makeSUT(networkDispatcher: dispatcherMock)
@@ -48,10 +48,25 @@ final class ToolsServicesTests: XCTestCase {
         let expectedResponse = [ToolResponseEntity.mock]
 
         // When
-        expect(sut, toCompleteWith: .success(expectedResponse))
+        getAllToolsExpect(sut, toCompleteWith: .success(expectedResponse))
 
         // Then
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.getTools]))
+    }
+
+    func test_deleteTool_whenRequestFails_shouldReturnCorrectError() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<NoEntity>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        let errorMock = NetworkError(.internal(.noInternetConnection))
+        dispatcherMock.dispatchResultToBeReturned = .failure(errorMock)
+        let expectedError = ToolsServiceError.genericError
+
+        // When
+        deleteToolExpect(sut, toCompleteWith: .failure(expectedError))
+
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.dispatchPassedRequests), String(describing: [ToolsRequest.deleteTool(id: .zero)]))
     }
 
     // MARK: - Test Helpers
@@ -61,7 +76,7 @@ final class ToolsServicesTests: XCTestCase {
         return sut
     }
 
-    private func expect(
+    private func getAllToolsExpect(
         _ sut: ToolsServices,
         toCompleteWith expectedResult: Result<[ToolResponseEntity], ToolsServiceError>,
         file: StaticString = #file,
@@ -80,6 +95,28 @@ final class ToolsServicesTests: XCTestCase {
             exp.fulfill()
         }
 
+        wait(for: [exp], timeout: 1.0)
+    }
+
+    private func deleteToolExpect(
+        _ sut: ToolsServices,
+        toCompleteWith expectedResult: Result<NoEntity, ToolsServiceError>,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        let exp = expectation(description: "Wait for completion")
+        sut.deleteTool(id: .zero) { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(expectedItems)):
+                XCTAssertEqual(String(describing: receivedItems), String(describing: expectedItems), file: file, line: line)
+            case let (.failure(receivedError), .failure(expectedError)):
+                XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+            default:
+                XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+
+        }
         wait(for: [exp], timeout: 1.0)
     }
 
