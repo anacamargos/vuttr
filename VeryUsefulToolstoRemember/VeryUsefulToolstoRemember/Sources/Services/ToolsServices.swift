@@ -15,6 +15,7 @@ enum ToolsServiceError: Error {
 
 protocol ToolsServicesProvider {
     func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void)
+    func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void)
 }
 
 final class ToolsServices: ToolsServicesProvider {
@@ -36,6 +37,18 @@ final class ToolsServices: ToolsServicesProvider {
         execute(request: request, then: handle)
     }
 
+    func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void) {
+        let request = ToolsRequest.deleteTool(id: id)
+        networkDispatcher.dispatch(request) { result in
+            switch result {
+            case .success:
+                handle(.success(.init()))
+            case .failure:
+                handle(.failure(.genericError))
+            }
+        }
+    }
+
     // MARK: - Private Methods
 
     private func execute<T: Codable>(
@@ -55,3 +68,5 @@ final class ToolsServices: ToolsServicesProvider {
         }
     }
 }
+
+struct NoEntity: Codable {}
