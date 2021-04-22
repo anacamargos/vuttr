@@ -69,6 +69,20 @@ final class ToolsServicesTests: XCTestCase {
         XCTAssertEqual(String(describing: dispatcherMock.dispatchPassedRequests), String(describing: [ToolsRequest.deleteTool(id: .zero)]))
     }
 
+    func test_deleteTool_whenRequestSucceeds_shouldReturnSuccess() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<NoEntity>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        dispatcherMock.dispatchResultToBeReturned = .success(.init(status: .http(200), data: nil))
+        let expectedResponse = NoEntity()
+
+        // When
+        deleteToolExpect(sut, toCompleteWith: .success(expectedResponse))
+
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.dispatchPassedRequests), String(describing: [ToolsRequest.deleteTool(id: .zero)]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(networkDispatcher: NetworkDispatcher) -> ToolsServices {
