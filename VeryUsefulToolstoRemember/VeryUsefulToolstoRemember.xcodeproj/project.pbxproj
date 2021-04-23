@@ -39,6 +39,7 @@
 		BF416957262486A700989DA1 /* HTTPClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF416956262486A700989DA1 /* HTTPClientMock.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
+		BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */; };
 		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
 		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
@@ -189,6 +190,7 @@
 		BF416956262486A700989DA1 /* HTTPClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientMock.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCase.swift; sourceTree = "<group>"; };
 		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
@@ -518,6 +520,22 @@
 			path = Decoder;
 			sourceTree = "<group>";
 		};
+		BF498E32263380F5008277F2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BF498E33263380FC008277F2 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BF498E33263380FC008277F2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		BF53CB8725ED92600014E967 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -830,6 +848,7 @@
 		BFD277B725F6BCEF004016C8 /* RemoveTool */ = {
 			isa = PBXGroup;
 			children = (
+				BF498E32263380F5008277F2 /* Domain */,
 				BFD277BC25F6BD36004016C8 /* Views */,
 				BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */,
 				BF764A1825F84A820096C623 /* RemoveToolRouter.swift */,
@@ -1241,6 +1260,7 @@
 				BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */,
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */,
+				BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BF11FE682627639C003A5E66 /* ToolsServices.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
