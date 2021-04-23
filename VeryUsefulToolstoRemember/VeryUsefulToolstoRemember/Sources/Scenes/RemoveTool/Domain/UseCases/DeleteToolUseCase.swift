@@ -17,7 +17,7 @@ protocol DeleteToolUseCaseProvider {
 }
 
 final class DeleteToolUseCase: DeleteToolUseCaseProvider {
-    
+
     // MARK: - Dependencies
 
     private let service: ToolsServicesProvider
@@ -27,9 +27,9 @@ final class DeleteToolUseCase: DeleteToolUseCaseProvider {
     init(service: ToolsServicesProvider) {
         self.service = service
     }
-    
+
     // MARK: - DeleteToolUseCaseProvider
-    
+
     func execute(toolId: UInt, then handle: @escaping (Result<NoEntity, DeleteToolUseCaseError>) -> Void) {
         service.deleteTool(id: toolId) { result in
             switch result {

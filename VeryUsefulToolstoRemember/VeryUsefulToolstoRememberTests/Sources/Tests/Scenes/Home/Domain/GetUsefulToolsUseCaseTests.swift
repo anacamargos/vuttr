@@ -10,9 +10,9 @@ import XCTest
 @testable import VeryUsefulToolstoRemember
 
 final class GetUsefulToolsUseCaseTests {
-    
+
     // MARK: - Test Helpers
-    
+
     private func makeSUT(
         service: ToolsServicesProvider = ToolsServicesDummy()
     ) -> GetUsefulToolsUseCase {
@@ -27,15 +27,15 @@ final class ToolsServicesDummy: ToolsServicesProvider {
 }
 
 final class ToolsServicesStub: ToolsServicesProvider {
-    
+
     var getAllToolsResultToBeReturned: Result<[ToolResponseEntity], ToolsServiceError> = .success([.mock])
-    
+
     func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {
         handle(getAllToolsResultToBeReturned)
     }
-    
+
     var deleteToolResultToBeReturned: Result<NoEntity, ToolsServiceError> = .success(.init())
-    
+
     func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void) {
         handle(deleteToolResultToBeReturned)
     }
