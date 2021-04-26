@@ -14,7 +14,7 @@ extension Home.UsefulTools.Tool {
         .init(
             id: .zero,
             title: "Notion",
-            description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
+            description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.",
             tags: [
                 .init(text: "organization", estimatedWidth: getEstimatedWidthByWord("organization")),
                 .init(text: "planning", estimatedWidth: getEstimatedWidthByWord("planning")),

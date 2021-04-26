@@ -15,7 +15,7 @@ extension GetUsefulToolsUseCaseModels.Tool {
             id: .zero,
             title: "Notion",
             link: "https://notion.so",
-            description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
+            description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.",
             tags: ["organization", "planning", "collaboration", "writing"]
         )
     }
@@ -25,7 +25,7 @@ extension GetUsefulToolsUseCaseModels.Tool {
             id: .zero,
             title: "Notion",
             link: "",
-            description: "All in one too to organize teams and ideas. Write, plan, collaborate, and get organized.",
+            description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.",
             tags: ["organization", "planning", "collaboration", "writing"]
         )
     }
