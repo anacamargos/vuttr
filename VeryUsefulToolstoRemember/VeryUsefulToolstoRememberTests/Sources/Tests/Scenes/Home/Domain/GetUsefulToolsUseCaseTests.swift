@@ -56,11 +56,6 @@ final class GetUsefulToolsUseCaseTests: XCTestCase {
     }
 }
 
-final class ToolsServicesDummy: ToolsServicesProvider {
-    func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {}
-    func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void) {}
-}
-
 final class ToolsServicesStub: ToolsServicesProvider {
 
     var getAllToolsResultToBeReturned: Result<[ToolResponseEntity], ToolsServiceError> = .success([.mock])

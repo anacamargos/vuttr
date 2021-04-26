@@ -11,6 +11,7 @@
 		BF007E5726192E3B0042F852 /* NetworkRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */; };
 		BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */; };
 		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
+		BF08F01A26376A260043578A /* ToolsServicesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08F01926376A260043578A /* ToolsServicesDummy.swift */; };
 		BF11FE682627639C003A5E66 /* ToolsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE672627639C003A5E66 /* ToolsServices.swift */; };
 		BF11FE6C262764CE003A5E66 /* ToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */; };
 		BF11FE71262769F1003A5E66 /* ToolResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */; };
@@ -163,6 +164,7 @@
 		BF007E5626192E3B0042F852 /* NetworkRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestBuilder.swift; sourceTree = "<group>"; };
 		BF03B7B0259B6C9A00DF170A /* HomeContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentViewTests.swift; sourceTree = "<group>"; };
 		BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCellTests.swift; sourceTree = "<group>"; };
+		BF08F01926376A260043578A /* ToolsServicesDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesDummy.swift; sourceTree = "<group>"; };
 		BF11FE672627639C003A5E66 /* ToolsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServices.swift; sourceTree = "<group>"; };
 		BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsRequest.swift; sourceTree = "<group>"; };
 		BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolResponseEntity.swift; sourceTree = "<group>"; };
@@ -963,6 +965,7 @@
 				BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */,
 				BF69835825EECF6D00603AF0 /* HomePresenterDummy.swift */,
 				BF69835C25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift */,
+				BF08F01926376A260043578A /* ToolsServicesDummy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1339,6 +1342,7 @@
 				BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
+				BF08F01A26376A260043578A /* ToolsServicesDummy.swift in Sources */,
 				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
 				BFFFA89625F978E5000BC298 /* RemoveToolPresenterTests.swift in Sources */,
 				BFE8AE2025DF14EA006ED5CA /* MirrorExtensions.swift in Sources */,
