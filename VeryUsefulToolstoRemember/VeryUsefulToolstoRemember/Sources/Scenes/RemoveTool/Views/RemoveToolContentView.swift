@@ -24,6 +24,7 @@ final class RemoveToolContentView: CodedView {
     // MARK: - Dependencies
 
     private let onTappedCloseButtonClosure: () -> Void
+    private let onTappedRemoveToolButtonClosure: () -> Void
 
     // MARK: - View Components
 
@@ -75,9 +76,11 @@ final class RemoveToolContentView: CodedView {
 
     init(
         frame: CGRect = .zero,
-        onTappedCloseButtonClosure: @escaping () -> Void
+        onTappedCloseButtonClosure: @escaping () -> Void,
+        onTappedRemoveToolButtonClosure: @escaping () -> Void
     ) {
         self.onTappedCloseButtonClosure = onTappedCloseButtonClosure
+        self.onTappedRemoveToolButtonClosure = onTappedRemoveToolButtonClosure
         super.init(frame: frame)
         configureView()
     }
@@ -175,10 +178,15 @@ final class RemoveToolContentView: CodedView {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
+        removeToolButton.addTarget(self, action: #selector(onTappedRemoveToolButton), for: .touchUpInside)
     }
 
     @objc private func onTappedCloseButton() {
         onTappedCloseButtonClosure()
+    }
+
+    @objc private func onTappedRemoveToolButton() {
+        onTappedRemoveToolButtonClosure()
     }
 }
 

@@ -47,7 +47,10 @@ final class RemoveToolViewController: UIViewController {
     }
 
     override func loadView() {
-        view = RemoveToolContentView { [weak self] in self?.onTappedCloseButtonAction() }
+        view = RemoveToolContentView(
+            onTappedCloseButtonClosure: { [weak self] in self?.onTappedCloseButtonAction() },
+            onTappedRemoveToolButtonClosure: { [weak self] in self?.onTappedRemoveToolButtonAction() }
+        )
         contentView = view as? RemoveToolContentViewProtocol
     }
 
@@ -55,6 +58,10 @@ final class RemoveToolViewController: UIViewController {
 
     private func onTappedCloseButtonAction() {
         router.routeToPreviousScene()
+    }
+
+    private func onTappedRemoveToolButtonAction() {
+        interactor.handleRemoveToolAction()
     }
 
 }
