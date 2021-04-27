@@ -18,8 +18,15 @@ final class RemoveToolConfigurator {
     // MARK: - Public Methods
 
     func resolveViewController(using parameters: RemoveToolSceneParameters) -> UIViewController {
+        let configuration = NetworkConfiguration(urlProvider: DefaultURLProvider())
+        let networkRespondeDecoder = DefaultResponseDecoder()
+        let httpClient = URLSessionHTTPClient(session: URLSession.shared, configuration: configuration)
+        let networkDispatcher = DefaultNetworkDispatcher(httpClient: httpClient, responseDecoder: networkRespondeDecoder)
+        let service = ToolsServices(networkDispatcher: networkDispatcher)
+        let deleteToolUseCase = DeleteToolUseCase(service: service)
+
         let presenter = RemoveToolPresenter()
-        let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters)
+        let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters, deleteToolUseCase: deleteToolUseCase)
         let router = RemoveToolRouter()
         let viewController = RemoveToolViewController(interactor: interactor, router: router)
         router.viewController = viewController
