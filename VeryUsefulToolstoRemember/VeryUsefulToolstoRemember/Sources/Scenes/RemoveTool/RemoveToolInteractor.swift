@@ -10,6 +10,7 @@ import Foundation
 
 protocol RemoveToolBusinessLogic {
     func onViewDidLoad()
+    func handleRemoveToolAction()
 }
 
 final class RemoveToolInteractor {
@@ -18,15 +19,18 @@ final class RemoveToolInteractor {
 
     private let presenter: RemoveToolPresentationLogic
     private let parameters: RemoveToolSceneParameters
+    private let deleteToolUseCase: DeleteToolUseCaseProvider
 
     // MARK: - Initializer
 
     init(
         presenter: RemoveToolPresentationLogic,
-        parameters: RemoveToolSceneParameters
+        parameters: RemoveToolSceneParameters,
+        deleteToolUseCase: DeleteToolUseCaseProvider
     ) {
         self.presenter = presenter
         self.parameters = parameters
+        self.deleteToolUseCase = deleteToolUseCase
     }
 }
 
@@ -36,5 +40,11 @@ extension RemoveToolInteractor: RemoveToolBusinessLogic {
 
     func onViewDidLoad() {
         presenter.presentToolName(parameters.toolName)
+    }
+
+    func handleRemoveToolAction() {
+        deleteToolUseCase.execute(toolId: parameters.toolId) { _ in
+
+        }
     }
 }
