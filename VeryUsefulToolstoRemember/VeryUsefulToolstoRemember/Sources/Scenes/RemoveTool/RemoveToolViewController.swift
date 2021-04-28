@@ -10,6 +10,7 @@ import UIKit
 
 protocol RemoveToolDisplayLogic: AnyObject {
     func displayToolName(_ toolName: String)
+    func displayDeleteToolViewState(_ viewState: RemoveTool.ViewState)
 }
 
 final class RemoveToolViewController: UIViewController {
@@ -72,5 +73,16 @@ extension RemoveToolViewController: RemoveToolDisplayLogic {
 
     func displayToolName(_ toolName: String) {
         contentView?.setupViewData(toolName)
+    }
+
+    func displayDeleteToolViewState(_ viewState: RemoveTool.ViewState) {
+        switch viewState {
+        case .loading:
+            contentView?.setupLoadingState(true)
+        case .success:
+            contentView?.setupLoadingState(false)
+        case .error:
+            contentView?.setupLoadingState(false)
+        }
     }
 }

@@ -27,7 +27,7 @@ extension RemoveToolPresenter: RemoveToolPresentationLogic {
     func presentToolName(_ toolName: String) {
         viewController?.displayToolName(toolName)
     }
-    
+
     func presentRemoveToolResponse(_ response: RemoveTool.Response) {
         let viewState: RemoveTool.ViewState
         switch response {
