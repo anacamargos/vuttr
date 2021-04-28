@@ -29,14 +29,20 @@ final class RemoveToolInteractorTests: XCTestCase {
     private func makeSUT(
         presenter: RemoveToolPresentationLogic = RemoveToolPresenterDummy(),
         parameters: RemoveToolSceneParameters = .mock,
+        deleteToolUseCase: DeleteToolUseCaseProvider = DeleteToolUseCaseDummy(),
         file: StaticString = #file,
         line: UInt = #line
     ) -> RemoveToolInteractor {
         let sut = RemoveToolInteractor(
             presenter: presenter,
-            parameters: parameters
+            parameters: parameters,
+            deleteToolUseCase: deleteToolUseCase
         )
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
+}
+
+final class DeleteToolUseCaseDummy: DeleteToolUseCaseProvider {
+    func execute(toolId: UInt, then handle: @escaping (Result<NoEntity, DeleteToolUseCaseError>) -> Void) {}
 }

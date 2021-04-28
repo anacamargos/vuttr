@@ -22,7 +22,7 @@ final class RemoveToolContentViewTests: XCTestCase {
 
     private func makeView() -> RemoveToolContentView {
         return .init(
-            frame: .init(origin: .zero, size: CGSize(width: 350, height: 600)), onTappedCloseButtonClosure: {}
+            frame: .init(origin: .zero, size: CGSize(width: 350, height: 600)), onTappedCloseButtonClosure: {}, onTappedRemoveToolButtonClosure: {}
         )
     }
 

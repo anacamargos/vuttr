@@ -11,4 +11,5 @@ import Foundation
 
 final class RemoveToolPresenterDummy: RemoveToolPresentationLogic {
     func presentToolName(_ toolName: String) {}
+    func presentRemoveToolResponse(_ response: RemoveTool.Response) {}
 }

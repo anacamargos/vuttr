@@ -16,4 +16,10 @@ final class RemoveToolPresenterSpy: RemoveToolPresentationLogic {
     func presentToolName(_ toolName: String) {
         presentToolNamePassedToolName.append(toolName)
     }
+
+    private(set) var presentRemoveToolResponsePassedResponses = [RemoveTool.Response]()
+
+    func presentRemoveToolResponse(_ response: RemoveTool.Response) {
+        presentRemoveToolResponsePassedResponses.append(response)
+    }
 }

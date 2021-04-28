@@ -11,4 +11,5 @@ import Foundation
 
 final class RemoveToolDisplayLogicDummy: RemoveToolDisplayLogic {
     func displayToolName(_ toolName: String) {}
+    func displayDeleteToolViewState(_ viewState: RemoveTool.ViewState) {}
 }

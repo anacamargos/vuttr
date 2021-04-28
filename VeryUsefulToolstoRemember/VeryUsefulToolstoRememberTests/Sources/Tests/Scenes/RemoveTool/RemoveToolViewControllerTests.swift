@@ -77,6 +77,7 @@ final class RemoveToolViewControllerTests: XCTestCase {
 
 final class RemoveToolInteractorDummy: RemoveToolBusinessLogic {
     func onViewDidLoad() {}
+    func handleRemoveToolAction() {}
 }
 
 final class RemoveToolRouterDummy: RemoveToolRoutingLogic {
@@ -90,6 +91,12 @@ final class RemoveToolInteractorSpy: RemoveToolBusinessLogic {
     func onViewDidLoad() {
         onViewDidLoadCalled = true
     }
+
+    private(set) var handleRemoveToolActionCalled = false
+
+    func handleRemoveToolAction() {
+        handleRemoveToolActionCalled = true
+    }
 }
 
 final class RemoveToolContentViewSpy: RemoveToolContentViewProtocol {
@@ -98,6 +105,12 @@ final class RemoveToolContentViewSpy: RemoveToolContentViewProtocol {
 
     func setupViewData(_ toolName: String) {
         setupViewDataPassedToolNames.append(toolName)
+    }
+
+    private(set) var setupLoadingStatePassedBooleans = [Bool]()
+
+    func setupLoadingState(_ isLoading: Bool) {
+        setupLoadingStatePassedBooleans.append(isLoading)
     }
 }
 

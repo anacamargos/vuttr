@@ -16,4 +16,10 @@ final class RemoveToolDisplayLogicSpy: RemoveToolDisplayLogic {
     func displayToolName(_ toolName: String) {
         displayToolNamePassedToolNames.append(toolName)
     }
+
+    private(set) var displayDeleteToolViewStatePassedViewStates = [RemoveTool.ViewState]()
+
+    func displayDeleteToolViewState(_ viewState: RemoveTool.ViewState) {
+        displayDeleteToolViewStatePassedViewStates.append(viewState)
+    }
 }
