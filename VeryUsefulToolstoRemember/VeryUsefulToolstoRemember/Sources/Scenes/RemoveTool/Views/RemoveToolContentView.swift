@@ -10,6 +10,7 @@ import UIKit
 
 protocol RemoveToolContentViewProtocol: AnyObject {
     func setupViewData(_ toolName: String)
+    func setupLoadingState(_ isLoading: Bool)
 }
 
 final class RemoveToolContentView: CodedView {
@@ -196,5 +197,9 @@ extension RemoveToolContentView: RemoveToolContentViewProtocol {
 
     func setupViewData(_ toolName: String) {
         descriptionLabel.text = L10n.AddNewTool.removeToolDescription(toolName)
+    }
+
+    func setupLoadingState(_ isLoading: Bool) {
+        removeToolButton.setLoading(isLoading)
     }
 }
