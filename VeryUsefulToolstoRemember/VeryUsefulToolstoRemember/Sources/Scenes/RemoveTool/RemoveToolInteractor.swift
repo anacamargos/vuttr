@@ -43,8 +43,14 @@ extension RemoveToolInteractor: RemoveToolBusinessLogic {
     }
 
     func handleRemoveToolAction() {
-        deleteToolUseCase.execute(toolId: parameters.toolId) { _ in
-
+        presenter.presentRemoveToolResponse(.loading)
+        deleteToolUseCase.execute(toolId: parameters.toolId) { [weak self] result in
+            switch result {
+            case .success:
+                self?.presenter.presentRemoveToolResponse(.success)
+            case .failure:
+                self?.presenter.presentRemoveToolResponse(.error)
+            }
         }
     }
 }
