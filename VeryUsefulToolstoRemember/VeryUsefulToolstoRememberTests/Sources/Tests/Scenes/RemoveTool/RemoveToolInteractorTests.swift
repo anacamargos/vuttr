@@ -42,7 +42,3 @@ final class RemoveToolInteractorTests: XCTestCase {
         return sut
     }
 }
-
-final class DeleteToolUseCaseDummy: DeleteToolUseCaseProvider {
-    func execute(toolId: UInt, then handle: @escaping (Result<NoEntity, DeleteToolUseCaseError>) -> Void) {}
-}
