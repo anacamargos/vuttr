@@ -13,6 +13,7 @@
 		BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */; };
 		BF08F01A26376A260043578A /* ToolsServicesDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08F01926376A260043578A /* ToolsServicesDummy.swift */; };
 		BF08F01E26376A620043578A /* ToolsServicesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08F01D26376A620043578A /* ToolsServicesStub.swift */; };
+		BF0CAC072639AAC800DFAE20 /* RemoveToolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0CAC062639AAC800DFAE20 /* RemoveToolModels.swift */; };
 		BF11FE682627639C003A5E66 /* ToolsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE672627639C003A5E66 /* ToolsServices.swift */; };
 		BF11FE6C262764CE003A5E66 /* ToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */; };
 		BF11FE71262769F1003A5E66 /* ToolResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */; };
@@ -168,6 +169,7 @@
 		BF03B7B8259B6E8200DF170A /* UsefulToolCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulToolCellTests.swift; sourceTree = "<group>"; };
 		BF08F01926376A260043578A /* ToolsServicesDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesDummy.swift; sourceTree = "<group>"; };
 		BF08F01D26376A620043578A /* ToolsServicesStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesStub.swift; sourceTree = "<group>"; };
+		BF0CAC062639AAC800DFAE20 /* RemoveToolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoveToolModels.swift; path = ../../../../../../../../../RemoveToolModels.swift; sourceTree = "<group>"; };
 		BF11FE672627639C003A5E66 /* ToolsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServices.swift; sourceTree = "<group>"; };
 		BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsRequest.swift; sourceTree = "<group>"; };
 		BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolResponseEntity.swift; sourceTree = "<group>"; };
@@ -881,6 +883,7 @@
 				BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */,
 				BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */,
 				BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */,
+				BF0CAC062639AAC800DFAE20 /* RemoveToolModels.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -1253,6 +1256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */,
+				BF0CAC072639AAC800DFAE20 /* RemoveToolModels.swift in Sources */,
 				BF11FE71262769F1003A5E66 /* ToolResponseEntity.swift in Sources */,
 				BFAA919125E6CF7B00C9936D /* UICollectionViewExtensions.swift in Sources */,
 				BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */,
