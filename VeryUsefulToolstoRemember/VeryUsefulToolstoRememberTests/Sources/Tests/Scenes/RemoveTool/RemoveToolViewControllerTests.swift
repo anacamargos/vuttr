@@ -75,15 +75,6 @@ final class RemoveToolViewControllerTests: XCTestCase {
     }
 }
 
-final class RemoveToolInteractorDummy: RemoveToolBusinessLogic {
-    func onViewDidLoad() {}
-    func handleRemoveToolAction() {}
-}
-
-final class RemoveToolRouterDummy: RemoveToolRoutingLogic {
-    func routeToPreviousScene() {}
-}
-
 final class RemoveToolInteractorSpy: RemoveToolBusinessLogic {
 
     private(set) var onViewDidLoadCalled = false
