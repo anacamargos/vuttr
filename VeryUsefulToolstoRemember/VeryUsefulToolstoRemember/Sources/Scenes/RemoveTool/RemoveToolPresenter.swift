@@ -10,6 +10,7 @@ import Foundation
 
 protocol RemoveToolPresentationLogic {
     func presentToolName(_ toolName: String)
+    func presentRemoveToolResponse(_ response: RemoveTool.Response)
 }
 
 final class RemoveToolPresenter {
@@ -25,5 +26,18 @@ extension RemoveToolPresenter: RemoveToolPresentationLogic {
 
     func presentToolName(_ toolName: String) {
         viewController?.displayToolName(toolName)
+    }
+    
+    func presentRemoveToolResponse(_ response: RemoveTool.Response) {
+        let viewState: RemoveTool.ViewState
+        switch response {
+        case .success:
+            viewState = .success
+        case .loading:
+            viewState = .loading
+        case .error:
+            viewState = .error
+        }
+        viewController?.displayDeleteToolViewState(viewState)
     }
 }
