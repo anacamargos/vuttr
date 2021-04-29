@@ -64,6 +64,64 @@ final class RemoveToolViewControllerTests: XCTestCase {
         XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
     }
 
+    func test_onTappedRemoveToolButtonClosure_shouldCallCorrectMethodInInteractor() {
+        // Given
+        let interactorSpy = RemoveToolInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy)
+        guard let contentView = sut.view as? RemoveToolContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedRemoveToolButtonClosure = Mirror(reflecting: contentView).firstChild(of: (() -> Void).self, in: "onTappedRemoveToolButtonClosure")
+
+        // When
+        onTappedRemoveToolButtonClosure?()
+
+        // Then
+        XCTAssertTrue(interactorSpy.handleRemoveToolActionCalled)
+    }
+
+    func test_displayDeleteToolViewState_whenStateIsSuccess_shouldCallCorrectMethods() {
+        // Given
+        let contentViewSpy = RemoveToolContentViewSpy()
+        let routerSpy = RemoveToolRouterSpy()
+        let sut = makeSUT(router: routerSpy)
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayDeleteToolViewState(.success)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [false]))
+        XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
+    }
+
+    func test_displayDeleteToolViewState_whenStateIsLoading_shouldCallCorrectMethods() {
+        // Given
+        let contentViewSpy = RemoveToolContentViewSpy()
+        let sut = makeSUT()
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayDeleteToolViewState(.loading)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [true]))
+    }
+
+    func test_displayDeleteToolViewState_whenStateIsError_shouldCallCorrectMethods() {
+        // Given
+        let contentViewSpy = RemoveToolContentViewSpy()
+        let sut = makeSUT()
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayDeleteToolViewState(.error)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [false]))
+    }
+
     // MARK: - Private Methods
 
     private func makeSUT(

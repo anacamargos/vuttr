@@ -81,6 +81,7 @@ extension RemoveToolViewController: RemoveToolDisplayLogic {
             contentView?.setupLoadingState(true)
         case .success:
             contentView?.setupLoadingState(false)
+            router.routeToPreviousScene()
         case .error:
             contentView?.setupLoadingState(false)
         }
