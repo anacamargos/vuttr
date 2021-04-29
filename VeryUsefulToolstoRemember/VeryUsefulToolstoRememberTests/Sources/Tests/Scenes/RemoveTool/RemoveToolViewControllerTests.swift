@@ -126,9 +126,16 @@ final class RemoveToolViewControllerTests: XCTestCase {
 
     private func makeSUT(
         interactor: RemoveToolBusinessLogic = RemoveToolInteractorDummy(),
-        router: RemoveToolRoutingLogic = RemoveToolRouterDummy()
+        router: RemoveToolRoutingLogic = RemoveToolRouterDummy(),
+        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock()
     ) -> RemoveToolViewController {
-        let sut = RemoveToolViewController(interactor: interactor, router: router)
+        let sut = RemoveToolViewController(interactor: interactor, router: router, mainDispatchQueue: mainDispatchQueue)
         return sut
+    }
+}
+
+final class DispatchQueueTypeMock: DispatchQueueType {
+    func async(execute work: @escaping () -> Void) {
+        work()
     }
 }
