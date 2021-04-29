@@ -86,6 +86,7 @@
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
 		BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */; };
 		BF8D067B25E0600E0045EAFE /* LayoutableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */; };
+		BF8DB38B263B56EE00303929 /* DeleteToolUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DB38A263B56EE00303929 /* DeleteToolUseCaseStub.swift */; };
 		BF92A2B8261542510026DD33 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92A2B7261542510026DD33 /* BaseURL.swift */; };
 		BF92A2BC2615430D0026DD33 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92A2BB2615430D0026DD33 /* URLProvider.swift */; };
 		BF93DEC62601515A00BBA060 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93DEC52601515A00BBA060 /* EmptyTableViewCell.swift */; };
@@ -252,6 +253,7 @@
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
 		BF8D067625E05BDA0045EAFE /* ButtonLayoutStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutStyles.swift; sourceTree = "<group>"; };
 		BF8D067A25E0600E0045EAFE /* LayoutableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutableButton.swift; sourceTree = "<group>"; };
+		BF8DB38A263B56EE00303929 /* DeleteToolUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCaseStub.swift; sourceTree = "<group>"; };
 		BF92A2B7261542510026DD33 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		BF92A2BB2615430D0026DD33 /* URLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
 		BF93DEC52601515A00BBA060 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
@@ -743,6 +745,7 @@
 		BF69836525EECFD700603AF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BF8DB389263B56DF00303929 /* RemoveTool */,
 				BF69836625EECFDE00603AF0 /* Home */,
 			);
 			path = Scenes;
@@ -791,6 +794,14 @@
 				BF489FCE25E5A93600F901B8 /* CustomTextView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BF8DB389263B56DF00303929 /* RemoveTool */ = {
+			isa = PBXGroup;
+			children = (
+				BF8DB38A263B56EE00303929 /* DeleteToolUseCaseStub.swift */,
+			);
+			path = RemoveTool;
 			sourceTree = "<group>";
 		};
 		BF9A5FF52593F8A400BBE399 /* DesignSystem */ = {
@@ -1382,6 +1393,7 @@
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				BF8DB38B263B56EE00303929 /* DeleteToolUseCaseStub.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */,
 				BF08F01A26376A260043578A /* ToolsServicesDummy.swift in Sources */,

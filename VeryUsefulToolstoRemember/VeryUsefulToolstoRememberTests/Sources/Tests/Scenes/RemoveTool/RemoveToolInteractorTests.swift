@@ -72,12 +72,3 @@ final class RemoveToolInteractorTests: XCTestCase {
         return sut
     }
 }
-
-final class DeleteToolUseCaseStub: DeleteToolUseCaseProvider {
-
-    var executeResultToBeReturned: Result<NoEntity, DeleteToolUseCaseError> = .success(.init())
-
-    func execute(toolId: UInt, then handle: @escaping (Result<NoEntity, DeleteToolUseCaseError>) -> Void) {
-        handle(executeResultToBeReturned)
-    }
-}
