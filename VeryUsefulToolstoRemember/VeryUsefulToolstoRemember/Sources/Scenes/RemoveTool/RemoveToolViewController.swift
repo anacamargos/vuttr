@@ -19,6 +19,7 @@ final class RemoveToolViewController: UIViewController {
 
     private let interactor: RemoveToolBusinessLogic
     private let router: RemoveToolRoutingLogic
+    private let mainDispatchQueue: DispatchQueueType
 
     // MARK: - View Components
 
@@ -28,10 +29,12 @@ final class RemoveToolViewController: UIViewController {
 
     init(
         interactor: RemoveToolBusinessLogic,
-        router: RemoveToolRoutingLogic
+        router: RemoveToolRoutingLogic,
+        mainDispatchQueue: DispatchQueueType = DispatchQueue.main
     ) {
         self.interactor = interactor
         self.router = router
+        self.mainDispatchQueue = mainDispatchQueue
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -76,14 +79,26 @@ extension RemoveToolViewController: RemoveToolDisplayLogic {
     }
 
     func displayDeleteToolViewState(_ viewState: RemoveTool.ViewState) {
-        switch viewState {
-        case .loading:
-            contentView?.setupLoadingState(true)
-        case .success:
-            contentView?.setupLoadingState(false)
-            router.routeToPreviousScene()
-        case .error:
-            contentView?.setupLoadingState(false)
+        mainDispatchQueue.async {
+            switch viewState {
+            case .loading:
+                self.contentView?.setupLoadingState(true)
+            case .success:
+                self.contentView?.setupLoadingState(false)
+                self.router.routeToPreviousScene()
+            case .error:
+                self.contentView?.setupLoadingState(false)
+            }
         }
+    }
+}
+
+protocol DispatchQueueType {
+    func async(execute work: @escaping () -> Void)
+}
+
+extension DispatchQueue: DispatchQueueType {
+    func async(execute work: @escaping () -> Void) {
+        async(group: nil, qos: .unspecified, flags: [], execute: work)
     }
 }
