@@ -18,6 +18,13 @@ final class RemoveToolContentViewTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
 
+    func test_removeToolContentView_loading() {
+        let view = makeView()
+        view.setupViewData("Notion")
+        view.setupLoadingState(true)
+        assertSnapshot(matching: view, as: .image)
+    }
+
     // MARK: - Test Helpers
 
     private func makeView() -> RemoveToolContentView {
