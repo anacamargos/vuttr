@@ -24,6 +24,45 @@ final class RemoveToolPresenterTests: XCTestCase {
         XCTAssertEqual(String(describing: viewControllerSpy.displayToolNamePassedToolNames), String(describing: [toolName]))
     }
 
+    func test_presentRemoveToolResponse_whenResponseIsError_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = RemoveToolDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+        let expectedViewState = RemoveTool.ViewState.error
+
+        // When
+        sut.presentRemoveToolResponse(.error)
+
+        // Then
+        XCTAssertEqual(String(describing: viewControllerSpy.displayDeleteToolViewStatePassedViewStates), String(describing: [expectedViewState]))
+    }
+
+    func test_presentRemoveToolResponse_whenResponseIsLoading_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = RemoveToolDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+        let expectedViewState = RemoveTool.ViewState.loading
+
+        // When
+        sut.presentRemoveToolResponse(.loading)
+
+        // Then
+        XCTAssertEqual(String(describing: viewControllerSpy.displayDeleteToolViewStatePassedViewStates), String(describing: [expectedViewState]))
+    }
+
+    func test_presentRemoveToolResponse_whenResponseIsSuccess_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = RemoveToolDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+        let expectedViewState = RemoveTool.ViewState.success
+
+        // When
+        sut.presentRemoveToolResponse(.success)
+
+        // Then
+        XCTAssertEqual(String(describing: viewControllerSpy.displayDeleteToolViewStatePassedViewStates), String(describing: [expectedViewState]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
