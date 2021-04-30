@@ -54,7 +54,8 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
 
     func routeToRemoveToolScene() {
         guard let selectedTool = dataStore?.selectedTool else { return }
-        let parameters = RemoveToolSceneParameters(toolName: selectedTool.title, toolId: selectedTool.id)
+        var parameters = RemoveToolSceneParameters(toolName: selectedTool.title, toolId: selectedTool.id)
+        parameters.delegate = dataStore as? RemoveToolDelegate
         let destinationViewController = removeToolConfigurator.resolveViewController(using: parameters)
         viewController?.present(destinationViewController, animated: true)
     }

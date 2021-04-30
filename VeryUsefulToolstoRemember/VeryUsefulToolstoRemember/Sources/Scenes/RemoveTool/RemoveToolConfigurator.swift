@@ -11,6 +11,7 @@ import UIKit
 struct RemoveToolSceneParameters {
     let toolName: String
     let toolId: UInt
+    weak var delegate: RemoveToolDelegate?
 }
 
 final class RemoveToolConfigurator {
@@ -26,7 +27,7 @@ final class RemoveToolConfigurator {
         let deleteToolUseCase = DeleteToolUseCase(service: service)
 
         let presenter = RemoveToolPresenter()
-        let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters, deleteToolUseCase: deleteToolUseCase)
+        let interactor = RemoveToolInteractor(presenter: presenter, parameters: parameters, deleteToolUseCase: deleteToolUseCase, delegate: parameters.delegate)
         let router = RemoveToolRouter()
         let viewController = RemoveToolViewController(interactor: interactor, router: router)
         router.viewController = viewController

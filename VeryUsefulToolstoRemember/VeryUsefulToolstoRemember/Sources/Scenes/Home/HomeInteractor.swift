@@ -19,6 +19,10 @@ protocol HomeDataStore {
     var selectedTool: GetUsefulToolsUseCaseModels.Tool? { get set }
 }
 
+protocol RemoveToolDelegate: AnyObject {
+    func handleToolDeletion(toolId: UInt)
+}
+
 final class HomeInteractor: HomeDataStore {
 
     // MARK: - Properties
@@ -49,14 +53,18 @@ final class HomeInteractor: HomeDataStore {
             switch result {
             case let .success(data):
                 self?.usefulTools = data
-                if data.isEmpty {
-                    self?.presenter.presentToolsResponse(.empty)
-                } else {
-                    self?.presenter.presentToolsResponse(.content(data))
-                }
+                self?.updateUsefulTools()
             case .failure:
                 self?.presenter.presentToolsResponse(.error)
             }
+        }
+    }
+
+    private func updateUsefulTools() {
+        if usefulTools.isEmpty {
+            presenter.presentToolsResponse(.empty)
+        } else {
+            presenter.presentToolsResponse(.content(usefulTools))
         }
     }
 }
@@ -86,5 +94,16 @@ extension HomeInteractor: HomeBusinessLogic {
     func handleRemoveToolSelection(_ toolId: UInt) {
         guard let selectedTool = usefulTools.first(where: { $0.id == toolId }) else { return }
         self.selectedTool = selectedTool
+    }
+}
+
+// MARK: - DeleteToolDelegate
+
+extension HomeInteractor: RemoveToolDelegate {
+
+    func handleToolDeletion(toolId: UInt) {
+        guard let toolIndex = usefulTools.firstIndex(where: { $0.id == toolId }) else { return }
+        usefulTools.remove(at: toolIndex)
+        updateUsefulTools()
     }
 }
