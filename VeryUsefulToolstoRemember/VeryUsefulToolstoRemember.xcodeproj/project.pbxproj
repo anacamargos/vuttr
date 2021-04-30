@@ -81,6 +81,7 @@
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
 		BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */; };
+		BF7F33F7263C9FC600607572 /* DispatchQueueTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */; };
 		BF8778FC261B5880001E22A9 /* DefaultRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */; };
 		BF877900261B5AB3001E22A9 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
@@ -248,6 +249,7 @@
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicDummy.swift; sourceTree = "<group>"; };
+		BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueTypeMock.swift; sourceTree = "<group>"; };
 		BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilder.swift; sourceTree = "<group>"; };
 		BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 				BF41694C262482AF00989DA1 /* URLSessionMock.swift */,
 				BF416956262486A700989DA1 /* HTTPClientMock.swift */,
 				BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */,
+				BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1396,6 +1399,7 @@
 				BF8DB38B263B56EE00303929 /* DeleteToolUseCaseStub.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */,
+				BF7F33F7263C9FC600607572 /* DispatchQueueTypeMock.swift in Sources */,
 				BF08F01A26376A260043578A /* ToolsServicesDummy.swift in Sources */,
 				BF69835925EECF6D00603AF0 /* HomePresenterDummy.swift in Sources */,
 				BFFFA89625F978E5000BC298 /* RemoveToolPresenterTests.swift in Sources */,

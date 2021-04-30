@@ -133,9 +133,3 @@ final class RemoveToolViewControllerTests: XCTestCase {
         return sut
     }
 }
-
-final class DispatchQueueTypeMock: DispatchQueueType {
-    func async(execute work: @escaping () -> Void) {
-        work()
-    }
-}
