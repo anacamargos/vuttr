@@ -148,6 +148,38 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
     }
 
+    func test_handleToolDeletion_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock, .otherMock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.content([.otherMock])
+
+        // When
+        sut.onViewDidLoad()
+        sut.handleToolDeletion(toolId: .zero)
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, .content([.mock, .otherMock]), expectedResponse]))
+    }
+
+    func test_handleToolDeletion_whenAllToolsAreRemoved_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.empty
+
+        // When
+        sut.onViewDidLoad()
+        sut.handleToolDeletion(toolId: .zero)
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, .content([.mock]), expectedResponse]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
