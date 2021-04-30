@@ -82,6 +82,7 @@
 		BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */; };
 		BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */; };
 		BF7F33F7263C9FC600607572 /* DispatchQueueTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */; };
+		BF7F33FB263CA37A00607572 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */; };
 		BF8778FC261B5880001E22A9 /* DefaultRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */; };
 		BF877900261B5AB3001E22A9 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
@@ -250,6 +251,7 @@
 		BF7EB25325ED8EA3004EA9AD /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicDummy.swift; sourceTree = "<group>"; };
 		BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueTypeMock.swift; sourceTree = "<group>"; };
+		BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
 		BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilder.swift; sourceTree = "<group>"; };
 		BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
@@ -703,6 +705,7 @@
 				BFA3253A259A6B12007BF348 /* UIViewExtensions.swift */,
 				BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */,
 				BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */,
+				BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1327,6 +1330,7 @@
 				BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BF11FE682627639C003A5E66 /* ToolsServices.swift in Sources */,
+				BF7F33FB263CA37A00607572 /* DispatchQueueExtensions.swift in Sources */,
 				BFA32536259A6652007BF348 /* HomeModels.swift in Sources */,
 				BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */,
 				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,

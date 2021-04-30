@@ -92,13 +92,3 @@ extension RemoveToolViewController: RemoveToolDisplayLogic {
         }
     }
 }
-
-protocol DispatchQueueType {
-    func async(execute work: @escaping () -> Void)
-}
-
-extension DispatchQueue: DispatchQueueType {
-    func async(execute work: @escaping () -> Void) {
-        async(group: nil, qos: .unspecified, flags: [], execute: work)
-    }
-}
