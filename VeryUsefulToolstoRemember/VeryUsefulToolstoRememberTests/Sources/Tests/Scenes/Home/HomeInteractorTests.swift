@@ -180,6 +180,22 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, .content([.mock]), expectedResponse]))
     }
 
+    func test_handleToolDeletion_whenIdPassedIsInvalid_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = GetUsefulToolsUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, getToolsUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.content([.mock])
+
+        // When
+        sut.onViewDidLoad()
+        sut.handleToolDeletion(toolId: 1)
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
