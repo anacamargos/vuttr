@@ -11,7 +11,7 @@ import Foundation
 enum ToolsRequest: NetworkRequest {
 
     case getTools
-    case createNewTool
+    case createNewTool(CreateNewToolParameters)
     case deleteTool(id: UInt)
 
     var baseURL: BaseURL { .serviceGroup(.vuttr) }
@@ -33,6 +33,15 @@ enum ToolsRequest: NetworkRequest {
             return .post
         case .deleteTool:
             return .delete
+        }
+    }
+
+    var httpBody: HTTPBody? {
+        switch self {
+        case let .createNewTool(parameters):
+            return .json((try? parameters.toJSON()) ?? [:])
+        default:
+            return nil
         }
     }
 }
