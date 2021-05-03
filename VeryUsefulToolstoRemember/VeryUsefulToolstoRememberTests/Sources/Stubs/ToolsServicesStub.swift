@@ -22,4 +22,10 @@ final class ToolsServicesStub: ToolsServicesProvider {
     func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void) {
         handle(deleteToolResultToBeReturned)
     }
+
+    var createNewToolResultToBeReturned: Result<ToolResponseEntity, ToolsServiceError> = .success(.mock)
+
+    func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void) {
+        handle(createNewToolResultToBeReturned)
+    }
 }

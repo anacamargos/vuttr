@@ -49,7 +49,7 @@ final class ToolsServices: ToolsServicesProvider {
             }
         }
     }
-    
+
     func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void) {
         let request = ToolsRequest.createNewTool(parameters)
         execute(request: request, then: handle)
