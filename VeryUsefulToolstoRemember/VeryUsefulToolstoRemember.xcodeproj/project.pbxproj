@@ -21,6 +21,8 @@
 		BF11FE6C262764CE003A5E66 /* ToolsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */; };
 		BF11FE71262769F1003A5E66 /* ToolResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */; };
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
+		BF2229FA2640927A00C014A9 /* CreateNewToolParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2229F92640927A00C014A9 /* CreateNewToolParameters.swift */; };
+		BF2229FF264092C000C014A9 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2229FE264092C000C014A9 /* JSONConvertible.swift */; };
 		BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317E9260D351300315A5F /* URLSessionProvider.swift */; };
 		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
 		BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */; };
@@ -186,6 +188,8 @@
 		BF11FE6B262764CE003A5E66 /* ToolsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsRequest.swift; sourceTree = "<group>"; };
 		BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolResponseEntity.swift; sourceTree = "<group>"; };
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BF2229F92640927A00C014A9 /* CreateNewToolParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolParameters.swift; sourceTree = "<group>"; };
+		BF2229FE264092C000C014A9 /* JSONConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
 		BF2317E9260D351300315A5F /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
 		BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -429,8 +433,17 @@
 			children = (
 				BF11FE70262769F1003A5E66 /* ToolResponseEntity.swift */,
 				BF2C334426324056000DB066 /* NoEntity.swift */,
+				BF2229F92640927A00C014A9 /* CreateNewToolParameters.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		BF2229FD264092AD00C014A9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BF2229FE264092C000C014A9 /* JSONConvertible.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		BF2317E8260D34EE00315A5F /* URLSession */ = {
@@ -648,6 +661,7 @@
 		BF5F993C2593F09E00E28356 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BF2229FD264092AD00C014A9 /* Other */,
 				BF11FE6626276381003A5E66 /* Services */,
 				BFEAF154260BE8A900B29F04 /* Network */,
 				BFAA918025E6C9B000C9936D /* UI */,
@@ -1339,6 +1353,7 @@
 				BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BFDB6E202613CDDB00AA0759 /* HTTPMethod.swift in Sources */,
+				BF2229FF264092C000C014A9 /* JSONConvertible.swift in Sources */,
 				BF9A5FFF2593FC5700BBE399 /* UINavigationBarExtensions.swift in Sources */,
 				BF678501261E60DA00738F99 /* HTTPRequest.swift in Sources */,
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
@@ -1348,6 +1363,7 @@
 				BFAA915425E5B45300C9936D /* AddNewToolRouter.swift in Sources */,
 				BF2C334526324056000DB066 /* NoEntity.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
+				BF2229FA2640927A00C014A9 /* CreateNewToolParameters.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */,
 				BF11FE6C262764CE003A5E66 /* ToolsRequest.swift in Sources */,
