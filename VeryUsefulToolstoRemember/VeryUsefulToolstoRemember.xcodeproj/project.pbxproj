@@ -23,6 +23,7 @@
 		BF145C422594059700BBAA52 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF145C412594059700BBAA52 /* Strings.swift */; };
 		BF2229FA2640927A00C014A9 /* CreateNewToolParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2229F92640927A00C014A9 /* CreateNewToolParameters.swift */; };
 		BF2229FF264092C000C014A9 /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2229FE264092C000C014A9 /* JSONConvertible.swift */; };
+		BF222A062640948100C014A9 /* JSONConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF222A052640948100C014A9 /* JSONConvertibleTests.swift */; };
 		BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317E9260D351300315A5F /* URLSessionProvider.swift */; };
 		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
 		BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */; };
@@ -190,6 +191,7 @@
 		BF145C412594059700BBAA52 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BF2229F92640927A00C014A9 /* CreateNewToolParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolParameters.swift; sourceTree = "<group>"; };
 		BF2229FE264092C000C014A9 /* JSONConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
+		BF222A052640948100C014A9 /* JSONConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConvertibleTests.swift; sourceTree = "<group>"; };
 		BF2317E9260D351300315A5F /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
 		BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -446,6 +448,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		BF222A042640947300C014A9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BF222A052640948100C014A9 /* JSONConvertibleTests.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		BF2317E8260D34EE00315A5F /* URLSession */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +477,7 @@
 		BF2C9C0625DDCA5300396C74 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BF222A042640947300C014A9 /* Other */,
 				BFFDFDDE2628DD160039B4EB /* Services */,
 				BF6784EC261E57EE00738F99 /* Network */,
 				BF2C9BFB25DDC08500396C74 /* Components */,
@@ -1415,6 +1426,7 @@
 				BF2C9C1625DDCAA000396C74 /* HomeContentViewSpy.swift in Sources */,
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */,
+				BF222A062640948100C014A9 /* JSONConvertibleTests.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				BF8DB38B263B56EE00303929 /* DeleteToolUseCaseStub.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,

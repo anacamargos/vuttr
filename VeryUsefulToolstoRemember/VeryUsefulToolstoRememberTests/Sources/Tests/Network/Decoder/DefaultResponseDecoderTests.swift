@@ -148,6 +148,6 @@ final class DefaultResponseDecoderTests: XCTestCase {
 
 }
 
-struct CodableMock: Codable, Equatable {
+struct CodableMock: Codable, Equatable, JSONConvertible {
     let key: String
 }
