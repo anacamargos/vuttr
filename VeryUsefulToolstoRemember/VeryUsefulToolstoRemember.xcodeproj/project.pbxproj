@@ -86,6 +86,7 @@
 		BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */; };
 		BF7F33F7263C9FC600607572 /* DispatchQueueTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */; };
 		BF7F33FB263CA37A00607572 /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */; };
+		BF8120242641DD0300E9E8CE /* CreateNewToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8120232641DD0300E9E8CE /* CreateNewToolUseCase.swift */; };
 		BF8778FC261B5880001E22A9 /* DefaultRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */; };
 		BF877900261B5AB3001E22A9 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */; };
 		BF8D067325E05B5F0045EAFE /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */; };
@@ -258,6 +259,7 @@
 		BF7EB25725ED90CF004EA9AD /* HomeDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicDummy.swift; sourceTree = "<group>"; };
 		BF7F33F6263C9FC600607572 /* DispatchQueueTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueTypeMock.swift; sourceTree = "<group>"; };
 		BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
+		BF8120232641DD0300E9E8CE /* CreateNewToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCase.swift; sourceTree = "<group>"; };
 		BF8778FB261B5880001E22A9 /* DefaultRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilder.swift; sourceTree = "<group>"; };
 		BF8778FF261B5AB3001E22A9 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		BF8D067225E05B5F0045EAFE /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
@@ -815,6 +817,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BF8120222641DCE500E9E8CE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BF8120232641DD0300E9E8CE /* CreateNewToolUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		BF8D067125E05B4B0045EAFE /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +1000,7 @@
 		BFE8ADFD25DF048F006ED5CA /* AddNewTool */ = {
 			isa = PBXGroup;
 			children = (
+				BF8120222641DCE500E9E8CE /* Domain */,
 				BFE8AE0425DF04B4006ED5CA /* Views */,
 				BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */,
 				BFAA915325E5B45300C9936D /* AddNewToolRouter.swift */,
@@ -1353,6 +1364,7 @@
 				BF9A5FF72593F8B100BBE399 /* Metrics.swift in Sources */,
 				BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */,
 				BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */,
+				BF8120242641DD0300E9E8CE /* CreateNewToolUseCase.swift in Sources */,
 				BFA3252C259A321D007BF348 /* UITableViewExtensions.swift in Sources */,
 				BF11FE682627639C003A5E66 /* ToolsServices.swift in Sources */,
 				BF7F33FB263CA37A00607572 /* DispatchQueueExtensions.swift in Sources */,
