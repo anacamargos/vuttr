@@ -128,6 +128,7 @@
 		BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */; };
 		BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */; };
 		BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */; };
+		BFD071BC26432C830072FCEB /* CreateNewToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */; };
 		BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */; };
 		BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */; };
 		BFD277C625F6C73D004016C8 /* RemoveToolContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */; };
@@ -305,6 +306,7 @@
 		BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoder.swift; sourceTree = "<group>"; };
+		BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewController.swift; sourceTree = "<group>"; };
 		BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentView.swift; sourceTree = "<group>"; };
 		BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentViewTests.swift; sourceTree = "<group>"; };
@@ -869,6 +871,7 @@
 		BFAA914525E5AF1900C9936D /* AddNewTool */ = {
 			isa = PBXGroup;
 			children = (
+				BFD071BA26432C6B0072FCEB /* Domain */,
 				BFAA914625E5AF2F00C9936D /* Views */,
 				BFAA916325E5BB1300C9936D /* AddNewToolConfiguratorTests.swift */,
 				BFAA916725E5BB6E00C9936D /* AddNewToolRouterTests.swift */,
@@ -935,6 +938,14 @@
 				BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */,
 			);
 			path = Decoder;
+			sourceTree = "<group>";
+		};
+		BFD071BA26432C6B0072FCEB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		BFD277B725F6BCEF004016C8 /* RemoveTool */ = {
@@ -1424,6 +1435,7 @@
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BFA5A36E2639AED6008F384D /* RemoveToolRouterSpy.swift in Sources */,
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
+				BFD071BC26432C830072FCEB /* CreateNewToolUseCaseTests.swift in Sources */,
 				BF03B7B9259B6E8200DF170A /* UsefulToolCellTests.swift in Sources */,
 				BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */,
 				BF0CAC132639ADF600DFAE20 /* RemoveToolRouterDummy.swift in Sources */,
