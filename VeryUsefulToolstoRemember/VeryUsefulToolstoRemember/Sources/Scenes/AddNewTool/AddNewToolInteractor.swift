@@ -8,13 +8,15 @@
 
 import Foundation
 
+protocol AddNewToolBusinessLogic {}
+
 final class AddNewToolInteractor {
-    
+
     // MARK: - Dependencies
 
     private let presenter: AddNewToolPresentationLogic
     private let createNewToolUseCase: CreateNewToolUseCaseProvider
-    
+
     // MARK: - Initializer
 
     init(
@@ -25,3 +27,7 @@ final class AddNewToolInteractor {
         self.createNewToolUseCase = createNewToolUseCase
     }
 }
+
+// MARK: - AddNewToolBusinessLogic
+
+extension AddNewToolInteractor: AddNewToolBusinessLogic {}

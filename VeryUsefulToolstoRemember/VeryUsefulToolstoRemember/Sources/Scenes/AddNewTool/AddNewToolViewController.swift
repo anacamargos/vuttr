@@ -14,6 +14,7 @@ final class AddNewToolViewController: UIViewController {
 
     // MARK: - Dependencies
 
+    private let interactor: AddNewToolBusinessLogic
     private let router: AddNewToolRoutingLogic
 
     // MARK: - View Components
@@ -23,8 +24,10 @@ final class AddNewToolViewController: UIViewController {
     // MARK: - Initializers
 
     init(
+        interactor: AddNewToolBusinessLogic,
         router: AddNewToolRoutingLogic
     ) {
+        self.interactor = interactor
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }

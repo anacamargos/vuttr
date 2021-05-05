@@ -11,7 +11,7 @@ import Foundation
 protocol AddNewToolPresentationLogic {}
 
 final class AddNewToolPresenter {
-    
+
     // MARK: - Dependencies
 
     weak var viewController: AddNewToolDisplayLogic?
