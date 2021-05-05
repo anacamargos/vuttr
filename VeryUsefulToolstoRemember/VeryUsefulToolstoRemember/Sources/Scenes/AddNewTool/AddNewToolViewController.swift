@@ -8,6 +8,8 @@
 
 import UIKit
 
+protocol AddNewToolDisplayLogic: AnyObject {}
+
 final class AddNewToolViewController: UIViewController {
 
     // MARK: - Dependencies
@@ -52,3 +54,7 @@ final class AddNewToolViewController: UIViewController {
 
     }
 }
+
+// MARK: - AddNewToolDisplayLogic
+
+extension AddNewToolViewController: AddNewToolDisplayLogic {}
