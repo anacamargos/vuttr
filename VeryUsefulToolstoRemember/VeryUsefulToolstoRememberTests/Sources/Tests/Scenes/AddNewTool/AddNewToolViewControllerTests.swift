@@ -39,9 +39,14 @@ final class AddNewToolViewControllerTests: XCTestCase {
 
     // MARK: - Private Methods
 
-    private func makeSUT(router: AddNewToolRoutingLogic = AddNewToolRouterDummy()) -> AddNewToolViewController {
-        let sut = AddNewToolViewController(router: router)
+    private func makeSUT(
+        interactor: AddNewToolBusinessLogic = AddNewToolInteractorDummy(),
+        router: AddNewToolRoutingLogic = AddNewToolRouterDummy()
+    ) -> AddNewToolViewController {
+        let sut = AddNewToolViewController(interactor: interactor, router: router)
         return sut
     }
 
 }
+
+final class AddNewToolInteractorDummy: AddNewToolBusinessLogic {}
