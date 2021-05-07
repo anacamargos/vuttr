@@ -16,4 +16,10 @@ enum AddNewTool {
         let toolDescription: String
         let toolTags: [String]
     }
+
+    enum Response {
+        case success
+        case error
+        case loading
+    }
 }

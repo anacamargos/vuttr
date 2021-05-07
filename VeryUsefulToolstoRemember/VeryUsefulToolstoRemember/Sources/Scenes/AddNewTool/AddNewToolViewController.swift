@@ -54,7 +54,7 @@ final class AddNewToolViewController: UIViewController {
     }
 
     private func onTappedAddToolButtonAction(_ newTool: AddNewTool.Request) {
-
+        interactor.handleNewToolCreation(newTool)
     }
 }
 

@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol AddNewToolBusinessLogic {}
+protocol AddNewToolBusinessLogic {
+    func handleNewToolCreation(_ request: AddNewTool.Request)
+}
 
 final class AddNewToolInteractor {
 
@@ -30,4 +32,17 @@ final class AddNewToolInteractor {
 
 // MARK: - AddNewToolBusinessLogic
 
-extension AddNewToolInteractor: AddNewToolBusinessLogic {}
+extension AddNewToolInteractor: AddNewToolBusinessLogic {
+
+    func handleNewToolCreation(_ request: AddNewTool.Request) {
+        presenter.presentToolsResponse(.loading)
+        createNewToolUseCase.execute(request: request) { [weak self] result in
+            switch result {
+            case let .success(response):
+                self?.presenter.presentToolsResponse(.success)
+            case .failure:
+                self?.presenter.presentToolsResponse(.error)
+            }
+        }
+    }
+}

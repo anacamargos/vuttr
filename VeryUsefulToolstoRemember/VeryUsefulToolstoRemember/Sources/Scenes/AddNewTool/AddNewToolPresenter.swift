@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol AddNewToolPresentationLogic {}
+protocol AddNewToolPresentationLogic {
+    func presentToolsResponse(_ response: AddNewTool.Response)
+}
 
 final class AddNewToolPresenter {
 
@@ -19,4 +21,9 @@ final class AddNewToolPresenter {
 
 // MARK: - AddNewToolPresentationLogic
 
-extension AddNewToolPresenter: AddNewToolPresentationLogic {}
+extension AddNewToolPresenter: AddNewToolPresentationLogic {
+
+    func presentToolsResponse(_ response: AddNewTool.Response) {
+
+    }
+}
