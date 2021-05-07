@@ -208,3 +208,14 @@ extension CreateNewToolParameters {
         )
     }
 }
+
+extension AddNewTool.Request {
+    static var mock: AddNewTool.Request {
+        .init(
+            toolName: "Notion",
+            toolLink: "https://notion.so",
+            toolDescription: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized.",
+            toolTags: ["organization", "planning", "collaboration", "writing"]
+        )
+    }
+}

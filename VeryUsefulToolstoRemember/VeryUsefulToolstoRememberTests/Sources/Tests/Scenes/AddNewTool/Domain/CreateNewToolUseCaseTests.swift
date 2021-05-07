@@ -34,7 +34,7 @@ final class CreateNewToolUseCaseTests: XCTestCase {
         line: UInt = #line
     ) {
         let exp = expectation(description: "Wait for completion")
-        sut.execute(parameters: .mock) { receivedResult in
+        sut.execute(request: .mock) { receivedResult in
             switch (receivedResult, expectedResult) {
             case let (.success(receivedResponse), .success(expectedResponse)):
                 XCTAssertEqual(String(describing: receivedResponse), String(describing: expectedResponse), file: file, line: line)

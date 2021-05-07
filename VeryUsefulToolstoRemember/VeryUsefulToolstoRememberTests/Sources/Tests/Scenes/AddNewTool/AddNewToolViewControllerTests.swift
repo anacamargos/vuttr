@@ -49,4 +49,6 @@ final class AddNewToolViewControllerTests: XCTestCase {
 
 }
 
-final class AddNewToolInteractorDummy: AddNewToolBusinessLogic {}
+final class AddNewToolInteractorDummy: AddNewToolBusinessLogic {
+    func handleNewToolCreation(_ request: AddNewTool.Request) {}
+}
