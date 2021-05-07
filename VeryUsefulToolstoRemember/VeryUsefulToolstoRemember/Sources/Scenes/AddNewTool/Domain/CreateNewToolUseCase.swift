@@ -13,7 +13,7 @@ enum CreateNewToolUseCaseError: Error {
 }
 
 protocol CreateNewToolUseCaseProvider {
-    func execute(parameters: CreateNewToolParameters, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void)
+    func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void)
 }
 
 final class CreateNewToolUseCase: CreateNewToolUseCaseProvider {
@@ -30,7 +30,8 @@ final class CreateNewToolUseCase: CreateNewToolUseCaseProvider {
 
     // MARK: - CreateNewToolUseCaseProvider
 
-    func execute(parameters: CreateNewToolParameters, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {
+    func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {
+        let parameters = CreateNewToolParameters(title: request.toolName, link: request.toolLink, description: request.toolDescription, tags: request.toolTags)
         service.createNewTool(parameters: parameters) { [weak self] result in
             switch result {
             case let .success(data):
