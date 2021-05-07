@@ -27,6 +27,7 @@
 		BF2317EA260D351300315A5F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317E9260D351300315A5F /* URLSessionProvider.swift */; };
 		BF2317F2260D352D00315A5F /* DefaultNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */; };
 		BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */; };
+		BF27B38E2645F04700C6BE8E /* AddNewToolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B38D2645F04700C6BE8E /* AddNewToolModels.swift */; };
 		BF2B97F02602AA6300C7821B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B97EF2602AA6300C7821B /* ErrorView.swift */; };
 		BF2C334526324056000DB066 /* NoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C334426324056000DB066 /* NoEntity.swift */; };
 		BF2C9BF425DDB8C300396C74 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */; };
@@ -199,6 +200,7 @@
 		BF2317E9260D351300315A5F /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		BF2317F1260D352D00315A5F /* DefaultNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkDispatcher.swift; sourceTree = "<group>"; };
 		BF2317F5260D35A600315A5F /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		BF27B38D2645F04700C6BE8E /* AddNewToolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolModels.swift; sourceTree = "<group>"; };
 		BF2B97EF2602AA6300C7821B /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		BF2C334426324056000DB066 /* NoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntity.swift; sourceTree = "<group>"; };
 		BF2C9BF325DDB8C300396C74 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -1022,6 +1024,7 @@
 				BFAA915725E5B5D500C9936D /* AddNewToolConfigurator.swift */,
 				BFD071C126432D820072FCEB /* AddNewToolPresenter.swift */,
 				BFD071C526432EC70072FCEB /* AddNewToolInteractor.swift */,
+				BF27B38D2645F04700C6BE8E /* AddNewToolModels.swift */,
 			);
 			path = AddNewTool;
 			sourceTree = "<group>";
@@ -1391,6 +1394,7 @@
 				BFEAF157260BE8D800B29F04 /* Status.swift in Sources */,
 				BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */,
 				BF6A74BB2617B4B800155DF5 /* URLParameters.swift in Sources */,
+				BF27B38E2645F04700C6BE8E /* AddNewToolModels.swift in Sources */,
 				BF2317F6260D35A600315A5F /* URLSessionHTTPClient.swift in Sources */,
 				BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */,
 				BFDB6E202613CDDB00AA0759 /* HTTPMethod.swift in Sources */,

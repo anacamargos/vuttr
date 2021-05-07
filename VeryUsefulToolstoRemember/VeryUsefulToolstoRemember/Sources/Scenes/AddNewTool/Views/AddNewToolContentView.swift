@@ -267,13 +267,3 @@ final class AddNewToolContentView: CodedView {
 // MARK: - AddNewToolContentViewProtocol
 
 extension AddNewToolContentView: AddNewToolContentViewProtocol {}
-
-enum AddNewTool {
-
-    struct Request {
-        let toolName: String
-        let toolLink: String
-        let toolDescription: String
-        let toolTags: [String]
-    }
-}
