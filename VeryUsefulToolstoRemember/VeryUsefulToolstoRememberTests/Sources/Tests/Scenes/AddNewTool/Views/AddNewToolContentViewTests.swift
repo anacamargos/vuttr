@@ -17,6 +17,12 @@ final class AddNewToolContentViewTests: XCTestCase {
         assertSnapshot(matching: view, as: .image)
     }
 
+    func test_addNewToolContentView_loadingState() {
+        let view = makeView()
+        view.setupLoadingState(true)
+        assertSnapshot(matching: view, as: .image)
+    }
+
     // MARK: - Test Helpers
 
     private func makeView() -> AddNewToolContentView {
