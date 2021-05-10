@@ -61,12 +61,3 @@ final class AddNewToolPresenterTests: XCTestCase {
     }
 
 }
-
-final class AddNewToolDisplayLogicSpy: AddNewToolDisplayLogic {
-
-    private(set) var displayAddToolViewStatePassedViewStates = [AddNewTool.ViewState]()
-
-    func displayAddToolViewState(_ viewState: AddNewTool.ViewState) {
-        displayAddToolViewStatePassedViewStates.append(viewState)
-    }
-}
