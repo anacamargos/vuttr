@@ -24,6 +24,15 @@ final class AddNewToolPresenter {
 extension AddNewToolPresenter: AddNewToolPresentationLogic {
 
     func presentToolsResponse(_ response: AddNewTool.Response) {
-
+        let viewState: AddNewTool.ViewState
+        switch response {
+        case .success:
+            viewState = .success
+        case .loading:
+            viewState = .loading
+        case .error:
+            viewState = .error
+        }
+        viewController?.displayAddToolViewState(viewState)
     }
 }

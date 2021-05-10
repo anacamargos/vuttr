@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol AddNewToolDisplayLogic: AnyObject {}
+protocol AddNewToolDisplayLogic: AnyObject {
+    func displayAddToolViewState(_ viewState: AddNewTool.ViewState)
+}
 
 final class AddNewToolViewController: UIViewController {
 
@@ -60,4 +62,17 @@ final class AddNewToolViewController: UIViewController {
 
 // MARK: - AddNewToolDisplayLogic
 
-extension AddNewToolViewController: AddNewToolDisplayLogic {}
+extension AddNewToolViewController: AddNewToolDisplayLogic {
+
+    func displayAddToolViewState(_ viewState: AddNewTool.ViewState) {
+        switch viewState {
+        case .error:
+            contentView?.setupLoadingState(false)
+        case .loading:
+            contentView?.setupLoadingState(true)
+        case .success:
+            contentView?.setupLoadingState(false)
+            router.routeToPreviousScene()
+        }
+    }
+}

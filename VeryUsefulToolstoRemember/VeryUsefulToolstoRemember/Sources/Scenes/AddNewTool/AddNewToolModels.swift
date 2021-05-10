@@ -22,4 +22,10 @@ enum AddNewTool {
         case error
         case loading
     }
+
+    enum ViewState {
+        case success
+        case error
+        case loading
+    }
 }
