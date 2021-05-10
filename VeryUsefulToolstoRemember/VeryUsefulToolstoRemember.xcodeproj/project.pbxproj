@@ -51,7 +51,7 @@
 		BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */; };
 		BF498E4226338284008277F2 /* GetUsefulToolsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E4126338284008277F2 /* GetUsefulToolsUseCaseTests.swift */; };
 		BF4AEB432649BE86009519F1 /* RemoveToolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB422649BE86009519F1 /* RemoveToolModels.swift */; };
-		BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */; };
+		BF4AEB4C2649BF93009519F1 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
 		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
 		BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */; };
@@ -224,7 +224,7 @@
 		BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCase.swift; sourceTree = "<group>"; };
 		BF498E4126338284008277F2 /* GetUsefulToolsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseTests.swift; sourceTree = "<group>"; };
 		BF4AEB422649BE86009519F1 /* RemoveToolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolModels.swift; sourceTree = "<group>"; };
-		BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
@@ -534,9 +534,9 @@
 			children = (
 				BF2C9C1525DDCAA000396C74 /* HomeContentViewSpy.swift */,
 				BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */,
-				BF53CB8325ED92190014E967 /* HomeDisplayLogicSpy.swift */,
 				BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */,
 				BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */,
+				BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1452,7 +1452,6 @@
 				BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */,
 				BF0CAC132639ADF600DFAE20 /* RemoveToolRouterDummy.swift in Sources */,
 				BF4169482624827A00989DA1 /* URLSessionDummy.swift in Sources */,
-				BF53CB8425ED92190014E967 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA915025E5B37400C9936D /* CustomTextViewTests.swift in Sources */,
 				BF41694226247E8100989DA1 /* DefaultNetworkDispatcherTests.swift in Sources */,
 				BF0CAC0B2639ADA100DFAE20 /* DeleteToolUseCaseDummy.swift in Sources */,
@@ -1489,6 +1488,7 @@
 				BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */,
 				BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */,
 				BF69836E25EEDA9700603AF0 /* HomeInteractorSpy.swift in Sources */,
+				BF4AEB4C2649BF93009519F1 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */,
 				BFFFA89025F97784000BC298 /* RemoveToolSceneParametersExtensions.swift in Sources */,
 				BFA5A3642639AE9B008F384D /* RemoveToolInteractorSpy.swift in Sources */,
