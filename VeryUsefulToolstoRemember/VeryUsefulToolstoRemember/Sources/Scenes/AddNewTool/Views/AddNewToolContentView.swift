@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol AddNewToolContentViewProtocol: AnyObject {}
+protocol AddNewToolContentViewProtocol: AnyObject {
+    func setupLoadingState(_ isLoading: Bool)
+}
 
 final class AddNewToolContentView: CodedView {
 
@@ -266,4 +268,9 @@ final class AddNewToolContentView: CodedView {
 
 // MARK: - AddNewToolContentViewProtocol
 
-extension AddNewToolContentView: AddNewToolContentViewProtocol {}
+extension AddNewToolContentView: AddNewToolContentViewProtocol {
+
+    func setupLoadingState(_ isLoading: Bool) {
+        addToolButton.setLoading(isLoading)
+    }
+}
