@@ -100,9 +100,10 @@ final class AddNewToolViewControllerTests: XCTestCase {
 
     private func makeSUT(
         interactor: AddNewToolBusinessLogic = AddNewToolInteractorDummy(),
-        router: AddNewToolRoutingLogic = AddNewToolRouterDummy()
+        router: AddNewToolRoutingLogic = AddNewToolRouterDummy(),
+        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock()
     ) -> AddNewToolViewController {
-        let sut = AddNewToolViewController(interactor: interactor, router: router)
+        let sut = AddNewToolViewController(interactor: interactor, router: router, mainDispatchQueue: mainDispatchQueue)
         return sut
     }
 

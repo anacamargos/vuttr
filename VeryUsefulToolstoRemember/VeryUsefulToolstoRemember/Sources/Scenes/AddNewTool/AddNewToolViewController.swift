@@ -18,6 +18,7 @@ final class AddNewToolViewController: UIViewController {
 
     private let interactor: AddNewToolBusinessLogic
     private let router: AddNewToolRoutingLogic
+    private let mainDispatchQueue: DispatchQueueType
 
     // MARK: - View Components
 
@@ -27,10 +28,12 @@ final class AddNewToolViewController: UIViewController {
 
     init(
         interactor: AddNewToolBusinessLogic,
-        router: AddNewToolRoutingLogic
+        router: AddNewToolRoutingLogic,
+        mainDispatchQueue: DispatchQueueType = DispatchQueue.main
     ) {
         self.interactor = interactor
         self.router = router
+        self.mainDispatchQueue = mainDispatchQueue
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -65,14 +68,16 @@ final class AddNewToolViewController: UIViewController {
 extension AddNewToolViewController: AddNewToolDisplayLogic {
 
     func displayAddToolViewState(_ viewState: AddNewTool.ViewState) {
-        switch viewState {
-        case .error:
-            contentView?.setupLoadingState(false)
-        case .loading:
-            contentView?.setupLoadingState(true)
-        case .success:
-            contentView?.setupLoadingState(false)
-            router.routeToPreviousScene()
+        mainDispatchQueue.async {
+            switch viewState {
+            case .error:
+                self.contentView?.setupLoadingState(false)
+            case .loading:
+                self.contentView?.setupLoadingState(true)
+            case .success:
+                self.contentView?.setupLoadingState(false)
+                self.router.routeToPreviousScene()
+            }
         }
     }
 }
