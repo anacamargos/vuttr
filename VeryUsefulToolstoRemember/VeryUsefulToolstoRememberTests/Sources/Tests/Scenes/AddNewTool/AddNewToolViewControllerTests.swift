@@ -37,6 +37,65 @@ final class AddNewToolViewControllerTests: XCTestCase {
         XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
     }
 
+    func test_onTappedAddToolButtonClosure_shouldCallCorrectMethodInInteractor() {
+        // Given
+        let interactorSpy = AddNewToolInteractorSpy()
+        let sut = makeSUT(interactor: interactorSpy)
+        let expectedRequest = AddNewTool.Request.mock
+        guard let contentView = sut.view as? AddNewToolContentView else {
+            XCTFail("Could not find contentView.")
+            return
+        }
+        let onTappedAddToolButtonClosure = Mirror(reflecting: contentView).firstChild(of: ((AddNewTool.Request) -> Void).self, in: "onTappedAddToolButtonClosure")
+
+        // When
+        onTappedAddToolButtonClosure?(.mock)
+
+        // Then
+        XCTAssertEqual(String(describing: interactorSpy.handleNewToolCreationPassedRequests), String(describing: [expectedRequest]))
+    }
+
+    func test_displayAddToolViewState_whenStateIsLoading_shouldCallCorrectMethodInContentView() {
+        // Given
+        let contentViewSpy = AddNewToolContentViewSpy()
+        let sut = makeSUT()
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayAddToolViewState(.loading)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [true]))
+    }
+
+    func test_displayAddToolViewState_whenStateIsSuccess_shouldCallCorrectMethodInContentView() {
+        // Given
+        let routerSpy = AddNewToolRouterSpy()
+        let contentViewSpy = AddNewToolContentViewSpy()
+        let sut = makeSUT(router: routerSpy)
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayAddToolViewState(.success)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [false]))
+        XCTAssertTrue(routerSpy.routeToPreviousSceneCalled)
+    }
+
+    func test_displayAddToolViewState_whenStateIsError_shouldCallCorrectMethodInContentView() {
+        // Given
+        let contentViewSpy = AddNewToolContentViewSpy()
+        let sut = makeSUT()
+        sut.contentView = contentViewSpy
+
+        // When
+        sut.displayAddToolViewState(.error)
+
+        // Then
+        XCTAssertEqual(String(describing: contentViewSpy.setupLoadingStatePassedBooleans), String(describing: [false]))
+    }
+
     // MARK: - Private Methods
 
     private func makeSUT(
@@ -51,4 +110,22 @@ final class AddNewToolViewControllerTests: XCTestCase {
 
 final class AddNewToolInteractorDummy: AddNewToolBusinessLogic {
     func handleNewToolCreation(_ request: AddNewTool.Request) {}
+}
+
+final class AddNewToolInteractorSpy: AddNewToolBusinessLogic {
+
+    private(set) var handleNewToolCreationPassedRequests = [AddNewTool.Request]()
+
+    func handleNewToolCreation(_ request: AddNewTool.Request) {
+        handleNewToolCreationPassedRequests.append(request)
+    }
+}
+
+final class AddNewToolContentViewSpy: AddNewToolContentViewProtocol {
+
+    private(set) var setupLoadingStatePassedBooleans = [Bool]()
+
+    func setupLoadingState(_ isLoading: Bool) {
+        setupLoadingStatePassedBooleans.append(isLoading)
+    }
 }
