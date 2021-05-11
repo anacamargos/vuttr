@@ -132,6 +132,7 @@
 		BFAB1FCC264AD4D700AADE0E /* AddNewToolInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FCB264AD4D700AADE0E /* AddNewToolInteractorDummy.swift */; };
 		BFAB1FD0264AD4F700AADE0E /* AddNewToolInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FCF264AD4F700AADE0E /* AddNewToolInteractorSpy.swift */; };
 		BFAB1FD4264AD53E00AADE0E /* AddNewToolContentViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FD3264AD53E00AADE0E /* AddNewToolContentViewSpy.swift */; };
+		BFAB1FD8264AD60000AADE0E /* AddNewToolInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FD7264AD60000AADE0E /* AddNewToolInteractorTests.swift */; };
 		BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */; };
 		BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */; };
 		BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */; };
@@ -319,6 +320,7 @@
 		BFAB1FCB264AD4D700AADE0E /* AddNewToolInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractorDummy.swift; sourceTree = "<group>"; };
 		BFAB1FCF264AD4F700AADE0E /* AddNewToolInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractorSpy.swift; sourceTree = "<group>"; };
 		BFAB1FD3264AD53E00AADE0E /* AddNewToolContentViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentViewSpy.swift; sourceTree = "<group>"; };
+		BFAB1FD7264AD60000AADE0E /* AddNewToolInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractorTests.swift; sourceTree = "<group>"; };
 		BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoder.swift; sourceTree = "<group>"; };
@@ -895,6 +897,7 @@
 				BFAA916725E5BB6E00C9936D /* AddNewToolRouterTests.swift */,
 				BFAA916B25E5BC2800C9936D /* AddNewToolViewControllerTests.swift */,
 				BF4AEB562649CC44009519F1 /* AddNewToolPresenterTests.swift */,
+				BFAB1FD7264AD60000AADE0E /* AddNewToolInteractorTests.swift */,
 			);
 			path = AddNewTool;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				BFA5A3682639AEBA008F384D /* RemoveToolContentViewSpy.swift in Sources */,
 				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
 				BFAA916425E5BB1300C9936D /* AddNewToolConfiguratorTests.swift in Sources */,
+				BFAB1FD8264AD60000AADE0E /* AddNewToolInteractorTests.swift in Sources */,
 				BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */,
 				BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */,
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
