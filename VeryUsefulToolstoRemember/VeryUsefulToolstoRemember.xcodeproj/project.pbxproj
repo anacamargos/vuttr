@@ -129,6 +129,9 @@
 		BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */; };
 		BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA918C25E6CDA300C9936D /* TagCell.swift */; };
 		BFAA919125E6CF7B00C9936D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */; };
+		BFAB1FCC264AD4D700AADE0E /* AddNewToolInteractorDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FCB264AD4D700AADE0E /* AddNewToolInteractorDummy.swift */; };
+		BFAB1FD0264AD4F700AADE0E /* AddNewToolInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FCF264AD4F700AADE0E /* AddNewToolInteractorSpy.swift */; };
+		BFAB1FD4264AD53E00AADE0E /* AddNewToolContentViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB1FD3264AD53E00AADE0E /* AddNewToolContentViewSpy.swift */; };
 		BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */; };
 		BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */; };
 		BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */; };
@@ -313,6 +316,9 @@
 		BFAA918625E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BFAA918C25E6CDA300C9936D /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		BFAB1FCB264AD4D700AADE0E /* AddNewToolInteractorDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractorDummy.swift; sourceTree = "<group>"; };
+		BFAB1FCF264AD4F700AADE0E /* AddNewToolInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractorSpy.swift; sourceTree = "<group>"; };
+		BFAB1FD3264AD53E00AADE0E /* AddNewToolContentViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolContentViewSpy.swift; sourceTree = "<group>"; };
 		BFACD0602638A39400759811 /* DeleteToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoder.swift; sourceTree = "<group>"; };
@@ -906,6 +912,7 @@
 			children = (
 				BFAA917025E5BD0E00C9936D /* AddNewToolRouterDummy.swift */,
 				BF4AEB5A2649CD9F009519F1 /* AddNewToolDisplayLogicDummy.swift */,
+				BFAB1FCB264AD4D700AADE0E /* AddNewToolInteractorDummy.swift */,
 			);
 			path = AddNewTool;
 			sourceTree = "<group>";
@@ -915,6 +922,8 @@
 			children = (
 				BFAA917725E5BE3D00C9936D /* AddNewToolRouterSpy.swift */,
 				BF4AEB5E2649CDDF009519F1 /* AddNewToolDisplayLogicSpy.swift */,
+				BFAB1FCF264AD4F700AADE0E /* AddNewToolInteractorSpy.swift */,
+				BFAB1FD3264AD53E00AADE0E /* AddNewToolContentViewSpy.swift */,
 			);
 			path = AddNewTool;
 			sourceTree = "<group>";
@@ -1473,7 +1482,9 @@
 				BF2C9BFD25DDC09500396C74 /* CustomTextFieldTests.swift in Sources */,
 				BF3E0CD22625D7E8003A31CF /* DefaultURLProviderTests.swift in Sources */,
 				BF222A062640948100C014A9 /* JSONConvertibleTests.swift in Sources */,
+				BFAB1FD0264AD4F700AADE0E /* AddNewToolInteractorSpy.swift in Sources */,
 				BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				BFAB1FD4264AD53E00AADE0E /* AddNewToolContentViewSpy.swift in Sources */,
 				BF8DB38B263B56EE00303929 /* DeleteToolUseCaseStub.swift in Sources */,
 				BFFFA88225F97685000BC298 /* RemoveToolPresenterDummy.swift in Sources */,
 				BFACD0612638A39400759811 /* DeleteToolUseCaseTests.swift in Sources */,
@@ -1512,6 +1523,7 @@
 				BFFFA87925F96DB4000BC298 /* RemoveToolConfiguratorTests.swift in Sources */,
 				BF7EB25825ED90CF004EA9AD /* HomeDisplayLogicDummy.swift in Sources */,
 				BFE8AE1525DF1366006ED5CA /* HomeRouterDummy.swift in Sources */,
+				BFAB1FCC264AD4D700AADE0E /* AddNewToolInteractorDummy.swift in Sources */,
 				BF2C9C0325DDC8D300396C74 /* HomeViewControllerTests.swift in Sources */,
 				BFFFA89E25F97ACE000BC298 /* RemoveToolDisplayLogicSpy.swift in Sources */,
 				BFE8AE1B25DF143C006ED5CA /* HomeConfiguratorTests.swift in Sources */,

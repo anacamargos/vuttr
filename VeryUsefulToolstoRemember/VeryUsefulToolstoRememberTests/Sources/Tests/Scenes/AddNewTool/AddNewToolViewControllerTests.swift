@@ -107,25 +107,3 @@ final class AddNewToolViewControllerTests: XCTestCase {
     }
 
 }
-
-final class AddNewToolInteractorDummy: AddNewToolBusinessLogic {
-    func handleNewToolCreation(_ request: AddNewTool.Request) {}
-}
-
-final class AddNewToolInteractorSpy: AddNewToolBusinessLogic {
-
-    private(set) var handleNewToolCreationPassedRequests = [AddNewTool.Request]()
-
-    func handleNewToolCreation(_ request: AddNewTool.Request) {
-        handleNewToolCreationPassedRequests.append(request)
-    }
-}
-
-final class AddNewToolContentViewSpy: AddNewToolContentViewProtocol {
-
-    private(set) var setupLoadingStatePassedBooleans = [Bool]()
-
-    func setupLoadingState(_ isLoading: Bool) {
-        setupLoadingStatePassedBooleans.append(isLoading)
-    }
-}
