@@ -13,10 +13,11 @@ final class AddNewToolInteractorTests: XCTestCase {
 
     func test_handleNewToolCreation_whenUseCaseSucceeds_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
         // Given
+        let delegateSpy = AddNewToolDelegateSpy()
         let presenterSpy = AddNewToolPresenterSpy()
         let useCaseStub = CreateNewToolUseCaseStub()
         useCaseStub.executeResultToBeReturned = .success(.mock)
-        let sut = makeSUT(presenter: presenterSpy, createNewToolUseCase: useCaseStub)
+        let sut = makeSUT(presenter: presenterSpy, createNewToolUseCase: useCaseStub, delegate: delegateSpy)
         let expectedResponse = AddNewTool.Response.success
 
         // When
@@ -24,6 +25,7 @@ final class AddNewToolInteractorTests: XCTestCase {
 
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+        XCTAssertEqual(String(describing: delegateSpy.handleToolCreationPassedTool), String(describing: [GetUsefulToolsUseCaseModels.Tool.mock]))
     }
 
     func test_handleNewToolCreation_whenUseCaseFails_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
@@ -45,9 +47,10 @@ final class AddNewToolInteractorTests: XCTestCase {
 
     private func makeSUT(
         presenter: AddNewToolPresentationLogic = AddNewToolPresenterDummy(),
-        createNewToolUseCase: CreateNewToolUseCaseProvider = CreateNewToolUseCaseDummy()
+        createNewToolUseCase: CreateNewToolUseCaseProvider = CreateNewToolUseCaseDummy(),
+        delegate: AddNewToolDelegate? = nil
     ) -> AddNewToolInteractor {
-        .init(presenter: presenter, createNewToolUseCase: createNewToolUseCase)
+        .init(presenter: presenter, createNewToolUseCase: createNewToolUseCase, delegate: delegate)
     }
 
 }
@@ -75,5 +78,14 @@ final class CreateNewToolUseCaseStub: CreateNewToolUseCaseProvider {
 
     func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {
         handle(executeResultToBeReturned)
+    }
+}
+
+final class AddNewToolDelegateSpy: AddNewToolDelegate {
+
+    private(set) var handleToolCreationPassedTool = [GetUsefulToolsUseCaseModels.Tool]()
+
+    func handleToolCreation(_ tool: GetUsefulToolsUseCaseModels.Tool) {
+        handleToolCreationPassedTool.append(tool)
     }
 }

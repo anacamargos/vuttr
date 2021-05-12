@@ -17,7 +17,7 @@ final class AddNewToolConfiguratorTests: XCTestCase {
         trackForMemoryLeaks(sut)
 
         // When
-        let viewController = sut.resolveViewController()
+        let viewController = sut.resolveViewController(using: .init(delegate: nil))
 
         // Then
         guard let router = Mirror(reflecting: viewController).firstChild(of: AddNewToolRouter.self) else {
