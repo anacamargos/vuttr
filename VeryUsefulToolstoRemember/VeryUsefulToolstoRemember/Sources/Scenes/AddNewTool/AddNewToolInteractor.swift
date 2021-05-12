@@ -18,15 +18,18 @@ final class AddNewToolInteractor {
 
     private let presenter: AddNewToolPresentationLogic
     private let createNewToolUseCase: CreateNewToolUseCaseProvider
+    weak var delegate: AddNewToolDelegate?
 
     // MARK: - Initializer
 
     init(
         presenter: AddNewToolPresentationLogic,
-        createNewToolUseCase: CreateNewToolUseCaseProvider
+        createNewToolUseCase: CreateNewToolUseCaseProvider,
+        delegate: AddNewToolDelegate?
     ) {
         self.presenter = presenter
         self.createNewToolUseCase = createNewToolUseCase
+        self.delegate = delegate
     }
 }
 
@@ -40,6 +43,7 @@ extension AddNewToolInteractor: AddNewToolBusinessLogic {
             switch result {
             case let .success(response):
                 self?.presenter.presentToolsResponse(.success)
+                self?.delegate?.handleToolCreation(response)
             case .failure:
                 self?.presenter.presentToolsResponse(.error)
             }

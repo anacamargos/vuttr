@@ -23,6 +23,10 @@ protocol RemoveToolDelegate: AnyObject {
     func handleToolDeletion(toolId: UInt)
 }
 
+protocol AddNewToolDelegate: AnyObject {
+    func handleToolCreation(_ tool: GetUsefulToolsUseCaseModels.Tool)
+}
+
 final class HomeInteractor: HomeDataStore {
 
     // MARK: - Properties
@@ -104,6 +108,16 @@ extension HomeInteractor: RemoveToolDelegate {
     func handleToolDeletion(toolId: UInt) {
         guard let toolIndex = usefulTools.firstIndex(where: { $0.id == toolId }) else { return }
         usefulTools.remove(at: toolIndex)
+        updateUsefulTools()
+    }
+}
+
+// MARK: - AddNewToolDelegate
+
+extension HomeInteractor: AddNewToolDelegate {
+
+    func handleToolCreation(_ tool: GetUsefulToolsUseCaseModels.Tool) {
+        usefulTools.insert(tool, at: .zero)
         updateUsefulTools()
     }
 }

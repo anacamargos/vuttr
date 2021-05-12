@@ -8,9 +8,13 @@
 
 import UIKit
 
+struct AddNewToolSceneParameters {
+    weak var delegate: AddNewToolDelegate?
+}
+
 final class AddNewToolConfigurator {
 
-    func resolveViewController() -> UIViewController {
+    func resolveViewController(using parameters: AddNewToolSceneParameters) -> UIViewController {
         let urlProvider = DefaultURLProvider()
         let networkConfiguration = NetworkConfiguration(urlProvider: urlProvider)
         let responseDecoder = DefaultResponseDecoder()
@@ -20,7 +24,7 @@ final class AddNewToolConfigurator {
 
         let createNewToolUseCase = CreateNewToolUseCase(service: service)
         let presenter = AddNewToolPresenter()
-        let interactor = AddNewToolInteractor(presenter: presenter, createNewToolUseCase: createNewToolUseCase)
+        let interactor = AddNewToolInteractor(presenter: presenter, createNewToolUseCase: createNewToolUseCase, delegate: parameters.delegate)
 
         let router = AddNewToolRouter()
         let viewController = AddNewToolViewController(interactor: interactor, router: router)

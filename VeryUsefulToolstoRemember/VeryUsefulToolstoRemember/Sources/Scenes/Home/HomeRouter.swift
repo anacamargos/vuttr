@@ -43,7 +43,8 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
     // MARK: - Public Methods
 
     func routeToAddNewToolScene() {
-        let destinationViewController = addNewToolConfigurator.resolveViewController()
+        let delegate = dataStore as? AddNewToolDelegate
+        let destinationViewController = addNewToolConfigurator.resolveViewController(using: .init(delegate: delegate))
         viewController?.present(destinationViewController, animated: true)
     }
 
