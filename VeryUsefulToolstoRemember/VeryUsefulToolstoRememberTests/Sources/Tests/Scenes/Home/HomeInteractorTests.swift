@@ -196,6 +196,19 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
     }
 
+    func test_handleToolCreation_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy)
+        let expectedResponse = Home.UsefulTools.Response.content([.mock])
+
+        // When
+        sut.handleToolCreation(.mock)
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [expectedResponse]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
