@@ -46,6 +46,7 @@
 		BF41694D262482AF00989DA1 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41694C262482AF00989DA1 /* URLSessionMock.swift */; };
 		BF4169532624866D00989DA1 /* HTTPClientDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4169522624866D00989DA1 /* HTTPClientDummy.swift */; };
 		BF416957262486A700989DA1 /* HTTPClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF416956262486A700989DA1 /* HTTPClientMock.swift */; };
+		BF476622264C783A0028FCCD /* RemoveToolConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF476621264C783A0028FCCD /* RemoveToolConfigurator.swift */; };
 		BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */; };
 		BF489FCF25E5A93600F901B8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF489FCE25E5A93600F901B8 /* CustomTextView.swift */; };
 		BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */; };
@@ -82,7 +83,6 @@
 		BF764A1925F84A820096C623 /* RemoveToolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A1825F84A820096C623 /* RemoveToolRouter.swift */; };
 		BF764A2225F84C110096C623 /* RemoveToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */; };
 		BF764A2625F84CDD0096C623 /* RemoveToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */; };
-		BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */; };
 		BF7CFC692609433600D977F0 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */; };
 		BF7EB24725ED861F004EA9AD /* GetUsefulToolsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */; };
 		BF7EB24E25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */; };
@@ -226,6 +226,7 @@
 		BF41694C262482AF00989DA1 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		BF4169522624866D00989DA1 /* HTTPClientDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientDummy.swift; sourceTree = "<group>"; };
 		BF416956262486A700989DA1 /* HTTPClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientMock.swift; sourceTree = "<group>"; };
+		BF476621264C783A0028FCCD /* RemoveToolConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfigurator.swift; sourceTree = "<group>"; };
 		BF4829D6261F7F580096FB78 /* DefaultResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoderTests.swift; sourceTree = "<group>"; };
 		BF489FCE25E5A93600F901B8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCase.swift; sourceTree = "<group>"; };
@@ -266,7 +267,6 @@
 		BF764A1825F84A820096C623 /* RemoveToolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolRouter.swift; sourceTree = "<group>"; };
 		BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolPresenter.swift; sourceTree = "<group>"; };
 		BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolInteractor.swift; sourceTree = "<group>"; };
-		BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolConfigurator.swift; sourceTree = "<group>"; };
 		BF7CFC682609433500D977F0 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		BF7EB24625ED861F004EA9AD /* GetUsefulToolsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCase.swift; sourceTree = "<group>"; };
 		BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModels.swift; sourceTree = "<group>"; };
@@ -984,8 +984,8 @@
 				BF764A1825F84A820096C623 /* RemoveToolRouter.swift */,
 				BF764A2125F84C110096C623 /* RemoveToolPresenter.swift */,
 				BF764A2525F84CDD0096C623 /* RemoveToolInteractor.swift */,
-				BF764A2925F84DA70096C623 /* RemoveToolConfigurator.swift */,
 				BF4AEB422649BE86009519F1 /* RemoveToolModels.swift */,
+				BF476621264C783A0028FCCD /* RemoveToolConfigurator.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -1373,6 +1373,7 @@
 				BFAA918D25E6CDA300C9936D /* TagCell.swift in Sources */,
 				BF5F99462593F0FF00E28356 /* HomeContentView.swift in Sources */,
 				BFDAAE412603F5F400E67F81 /* ErrorTableViewCell.swift in Sources */,
+				BF476622264C783A0028FCCD /* RemoveToolConfigurator.swift in Sources */,
 				BF145C422594059700BBAA52 /* Strings.swift in Sources */,
 				BF5F98E42593DFEB00E28356 /* AppDelegate.swift in Sources */,
 				BFAA918725E6CA1200C9936D /* AlignedCollectionViewFlowLayout.swift in Sources */,
@@ -1425,7 +1426,6 @@
 				BFA32531259A64AA007BF348 /* UIColorExtensions.swift in Sources */,
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */,
-				BF764A2A25F84DA70096C623 /* RemoveToolConfigurator.swift in Sources */,
 				BFAA915425E5B45300C9936D /* AddNewToolRouter.swift in Sources */,
 				BF2C334526324056000DB066 /* NoEntity.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
