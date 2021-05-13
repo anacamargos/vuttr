@@ -59,10 +59,6 @@ final class AddNewToolInteractorTests: XCTestCase {
 
 }
 
-final class AddNewToolPresenterDummy: AddNewToolPresentationLogic {
-    func presentToolsResponse(_ response: AddNewTool.Response) {}
-}
-
 final class AddNewToolPresenterSpy: AddNewToolPresentationLogic {
 
     private(set) var presentToolsResponsePassedResponses = [AddNewTool.Response]()
@@ -70,10 +66,6 @@ final class AddNewToolPresenterSpy: AddNewToolPresentationLogic {
     func presentToolsResponse(_ response: AddNewTool.Response) {
         presentToolsResponsePassedResponses.append(response)
     }
-}
-
-final class CreateNewToolUseCaseDummy: CreateNewToolUseCaseProvider {
-    func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {}
 }
 
 final class CreateNewToolUseCaseStub: CreateNewToolUseCaseProvider {
