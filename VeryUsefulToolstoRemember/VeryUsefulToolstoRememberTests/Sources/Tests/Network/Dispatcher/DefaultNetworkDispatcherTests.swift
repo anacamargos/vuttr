@@ -112,9 +112,12 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
     // MARK: - Test Helpers
 
     private func makeSUT(
-        httpClient: HTTPClient = HTTPClientDummy()
+        httpClient: HTTPClient = HTTPClientDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> DefaultNetworkDispatcher {
         let sut = DefaultNetworkDispatcher(httpClient: httpClient, responseDecoder: DefaultResponseDecoder())
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 }

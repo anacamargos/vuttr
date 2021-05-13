@@ -25,8 +25,13 @@ final class DefaultURLProviderTests: XCTestCase {
 
     // MARK: - Test Helpers
 
-    private func makeSUT() -> DefaultURLProvider {
-        .init()
+    private func makeSUT(
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> DefaultURLProvider {
+        let sut = DefaultURLProvider()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
 
 }

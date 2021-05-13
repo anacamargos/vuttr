@@ -110,6 +110,7 @@ final class DefaultResponseDecoderTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) -> CodableMock? {
+        trackForMemoryLeaks(sut, file: file, line: line)
         var resultingValue: CodableMock?
         let decodeDataRequestResultExpectation = expectation(description: "decodeDataRequestResultExpectation")
         sut.decodeDataRequestResult(result, ofType: CodableMock.self) { result in
@@ -131,6 +132,7 @@ final class DefaultResponseDecoderTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) -> NetworkError? {
+        trackForMemoryLeaks(sut, file: file, line: line)
         var resultingError: NetworkError?
         let decodeDataRequestResultExpectation = expectation(description: "decodeDataRequestResultExpectation")
         sut.decodeDataRequestResult(result, ofType: CodableMock.self) { result in

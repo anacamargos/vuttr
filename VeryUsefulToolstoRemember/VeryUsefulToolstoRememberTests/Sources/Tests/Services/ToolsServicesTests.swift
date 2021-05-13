@@ -160,6 +160,7 @@ final class ToolsServicesTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) {
+        trackForMemoryLeaks(sut, file: file, line: line)
         let exp = expectation(description: "Wait for completion")
         sut.deleteTool(id: .zero) { receivedResult in
             switch (receivedResult, expectedResult) {
@@ -181,6 +182,7 @@ final class ToolsServicesTests: XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) {
+        trackForMemoryLeaks(sut, file: file, line: line)
         let exp = expectation(description: "Wait for completion")
         sut.createNewTool(parameters: .mock) { receivedResult in
             switch (receivedResult, expectedResult) {
