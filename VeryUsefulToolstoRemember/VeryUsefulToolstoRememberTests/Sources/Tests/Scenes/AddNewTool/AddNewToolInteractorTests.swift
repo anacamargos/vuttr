@@ -58,12 +58,3 @@ final class AddNewToolInteractorTests: XCTestCase {
     }
 
 }
-
-final class CreateNewToolUseCaseStub: CreateNewToolUseCaseProvider {
-
-    var executeResultToBeReturned: Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError> = .success(.mock)
-
-    func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {
-        handle(executeResultToBeReturned)
-    }
-}

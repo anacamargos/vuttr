@@ -60,6 +60,7 @@
 		BF4FA9D9264DCFAC0024B5AD /* CreateNewToolUseCaseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9D8264DCFAC0024B5AD /* CreateNewToolUseCaseDummy.swift */; };
 		BF4FA9DD264DCFED0024B5AD /* AddNewToolPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9DC264DCFED0024B5AD /* AddNewToolPresenterSpy.swift */; };
 		BF4FA9E1264DD0060024B5AD /* AddNewToolDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9E0264DD0060024B5AD /* AddNewToolDelegateSpy.swift */; };
+		BF4FA9E6264DD0790024B5AD /* CreateNewToolUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9E5264DD0790024B5AD /* CreateNewToolUseCaseStub.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
 		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
 		BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */; };
@@ -244,6 +245,7 @@
 		BF4FA9D8264DCFAC0024B5AD /* CreateNewToolUseCaseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseDummy.swift; sourceTree = "<group>"; };
 		BF4FA9DC264DCFED0024B5AD /* AddNewToolPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolPresenterSpy.swift; sourceTree = "<group>"; };
 		BF4FA9E0264DD0060024B5AD /* AddNewToolDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolDelegateSpy.swift; sourceTree = "<group>"; };
+		BF4FA9E5264DD0790024B5AD /* CreateNewToolUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseStub.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
@@ -630,6 +632,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		BF4FA9E4264DD06D0024B5AD /* AddNewTool */ = {
+			isa = PBXGroup;
+			children = (
+				BF4FA9E5264DD0790024B5AD /* CreateNewToolUseCaseStub.swift */,
+			);
+			path = AddNewTool;
+			sourceTree = "<group>";
+		};
 		BF53CB8725ED92600014E967 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +818,7 @@
 		BF69836525EECFD700603AF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BF4FA9E4264DD06D0024B5AD /* AddNewTool */,
 				BF8DB389263B56DF00303929 /* RemoveTool */,
 				BF69836625EECFDE00603AF0 /* Home */,
 			);
@@ -1473,6 +1484,7 @@
 				BF4AEB5B2649CD9F009519F1 /* AddNewToolDisplayLogicDummy.swift in Sources */,
 				BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */,
 				BF69836125EECFB800603AF0 /* HomePresenterSpy.swift in Sources */,
+				BF4FA9E6264DD0790024B5AD /* CreateNewToolUseCaseStub.swift in Sources */,
 				BFAA917125E5BD0E00C9936D /* AddNewToolRouterDummy.swift in Sources */,
 				BFA5A3682639AEBA008F384D /* RemoveToolContentViewSpy.swift in Sources */,
 				BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */,
