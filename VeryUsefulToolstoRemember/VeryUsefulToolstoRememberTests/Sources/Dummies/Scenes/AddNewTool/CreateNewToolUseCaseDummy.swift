@@ -12,4 +12,3 @@ import Foundation
 final class CreateNewToolUseCaseDummy: CreateNewToolUseCaseProvider {
     func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {}
 }
-

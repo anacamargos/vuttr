@@ -59,29 +59,11 @@ final class AddNewToolInteractorTests: XCTestCase {
 
 }
 
-final class AddNewToolPresenterSpy: AddNewToolPresentationLogic {
-
-    private(set) var presentToolsResponsePassedResponses = [AddNewTool.Response]()
-
-    func presentToolsResponse(_ response: AddNewTool.Response) {
-        presentToolsResponsePassedResponses.append(response)
-    }
-}
-
 final class CreateNewToolUseCaseStub: CreateNewToolUseCaseProvider {
 
     var executeResultToBeReturned: Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError> = .success(.mock)
 
     func execute(request: AddNewTool.Request, then handle: @escaping (Result<GetUsefulToolsUseCaseModels.Tool, CreateNewToolUseCaseError>) -> Void) {
         handle(executeResultToBeReturned)
-    }
-}
-
-final class AddNewToolDelegateSpy: AddNewToolDelegate {
-
-    private(set) var handleToolCreationPassedTool = [GetUsefulToolsUseCaseModels.Tool]()
-
-    func handleToolCreation(_ tool: GetUsefulToolsUseCaseModels.Tool) {
-        handleToolCreationPassedTool.append(tool)
     }
 }
