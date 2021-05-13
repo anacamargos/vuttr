@@ -49,9 +49,12 @@ final class DeleteToolUseCaseTests: XCTestCase {
     }
 
     private func makeSUT(
-        service: ToolsServicesProvider = ToolsServicesDummy()
+        service: ToolsServicesProvider = ToolsServicesDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> DeleteToolUseCase {
         let sut = DeleteToolUseCase(service: service)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 }

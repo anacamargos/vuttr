@@ -53,10 +53,14 @@ final class AddNewToolPresenterTests: XCTestCase {
     // MARK: - Test Helpers
 
     private func makeSUT(
-        viewController: AddNewToolDisplayLogic = AddNewToolDisplayLogicDummy()
+        viewController: AddNewToolDisplayLogic = AddNewToolDisplayLogicDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> AddNewToolPresenter {
         let sut = AddNewToolPresenter()
         sut.viewController = viewController
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(viewController, file: file, line: line)
         return sut
     }
 

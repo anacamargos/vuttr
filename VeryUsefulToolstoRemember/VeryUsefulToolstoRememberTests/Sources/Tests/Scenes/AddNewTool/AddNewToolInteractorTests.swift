@@ -48,9 +48,13 @@ final class AddNewToolInteractorTests: XCTestCase {
     private func makeSUT(
         presenter: AddNewToolPresentationLogic = AddNewToolPresenterDummy(),
         createNewToolUseCase: CreateNewToolUseCaseProvider = CreateNewToolUseCaseDummy(),
-        delegate: AddNewToolDelegate? = nil
+        delegate: AddNewToolDelegate? = nil,
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> AddNewToolInteractor {
-        .init(presenter: presenter, createNewToolUseCase: createNewToolUseCase, delegate: delegate)
+        let sut = AddNewToolInteractor(presenter: presenter, createNewToolUseCase: createNewToolUseCase, delegate: delegate)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
 
 }
