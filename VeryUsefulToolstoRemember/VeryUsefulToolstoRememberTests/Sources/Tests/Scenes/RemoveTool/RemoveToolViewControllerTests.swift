@@ -19,6 +19,7 @@ final class RemoveToolViewControllerTests: XCTestCase {
         viewController.loadView()
         viewController.displayToolName("Notion")
         assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
+        navigationController.viewControllers.removeAll()
     }
 
     func test_viewDidLoad_shouldCallCorrectMethodInInteractor() {
@@ -127,9 +128,12 @@ final class RemoveToolViewControllerTests: XCTestCase {
     private func makeSUT(
         interactor: RemoveToolBusinessLogic = RemoveToolInteractorDummy(),
         router: RemoveToolRoutingLogic = RemoveToolRouterDummy(),
-        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock()
+        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> RemoveToolViewController {
         let sut = RemoveToolViewController(interactor: interactor, router: router, mainDispatchQueue: mainDispatchQueue)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 }

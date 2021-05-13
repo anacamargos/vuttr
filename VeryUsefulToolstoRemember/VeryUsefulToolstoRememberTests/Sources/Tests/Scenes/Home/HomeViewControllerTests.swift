@@ -19,6 +19,7 @@ final class HomeViewControllerTests: XCTestCase {
         viewController.loadView()
         viewController.displayUsefulToolsViewState(.content(.init(tools: [.mock, .mock])))
         assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
+        navigationController.viewControllers.removeAll()
     }
 
     func test_displayUsefulToolsViewState_shouldCallCorrectMethodInContentView() {
@@ -136,9 +137,12 @@ final class HomeViewControllerTests: XCTestCase {
 
     private func makeSUT(
         interactor: HomeBusinessLogic = HomeInteractorDummy(),
-        router: HomeRoutingLogic = HomeRouterDummy()
+        router: HomeRoutingLogic = HomeRouterDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> HomeViewController {
         let sut = HomeViewController(interactor: interactor, router: router)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 }

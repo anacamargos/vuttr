@@ -18,6 +18,7 @@ final class AddNewToolViewControllerTests: XCTestCase {
         viewController.viewDidLoad()
         viewController.loadView()
         assertSnapshot(matching: navigationController, as: .image(on: .iPhone8))
+        navigationController.viewControllers.removeAll()
     }
 
     func test_onTappedCloseButtonAction_shouldCallCorrectMethodInRouter() {
@@ -101,9 +102,12 @@ final class AddNewToolViewControllerTests: XCTestCase {
     private func makeSUT(
         interactor: AddNewToolBusinessLogic = AddNewToolInteractorDummy(),
         router: AddNewToolRoutingLogic = AddNewToolRouterDummy(),
-        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock()
+        mainDispatchQueue: DispatchQueueType = DispatchQueueTypeMock(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> AddNewToolViewController {
         let sut = AddNewToolViewController(interactor: interactor, router: router, mainDispatchQueue: mainDispatchQueue)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 
