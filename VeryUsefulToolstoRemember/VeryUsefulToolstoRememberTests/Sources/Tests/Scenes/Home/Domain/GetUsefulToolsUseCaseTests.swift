@@ -49,9 +49,12 @@ final class GetUsefulToolsUseCaseTests: XCTestCase {
     }
 
     private func makeSUT(
-        service: ToolsServicesProvider = ToolsServicesDummy()
+        service: ToolsServicesProvider = ToolsServicesDummy(),
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> GetUsefulToolsUseCase {
         let sut = GetUsefulToolsUseCase(service: service)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 }
