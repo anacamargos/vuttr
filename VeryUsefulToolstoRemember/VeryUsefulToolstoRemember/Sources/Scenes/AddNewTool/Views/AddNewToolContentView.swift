@@ -214,6 +214,9 @@ final class AddNewToolContentView: CodedView {
         toolLinkTextField.returnKeyType = .next
         toolDescriptionTextField.returnKeyType = .next
         toolTagsTextField.returnKeyType = .send
+        toolLinkTextField.delegate = self
+        toolNameTextField.delegate = self
+        toolTagsTextField.delegate = self
     }
 
     private func validateTextField(_ textField: CustomTextField) -> Bool {
@@ -276,5 +279,29 @@ extension AddNewToolContentView: AddNewToolContentViewProtocol {
 
     func setupLoadingState(_ isLoading: Bool) {
         addToolButton.setLoading(isLoading)
+    }
+}
+
+// MARK: - CustomUITextFieldDelegate
+
+extension AddNewToolContentView: CustomUITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case toolNameTextField.textField:
+            textField.resignFirstResponder()
+            toolLinkTextField.textField.becomeFirstResponder()
+        case toolLinkTextField.textField:
+            textField.resignFirstResponder()
+            toolDescriptionTextField.textView.becomeFirstResponder()
+        case toolDescriptionTextField.textView:
+            textField.resignFirstResponder()
+            toolTagsTextField.textField.becomeFirstResponder()
+        case toolTagsTextField.textField:
+            textField.resignFirstResponder()
+        default:
+            break
+        }
+        return true
     }
 }

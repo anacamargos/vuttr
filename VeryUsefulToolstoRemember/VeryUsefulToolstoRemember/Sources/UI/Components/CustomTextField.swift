@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomUITextFieldDelegate: AnyObject {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+}
+
 final class CustomTextField: UIView {
 
     // MARK: - Public Properties
@@ -71,6 +75,10 @@ final class CustomTextField: UIView {
     // MARK: - Private Properties
 
     private var inputContainerHeight: CGFloat?
+
+    // MARK: - Dependencies
+
+    weak var delegate: CustomUITextFieldDelegate?
 
     // MARK: - Constants
 
@@ -220,6 +228,8 @@ final class CustomTextField: UIView {
     }
 }
 
+// MARK: - UITextFieldDelegate
+
 extension CustomTextField: UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -230,5 +240,9 @@ extension CustomTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         inputContainer.layer.borderColor = UIColor.darkestWhite.cgColor
         inputContainer.backgroundColor = .darkerWhite
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return delegate?.textFieldShouldReturn(textField) ?? false
     }
 }
