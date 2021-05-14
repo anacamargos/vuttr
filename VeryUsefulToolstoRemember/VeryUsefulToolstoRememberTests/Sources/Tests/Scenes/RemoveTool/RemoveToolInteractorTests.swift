@@ -78,12 +78,3 @@ final class RemoveToolInteractorTests: XCTestCase {
         return sut
     }
 }
-
-final class RemoveToolDelegateSpy: RemoveToolDelegate {
-
-    private(set) var handleToolDeletionPassedIds = [UInt]()
-
-    func handleToolDeletion(toolId: UInt) {
-        handleToolDeletionPassedIds.append(toolId)
-    }
-}

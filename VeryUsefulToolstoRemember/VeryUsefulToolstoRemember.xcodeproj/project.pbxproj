@@ -147,6 +147,7 @@
 		BFD277B925F6BD1C004016C8 /* RemoveToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */; };
 		BFD277BE25F6BD59004016C8 /* RemoveToolContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */; };
 		BFD277C625F6C73D004016C8 /* RemoveToolContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */; };
+		BFD5F893264EE792007AE674 /* RemoveToolDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD5F892264EE792007AE674 /* RemoveToolDelegateSpy.swift */; };
 		BFDAAE412603F5F400E67F81 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDAAE402603F5F400E67F81 /* ErrorTableViewCell.swift */; };
 		BFDB6E202613CDDB00AA0759 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB6E1F2613CDDB00AA0759 /* HTTPMethod.swift */; };
 		BFE8ADFF25DF049F006ED5CA /* AddNewToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */; };
@@ -340,6 +341,7 @@
 		BFD277B825F6BD1B004016C8 /* RemoveToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolViewController.swift; sourceTree = "<group>"; };
 		BFD277BD25F6BD59004016C8 /* RemoveToolContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentView.swift; sourceTree = "<group>"; };
 		BFD277C525F6C73D004016C8 /* RemoveToolContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolContentViewTests.swift; sourceTree = "<group>"; };
+		BFD5F892264EE792007AE674 /* RemoveToolDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolDelegateSpy.swift; sourceTree = "<group>"; };
 		BFDAAE402603F5F400E67F81 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
 		BFDB6E1F2613CDDB00AA0759 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		BFE8ADFE25DF049F006ED5CA /* AddNewToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolViewController.swift; sourceTree = "<group>"; };
@@ -1188,6 +1190,7 @@
 				BFFFA89D25F97ACE000BC298 /* RemoveToolDisplayLogicSpy.swift */,
 				BFA5A3672639AEBA008F384D /* RemoveToolContentViewSpy.swift */,
 				BFA5A36D2639AED6008F384D /* RemoveToolRouterSpy.swift */,
+				BFD5F892264EE792007AE674 /* RemoveToolDelegateSpy.swift */,
 			);
 			path = RemoveTool;
 			sourceTree = "<group>";
@@ -1529,6 +1532,7 @@
 				BFAA916C25E5BC2800C9936D /* AddNewToolViewControllerTests.swift in Sources */,
 				BFFFA89A25F97A54000BC298 /* RemoveToolDisplayLogicDummy.swift in Sources */,
 				BFFDFDEA2628E2820039B4EB /* NetworkDispatcherMock.swift in Sources */,
+				BFD5F893264EE792007AE674 /* RemoveToolDelegateSpy.swift in Sources */,
 				BF4AEB572649CC44009519F1 /* AddNewToolPresenterTests.swift in Sources */,
 				BF69835D25EECF9200603AF0 /* GetUsefulToolsUseCaseDummy.swift in Sources */,
 				BF41694D262482AF00989DA1 /* URLSessionMock.swift in Sources */,
