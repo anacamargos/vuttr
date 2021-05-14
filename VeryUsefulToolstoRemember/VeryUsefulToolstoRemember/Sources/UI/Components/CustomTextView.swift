@@ -19,13 +19,6 @@ final class CustomTextView: UIView {
         }
     }
 
-//    var placeholder: String? {
-//        get { textInput.placeholder }
-//        set {
-//            textInput.placeholder = newValue
-//        }
-//    }
-
     var errorMessageText: String? {
         get { errorMessageLabel.text }
         set {
@@ -44,6 +37,13 @@ final class CustomTextView: UIView {
         get { textInput.keyboardType }
         set {
             textInput.keyboardType = newValue
+        }
+    }
+
+    var returnKeyType: UIReturnKeyType {
+        get { textInput.returnKeyType }
+        set {
+            textInput.returnKeyType = newValue
         }
     }
 

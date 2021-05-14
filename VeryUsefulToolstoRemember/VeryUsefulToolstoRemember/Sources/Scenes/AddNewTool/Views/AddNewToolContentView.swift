@@ -210,6 +210,10 @@ final class AddNewToolContentView: CodedView {
         backgroundColor = .secundary80
         closeButton.addTarget(self, action: #selector(onTappedCloseButton), for: .touchUpInside)
         addToolButton.addTarget(self, action: #selector(onTappedAddToolButton), for: .touchUpInside)
+        toolNameTextField.returnKeyType = .next
+        toolLinkTextField.returnKeyType = .next
+        toolDescriptionTextField.returnKeyType = .next
+        toolTagsTextField.returnKeyType = .send
     }
 
     private func validateTextField(_ textField: CustomTextField) -> Bool {

@@ -47,6 +47,13 @@ final class CustomTextField: UIView {
         }
     }
 
+    var returnKeyType: UIReturnKeyType {
+        get { textInput.returnKeyType }
+        set {
+            textInput.returnKeyType = newValue
+        }
+    }
+
     var isSecureTextEntry: Bool {
         get { textInput.isSecureTextEntry }
         set {
