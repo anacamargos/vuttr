@@ -294,9 +294,6 @@ extension AddNewToolContentView: CustomUITextFieldDelegate {
         case toolLinkTextField.textField:
             textField.resignFirstResponder()
             toolDescriptionTextField.textView.becomeFirstResponder()
-        case toolDescriptionTextField.textView:
-            textField.resignFirstResponder()
-            toolTagsTextField.textField.becomeFirstResponder()
         case toolTagsTextField.textField:
             textField.resignFirstResponder()
         default:
