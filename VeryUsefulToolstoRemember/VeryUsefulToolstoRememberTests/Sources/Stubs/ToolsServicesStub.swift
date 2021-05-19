@@ -28,4 +28,10 @@ final class ToolsServicesStub: ToolsServicesProvider {
     func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void) {
         handle(createNewToolResultToBeReturned)
     }
+
+    var searchForToolResultToBeReturned: Result<[ToolResponseEntity], ToolsServiceError> = .success([.mock])
+
+    func searchForTool(parameters: SearchToolParameters, then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {
+        handle(searchForToolResultToBeReturned)
+    }
 }

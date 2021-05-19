@@ -13,4 +13,5 @@ final class ToolsServicesDummy: ToolsServicesProvider {
     func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {}
     func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void) {}
     func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void) {}
+    func searchForTool(parameters: SearchToolParameters, then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {}
 }
