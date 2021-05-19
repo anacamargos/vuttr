@@ -17,6 +17,7 @@ protocol ToolsServicesProvider {
     func getAllTools(then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void)
     func deleteTool(id: UInt, then handle: @escaping (Result<NoEntity, ToolsServiceError>) -> Void)
     func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void)
+    func searchForTool(parameters: SearchToolParameters, then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void)
 }
 
 final class ToolsServices: ToolsServicesProvider {
@@ -52,6 +53,11 @@ final class ToolsServices: ToolsServicesProvider {
 
     func createNewTool(parameters: CreateNewToolParameters, then handle: @escaping (Result<ToolResponseEntity, ToolsServiceError>) -> Void) {
         let request = ToolsRequest.createNewTool(parameters)
+        execute(request: request, then: handle)
+    }
+
+    func searchForTool(parameters: SearchToolParameters, then handle: @escaping (Result<[ToolResponseEntity], ToolsServiceError>) -> Void) {
+        let request = ToolsRequest.searchTools(parameters)
         execute(request: request, then: handle)
     }
 
