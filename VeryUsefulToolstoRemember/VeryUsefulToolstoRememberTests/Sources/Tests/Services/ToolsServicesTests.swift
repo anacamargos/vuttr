@@ -126,6 +126,35 @@ final class ToolsServicesTests: XCTestCase {
         XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.createNewTool(.mock)]))
     }
 
+    func test_searchForTool_whenRequestFails_shouldReturnCorrectError() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        let errorMock = NetworkError(.internal(.noInternetConnection))
+        dispatcherMock.requestCodableResultToBeReturned = .failure(errorMock)
+        let expectedError = ToolsServiceError.genericError
+
+        // When
+        searchForToolExpect(sut, toCompleteWith: .failure(expectedError))
+
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.searchTools(.init(text: ""))]))
+    }
+
+    func test_searchForTool_whenRequestSucceedsWithValidResponse_shouldReturnCorrectData() {
+        // Given
+        let dispatcherMock = NetworkDispatcherMock<[ToolResponseEntity]>()
+        let sut = makeSUT(networkDispatcher: dispatcherMock)
+        dispatcherMock.requestCodableResultToBeReturned = .success([.mock])
+        let expectedResponse = [ToolResponseEntity.mock]
+
+        // When
+        searchForToolExpect(sut, toCompleteWith: .success(expectedResponse))
+
+        // Then
+        XCTAssertEqual(String(describing: dispatcherMock.requestCodablePassedRequests), String(describing: [ToolsRequest.searchTools(.init(text: ""))]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(networkDispatcher: NetworkDispatcher) -> ToolsServices {
@@ -185,6 +214,27 @@ final class ToolsServicesTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         let exp = expectation(description: "Wait for completion")
         sut.createNewTool(parameters: .mock) { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(expectedItems)):
+                XCTAssertEqual(String(describing: receivedItems), String(describing: expectedItems), file: file, line: line)
+            case let (.failure(receivedError), .failure(expectedError)):
+                XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+            default:
+                XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
+
+    private func searchForToolExpect(
+        _ sut: ToolsServices,
+        toCompleteWith expectedResult: Result<[ToolResponseEntity], ToolsServiceError>,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        let exp = expectation(description: "Wait for completion")
+        sut.searchForTool(parameters: .init(text: "")) { receivedResult in
             switch (receivedResult, expectedResult) {
             case let (.success(receivedItems), .success(expectedItems)):
                 XCTAssertEqual(String(describing: receivedItems), String(describing: expectedItems), file: file, line: line)
