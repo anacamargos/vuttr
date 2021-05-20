@@ -53,7 +53,6 @@
 		BF498E3D26338229008277F2 /* DeleteToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */; };
 		BF498E4226338284008277F2 /* GetUsefulToolsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF498E4126338284008277F2 /* GetUsefulToolsUseCaseTests.swift */; };
 		BF4AEB432649BE86009519F1 /* RemoveToolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB422649BE86009519F1 /* RemoveToolModels.swift */; };
-		BF4AEB4C2649BF93009519F1 /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */; };
 		BF4AEB572649CC44009519F1 /* AddNewToolPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB562649CC44009519F1 /* AddNewToolPresenterTests.swift */; };
 		BF4AEB5B2649CD9F009519F1 /* AddNewToolDisplayLogicDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB5A2649CD9F009519F1 /* AddNewToolDisplayLogicDummy.swift */; };
 		BF4AEB5F2649CDDF009519F1 /* AddNewToolDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEB5E2649CDDF009519F1 /* AddNewToolDisplayLogicSpy.swift */; };
@@ -144,6 +143,7 @@
 		BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */; };
 		BFBA7F122657068000C3AABE /* SearchForToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA7F112657068000C3AABE /* SearchForToolUseCase.swift */; };
 		BFBA7F14265707DE00C3AABE /* SearchForToolUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA7F13265707DE00C3AABE /* SearchForToolUseCaseModels.swift */; };
+		BFBA7F162657085C00C3AABE /* HomeDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA7F152657085C00C3AABE /* HomeDisplayLogicSpy.swift */; };
 		BFD071BC26432C830072FCEB /* CreateNewToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */; };
 		BFD071C226432D820072FCEB /* AddNewToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071C126432D820072FCEB /* AddNewToolPresenter.swift */; };
 		BFD071C626432EC70072FCEB /* AddNewToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071C526432EC70072FCEB /* AddNewToolInteractor.swift */; };
@@ -242,7 +242,6 @@
 		BF498E3C26338229008277F2 /* DeleteToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToolUseCase.swift; sourceTree = "<group>"; };
 		BF498E4126338284008277F2 /* GetUsefulToolsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseTests.swift; sourceTree = "<group>"; };
 		BF4AEB422649BE86009519F1 /* RemoveToolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveToolModels.swift; sourceTree = "<group>"; };
-		BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeDisplayLogicSpy.swift; path = ../../../../../../../../../../HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BF4AEB562649CC44009519F1 /* AddNewToolPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolPresenterTests.swift; sourceTree = "<group>"; };
 		BF4AEB5A2649CD9F009519F1 /* AddNewToolDisplayLogicDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolDisplayLogicDummy.swift; sourceTree = "<group>"; };
 		BF4AEB5E2649CDDF009519F1 /* AddNewToolDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolDisplayLogicSpy.swift; sourceTree = "<group>"; };
@@ -341,6 +340,7 @@
 		BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoder.swift; sourceTree = "<group>"; };
 		BFBA7F112657068000C3AABE /* SearchForToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForToolUseCase.swift; sourceTree = "<group>"; };
 		BFBA7F13265707DE00C3AABE /* SearchForToolUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForToolUseCaseModels.swift; sourceTree = "<group>"; };
+		BFBA7F152657085C00C3AABE /* HomeDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplayLogicSpy.swift; sourceTree = "<group>"; };
 		BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFD071C126432D820072FCEB /* AddNewToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolPresenter.swift; sourceTree = "<group>"; };
 		BFD071C526432EC70072FCEB /* AddNewToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractor.swift; sourceTree = "<group>"; };
@@ -569,7 +569,7 @@
 				BFE8AE2525DF1620006ED5CA /* HomeRouterSpy.swift */,
 				BF69836025EECFB800603AF0 /* HomePresenterSpy.swift */,
 				BF69836D25EEDA9700603AF0 /* HomeInteractorSpy.swift */,
-				BF4AEB4B2649BF93009519F1 /* HomeDisplayLogicSpy.swift */,
+				BFBA7F152657085C00C3AABE /* HomeDisplayLogicSpy.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1508,6 +1508,7 @@
 				BFAB1FD8264AD60000AADE0E /* AddNewToolInteractorTests.swift in Sources */,
 				BF4829D7261F7F580096FB78 /* DefaultResponseDecoderTests.swift in Sources */,
 				BF7EB25425ED8EA3004EA9AD /* HomePresenterTests.swift in Sources */,
+				BFBA7F162657085C00C3AABE /* HomeDisplayLogicSpy.swift in Sources */,
 				BF03B7B1259B6C9A00DF170A /* HomeContentViewTests.swift in Sources */,
 				BFA5A36E2639AED6008F384D /* RemoveToolRouterSpy.swift in Sources */,
 				BFAA915C25E5B74F00C9936D /* HomeRouterTests.swift in Sources */,
@@ -1558,7 +1559,6 @@
 				BFFFA87525F96CAE000BC298 /* RemoveToolRouterTests.swift in Sources */,
 				BF3140F925E8624800D5F766 /* HomeInteractorDummy.swift in Sources */,
 				BF69836E25EEDA9700603AF0 /* HomeInteractorSpy.swift in Sources */,
-				BF4AEB4C2649BF93009519F1 /* HomeDisplayLogicSpy.swift in Sources */,
 				BFAA916825E5BB6E00C9936D /* AddNewToolRouterTests.swift in Sources */,
 				BFFFA89025F97784000BC298 /* RemoveToolSceneParametersExtensions.swift in Sources */,
 				BFA5A3642639AE9B008F384D /* RemoveToolInteractorSpy.swift in Sources */,
