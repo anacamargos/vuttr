@@ -143,6 +143,7 @@
 		BFB1048F26126C8300AA4307 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */; };
 		BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */; };
 		BFBA7F122657068000C3AABE /* SearchForToolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA7F112657068000C3AABE /* SearchForToolUseCase.swift */; };
+		BFBA7F14265707DE00C3AABE /* SearchForToolUseCaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA7F13265707DE00C3AABE /* SearchForToolUseCaseModels.swift */; };
 		BFD071BC26432C830072FCEB /* CreateNewToolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */; };
 		BFD071C226432D820072FCEB /* AddNewToolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071C126432D820072FCEB /* AddNewToolPresenter.swift */; };
 		BFD071C626432EC70072FCEB /* AddNewToolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD071C526432EC70072FCEB /* AddNewToolInteractor.swift */; };
@@ -339,6 +340,7 @@
 		BFB1048E26126C8300AA4307 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		BFB1049226126D2500AA4307 /* DefaultResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseDecoder.swift; sourceTree = "<group>"; };
 		BFBA7F112657068000C3AABE /* SearchForToolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForToolUseCase.swift; sourceTree = "<group>"; };
+		BFBA7F13265707DE00C3AABE /* SearchForToolUseCaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForToolUseCaseModels.swift; sourceTree = "<group>"; };
 		BFD071BB26432C830072FCEB /* CreateNewToolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseTests.swift; sourceTree = "<group>"; };
 		BFD071C126432D820072FCEB /* AddNewToolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolPresenter.swift; sourceTree = "<group>"; };
 		BFD071C526432EC70072FCEB /* AddNewToolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolInteractor.swift; sourceTree = "<group>"; };
@@ -862,6 +864,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7EB24D25ED8911004EA9AD /* GetUsefulToolsUseCaseModels.swift */,
+				BFBA7F13265707DE00C3AABE /* SearchForToolUseCaseModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				BFA3250F259A30CE007BF348 /* UsefulToolCell.swift in Sources */,
 				BFB1049326126D2500AA4307 /* DefaultResponseDecoder.swift in Sources */,
 				BFAA915425E5B45300C9936D /* AddNewToolRouter.swift in Sources */,
+				BFBA7F14265707DE00C3AABE /* SearchForToolUseCaseModels.swift in Sources */,
 				BF2C334526324056000DB066 /* NoEntity.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF2229FA2640927A00C014A9 /* CreateNewToolParameters.swift in Sources */,

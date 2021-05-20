@@ -8,19 +8,8 @@
 
 import Foundation
 
-enum SearchForToolUseCaseError: Error {
-    case genericError
-}
-
 protocol SearchForToolUseCaseProvider {
     func execute(request: SearchForToolUseCaseModels.Request, then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError>) -> Void)
-}
-
-enum SearchForToolUseCaseModels {
-
-    struct Request {
-        let text: String
-    }
 }
 
 final class SearchForToolUseCase: SearchForToolUseCaseProvider {
