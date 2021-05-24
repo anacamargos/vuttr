@@ -11,6 +11,20 @@ import XCTest
 
 final class SearchForToolUseCaseTests: XCTestCase {
 
+    func test_execute_whenServiceFails_shouldReturnCorrectError() {
+        let serviceStub = ToolsServicesStub()
+        serviceStub.searchForToolResultToBeReturned = .failure(.genericError)
+        let sut = makeSUT(service: serviceStub)
+        expect(sut, toCompleteWith: .failure(.genericError))
+    }
+
+    func test_execute_whenServiceSucceeds_shouldReturnCorrectModel() {
+        let serviceStub = ToolsServicesStub()
+        serviceStub.searchForToolResultToBeReturned = .success([.mock])
+        let sut = makeSUT(service: serviceStub)
+        expect(sut, toCompleteWith: .success([.mock]))
+    }
+
     // MARK: - Test Helpers
 
     func expect(
@@ -43,5 +57,5 @@ final class SearchForToolUseCaseTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
+
 }
