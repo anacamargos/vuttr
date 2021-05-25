@@ -23,9 +23,10 @@ final class HomeConfigurator {
         let addNewToolConfigurator = AddNewToolConfigurator()
         let removeToolConfigurator = RemoveToolConfigurator()
         let getToolsUseCase = GetUsefulToolsUseCase(service: service)
+        let searchForToolUseCase = SearchForToolUseCase(service: service)
 
         let presenter = HomePresenter()
-        let interactor = HomeInteractor(presenter: presenter, getToolsUseCase: getToolsUseCase)
+        let interactor = HomeInteractor(presenter: presenter, getToolsUseCase: getToolsUseCase, searchForToolUseCase: searchForToolUseCase)
         let router = HomeRouter(addNewToolConfigurator: addNewToolConfigurator, removeToolConfigurator: removeToolConfigurator, dataStore: interactor)
         let viewController = HomeViewController(interactor: interactor, router: router)
         router.viewController = viewController

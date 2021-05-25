@@ -13,6 +13,7 @@ protocol HomeBusinessLogic {
     func reloadTools()
     func handleToolSelection(at row: Int)
     func handleRemoveToolSelection(_ toolId: UInt)
+    func searchForTool(with text: String)
 }
 
 protocol HomeDataStore {
@@ -38,15 +39,18 @@ final class HomeInteractor: HomeDataStore {
 
     private let presenter: HomePresentationLogic
     private let getToolsUseCase: GetUsefulToolsUseCaseProvider
+    private let searchForToolUseCase: SearchForToolUseCaseProvider
 
     // MARK: - Initializer
 
     init(
         presenter: HomePresentationLogic,
-        getToolsUseCase: GetUsefulToolsUseCaseProvider
+        getToolsUseCase: GetUsefulToolsUseCaseProvider,
+        searchForToolUseCase: SearchForToolUseCaseProvider
     ) {
         self.presenter = presenter
         self.getToolsUseCase = getToolsUseCase
+        self.searchForToolUseCase = searchForToolUseCase
     }
 
     // MARK: - Private Methods
@@ -98,6 +102,10 @@ extension HomeInteractor: HomeBusinessLogic {
     func handleRemoveToolSelection(_ toolId: UInt) {
         guard let selectedTool = usefulTools.first(where: { $0.id == toolId }) else { return }
         self.selectedTool = selectedTool
+    }
+
+    func searchForTool(with text: String) {
+
     }
 }
 
