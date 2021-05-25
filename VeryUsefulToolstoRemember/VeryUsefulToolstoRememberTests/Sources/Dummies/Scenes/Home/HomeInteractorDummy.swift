@@ -14,4 +14,5 @@ final class HomeInteractorDummy: HomeBusinessLogic {
     func reloadTools() {}
     func handleToolSelection(at row: Int) {}
     func handleRemoveToolSelection(_ toolId: UInt) {}
+    func searchForTool(with text: String) {}
 }

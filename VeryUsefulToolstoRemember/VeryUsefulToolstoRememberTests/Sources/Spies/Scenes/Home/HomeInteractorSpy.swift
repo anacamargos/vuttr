@@ -34,4 +34,10 @@ final class HomeInteractorSpy: HomeBusinessLogic {
     func handleRemoveToolSelection(_ toolId: UInt) {
         handleRemoveToolSelectionCalled = true
     }
+
+    private(set) var searchForToolCalled = false
+
+    func searchForTool(with text: String) {
+        searchForToolCalled = true
+    }
 }

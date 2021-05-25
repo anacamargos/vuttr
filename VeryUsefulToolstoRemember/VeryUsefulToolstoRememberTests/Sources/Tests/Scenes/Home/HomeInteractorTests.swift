@@ -214,15 +214,21 @@ final class HomeInteractorTests: XCTestCase {
     private func makeSUT(
         presenter: HomePresentationLogic = HomePresenterDummy(),
         getToolsUseCase: GetUsefulToolsUseCaseProvider = GetUsefulToolsUseCaseDummy(),
+        searchForToolUseCase: SearchForToolUseCaseProvider = SearchForToolUseCaseDummy(),
         file: StaticString = #file,
         line: UInt = #line
     ) -> HomeInteractor {
         let sut = HomeInteractor(
             presenter: presenter,
-            getToolsUseCase: getToolsUseCase
+            getToolsUseCase: getToolsUseCase,
+            searchForToolUseCase: searchForToolUseCase
         )
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 
+}
+
+final class SearchForToolUseCaseDummy: SearchForToolUseCaseProvider {
+    func execute(request: SearchForToolUseCaseModels.Request, then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError>) -> Void) {}
 }
