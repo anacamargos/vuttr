@@ -105,7 +105,17 @@ extension HomeInteractor: HomeBusinessLogic {
     }
 
     func searchForTool(with text: String) {
-
+        let request = SearchForToolUseCaseModels.Request(text: text)
+        presenter.presentToolsResponse(.loading)
+        searchForToolUseCase.execute(request: request) { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.usefulTools = data
+                self?.updateUsefulTools()
+            case .failure:
+                self?.presenter.presentToolsResponse(.error)
+            }
+        }
     }
 }
 
