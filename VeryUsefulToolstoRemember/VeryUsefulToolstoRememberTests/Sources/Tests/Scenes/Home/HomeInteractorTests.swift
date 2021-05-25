@@ -228,7 +228,3 @@ final class HomeInteractorTests: XCTestCase {
     }
 
 }
-
-final class SearchForToolUseCaseDummy: SearchForToolUseCaseProvider {
-    func execute(request: SearchForToolUseCaseModels.Request, then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError>) -> Void) {}
-}
