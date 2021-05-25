@@ -69,7 +69,7 @@ final class HomeViewController: UIViewController {
 
     private func configureSearchBar() {
         let search = UISearchController(searchResultsController: nil)
-        search.delegate = self
+        search.searchBar.delegate = self
         let placeholderAppearance = UILabel.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         placeholderAppearance.font = .themeFont(for: .body, weight: .regular)
         let attributes = [NSAttributedString.Key.font: UIFont.themeFont(for: .body, weight: .regular)]
@@ -97,4 +97,9 @@ extension HomeViewController: HomeDisplayLogic {
     }
 }
 
-extension HomeViewController: UISearchControllerDelegate {}
+extension HomeViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        interactor.searchForTool(with: searchText)
+    }
+}
