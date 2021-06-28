@@ -169,6 +169,7 @@
 		BFEAF167260BEBC700B29F04 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */; };
 		BFEAF16D260BEC6C00B29F04 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */; };
 		BFF5AF4E259BEEC400BA97A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */; };
+		BFF79A87268A91ED0038E800 /* SearchForToolUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF79A86268A91ED0038E800 /* SearchForToolUseCaseStub.swift */; };
 		BFFDFDE02628DD270039B4EB /* ToolsServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */; };
 		BFFDFDE62628E2570039B4EB /* NetworkDispatcherDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDE52628E2570039B4EB /* NetworkDispatcherDummy.swift */; };
 		BFFDFDEA2628E2820039B4EB /* NetworkDispatcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */; };
@@ -368,6 +369,7 @@
 		BFEAF166260BEBC700B29F04 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		BFEAF16C260BEC6C00B29F04 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		BFF79A86268A91ED0038E800 /* SearchForToolUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForToolUseCaseStub.swift; sourceTree = "<group>"; };
 		BFFDFDDF2628DD270039B4EB /* ToolsServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsServicesTests.swift; sourceTree = "<group>"; };
 		BFFDFDE52628E2570039B4EB /* NetworkDispatcherDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcherDummy.swift; sourceTree = "<group>"; };
 		BFFDFDE92628E2820039B4EB /* NetworkDispatcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcherMock.swift; sourceTree = "<group>"; };
@@ -843,6 +845,7 @@
 			isa = PBXGroup;
 			children = (
 				BF69836725EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift */,
+				BFF79A86268A91ED0038E800 /* SearchForToolUseCaseStub.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1570,6 +1573,7 @@
 				BFFFA89025F97784000BC298 /* RemoveToolSceneParametersExtensions.swift in Sources */,
 				BFA5A3642639AE9B008F384D /* RemoveToolInteractorSpy.swift in Sources */,
 				BF0CAC0F2639ADDD00DFAE20 /* RemoveToolInteractorDummy.swift in Sources */,
+				BFF79A87268A91ED0038E800 /* SearchForToolUseCaseStub.swift in Sources */,
 				BF498E4226338284008277F2 /* GetUsefulToolsUseCaseTests.swift in Sources */,
 				BF7F6544265DA0E40045FF97 /* SearchForToolUseCaseDummy.swift in Sources */,
 				BF69836825EECFE700603AF0 /* GetUsefulToolsUseCaseStub.swift in Sources */,

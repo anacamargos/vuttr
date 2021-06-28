@@ -258,12 +258,3 @@ final class HomeInteractorTests: XCTestCase {
     }
 
 }
-
-final class SearchForToolUseCaseStub: SearchForToolUseCaseProvider {
-
-    var executeResultToBeReturned: Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError> = .success([.mock])
-
-    func execute(request: SearchForToolUseCaseModels.Request, then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError>) -> Void) {
-        handle(executeResultToBeReturned)
-    }
-}
