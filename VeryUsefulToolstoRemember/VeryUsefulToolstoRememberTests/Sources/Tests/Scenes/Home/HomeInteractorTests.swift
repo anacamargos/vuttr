@@ -209,6 +209,36 @@ final class HomeInteractorTests: XCTestCase {
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [expectedResponse]))
     }
 
+    func test_searchForTool_whenUseCaseFails_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = SearchForToolUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .failure(.genericError)
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, searchForToolUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.error
+
+        // When
+        sut.searchForTool(with: "")
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+    }
+
+    func test_searchForTool_whenUseCaseSucceeds_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
+        // Given
+        let useCaseStub = SearchForToolUseCaseStub()
+        useCaseStub.executeResultToBeReturned = .success([.mock])
+        let presenterSpy = HomePresenterSpy()
+        let sut = makeSUT(presenter: presenterSpy, searchForToolUseCase: useCaseStub)
+        let expectedResponse = Home.UsefulTools.Response.content([.mock])
+
+        // When
+        sut.searchForTool(with: "")
+
+        // Then
+        XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
@@ -227,4 +257,13 @@ final class HomeInteractorTests: XCTestCase {
         return sut
     }
 
+}
+
+final class SearchForToolUseCaseStub: SearchForToolUseCaseProvider {
+
+    var executeResultToBeReturned: Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError> = .success([.mock])
+
+    func execute(request: SearchForToolUseCaseModels.Request, then handle: @escaping (Result<[GetUsefulToolsUseCaseModels.Tool], SearchForToolUseCaseError>) -> Void) {
+        handle(executeResultToBeReturned)
+    }
 }
