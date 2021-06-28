@@ -65,7 +65,7 @@ internal enum L10n {
     internal static var errorMessage: String {
       L10n.tr("Localizable", "home.error_message")
     }
-    /// Você não adicionou nenhuma ferramenta... ainda!
+    /// Nenhuma ferramenta foi encontrada
     internal static var noRegisteredTools: String {
       L10n.tr("Localizable", "home.no_registered_tools")
     }
