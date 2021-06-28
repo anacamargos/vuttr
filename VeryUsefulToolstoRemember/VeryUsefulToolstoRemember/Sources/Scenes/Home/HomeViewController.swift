@@ -99,7 +99,16 @@ extension HomeViewController: HomeDisplayLogic {
 
 extension HomeViewController: UISearchBarDelegate {
 
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        interactor.searchForTool(with: searchText)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else { return }
+        if searchText.isEmpty {
+            interactor.reloadTools()
+        } else {
+            interactor.searchForTool(with: searchText)
+        }
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        interactor.reloadTools()
     }
 }
