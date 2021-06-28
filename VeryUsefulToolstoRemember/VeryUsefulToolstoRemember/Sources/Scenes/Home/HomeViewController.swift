@@ -68,14 +68,18 @@ final class HomeViewController: UIViewController {
     }
 
     private func configureSearchBar() {
-        let search = UISearchController(searchResultsController: nil)
-        search.searchBar.delegate = self
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = L10n.Home.search
+
         let placeholderAppearance = UILabel.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         placeholderAppearance.font = .themeFont(for: .body, weight: .regular)
         let attributes = [NSAttributedString.Key.font: UIFont.themeFont(for: .body, weight: .regular)]
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = attributes
-        navigationItem.searchController = search
+        navigationItem.searchController = searchController
     }
 
     private func onTappedRemoveToolAction(_ toolId: UInt) {
@@ -99,16 +103,19 @@ extension HomeViewController: HomeDisplayLogic {
 
 extension HomeViewController: UISearchBarDelegate {
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text else { return }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        interactor.reloadTools()
+    }
+}
+
+extension HomeViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
         if searchText.isEmpty {
             interactor.reloadTools()
         } else {
             interactor.searchForTool(with: searchText)
         }
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        interactor.reloadTools()
     }
 }
