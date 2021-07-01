@@ -11,6 +11,8 @@ import UIKit
 protocol HomePresentationLogic {
     func presentToolsResponse(_ response: Home.UsefulTools.Response)
     func presentURL(_ url: URL)
+    func presentAddNewToolSuccessMessage()
+    func presetRemoveToolSuccessMessage()
 }
 
 final class HomePresenter {
@@ -63,5 +65,13 @@ extension HomePresenter: HomePresentationLogic {
 
     func presentURL(_ url: URL) {
         viewController?.displayURL(url)
+    }
+
+    func presentAddNewToolSuccessMessage() {
+        viewController?.displayAddNewToolSuccessMessage()
+    }
+
+    func presetRemoveToolSuccessMessage() {
+        viewController?.displayRemoveToolSuccessMessage()
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 protocol HomeDisplayLogic: AnyObject {
     func displayUsefulToolsViewState(_ viewState: Home.UsefulTools.ViewState)
     func displayURL(_ url: URL)
+    func displayAddNewToolSuccessMessage()
+    func displayRemoveToolSuccessMessage()
 }
 
 final class HomeViewController: UIViewController {
@@ -98,6 +100,14 @@ extension HomeViewController: HomeDisplayLogic {
 
     func displayURL(_ url: URL) {
         router.routeToURL(url)
+    }
+
+    func displayAddNewToolSuccessMessage() {
+        showToast(message: L10n.Home.addToolSuccessMessage)
+    }
+
+    func displayRemoveToolSuccessMessage() {
+        showToast(message: L10n.Home.removeToolSuccessMessage)
     }
 }
 

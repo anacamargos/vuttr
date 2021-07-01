@@ -127,6 +127,7 @@ extension HomeInteractor: RemoveToolDelegate {
         guard let toolIndex = usefulTools.firstIndex(where: { $0.id == toolId }) else { return }
         usefulTools.remove(at: toolIndex)
         updateUsefulTools()
+        presenter.presetRemoveToolSuccessMessage()
     }
 }
 
@@ -137,5 +138,6 @@ extension HomeInteractor: AddNewToolDelegate {
     func handleToolCreation(_ tool: GetUsefulToolsUseCaseModels.Tool) {
         usefulTools.insert(tool, at: .zero)
         updateUsefulTools()
+        presenter.presentAddNewToolSuccessMessage()
     }
 }
