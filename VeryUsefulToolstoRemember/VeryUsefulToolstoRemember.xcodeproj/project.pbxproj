@@ -61,6 +61,7 @@
 		BF4FA9DD264DCFED0024B5AD /* AddNewToolPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9DC264DCFED0024B5AD /* AddNewToolPresenterSpy.swift */; };
 		BF4FA9E1264DD0060024B5AD /* AddNewToolDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9E0264DD0060024B5AD /* AddNewToolDelegateSpy.swift */; };
 		BF4FA9E6264DD0790024B5AD /* CreateNewToolUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FA9E5264DD0790024B5AD /* CreateNewToolUseCaseStub.swift */; };
+		BF502DA9268E655D001775EB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF502DA8268E655D001775EB /* UIViewControllerExtensions.swift */; };
 		BF53CB8A25ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */; };
 		BF53CB9025ED92B00014E967 /* HomeModelsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */; };
 		BF53CB9425ED93600014E967 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */; };
@@ -253,6 +254,7 @@
 		BF4FA9DC264DCFED0024B5AD /* AddNewToolPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolPresenterSpy.swift; sourceTree = "<group>"; };
 		BF4FA9E0264DD0060024B5AD /* AddNewToolDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToolDelegateSpy.swift; sourceTree = "<group>"; };
 		BF4FA9E5264DD0790024B5AD /* CreateNewToolUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewToolUseCaseStub.swift; sourceTree = "<group>"; };
+		BF502DA8268E655D001775EB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8925ED92710014E967 /* GetUsefulToolsUseCaseModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsefulToolsUseCaseModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB8F25ED92B00014E967 /* HomeModelsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelsExtensions.swift; sourceTree = "<group>"; };
 		BF53CB9325ED93600014E967 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 				BFF5AF4D259BEEC400BA97A5 /* UIImageExtensions.swift */,
 				BFAA919025E6CF7B00C9936D /* UICollectionViewExtensions.swift */,
 				BF7F33FA263CA37A00607572 /* DispatchQueueExtensions.swift */,
+				BF502DA8268E655D001775EB /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1477,6 +1480,7 @@
 				BF2C334526324056000DB066 /* NoEntity.swift in Sources */,
 				BFA32527259A31A0007BF348 /* NSObjectExtensions.swift in Sources */,
 				BF2229FA2640927A00C014A9 /* CreateNewToolParameters.swift in Sources */,
+				BF502DA9268E655D001775EB /* UIViewControllerExtensions.swift in Sources */,
 				BF5F99402593F0D600E28356 /* HomeViewController.swift in Sources */,
 				BF8D067725E05BDA0045EAFE /* ButtonLayoutStyles.swift in Sources */,
 				BF11FE6C262764CE003A5E66 /* ToolsRequest.swift in Sources */,
