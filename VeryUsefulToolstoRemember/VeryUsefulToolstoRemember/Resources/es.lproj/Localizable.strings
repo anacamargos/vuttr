@@ -27,7 +27,7 @@
 
 // MARK: - Remove Tool
 
-"add_new_tool.remove_tool_title" = "Eliminar herramienta";
-"add_new_tool.remove_tool_description" = "¿Estás seguro de que quieres eliminar %@?";
-"add_new_tool.remove_tool_cancel" = "Cancelar";
-"add_new_tool.remove_tool_confirmation" = "Si, elimine";
+"remove_tool.remove_tool_title" = "Eliminar herramienta";
+"remove_tool.remove_tool_description" = "¿Estás seguro de que quieres eliminar %@?";
+"remove_tool.remove_tool_cancel" = "Cancelar";
+"remove_tool.remove_tool_confirmation" = "Si, elimine";
