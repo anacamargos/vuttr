@@ -12,6 +12,8 @@
 "home.vuttr" = "vuttr";
 "home.no_registered_tools" = "No tools were found";
 "home.error_message" = "Unable to load\nTry again";
+"home.add_tool_success_message" = "The tool has been successfully added!";
+"home.remove_tool_success_message" = "The tool was removed successfully!";
 
 // MARK: - Add New Tool
 

@@ -45,6 +45,10 @@ internal enum L10n {
   }
 
   internal enum Home {
+    /// A ferramenta foi adicionada com sucesso!
+    internal static var addToolSuccessMessage: String {
+      L10n.tr("Localizable", "home.add_tool_success_message")
+    }
     /// Não foi possível carregar\nTente novamente
     internal static var errorMessage: String {
       L10n.tr("Localizable", "home.error_message")
@@ -52,6 +56,10 @@ internal enum L10n {
     /// Nenhuma ferramenta foi encontrada
     internal static var noRegisteredTools: String {
       L10n.tr("Localizable", "home.no_registered_tools")
+    }
+    /// A ferramenta foi removida com sucesso!
+    internal static var removeToolSuccessMessage: String {
+      L10n.tr("Localizable", "home.remove_tool_success_message")
     }
     /// Pesquisar
     internal static var search: String {
