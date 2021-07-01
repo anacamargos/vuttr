@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIViewController {
-    
+
     private enum Constants {
         static var alertCornerRadius: CGFloat = 15.0
         static var attributedTitle: String = "attributedTitle"
     }
-    
+
     func showToast(message: String, seconds: Double = 3.0) {
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .actionSheet)
         alert.view.layer.cornerRadius = Constants.alertCornerRadius

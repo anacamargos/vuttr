@@ -32,7 +32,7 @@ final class RemoveToolContentView: CodedView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .ink
-        label.text = L10n.AddNewTool.removeToolTitle
+        label.text = L10n.RemoveTool.removeToolTitle
         label.font = .themeFont(for: .subtitle, weight: .semibold)
         label.numberOfLines = .zero
         return label
@@ -54,14 +54,14 @@ final class RemoveToolContentView: CodedView {
 
     private let cancelButton: LayoutableButton = {
         let button = LayoutableButton(layout: .secundaryDanger)
-        button.setTitle(L10n.AddNewTool.removeToolCancel, for: .normal)
+        button.setTitle(L10n.RemoveTool.removeToolCancel, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
 
     private let removeToolButton: LayoutableButton = {
         let button = LayoutableButton(layout: .primaryDanger)
-        button.setTitle(L10n.AddNewTool.removeToolConfirmation, for: .normal)
+        button.setTitle(L10n.RemoveTool.removeToolConfirmation, for: .normal)
         button.contentEdgeInsets = .init(top: Metrics.Spacing.small, left: Metrics.Spacing.base, bottom: Metrics.Spacing.small, right: Metrics.Spacing.base)
         return button
     }()
@@ -196,7 +196,7 @@ final class RemoveToolContentView: CodedView {
 extension RemoveToolContentView: RemoveToolContentViewProtocol {
 
     func setupViewData(_ toolName: String) {
-        descriptionLabel.text = L10n.AddNewTool.removeToolDescription(toolName)
+        descriptionLabel.text = L10n.RemoveTool.removeToolDescription(toolName)
     }
 
     func setupLoadingState(_ isLoading: Bool) {

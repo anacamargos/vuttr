@@ -22,22 +22,6 @@ internal enum L10n {
     internal static var addTool: String {
       L10n.tr("Localizable", "add_new_tool.add_tool")
     }
-    /// Cancelar
-    internal static var removeToolCancel: String {
-      L10n.tr("Localizable", "add_new_tool.remove_tool_cancel")
-    }
-    /// Sim, remova
-    internal static var removeToolConfirmation: String {
-      L10n.tr("Localizable", "add_new_tool.remove_tool_confirmation")
-    }
-    /// Você tem certeza que deseja remover %@?
-    internal static func removeToolDescription(_ p1: String) -> String {
-      return L10n.tr("Localizable", "add_new_tool.remove_tool_description", p1)
-    }
-    /// Remover ferramenta
-    internal static var removeToolTitle: String {
-      L10n.tr("Localizable", "add_new_tool.remove_tool_title")
-    }
     /// Campo obrigatório
     internal static var requiredField: String {
       L10n.tr("Localizable", "add_new_tool.required_field")
@@ -76,6 +60,25 @@ internal enum L10n {
     /// vuttr
     internal static var vuttr: String {
       L10n.tr("Localizable", "home.vuttr")
+    }
+  }
+
+  internal enum RemoveTool {
+    /// Cancelar
+    internal static var removeToolCancel: String {
+      L10n.tr("Localizable", "remove_tool.remove_tool_cancel")
+    }
+    /// Sim, remova
+    internal static var removeToolConfirmation: String {
+      L10n.tr("Localizable", "remove_tool.remove_tool_confirmation")
+    }
+    /// Você tem certeza que deseja remover %@?
+    internal static func removeToolDescription(_ p1: String) -> String {
+      return L10n.tr("Localizable", "remove_tool.remove_tool_description", p1)
+    }
+    /// Remover ferramenta
+    internal static var removeToolTitle: String {
+      L10n.tr("Localizable", "remove_tool.remove_tool_title")
     }
   }
 }
