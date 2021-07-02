@@ -22,4 +22,16 @@ final class HomePresenterSpy: HomePresentationLogic {
     func presentURL(_ url: URL) {
         presentURLPassedURLs.append(url)
     }
+
+    private(set) var presentAddNewToolSuccessMessageCalled = false
+
+    func presentAddNewToolSuccessMessage() {
+        presentAddNewToolSuccessMessageCalled = true
+    }
+
+    private(set) var presetRemoveToolSuccessMessageCalled = false
+
+    func presetRemoveToolSuccessMessage() {
+        presetRemoveToolSuccessMessageCalled = true
+    }
 }

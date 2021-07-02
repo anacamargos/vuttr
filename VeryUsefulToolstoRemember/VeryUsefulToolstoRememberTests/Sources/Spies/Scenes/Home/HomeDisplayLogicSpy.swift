@@ -22,4 +22,16 @@ final class HomeDisplayLogicSpy: HomeDisplayLogic {
     func displayURL(_ url: URL) {
         displayURLPassedURLs.append(url)
     }
+
+    private(set) var displayAddNewToolSuccessMessageCalled = false
+
+    func displayAddNewToolSuccessMessage() {
+        displayAddNewToolSuccessMessageCalled = true
+    }
+
+    private(set) var displayRemoveToolSuccessMessageCalled = false
+
+    func displayRemoveToolSuccessMessage() {
+        displayRemoveToolSuccessMessageCalled = true
+    }
 }
