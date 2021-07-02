@@ -162,6 +162,7 @@ final class HomeInteractorTests: XCTestCase {
 
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, .content([.mock, .otherMock]), expectedResponse]))
+        XCTAssertTrue(presenterSpy.presentRemoveToolSuccessMessageCalled)
     }
 
     func test_handleToolDeletion_whenAllToolsAreRemoved_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
@@ -178,6 +179,7 @@ final class HomeInteractorTests: XCTestCase {
 
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, .content([.mock]), expectedResponse]))
+        XCTAssertTrue(presenterSpy.presentRemoveToolSuccessMessageCalled)
     }
 
     func test_handleToolDeletion_whenIdPassedIsInvalid_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
@@ -194,6 +196,7 @@ final class HomeInteractorTests: XCTestCase {
 
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [.loading, expectedResponse]))
+        XCTAssertFalse(presenterSpy.presentRemoveToolSuccessMessageCalled)
     }
 
     func test_handleToolCreation_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
@@ -207,6 +210,7 @@ final class HomeInteractorTests: XCTestCase {
 
         // Then
         XCTAssertEqual(String(describing: presenterSpy.presentToolsResponsePassedResponses), String(describing: [expectedResponse]))
+        XCTAssertTrue(presenterSpy.presentAddNewToolSuccessMessageCalled)
     }
 
     func test_searchForTool_whenUseCaseFails_shouldCallCorrectMethodInPresenterWithCorrectParameters() {
