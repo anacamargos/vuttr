@@ -77,6 +77,30 @@ final class HomePresenterTests: XCTestCase {
         XCTAssertEqual(viewControllerSpy.displayURLPassedURLs, [anyURL])
     }
 
+    func test_presentAddNewToolSuccessMessage_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = HomeDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+
+        // When
+        sut.presentAddNewToolSuccessMessage()
+
+        // Then
+        XCTAssertTrue(viewControllerSpy.displayAddNewToolSuccessMessageCalled)
+    }
+
+    func test_presentRemoveToolSuccessMessage_shouldCallCorrectMethodInViewController() {
+        // Given
+        let viewControllerSpy = HomeDisplayLogicSpy()
+        let sut = makeSUT(viewController: viewControllerSpy)
+
+        // When
+        sut.presentRemoveToolSuccessMessage()
+
+        // Then
+        XCTAssertTrue(viewControllerSpy.displayRemoveToolSuccessMessageCalled)
+    }
+
     // MARK: - Test Helpers
 
     private func makeSUT(
