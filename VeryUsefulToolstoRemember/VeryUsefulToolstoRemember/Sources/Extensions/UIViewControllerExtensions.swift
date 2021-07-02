@@ -19,8 +19,7 @@ extension UIViewController {
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .actionSheet)
         alert.view.layer.cornerRadius = Constants.alertCornerRadius
         let titleFont = [
-            NSAttributedString.Key.font: UIFont.themeFont(for: .subtitle, weight: .semibold),
-            NSAttributedString.Key.foregroundColor: UIColor.red
+            NSAttributedString.Key.font: UIFont.themeFont(for: .subtitle, weight: .semibold)
         ]
         let titleAttrStirng = NSMutableAttributedString(string: message, attributes: titleFont)
         alert.setValue(titleAttrStirng, forKey: Constants.attributedTitle)
