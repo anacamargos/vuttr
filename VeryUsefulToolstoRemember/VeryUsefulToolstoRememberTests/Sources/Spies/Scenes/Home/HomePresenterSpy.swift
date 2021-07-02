@@ -29,9 +29,9 @@ final class HomePresenterSpy: HomePresentationLogic {
         presentAddNewToolSuccessMessageCalled = true
     }
 
-    private(set) var presetRemoveToolSuccessMessageCalled = false
+    private(set) var presentRemoveToolSuccessMessageCalled = false
 
-    func presetRemoveToolSuccessMessage() {
-        presetRemoveToolSuccessMessageCalled = true
+    func presentRemoveToolSuccessMessage() {
+        presentRemoveToolSuccessMessageCalled = true
     }
 }

@@ -127,7 +127,7 @@ extension HomeInteractor: RemoveToolDelegate {
         guard let toolIndex = usefulTools.firstIndex(where: { $0.id == toolId }) else { return }
         usefulTools.remove(at: toolIndex)
         updateUsefulTools()
-        presenter.presetRemoveToolSuccessMessage()
+        presenter.presentRemoveToolSuccessMessage()
     }
 }
 

@@ -12,7 +12,7 @@ protocol HomePresentationLogic {
     func presentToolsResponse(_ response: Home.UsefulTools.Response)
     func presentURL(_ url: URL)
     func presentAddNewToolSuccessMessage()
-    func presetRemoveToolSuccessMessage()
+    func presentRemoveToolSuccessMessage()
 }
 
 final class HomePresenter {
@@ -71,7 +71,7 @@ extension HomePresenter: HomePresentationLogic {
         viewController?.displayAddNewToolSuccessMessage()
     }
 
-    func presetRemoveToolSuccessMessage() {
+    func presentRemoveToolSuccessMessage() {
         viewController?.displayRemoveToolSuccessMessage()
     }
 }
