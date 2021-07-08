@@ -24,6 +24,7 @@
 "add_new_tool.tags" = "Etiquetas";
 "add_new_tool.add_tool" = "Agregar herramienta";
 "add_new_tool.required_field" = "Campo obligatorio";
+"add_new_tool.error_message" = "No se puede agregar la herramienta. Inténtalo de nuevo.";
 
 // MARK: - Remove Tool
 
@@ -31,3 +32,4 @@
 "remove_tool.remove_tool_description" = "¿Estás seguro de que quieres eliminar %@?";
 "remove_tool.remove_tool_cancel" = "Cancelar";
 "remove_tool.remove_tool_confirmation" = "Si, elimine";
+"remove_tool.error_message" = "No fue posible quitar la herramienta. Inténtalo de nuevo.";

@@ -24,6 +24,7 @@
 "add_new_tool.tags" = "Tags";
 "add_new_tool.add_tool" = "Add tool";
 "add_new_tool.required_field" = "Required field";
+"add_new_tool.error_message" = "Unable to add the tool. Try again.";
 
 // MARK: - Remove Tool
 
@@ -31,3 +32,4 @@
 "remove_tool.remove_tool_description" = "Are you sure you want to remove %@?";
 "remove_tool.remove_tool_cancel" = "Cancel";
 "remove_tool.remove_tool_confirmation" = "Yes, remove";
+"remove_tool.error_message" = "It was not possible to remove the tool. Try again.";
