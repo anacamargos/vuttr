@@ -72,6 +72,7 @@ extension AddNewToolViewController: AddNewToolDisplayLogic {
             switch viewState {
             case .error:
                 self.contentView?.setupLoadingState(false)
+                self.showToast(message: L10n.AddNewTool.errorMessage)
             case .loading:
                 self.contentView?.setupLoadingState(true)
             case .success:

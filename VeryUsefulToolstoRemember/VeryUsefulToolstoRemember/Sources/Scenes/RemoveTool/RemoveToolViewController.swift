@@ -88,6 +88,7 @@ extension RemoveToolViewController: RemoveToolDisplayLogic {
                 self.router.routeToPreviousScene()
             case .error:
                 self.contentView?.setupLoadingState(false)
+                self.showToast(message: L10n.RemoveTool.errorMessage)
             }
         }
     }
