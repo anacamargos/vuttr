@@ -22,6 +22,10 @@ internal enum L10n {
     internal static var addTool: String {
       L10n.tr("Localizable", "add_new_tool.add_tool")
     }
+    /// Não foi possivel adicionar a ferramente. Tente novamente.
+    internal static var errorMessage: String {
+      L10n.tr("Localizable", "add_new_tool.error_message")
+    }
     /// Campo obrigatório
     internal static var requiredField: String {
       L10n.tr("Localizable", "add_new_tool.required_field")
@@ -72,6 +76,10 @@ internal enum L10n {
   }
 
   internal enum RemoveTool {
+    /// Não foi possivel remover a ferramente. Tente novamente.
+    internal static var errorMessage: String {
+      L10n.tr("Localizable", "remove_tool.error_message")
+    }
     /// Cancelar
     internal static var removeToolCancel: String {
       L10n.tr("Localizable", "remove_tool.remove_tool_cancel")

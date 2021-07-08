@@ -24,6 +24,7 @@
 "add_new_tool.tags" = "Tags";
 "add_new_tool.add_tool" = "Adicionar ferramenta";
 "add_new_tool.required_field" = "Campo obrigatório";
+"add_new_tool.error_message" = "Não foi possivel adicionar a ferramente. Tente novamente.";
 
 // MARK: - Remove Tool
 
@@ -31,3 +32,4 @@
 "remove_tool.remove_tool_description" = "Você tem certeza que deseja remover %@?";
 "remove_tool.remove_tool_cancel" = "Cancelar";
 "remove_tool.remove_tool_confirmation" = "Sim, remova";
+"remove_tool.error_message" = "Não foi possivel remover a ferramente. Tente novamente.";
