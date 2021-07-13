@@ -17,6 +17,14 @@ With this app you can:
 - [x] Remove a tool
 - [x] Search for tools
 
+## 📱 Wireframes
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/29712168/125471696-9e3fe1dd-8c07-4353-9fac-abfb633bc889.png" alt="drawing" width="235"/>
+  <img src="https://user-images.githubusercontent.com/29712168/125471681-864f1145-e69e-4fa9-bcde-a3f7c834e807.png" alt="drawing" width="235"/>
+  <img src="https://user-images.githubusercontent.com/29712168/125471692-916cdc66-eeef-4e26-9055-0f9a1d980f7a.png" alt="drawing" width="235"/>
+  <img src="https://user-images.githubusercontent.com/29712168/125471689-962d5dab-301c-404c-82dd-41649f2bc6e7.png" alt="drawing" width="235"/>
+</p>
 
 
 ## ✍️ Authors
